@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Git scm ve GitHub</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">Ramazan AYYILDIZ</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+     
+                <h2>Git scm ve GitHub</h2>
+<p class="meta">18 Mar 2010</p>
+
+<div id="post">
+<p>Github, git-scm ile opensource veya kendi projelerinizin kaynak kodlarını yönetmek için bir uygulama. SVN üzerinde yer alan kaynak kodları çok kolay bir şekilde, import edebiliyorsunuz. Ücretsiz sürümü private proje açmanıza izin vermezken, sayısız public proje açabilirsiniz.</p>
+
+<p>Twitter, facebook başta olmak üzere birçok önemli proje şu anda github üzerinde durmakta. Twitter’ın scala ile geliştirdiği gizzard projesi github üzerinden erişmeniz mümkün.</p>
+
+<h2 id='gitscm'>Git-Scm</h2>
+
+<p>Linux Torwalds tarafından geliştirilen kaynak kod paylaşım aracıdır. Özellikle dağıtım kod yönetim sistemi olmasından ve hızlı çalışmasından dolayı gün geçtikçe populer bir hale gelmeye başladı. SVN den farklı olarak merkezi değil, dağıtık bir kod yönetimine sahiptir. Bu ise linux kernel’ın geliştirilmesi sürecinde ihtiyac haline gelen ve gene Linux Torwalds tarafından yazılan bir araç.</p>
+
+<h3 id='github_le_alma'>GitHub İle Çalışma</h3>
+
+<p>Github sitesinde ihtiyacınıza göre üye olmanız gerekmekte. Yeni bir proje açmak ise çok kolay.</p>
+
+<p>Yeni proje açtktan sonra yapmanız gereken git ile ilk halini almak. Git, bilgisayarınıza indirdikten sonra promt dan aşağıdaki adımları yapmanız gerekiyor. (Windows için tafsiyem msysgit i denemeniz) Genel ayarlar</p>
+
+<pre><code>git config –global user.name “ADINIZ SOYADINIZ”
+git config –global user.email [eposta adresiniz]</code></pre>
+
+<p>Projeyi Almak için</p>
+
+<pre><code>mkdir [projenizi_adi]
+cd [projenizi_adi]
+git init
+touch README
+git add README
+git commit -m ‘mesajınız”
+git remote add origin [projenizin adresi] – — örnek: git@github.com:rayyildiz/test_project.git
+git push origin master</code></pre>
+
+<p>Github, ana klaösrde README klasörü kullanmanızı tafsiye etmektedir. Bu şekilde, projenizin sayfanızda bu sayfanın içeriğini göstermektedir.</p>
+
+<h3 id='gitignore'>.gitignore</h3>
+
+<p>Bazı derleme sonucunda ğretilen dosyaları git içinde yer almasını istemezsiniz. Bu durumda yapmanız gereken projenizin ana sayfasında .gitignore diye bir dosya açıp içine istemediğinizi klasör, uzantıları veya dosyaları çıkarmaktır. Bir ASP.NET 3.5 projesinde bin/debug klasörü, .uso gibi dosyalar sürekli değişmekte ve sıkıntı yaşatmaktadır. Bir asp.net projesi için aşağıdaki dosyayı kullanabilirsiniz.</p>
+
+<pre><code>.svn*
+obj/
+bin/
+*.suo
+*.user
+Log/
+log/
+*.db</code></pre>
+
+<p>Çoğunlukla kullandığınız IDE ler için git plugin geliştirlmiştir. Ancak konsoldan git projesi ile çalışmak çok zevkli :) Github duyurduğu haberde, github da yer alan projelerinizi artık svn ile de erişebilecek, code gönderip alabileceksiniz. √áok güzel bir gelişme. Özellikle şu günlerde, git plugin sayısı SVN plugin sayısından az olduğunu düşündüğümüzde, svn kullanan bir kişinin alışkanlığını şimdilik değiştirmesine gerek yok demektir.</p>
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Ramazan AYYILDIZ<br />
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/rayyildiz/">github.com/rayyildiz</a><br />
+                  <a href="http://twitter.com/rayyildiz/">twitter.com/rayyildiz</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>

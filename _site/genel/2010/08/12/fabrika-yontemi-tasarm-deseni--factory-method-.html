@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Fabrika Yöntemi Tasarım Deseni ( Factory Method )</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">Ramazan AYYILDIZ</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+     
+                <h2>Fabrika Yöntemi Tasarım Deseni ( Factory Method )</h2>
+<p class="meta">12 Aug 2010</p>
+
+<div id="post">
+<p>Tasarım desenleri hakkında giriş mahiyetindeki yazıma <a href='/2010/07/tasarm-desenleri-design-pattern/'>buradan</a> ulaşabilirsiniz. Bu tasarım desenlerinden yaratım desenleri grubundaki ücüncü desen fabrika tasarım desenidir ( Factory Method)</p>
+
+<p>Fabrika yöntemi tasarım deseni,birçok framework yaygın bir şekilde kullanılan bir tasarım desenidir. Bu tasarım deseninde, parelel seviyedeki nesnelerin hangisinin oluşmasını gerektiğini karar veren bir fabrika metodunu ifade eder. Yani aynı arayüz ( interface) gerçekleştiren paralel sınıfların hangisinin gerçekleşmesini sağlayan bir nesne sayesinde bu ilşemi gerçekleştirebiliriz.</p>
+
+<p>Örneğimiz üzerinden düşünelim. örnekte IDbConnection adında bir arayüzümüz mevcut olup, bu arayüzü OracleDbConnection, MySqlDbConnection ve MssqlDbConnection adında 3 tane nesne vardır. Bu üç nesneden hangisinin oluşması gerektiğini karar veren DbConnectionFactory adında bir nesnemiz var. Bu DbConnectionFactory nesnesi içinde yer alan static bir metod ve (metodun adı : createDbConnection)¬† metoda geçirilen parametreden hangi nesneyi gerçekleştireceğine karar verir.</p>
+
+<p>Arayüz ve bu 3 nesnenin kaynak koduna bakalım.</p>
+
+<pre><code>package com.rayyildiz.patterns;
+
+public interface IDbConnection {
+	String getConnection();
+}
+
+public class OracleDbConnection implements IDbConnection {
+	@Override
+	public String getConnection() {
+		return &quot;Oracle Data Connection&quot;;
+	}
+}
+
+public class MySqlDbConnection implements IDbConnection {
+	@Override
+	public String getConnection() {
+		return &quot;MySql Data Connection&quot;;
+	}
+}
+
+public class MssqlDbConnection implements IDbConnection {
+	@Override
+	public String getConnection() {
+		return &quot;Mssql Data Connection&quot;;
+	}
+}</code></pre>
+
+<p>Şimdi ise fabrika yöntemini yapan metodu görelim:</p>
+
+<pre><code>package com.rayyildiz.patterns;
+
+public enum DbConnectionType {
+	Oracle,
+	Mysql,
+	Mssql
+}
+
+package com.rayyildiz.patterns;
+
+public class DbConnectionFactory {
+	public static IDbConnection createDbConnection(DbConnectionType dbConnType){
+		switch(dbConnType){
+  			case Oracle:
+    			return new OracleDbConnection();
+  			case Mysql:
+    			return new MySqlDbConnection();
+  			case Mssql:
+    			return new MssqlDbConnection();
+			
+		}
+		return null;
+	}
+}</code></pre>
+
+<p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a href='http://github.com/rayyildiz/DesignPatterns'>http://github.com/rayyildiz/DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Ramazan AYYILDIZ<br />
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/rayyildiz/">github.com/rayyildiz</a><br />
+                  <a href="http://twitter.com/rayyildiz/">twitter.com/rayyildiz</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>

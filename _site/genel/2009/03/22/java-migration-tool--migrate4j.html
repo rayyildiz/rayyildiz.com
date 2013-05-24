@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Java Migration Tool : Migrate4j</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">Ramazan AYYILDIZ</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+     
+                <h2>Java Migration Tool : Migrate4j</h2>
+<p class="meta">22 Mar 2009</p>
+
+<div id="post">
+<p>Migrate4j , java ortamı için geliştirilmiş bir &#8216;migration&#8217; aracıdır. &#8216;Migration&#8217; bu konuda yakın olan kişilerin cok da kullandığı bir kelime olduğu için aynen bu kelimeyi kullanmak daha doğru geldi bana. Bu araç aslında veritabanını biryerden başka yere taşırken yada yeni özellikler eklerken kullanılan bir araçtır. √áoğunlukla birden fazla kişinin aynı anda üzerinde çalıştığı veritabanlarında buna benzer sorunlar yaşanabilir. Geliştiricelerden birisi yeni tablo eklerken, diğeri ise başka tablolarda sütun ekelem yada cıkarma işlemi yapmış olabilir. İşte bu gibi nedenlerden dolayı veritabanlarının senkronize olması istenir, eksik tabloların ve yeni sütunarın otomatik olarak kurulması, eğer tablo yoksa yeni tablo oluşturulması, varsa üzerinde oynanan sütunların değiştirilmesi istenir. İşte bu tarz sorunları çözmek için çeşitli &#8216;migration&#8217; araçları vardır. Bunlardan birisi Migrate4j uygulaması.</p>
+
+<p>Migrate4j diğer araçlardan biraz daha fazla özellik içerir. Örneğin sorgular native SQL değil java ile yazılmaktadır. Ayrıca farklı veritabanları motorlarında sorunsuzca çalışabilmektedir. Nasıl Kullanırım?</p>
+
+<p>Migrate4j uygulamasını <a href='http://migrate4j.sourceforge.net/'>http://migrate4j.sourceforge.net/</a> adresinden hem daha fazla detaylı bilgi alarak bakabilir hemd e bu adresten indirebilirsiniz. İndirdiğiniz paket içinden cıkan Migrate4j.jar dosyasını kullandığınız editörten tanımlayarak yada console ile derleyecekseniz ilgili classpath içine almanız yeterli. Daha sonra uygulamanızın an dizininde migrate4j.properties ayar dosyası oluşturmanı gerekiyor. Bu dosya içinde genel ayarlar ile bağlantı çümlesi ve driver seçenekleri olmalıdır. Örnek bir migrate4j.properties şu şekilde olabilir.</p>
+<div class='highlight'><pre><code class='java'><span class='n'>connection</span><span class='o'>.</span><span class='na'>url</span><span class='o'>=</span><span class='nl'>jdbc:mysql:</span><span class='c1'>//localhost:3306/testdb</span>
+<span class='n'>connection</span><span class='o'>.</span><span class='na'>driver</span><span class='o'>=</span><span class='n'>com</span><span class='o'>.</span><span class='na'>mysql</span><span class='o'>.</span><span class='na'>jdbc</span><span class='o'>.</span><span class='na'>Driver</span>
+<span class='n'>connection</span><span class='o'>.</span><span class='na'>password</span><span class='o'>=</span><span class='n'>passw</span><span class='nd'>@rd</span>
+<span class='n'>migration</span><span class='o'>.</span><span class='na'>package</span><span class='o'>.</span><span class='na'>name</span><span class='o'>=</span><span class='n'>test</span><span class='o'>.</span><span class='na'>migratebase</span>
+</code></pre></div>
+<p>Bu dosya içinde bağlantı için mysql deki testdb veritabanını kullandığımızı ve migration paketlerinin test.migratebase içinde yer aldığını belirttik. Daha sonra yazacağımız migrate sınıflarını bu paket içinde oluşturmamız gerekli.</p>
+
+<p>Örneğin Student diye bir tablomuz var. Eğer sistemiizmde bu tablo yoksa oluşmasını, sistemden silmek istediğimizde ise bu tablonun silinmesini sağlayan nesnemiz şu şekildedir:</p>
+<div class='highlight'><pre><code class='java'>	
+<span class='kn'>package</span> <span class='n'>test</span><span class='o'>.</span><span class='na'>migratebase</span><span class='o'>;</span>
+
+<span class='kn'>import</span> <span class='nn'>static</span> <span class='n'>com</span><span class='o'>.</span><span class='na'>eroi</span><span class='o'>.</span><span class='na'>migrate</span><span class='o'>.</span><span class='na'>Define</span><span class='o'>.*;</span>
+<span class='kn'>import</span> <span class='nn'>static</span> <span class='n'>com</span><span class='o'>.</span><span class='na'>eroi</span><span class='o'>.</span><span class='na'>migrate</span><span class='o'>.</span><span class='na'>Define</span><span class='o'>.</span><span class='na'>DataTypes</span><span class='o'>.*;</span>
+<span class='kn'>import</span> <span class='nn'>static</span> <span class='n'>com</span><span class='o'>.</span><span class='na'>eroi</span><span class='o'>.</span><span class='na'>migrate</span><span class='o'>.</span><span class='na'>Execute</span><span class='o'>.*;</span>
+<span class='kn'>import</span> <span class='nn'>com.eroi.migrate.Migration</span><span class='o'>;</span>
+ 
+<span class='kd'>public</span> <span class='kd'>class</span> <span class='nc'>Student</span> <span class='kd'>implements</span> <span class='n'>Migration</span> <span class='o'>{</span>
+	<span class='kd'>public</span> <span class='kt'>void</span> <span class='nf'>up</span><span class='o'>()</span> <span class='o'>{</span>
+    	<span class='n'>createTable</span><span class='o'>(</span><span class='n'>table</span><span class='o'>(</span><span class='s'>&quot;student_table&quot;</span><span class='o'>,</span>
+       	<span class='n'>column</span><span class='o'>(</span><span class='s'>&quot;id&quot;</span><span class='o'>,</span> <span class='n'>INTEGER</span><span class='o'>,</span> <span class='n'>primarykey</span><span class='o'>(),</span> <span class='n'>notnull</span><span class='o'>()),</span>
+       	<span class='n'>column</span><span class='o'>(</span><span class='s'>&quot;firstname&quot;</span><span class='o'>,</span> <span class='n'>VARCHAR</span><span class='o'>,</span> <span class='n'>length</span><span class='o'>(</span><span class='mi'>50</span><span class='o'>),</span> <span class='n'>defaultValue</span><span class='o'>(</span><span class='s'>&quot;NA&quot;</span><span class='o'>)),</span>
+       	<span class='n'>column</span><span class='o'>(</span><span class='s'>&quot;lastname&quot;</span><span class='o'>,</span> <span class='n'>VARCHAR</span><span class='o'>,</span> <span class='n'>length</span><span class='o'>(</span><span class='mi'>50</span><span class='o'>),</span> <span class='n'>defaultValue</span><span class='o'>(</span><span class='s'>&quot;NA&quot;</span><span class='o'>)),</span>
+       	<span class='n'>column</span><span class='o'>(</span><span class='s'>&quot;number&quot;</span><span class='o'>,</span> <span class='n'>VARCHAR</span><span class='o'>,</span> <span class='n'>length</span><span class='o'>(</span><span class='mi'>15</span><span class='o'>),</span> <span class='n'>defaultValue</span><span class='o'>(</span><span class='s'>&quot;NA&quot;</span><span class='o'>))));</span>
+  	<span class='o'>}</span>
+ 
+  	<span class='kd'>public</span> <span class='kt'>void</span> <span class='nf'>down</span><span class='o'>()</span> <span class='o'>{</span>
+     	<span class='n'>dropTable</span><span class='o'>(</span><span class='s'>&quot;student_table&quot;</span><span class='o'>);</span>
+  	<span class='o'>}</span>
+<span class='o'>}</span>
+</code></pre></div>
+<p>Evet aslında bu nesne bizim için student_table tablosu yoksa oluşturmayı varsa silmek istediğimizde ise silmeyi sağlıyor. genel olarak eğer bir tablo oluşturulucaksa <strong>up</strong> silmek istenilirse <strong>down</strong> metodu çağrılacaktır.</p>
+
+<p>Kabaca bir tablonun bir migration araçla nasıl silinip kurulacağını gördük. Elbette bu yeterli değildir. Sitesine girerek detaylı bilgi alabilirsiniz. Eğer bir sorunla karşılaşırsanız yardımcı olmaya çalışırız.</p>
+
+<p>Kolay gelsin</p>
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Ramazan AYYILDIZ<br />
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/rayyildiz/">github.com/rayyildiz</a><br />
+                  <a href="http://twitter.com/rayyildiz/">twitter.com/rayyildiz</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>

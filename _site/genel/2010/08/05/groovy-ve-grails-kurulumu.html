@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Groovy ve Grails Kurulumu</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">Ramazan AYYILDIZ</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+     
+                <h2>Groovy ve Grails Kurulumu</h2>
+<p class="meta">05 Aug 2010</p>
+
+<div id="post">
+<h2 id='grrovy_nedir'>Grrovy Nedir?</h2>
+
+<p><img alt='Groovy' src='/images/groovy_medium.png' /></p>
+
+<p>Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.</p>
+
+<p>Eclipse, NetBeans ve Intellij Idea da geliştirilmiş eklentiler sayesinde groovy geliştirebilirsiniz.</p>
+
+<p>Groovy hakkında daha detaylı bilgi için <a href='http://groovy.codehaus.org/ bakabilirsiniz.'>http://groovy.codehaus.org/ bakabilirsiniz.</a></p>
+
+<h2 id='grails_nedir'>Grails Nedir?</h2>
+
+<p><img alt='Grails Logo' src='/images/grails_logo1.png' /></p>
+
+<p>Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir. Yani bir nevi “Ruby On Rails” in, Groovy ile gerçekleştirilmiş halidir.</p>
+
+<p>Java yazılımcıların sürekli kullanmak durumunda kaldığı xml ayar dosyaları grails de yoktur. Grails, ayar işlemlerini, groovy dosyalar üzerinde yazmanızı ister.</p>
+
+<p>Ruby On Rails‘de olduğu gibi, geliştirme, test ve ürün ortamlarını için farklı ayar imkanları sunması oldukça güzel bir özelliktir. Grails için yazılan bir çok eklentin bulunmaktadır ( bu sayı gün geçtikçe artıyor).</p>
+
+<p>Grails hakkında daha detaylı bilgi için <a href='http://www.grails.org/'>http://www.grails.org/</a> bakabilirsiniz.</p>
+
+<p>Groovy ve grails hakkında yüzeysel bilgi verdikten sonra, kurulumlarını ve kullanıma hazır hale gelmeleri için yapılması gerekenlere bir göz atalım. Groovy Kurulum</p>
+
+<p>Groovy kurulum için groovy indirme sayfasına giderek, işletim sisteminize göre en son kararlı sürümümü indiriniz. Windows işletim sistemi için, Windows Installer versiyonunu indiriniz.</p>
+
+<p>Daha sonra GROOVY_HOME cevre değişkeni tanımlamanız gerekmektedir. Windows kurulum sırasında bunu size tanımlamak istediğini soracaktır. Linux da ise bunu .bashrc dosyasına aşağıdaki şekilde bir satır ekleyerek yapabilirsiniz.</p>
+
+<pre><code>export JDK_HOME=/usr/lib/jvm/java-6-sun
+export GROOVY_HOME=/developer/groovy-1.7.4
+export PATH=$PATH:$JDK_HOME/bin:$GROOVY_HOME/bin</code></pre>
+
+<blockquote>
+<p>Not: Eğer tanımlı değilse, GROOVY_HOME tanımlamak için, JDK_HOME cevresel değişkeni de tanımlamanız gerekiyor.</p>
+</blockquote>
+
+<p>Bu işlemden sonra komut penceresinden aşağıdaki kodu çalıştırarak, groovy kurulumunu test edebilirsiniz.</p>
+
+<pre><code>groovysh</code></pre>
+
+<h2 id='grails_kurulum'>Grails Kurulum</h2>
+
+<p>Grails indirme sayfasına giderek, en son kararlı sürümünü indiriniz. Daha sonra bu klasörü açınız.</p>
+
+<p>Grails kurulumu bu adım yeterlidir. Kullandığınız IDE, size grails kurulum dizinini soracaktır. Ancak yineden GRAILS_HOME cevre değişkeni tanımlarsanız çok sağlıklı olacaktır. Aşağıdakı satırı .bashrc dosyasına ekleyiniz.</p>
+
+<pre><code>export GRAILS_HOME=/developer/grails-1.3.3
+export PATH=$PATH:$GRAILS_HOME/bin</code></pre>
+
+<p>Bu şekilde groovy ve grails kurulumu tamamladık.</p>
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Ramazan AYYILDIZ<br />
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/rayyildiz/">github.com/rayyildiz</a><br />
+                  <a href="http://twitter.com/rayyildiz/">twitter.com/rayyildiz</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>

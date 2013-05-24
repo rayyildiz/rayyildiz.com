@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Android Uygulamalarında Veritabanı İşlemleri</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">Ramazan AYYILDIZ</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+     
+                <h2>Android Uygulamalarında Veritabanı İşlemleri</h2>
+<p class="meta">12 Jun 2010</p>
+
+<div id="post">
+<p>Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.</p>
+
+<p><img alt='Sqlite' src='/images/sqlite1.gif' /></p>
+
+<p><a href='http://www.sqlite.org/'>Sqlite</a>, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi <a href='http://www.sqlite.org/th3.html'>test edilmiş</a> bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir.</p>
+
+<p>Bu giriş bilgilerinden sonra örnek bir uygulama geliştirelim. Uygulamamız, ad, soyad ve telefon numarası kayıt edeceğimiz bir “customer” tablosu olsun. Linux ‘ta sqliteman gibi bir uygulama ile veritabanınızı oluştururun. Örneğimizde kullanacağımız tablonun scripti şu şekildedir:</p>
+
+<pre><code>CREATE TABLE &quot;Customer&quot; (
+	&quot;Id&quot; INTEGER PRIMARY KEY,
+	&quot;Firstname&quot; TEXT,
+	&quot;Lastname&quot; TEXT,
+	&quot;PhoneNumber&quot; TEXT
+	);</code></pre>
+
+<p>Daha sonra ise IDE nizde bir android uygulaması açınız(<a href='/2010/06/android-icin-uygulama-gelitirme/'>Android ile Uygulama Geliştirme</a> yazısından faydalanabilirsiniz). Ben daha eski telefonlarda kullanılabilmesi için 1.6 uygulması actım. Daha sonra ise droiddraw ana ekran tasarlıyoruz.</p>
+
+<p>Veritabanı ilk acıldığında tablonun create edilmesi için create script i kod içine almamız gerekir. Aynı şekilde örneğimizde compiled statement kullanıyoruz. Şu anda sadece insert ve getAll metodunu implemente ettik.</p>
+
+<pre><code>public class DbHelper {
+	private static final String DATABASE_NAME = &quot;rayyildiz_sample.db&quot;;
+	private static final int DATABASE_VERSION = 1;
+	private static final String TABLE_NAME = &quot;Customer&quot;;
+	private static final String TABLE_CREATE = &quot;CREATE TABLE &quot; + TABLE_NAME + &quot; ( &quot;
+  		+ &quot;  \&quot;Id\&quot; INTEGER PRIMARY KEY,&quot;
+  		+ &quot;  \&quot;Firstname\&quot; TEXT,&quot;
+  		+ &quot;  \&quot;Lastname\&quot; TEXT,&quot;
+  		+ &quot;  \&quot;PhoneNumber\&quot; TEXT&quot; + &quot;)&quot;;
+
+	private static final String TABLE_INSERT = &quot;INSERT INTO &quot; + TABLE_NAME + &quot;(Firstname,Lastname,PhoneNumber) VALUES (?,?,?)&quot;;
+	private Context context;
+	private SQLiteDatabase database;
+	private SQLiteStatement insertSQLiteStatement;
+
+	public DbHelper(Context context) {
+		this.context = context;
+		DbOpenHelper dbOpenHelper = new DbOpenHelper(context);
+		database = dbOpenHelper.getWritableDatabase();
+		insertSQLiteStatement = database.compileStatement(TABLE_INSERT);
+	}
+
+	public long insertCustomer(Customer customer) {
+		if (customer == null) {
+  			return -1;
+		}
+		insertSQLiteStatement.bindString(1, customer.getFirstname());
+		insertSQLiteStatement.bindString(2, customer.getLastname());
+		insertSQLiteStatement.bindString(3, customer.getPhoneNumber());
+
+		return insertSQLiteStatement.executeInsert();
+	}
+
+	public List getAllCustomer() {
+		List customers = new ArrayList();
+		Cursor cursor = database.query(TABLE_NAME, new String[]{&quot;id,Firstname,Lastname,PhoneNumber&quot;}, null, null, null, null, &quot;id desc&quot;);
+		if (cursor.moveToFirst()) {
+  			do {
+    			Customer c = new Customer();
+    			c.setId(cursor.getInt(0));
+    			c.setFirstname(cursor.getString(1));
+    			c.setLastname(cursor.getString(2));
+    			c.setPhoneNumber(cursor.getString(3));
+
+    			customers.add(c);
+  			} while (cursor.moveToNext());
+		}
+		if (cursor != null &amp;amp;&amp;amp; !cursor.isClosed()) {
+  			cursor.close();
+		}
+		return customers;
+	}
+
+	private static class DbOpenHelper extends SQLiteOpenHelper {
+		public DbOpenHelper(Context context) {
+  			super(context, DATABASE_NAME, null, DATABASE_VERSION);
+		}
+
+		@Override
+		public void onCreate(SQLiteDatabase db) {
+  			db.execSQL(TABLE_CREATE);
+		}
+
+		@Override
+		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+  			db.execSQL(&quot;DROP TABLE IF EXISTS &quot; + TABLE_NAME);
+  			onCreate(db);
+		}
+	}
+}</code></pre>
+
+<p>Bu ise Customer nesnesi</p>
+
+<pre><code>public class Customer {
+	private int id;
+	private String firstname;
+	private String lastname;
+	private String phoneNumber;
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+}</code></pre>
+
+<p>İki tane Aktivity ekleyelim birisi MainActivity, diğeri ise Customer bilgilerini giriş yapabileceğimiz Activity olsun.</p>
+
+<p>Bunlardan AddCustomerActivity şu şekilde:</p>
+
+<pre><code>public class AddCustomerActivity extends Activity {
+	public final static int SUCCESS_RETURN_CODE = 1;
+	private DbHelper m_db;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.insert);
+
+		m_db = new DbHelper(this);
+		Button saveButton = (Button) findViewById(R.id.btnSave);
+		final  EditText textFirstname = (EditText) findViewById(R.id.textFirstname);
+		final EditText textLastname = (EditText) findViewById(R.id.textLastname);
+		final EditText textPhoneNumber = (EditText) findViewById(R.id.textPhoneNumber);
+
+		saveButton.setOnClickListener(new View.OnClickListener() {
+ 			@Override
+ 			public void onClick(View v) {
+   				Intent intent = new Intent();
+   				Customer c = new Customer();
+   				c.setFirstname(textFirstname.getText().toString());
+   				c.setLastname(textLastname.getText().toString());
+   				c.setPhoneNumber(textPhoneNumber.getText().toString());
+   				m_db.insertCustomer(c);
+   				setResult(SUCCESS_RETURN_CODE, intent);
+   				finish();
+ 			}
+		});
+	}
+}</code></pre>
+
+<p>Ve Main Activity şu şekildedir</p>
+
+<pre><code>public class MainActivity extends Activity {
+
+	private ProgressDialog m_ProgressDialog = null;
+	protected static final int SUB_ACTIVITY_REQUEST_CODE = 100;private ArrayList m_customers = null;
+	private DataAdapter m_adapter;
+	private Runnable viewData;
+	DbHelper m_db;
+
+	@Override
+	public void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
+		setContentView(R.layout.main);
+		m_db = new DbHelper(this);
+		m_customers = new ArrayList();
+		this.m_adapter = new DataAdapter(this, R.layout.row, m_customers);
+		setListAdapter(this.m_adapter);
+		
+		Button refreshButton = (Button)findViewById(R.id.btnRefresh);
+		refreshButton.setOnClickListener(new View.OnClickListener() {
+  			public void onClick(View arg0) {
+				refresh();
+  			}
+		});
+
+		Button addButton = (Button) findViewById(R.id.btnAdd);
+		addButton.setOnClickListener(new View.OnClickListener() {
+
+  			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this,AddCustomerActivity.class);
+				startActivityForResult(i, SUB_ACTIVITY_REQUEST_CODE);
+  			}
+		});
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == SUB_ACTIVITY_REQUEST_CODE) {
+  			refresh();
+		}
+	}
+
+	private void setListAdapter(DataAdapter m_adapter) {
+		ListView lw = (ListView) findViewById(R.id.listCustomer);
+		if (lw != null) {
+  			lw.setAdapter(m_adapter);
+		}
+	}
+
+	private void insert(Customer c){
+		m_db.insertCustomer(c);
+	}
+
+	private void refresh(){
+		WorkerThread thread = new WorkerThread();
+		thread.start();
+		m_ProgressDialog = ProgressDialog.show(MainActivity.this,
+			&quot;Please wait...&quot;, &quot;Resfreshing data ...&quot;, true);
+	}
+
+	private class WorkerThread extends Thread {
+		@Override
+		public void run() {
+  			getCustomers();
+		}
+	}
+
+	private Runnable returnRes = new Runnable() {
+		@Override
+		public void run() {
+  			if (m_customers != null &amp;amp;&amp;amp; m_customers.size() &amp;gt; 0) {
+				m_adapter.clear();
+				m_adapter.notifyDataSetChanged();
+				for (int i = 0; i &amp;lt; m_customers.size(); i++) {
+	  				m_adapter.add(m_customers.get(i));
+				}
+  			}
+  			m_ProgressDialog.dismiss();
+  			m_adapter.notifyDataSetChanged();
+		}
+	};
+
+	private void getCustomers() {
+		try {
+  			m_customers = new ArrayList();
+
+  			m_customers = (ArrayList) m_db.getAllCustomer(); 	
+		} catch (Exception e) {
+  			Log.e(&quot;BACKGROUND_PROC&quot;, e.getMessage());
+		}
+		runOnUiThread(returnRes);
+	}
+
+	public class DataAdapter extends ArrayAdapter{
+		private ArrayList items;
+
+		public DataAdapter(Context context, int textViewResourceId, ArrayList items) {
+			super(context, textViewResourceId, items);
+			this.items = items;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			View v = convertView;
+			if (v == null) {
+  				LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+  				v = vi.inflate(R.layout.row, null);
+			}
+			Customer o = items.get(position);
+			if (o != null) {
+  				TextView tt = (TextView) v.findViewById(R.id.listLabeltext);
+  				if (tt != null) {
+					tt.setText(o.getId() +&quot; : &quot; + o.getFirstname() + &quot; &quot; + o.getLastname() + &quot;(&quot;+ o.getPhoneNumber() + &quot;)&quot;);
+  				}
+			}
+ 			return v;
+		}
+	}
+}</code></pre>
+
+<p>Örnek uygulamamızın ekran görüntüleri</p>
+
+<p><img alt='Add Customer' src='/images/add_customer1.png' /></p>
+
+<p><img alt='List Customers' src='/images/list_customers1.png' /></p>
+
+<p>Uygulamanın kaynak kodunu ise <a href='http://code.google.com/p/nbase/'>google code</a> üzerinden indirebilirsiniz.</p>
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Ramazan AYYILDIZ<br />
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/rayyildiz/">github.com/rayyildiz</a><br />
+                  <a href="http://twitter.com/rayyildiz/">twitter.com/rayyildiz</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>

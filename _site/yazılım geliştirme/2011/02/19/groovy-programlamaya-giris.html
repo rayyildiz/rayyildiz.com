@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Groovy Programlamaya Giriş</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <h1 class="title"><a href="/">Ramazan AYYILDIZ</a></h1>
+              <a class="extra" href="/">home</a>
+            </div>
+     
+                <h2>Groovy Programlamaya Giriş</h2>
+<p class="meta">19 Feb 2011</p>
+
+<div id="post">
+<p><a href='/2010/08/groovy-ve-grails-kurulumu/'>Daha önceki yazımda</a> groovy ve grails’in nasıl kurulacağı bilgisini vermiştim. Bu yazımda ise groovy programlamaya başlayacağız.</p>
+
+<p>Groovy java programlama diline alışkın kişilerin, Python, Ruby, Smalltalk yer alan özellikleri kullanabilmesine olanak sunan agile bir programlama dili olarak tanımlanıyor.</p>
+
+<p>Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten türemiştir. Groovy ile yazılan bir nesne derlendikten sonra bytecode a cevrilir. Oluşan <code>*.class</code> dosyasını classpath’inize eklenerek java tarafından kullamabilirsiniz. Yani java’dan groovy’ye, groovy den ise java’ya erişmek cok kolaydır.</p>
+
+<blockquote>
+<p>Groovy’ de “;” kullanma zorunluğu yoktur.</p>
+</blockquote>
+
+<p>Groovy mevcut dilin kütüphanelerin dışında, diğer kütüphaneler ve JDK yer alan özelliklerin yer aldığı GDK’den oluşmaktadır</p>
+
+<p>Groovy javada yer alan List, Map ‘ e yeni özellikler katar. örneğin şu satır nesnelerin paketlerini ekrana basar.</p>
+
+<pre><code>package com.rayyildiz
+class ListMapTest {
+	static main(args) {
+  		def classes = [String, Date, Long, Boolean]
+  		println(classes.&#39;package&#39;.name);
+	}
+}</code></pre>
+
+<p>Bir siteye erişip içeriğini okumak için aşağıda bir code yer almakta, görebileceğiniz gibi groovy de bir rss’i almak cok kolay.Groovy de closure code yazmak çok kolaşmakta.</p>
+
+<pre><code>package com.rayyildiz
+import java.net.URL
+
+class HelloWorld {
+	static main(args) {
+  		def url = new URL(&quot;http://rayyildiz.com/feed&quot;);
+     	url.eachLine { ln -&gt;
+     		println(ln);
+  		}
+	}
+}</code></pre>
+
+<p>Özellikle java programcılarının çok kolay alışabileceği bir dil olan groovy yi incelemenizi tafsiye ederim. Size farklı bir bakış açışı kazandıracaktır.</p>
+</div>
+
+
+            <div class="footer">
+              <div class="contact">
+                <p>
+                  Ramazan AYYILDIZ<br />
+                </p>
+              </div>
+              <div class="contact">
+                <p>
+                  <a href="http://github.com/rayyildiz/">github.com/rayyildiz</a><br />
+                  <a href="http://twitter.com/rayyildiz/">twitter.com/rayyildiz</a><br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>
