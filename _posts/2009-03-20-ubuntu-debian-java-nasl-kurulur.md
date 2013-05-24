@@ -6,6 +6,9 @@ category: Genel
 tags: [java, ubuntu, debian]
 ---
 
+{% include JB/setup %}
+
+
 Debian türevli bir sistemde sisteme java nasıl kurabiliriz?
 
 Grafiksel arayüze sahip bir sistemde java kurmak artık cok kolay oldu. Java sitesine girerek edineceğiniz java dosyasını önergeleri takip ederek kurabilirsiniz. Yada Syneptic Paket Yöneticisi yardımıyla cok kolay kurulum gerçekleşgtirebilirsiniz.

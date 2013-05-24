@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Groovy Programlamaya Giriş</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ramazan AYYILDIZ">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">rayyildiz.com</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">Hakkımda</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Arşiv</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Kategoriler</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Sayfalar</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Groovy Programlamaya Giriş <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p><a href='/2010/08/groovy-ve-grails-kurulumu/'>Daha önceki yazımda</a> groovy ve grails’in nasıl kurulacağı bilgisini vermiştim. Bu yazımda ise groovy programlamaya başlayacağız.</p>
+
+<p>Groovy java programlama diline alışkın kişilerin, Python, Ruby, Smalltalk yer alan özellikleri kullanabilmesine olanak sunan agile bir programlama dili olarak tanımlanıyor.</p>
+
+<p>Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten türemiştir. Groovy ile yazılan bir nesne derlendikten sonra bytecode a cevrilir. Oluşan <code>*.class</code> dosyasını classpath’inize eklenerek java tarafından kullamabilirsiniz. Yani java’dan groovy’ye, groovy den ise java’ya erişmek cok kolaydır.</p>
+
+<blockquote>
+<p>Groovy’ de “;” kullanma zorunluğu yoktur.</p>
+</blockquote>
+
+<p>Groovy mevcut dilin kütüphanelerin dışında, diğer kütüphaneler ve JDK yer alan özelliklerin yer aldığı GDK’den oluşmaktadır</p>
+
+<p>Groovy javada yer alan List, Map ‘ e yeni özellikler katar. örneğin şu satır nesnelerin paketlerini ekrana basar.</p>
+
+<pre><code>package com.rayyildiz
+class ListMapTest {
+	static main(args) {
+  		def classes = [String, Date, Long, Boolean]
+  		println(classes.&#39;package&#39;.name);
+	}
+}</code></pre>
+
+<p>Bir siteye erişip içeriğini okumak için aşağıda bir code yer almakta, görebileceğiniz gibi groovy de bir rss’i almak cok kolay.Groovy de closure code yazmak çok kolaşmakta.</p>
+
+<pre><code>package com.rayyildiz
+import java.net.URL
+
+class HelloWorld {
+	static main(args) {
+  		def url = new URL(&quot;http://rayyildiz.com/feed&quot;);
+     	url.eachLine { ln -&gt;
+     		println(ln);
+  		}
+	}
+}</code></pre>
+
+<p>Özellikle java programcılarının çok kolay alışabileceği bir dil olan groovy yi incelemenizi tafsiye ederim. Size farklı bir bakış açışı kazandıracaktır.</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2010/10/javada-vector-ve-arraylist-performans-karlatirmasi" title="Java’da Vector ve ArrayList Performans Karşılaştırması">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2011/10/springone-2gx-ve-chicago" title="SpringOne 2GX ve Chicago">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_shortname = 'rayyildiz'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>19 February 2011</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#groovy-ref">groovy <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#java-ref">java <span>16</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Ramazan AYYILDIZ 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-765318-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
+

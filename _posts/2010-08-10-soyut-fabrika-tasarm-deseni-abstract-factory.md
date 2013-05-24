@@ -6,6 +6,9 @@ category: Genel
 tags: [Tasarım Deseni, Design Patterns, Factory Pattern]
 ---
 
+{% include JB/setup %}
+
+
 Tasarım desenleri hakkında giriş mahiyetindeki yazıma buradan ulaşabilirsiniz. Bu tasarım desenlerinden ilki olan soyut fabrika tasarım deseni (Abstract Factory) bu yazımızda genel olarak göreceğiz.
 
 Soyut fabrika tasarım deseninin amacı, farklı ürün ailelerin için uygulanması söz konusu olduğu durumlarda tercih edilir. Mesela yazdığınız uygulamanın hem macos hem de windows platformunda çalışması sözkonusu olduğu durumlarda UI nasıl oluşması gerektiğini soyutlandırarak daha hızlı adapte edebileceğiniz bir yapı geliştirebilirsiniz.

@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ubuntu Oracle Kurulumu ve İlk Ayarı</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ramazan AYYILDIZ">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">rayyildiz.com</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">Hakkımda</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Arşiv</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Kategoriler</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Sayfalar</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Ubuntu Oracle Kurulumu ve İlk Ayarı <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>Oracle veritabanı Ubuntu kurulumu iki adımda yapabilrisiniz.</p>
+
+<h2 id='oracle_ndirme_sayfasndan_ndirmek'>Oracle İndirme Sayfasından İndirmek</h2>
+
+<p>Oracle indirme sayfasınandan(<a href='http://www.oracle.com/technetwork/database/express-edition/downloads/102xelinsoft-102048.html'>http://www.oracle.com/technetwork/database/express-edition/downloads/102xelinsoft-102048.html</a>) Oracle Database 10g Express Edition (Universal) veritabanının .deb uzantı versiyonunu indirin. (Eğer .rpm versiyonunu indirirseniz, alien komutu kullanarak .rpm versiyonunu .deb uzantılı dosyaya cevirebilirsiniz. Detaylı bilgi buraya tıklayınız). Daha sonra ise kurulum işlemini grafiksel arayüz ortamında çift tıklayarak yapabilirsiniz.</p>
+
+<h2 id='oracle_repository_kullanmak'>Oracle Repository Kullanmak</h2>
+
+<p>Konsole penceresinden veya Software Source arayüzünu kullanarak aşağıdaki repository paketini /etc/apt/source.list dosyasına ekleyiniz.</p>
+
+<pre><code>deb http://oss.oracle.com/debian unstable main non-free</code></pre>
+
+<p>daha sonra aşağıdaki komutları çalıştırın.</p>
+
+<pre><code>wget http://oss.oracle.com/el4/RPM-GPG-KEY-oracle  -O- | sudo apt-key add -
+apt-get update
+apt-get install oracle-xe</code></pre>
+
+<h4 id='oracle_lk_ayar'>Oracle İlk Ayarı</h4>
+
+<p>Eğer daha önce windows ortamında oracle kurulum yaptıysanız, size sorulan sorular kurulum sırasında sorulmadığında şaşırmış olabilirsiniz. √áünkü henüz kurulum daha bitmedi.</p>
+
+<p>Yukarı adımlardan sonra, oracle yüklendi ama konfigürasyon yapmadınız. Oracle ilk ayarları işlemi- için aşağıdaki komutu çalıştırınız.</p>
+
+<pre><code>sudo /etc/init.d/oracle-xe -configure</code></pre>
+
+<p>Bu ayaralar sırasında aşağıdakine benzer sorular sorulacaktır. Burada yazacağınız şifre, “system” kullanıcısın şifresi olup hatırlayacağınız bir şifre olmasını tafsiye ederim.</p>
+
+<pre><code>Specify the HTTP port that will be used for Oracle Application Express (8080):
+
+Specify a port that will be used for the database listener (1521) :
+
+Specify a password to be used for database accounts. Note that the same
+password will be used for SYS and SYSTEM. Oracle recommends the use of
+different passwords for each database account. This can be done after
+initial configuration:
+  
+Confirm the password: ( make sure you remember this password )
+
+Do you want Oracle Database 10g Express Edition to be started on boot (y/n) (y): y
+
+Starting Oracle Net Listener…Done
+Configuring Database…Done
+Starting Oracle Database 10g Express Edition Instance…Done
+Installation Completed Successfully.
+To access the Database Home Page go to “http://127.0.0.1:8080/apex”</code></pre>
+
+<p>Normal ayarlara göre kururulum yaparsanız, tarayınızdan http://127.0.0.1:8080/apex açınız. Burada kullanıcı adı olarak “system”, şifre- olarak ise az önce kurulumda yazdığınız şifreyi yazınız. Bu arayüzü size birtakım güzel olanaklar sunacaktır(detaylı bilgi için buraya tıklayınız). Ben ise daha sonraki yazılarımda Sql Developer ile nasıl bağlanabileceğinizi ve basit veritabanı işlemleri yapabilmenizi anlatacağım.</p>
+
+<p><img alt='Oracle' src='/images/oracle1.jpg' /></p>
+
+<p>Toad ise Wine ile kurabilseniz dahi malesef ubuntu ortamında sorun cıkartıyor, o yüzden linux ortamında oracle veri tabanı işlemleri için size tafsiye edeceğim araç sql developer olacaktır.</p>
+
+<p>Not: Eğer kullanıcınız dba grubunda değilse, oracle durdurma ve yeniden başlatma işlemleri sırasında sorun yaşayabilirsiniz. Benim tafsiyem kullanıcınızı dba grubuna eklemeniz.</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2010/07/tasarm-desenleri-design-pattern" title="Tasarım Desenleri (Design Pattern)">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2010/08/oyun-gelistirmek-icin-hangi-programlama-dili" title="Oyun Geliştirmek için Hangi Programlama Dili">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_shortname = 'rayyildiz'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>01 August 2010</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#kurulum-ref">kurulum <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#linux-ref">linux <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#ubuntu,oracle-ref">ubuntu,oracle <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Ramazan AYYILDIZ 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-765318-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
+

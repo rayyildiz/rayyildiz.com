@@ -6,6 +6,9 @@ category: Genel
 tags: [mongodb, nosql]
 ---
 
+{% include JB/setup %}
+
+
 NoSQL, isminden de anlaşılabileceği gibi SQL kullanılmadığı veritabanlarına verilen genel bir isimdir. Genelde ORM ile karıştırılmaktadır. NoSQL, işişkisel veritabanlarına ([RDMS](http://en.wikipedia.org/wiki/Relational_database_management_system)) alternatif bir tekniktir.
 
 ilişkisel bir veritabanında (RDMS), tablolar oluşturur, tabloları birbirleriyle ilişki kurarak, join, kartezyen gibi SQL cümlecikleriyle kullanırız. Bunun birçok faydası vardır. Hatta yazılım geliştirirken, SQL den kaçınmak maksadıyla, ORM aracları geliştirilmiştir. Bu sayede, veritabanında yer alan tablolara, nesne gözüyle bakılabilmiş, OOP mantığıyla üzerinde işlem yapılabilmiştir.

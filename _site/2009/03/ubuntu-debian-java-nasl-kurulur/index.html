@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ubuntu/Debian Java Nasıl Kurulur</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ramazan AYYILDIZ">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">rayyildiz.com</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">Hakkımda</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Arşiv</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Kategoriler</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Sayfalar</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Ubuntu/Debian Java Nasıl Kurulur <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>Debian türevli bir sistemde sisteme java nasıl kurabiliriz?</p>
+
+<p>Grafiksel arayüze sahip bir sistemde java kurmak artık cok kolay oldu. Java sitesine girerek edineceğiniz java dosyasını önergeleri takip ederek kurabilirsiniz. Yada Syneptic Paket Yöneticisi yardımıyla cok kolay kurulum gerçekleşgtirebilirsiniz. Terminal den Kurulumu gerçekleştirme</p>
+
+<p>Grafiksel arayüz ortamı olmayan bir sistemde yada grafik ortamına gerek olmadan kurulum yapmak istiyorsanız aşağıdaki adımlari takip ederek kurulumu gerçekleştirebiliriz.</p>
+
+<p>Öncelikle source.list içinde gerekli repo olup olmadığına emin olalım. Bunun için terminal ekranından aşağıdaki komutu kullanarak ilgili repoları ekleyelim.</p>
+
+<pre><code>sudo nano /etc/apt/sources.list</code></pre>
+
+<p>Daha sonra eğer yoksa aşağıdaki repo ları ekleyelim.</p>
+
+<pre><code>deb http://us.archive.ubuntu.com/ubuntu feisty main restricted
+deb http://us.archive.ubuntu.com/ubuntu feisty universe multiverse</code></pre>
+
+<p>Daha sonra Ctrl +X- ile nano editörünü kapatalım. Tabiki kayıt edip etmeyeceğimizi soracaktır. ‚ÄòY‚Äô yaparak bu dosyayı yazalım. Bu aşamadan sonra paketleri güncellememiz gerekiyor. Bunun için yapmamız gereken şu:</p>
+
+<pre><code>sudo apt-get update</code></pre>
+
+<p>Bu işlem repoları bakarak paketleri güncelleyecektir. Daha sonra sun java- 6 sürümünü indirip kurulumunu yapalım. Bunun yapmanız gereken aşağıdaki komutu çalıştırmak.</p>
+
+<pre><code>sudo apt-get install  sun-java6-jdk  sun-java6-jre sun-java6-jdk</code></pre>
+
+<p>Bu sayede gerekli süürmler indirilerek kurulum yapılacaktır. Bu kurulum sırasında size encoding ile ilgili ayar cıkacaktır. Dileğiniz doğrultusunda kurulacak encoding paketlerini seçebilirsiniz.</p>
+
+<p>Bu işlemler sonunda</p>
+
+<pre><code>java -version</code></pre>
+
+<p>yaparak kurulumu test edebilirsiniz. Eğer Sun Java Version 6 ya dair bir mesaj gelmezse yapmanız gereken</p>
+
+<pre><code>update-java-alternatives -l</code></pre>
+
+<p>Bu komutsistemde birden fazla jvm varsa listeleyecektir. Bunlardan birisini aktif edebilmek için aşağıdaki komutu çalıştırmanız yeterli.</p>
+
+<pre><code>sudo update-java-alternatives -s java-1.6.0-sun</code></pre>
+
+<p>Eğer herhangi bir hata gelmediyse java -version diyerek kurulumu test edebilirsiniz. Bu sayede sun java sistemimize kurmuş olduk.</p>
+
+<p>Kolay gelsin</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2009/03/google-chrome" title="Google Chrome">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2009/03/java-migration-tool--migrate4j" title="Java Migration Tool : Migrate4j">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_shortname = 'rayyildiz'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>20 March 2009</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#java-ref">java <span>16</span></a></li>
+     
+    	<li><a href="/tags.html#ubuntu-ref">ubuntu <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#debian-ref">debian <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Ramazan AYYILDIZ 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-765318-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
+

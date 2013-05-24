@@ -6,6 +6,8 @@ category: Mobile Programlama
 tags: [android, java, mobile, programlama]
 ---
 
+{% include JB/setup %}
+
 
 Yeni icatlar hep “Nasıl?” sorusunun cevabıymış. Son yıllarda yaşanan teknolojik dev adımları görünce buna hak vermemek mümkün değil.
 Bilgisayar ilk icat edildiğinde bir odaya bile sığmıyordu. Zamanla mikro bilgisayarların yerini almasıyla ‚Äúteknolojiyi dahada nasıl küçültebiliriz?‚Äù sorusu akıllara gelmeye başladı. Sadece konuşma özelliği bulunan telefonlar acaba nasıl yanımızda taşıyabiliriz sorusu cep telefonlarının icat edilmesiyle sonuçlandı. Bunu takip eden dönemde ise acaba cep telefonlarıyla bilgisayarı nasıl birleştirebiliriz sorusu oldu. Bu sorunun cevabını birkaç yıl önce cevap vermişler, pocket bilgisayar üretildi. Ancak şimdi akıllara gelen soru, cep telefonuna nasıl daha fazla özellik ekleyebiliriz.

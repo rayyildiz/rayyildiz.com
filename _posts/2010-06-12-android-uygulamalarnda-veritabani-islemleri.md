@@ -6,6 +6,9 @@ category: Mobil Uygulama
 tags: [android, java, db]
 ---
 
+{% include JB/setup %}
+
+
 Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
 
 ![Sqlite](/images/sqlite1.gif)

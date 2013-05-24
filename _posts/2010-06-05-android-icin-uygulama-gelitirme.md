@@ -6,6 +6,9 @@ category: [Mobil Uygulama, Uygulama Geliştirme]
 tags: [Android, java]
 ---
 
+{% include JB/setup %}
+
+
 Android ile uygulama geliştirmeye başlamak için [Android SDK](http://developer.android.com/sdk/index.html) indirmeniz gerekiyor. İşletim sisteminize göre bir sürümü indirip açtıktan sonra , windows için Setup.exe kullanadarak linux için ise tools klasörü altında yer alan ./android komutuyla android platform indirmeniz gerekiyor.
 
 Şu anda en son sürüm [2.2](http://developer.android.com/sdk/android-2.2.html) (Android 8) dilerseniz tüm platformları dilerseniz sadece ihtiyacınız olan platformu indirebilirsiniz. Platformu indirmek biraz zaman alabilir.

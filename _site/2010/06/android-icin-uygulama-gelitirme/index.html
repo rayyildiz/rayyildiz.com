@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Android için Uygulama Geliştirme</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ramazan AYYILDIZ">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">rayyildiz.com</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">Hakkımda</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Arşiv</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Kategoriler</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Sayfalar</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Android için Uygulama Geliştirme <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>Android ile uygulama geliştirmeye başlamak için <a href='http://developer.android.com/sdk/index.html'>Android SDK</a> indirmeniz gerekiyor. İşletim sisteminize göre bir sürümü indirip açtıktan sonra , windows için Setup.exe kullanadarak linux için ise tools klasörü altında yer alan ./android komutuyla android platform indirmeniz gerekiyor.</p>
+
+<p>Şu anda en son sürüm <a href='http://developer.android.com/sdk/android-2.2.html'>2.2</a> (Android 8) dilerseniz tüm platformları dilerseniz sadece ihtiyacınız olan platformu indirebilirsiniz. Platformu indirmek biraz zaman alabilir.</p>
+
+<p>Bu sırada size tafsiyem UI tasarlayabileniz için <a href='http://www.droiddraw.org/'>droiddraw</a> adındaki bir uygulamayı indirmenizdir. Her ne kadar da eclipse için <a href='http://developer.android.com/sdk/eclipse-adt.html'>ADT</a> paketi yer alsa da ben droiddraw ı daha çok beğendim. Ayrıca biz örneği netbeans ile geliştireceğiz. Bu yüzden droiddraw ı indirmenizde yarar var. Ayrıca netbeans için geliştirilmiş NBAndroid eklentisini- <a href='http://wiki.netbeans.org/IntroAndroidDevNetBeans'>bu adresten</a> yardım alarak veya <a href='http://kenai.com/downloads/nbandroid/updates.xml'>http://kenai.com/downloads/nbandroid/updates.xml</a> update adresiyle kurabilirsiniz. Yapmanız gereken netbeans de Tools-&gt;Plugins oradan da Settings de “Add” butonuna tıklayarak bu plugini eklemek ve Available Plugins tabında Android diye aratıp bu plugin i kurmaktır.</p>
+
+<p><img alt='Nbandroid Plugin Install' src='/images/nbandroid_plugin_install-e1275732394906.png' /></p>
+
+<p>Daha sonra linux için terminalden aşağıdaki komutu- çalıştırıp DroidDraw ı açın. Windows da eğer Java6 kuruluysa, droiddraw ın içindeki droiddraw.jar ı tıklamanız yeterlidir.</p>
+
+<pre><code>rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &amp;</code></pre>
+
+<p><img alt='Droiddraw' src='/images/droiddraw1.png' /> Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakınız. Daha sonra Button’a tıklayıp Properties tabı na tıklayınız.Burada şu bilgileri değiştirin:</p>
+
+<blockquote>
+<p>id——– : @+id/btnSample</p>
+
+<p>Width : 100px</p>
+
+<p>Text—- : Hi</p>
+</blockquote>
+
+<p>Bunları değiştirip Apply düğmensine basın. Sizde diğer özellikleri bakabilirsiniz. Burada sadece şu aklınızda olsun; Width, height, left margin değerleri gibi yerlerde mutlaka px ekleyin. Yani 100 değil 100px olmalı. Bu işlemleri tamamlayıp Generete tıklanız. Output ekranında aşağıdakine benzer bir xml üretecek. Bu xml sizin UI nı oluşturacaktır.</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;AbsoluteLayout
+	android:id=&quot;@+id/widget0&quot;
+	android:layout_width=&quot;fill_parent&quot;
+	android:layout_height=&quot;fill_parent&quot;
+	xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+	&gt;
+	&lt;Button
+		android:id=&quot;@+id/btnSample&quot;
+		android:layout_width=&quot;100px&quot;
+		android:layout_height=&quot;wrap_content&quot;
+		android:text=&quot;Hi&quot;
+		android:layout_x=&quot;90px&quot;
+		android:layout_y=&quot;32px&quot;
+	&gt;
+&lt;/Button&gt;
+&lt;/AbsoluteLayout&gt;</code></pre>
+
+<p><img alt='Android New Project' src='/images/android_new_project1.png' /></p>
+
+<p>Netbeans de yeni bir proje açalım. NBAdroid eklentisini kurduysanız, yeni bir proje eklerken Android diye bir kısım yer alacaktır. Daha sorna yandaki gibi proje adı, paket adı, activity adı gibi alanları doldurmanız gerekiyor. İlk kez acıyosanız, Manageplatformu tıklayarak kurulum yaptığınız android klasörünü göstermeniz gerekiyor.</p>
+
+<p>İlk kez projeyi actığınızda, Shift + F10 ile projeyi çalıştırabilirsiniz. Burada android emulator acılıp projenizi yükleyecektir ve ekrana klasik “Hello World” yazacaktır.</p>
+
+<p>Şimdi uygulamaya geri dönüp Resources/layouts altında yer alan main.xml- i droiddraw ile üretttiğimiz xml i kopyalayıp yağıştıralım. Bunu yaptıktan sonra uygulamayı bir kere build etmenizde yarar var. Bu işlem sonuda otomatik üretilen R.java dosyasında aşağıaki gibi değişiklikler olacaktır.</p>
+
+<pre><code>public final class R {
+	public static final class attr { }
+
+	public static final class id {
+  		public static final int btnSample=0x7f040001;
+  		public static final int widget0=0x7f040000;
+	}
+
+	public static final class layout {
+		public static final int main=0x7f020000;
+	}
+
+	public static final class string {
+		public static final int app_name=0x7f030000;
+	}
+}</code></pre>
+
+<p>Daha sonra aşağıdaki kodu MainActivity.java içine yazınız.</p>
+
+<pre><code>@Override
+public void onCreate(Bundle icicle) {
+	super.onCreate(icicle);
+	setContentView(R.layout.main);
+	final Button button = (Button) findViewById(R.id.btnSample);
+	button.setOnClickListener(new View.OnClickListener() {
+  		public void onClick(View v) {
+     		alert(&quot;Hello world&quot;);
+  		}
+	});
+}
+
+private void alert(String message){
+	new AlertDialog.Builder(this).setTitle(&quot;rayyildiz.com&quot;).setMessage(message).setNeutralButton(&quot;Ok&quot;,
+  	new DialogInterface.OnClickListener() {
+    	public void onClick(DialogInterface dialog,int which) { }
+  	}).show();
+}</code></pre>
+
+<p>Uygulamayı çalıştırdığınızda şöylşe çalışacaktır:</p>
+
+<p><img alt='Application Run' src='/images/application_run1.png' /></p>
+
+<p>Uygulamanın kaynak kodunu şu adresten indirebilirsiniz.<a href='http://github.com/downloads/rayyildiz/TestProject/AndroidSample1-v1_0.tar.gz'>http://github.com/downloads/rayyildiz/TestProject/AndroidSample1-v1_0.tar.gz</a></p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2010/04/nosql-giris-ve-mongodb" title="NoSQL Giriş ve MongoDB">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2010/06/android-uygulamalarnda-veritabani-islemleri" title="Android Uygulamalarında Veritabanı İşlemleri">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_shortname = 'rayyildiz'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>05 June 2010</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#Android-ref">Android <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#java-ref">java <span>16</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Ramazan AYYILDIZ 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-765318-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
+

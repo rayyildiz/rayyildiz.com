@@ -6,6 +6,9 @@ category: Genel
 tags: [groovy, grails, kurulum]
 ---
 
+{% include JB/setup %}
+
+
 ## Grrovy Nedir?
 
 ![Groovy](/images/groovy_medium.png)

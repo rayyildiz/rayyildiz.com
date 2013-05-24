@@ -6,6 +6,9 @@ category: Genel
 tags: [springone, grails, groovy, java, spring framework]
 ---
 
+{% include JB/setup %}
+
+
 24 Ekim de başlayıp 28 Ekim tarihleri arasında sürecek olan SpringOne 2GX katılmak üzere Chicago ya geldim. Açıkcası Amerika gibi bir ülkeye gelmek bir nebzede olsa insanı geriyor. Bilmediğin bir yer oluşu, gerek yemek gerekse yasam tarzının farklılığı, dil gibi konularda dusunuyorsun. Bütün bunları düşünürken süren 11 saatlik uzun bir uçak yolculugu ise ayrı bir zorluk.
 
 İlk geldiğim gün hiçbir yeri tanimayisimdan dolayı zorluk çektim elbette. O ilk gunün ardından ise sehri tanımaya başlayınca anladım ki çok da farklı bir yer değil burası. Tam tersine İstanbul da sahip olamadığımız o kadar çok güzellikleri var ki burada; kesinlikle görülmesi gereken yerlerden bir yer diye düşünüyorum. Su anda Lake Front adını verdikleri Michigan Lake yanında, Sturbucks’tan aldığım kahvemi yudumlarken yazıyorum bu yazıyı. Burada hemen hemen her yerde wi-fi noktası bulmak mümkün. Public alanların dısında At&t gibi firmaların sundukları güzel wifi noktaları var hızı ise oldukça güzel.

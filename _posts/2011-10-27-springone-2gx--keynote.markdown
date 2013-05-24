@@ -6,6 +6,9 @@ category: Genel
 tags: [sprigone, java, springframewrok, keynote]
 ---
 
+{% include JB/setup %}
+
+
 Uzun süredir beklediğim SpringOne 2GX ilk gunü geride kaldı. Katılımın yüksek olacağı bir etkinliğe benziyor. Bugün gerçekleştirilen “Keynote” çok kalabalıktı .Bu kadar kalabalık olacağını tahmin etmemiştim.
 
 “Keynote” bir hosgeldiniz ve etkinlik kapsamında hangi konuların islenecegi bilgisinin verildiği bir toplantiydi.

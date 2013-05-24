@@ -6,6 +6,9 @@ category: [Genel]
 tags: [java, database]
 ---
 
+{% include JB/setup %}
+
+
 Migrate4j , java ortamı için geliştirilmiş bir 'migration' aracıdır. 'Migration' bu konuda yakın olan kişilerin cok da kullandığı bir kelime olduğu için aynen bu kelimeyi kullanmak daha doğru geldi bana. Bu araç aslında veritabanını biryerden başka yere taşırken yada yeni özellikler eklerken kullanılan bir araçtır. √áoğunlukla birden fazla kişinin aynı anda üzerinde çalıştığı veritabanlarında buna benzer sorunlar yaşanabilir. Geliştiricelerden birisi yeni tablo eklerken, diğeri ise başka tablolarda sütun ekelem yada cıkarma işlemi yapmış olabilir. İşte bu gibi nedenlerden dolayı veritabanlarının senkronize olması istenir, eksik tabloların ve yeni sütunarın otomatik olarak kurulması, eğer tablo yoksa yeni tablo oluşturulması, varsa üzerinde oynanan sütunların değiştirilmesi istenir. İşte bu tarz sorunları çözmek için çeşitli 'migration' araçları vardır. Bunlardan birisi Migrate4j uygulaması.
 
 Migrate4j diğer araçlardan biraz daha fazla özellik içerir. Örneğin sorgular native SQL değil java ile yazılmaktadır. Ayrıca farklı veritabanları motorlarında sorunsuzca çalışabilmektedir.

@@ -6,6 +6,9 @@ category: Mobil Uygulama
 tags: [android, java]
 ---
 
+{% include JB/setup %}
+
+
 Android ekranları tasarlarken Tab kullanmak güzel bir artı katmakta, Activity ler arasında dolaşmaktan daha avantajlı bir yapı sunmaktadır. Android de tab kullanmak için “TabActivity” yararlanacağız. Bunun için ihtiyacımız olan layout xml şu şekilde bir yapıda olmalı.
 
 

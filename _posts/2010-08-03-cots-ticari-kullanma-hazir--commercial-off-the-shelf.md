@@ -6,6 +6,9 @@ category: Genel
 tags: [cots]
 ---
 
+{% include JB/setup %}
+
+
 Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.
 
 Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir.

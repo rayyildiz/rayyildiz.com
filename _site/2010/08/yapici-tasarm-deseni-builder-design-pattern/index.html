@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Yapıcı Tasarım Deseni (Builder Design Pattern)</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ramazan AYYILDIZ">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">rayyildiz.com</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">Hakkımda</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Arşiv</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Kategoriler</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Sayfalar</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Yapıcı Tasarım Deseni (Builder Design Pattern) <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>Tasarım desenleri hakkında giriş mahiyetindeki yazıma buradan ulaşabilirsiniz. Bu tasarım desenlerinden yaratım desenleri grubundaki ikinci desen yapıcı tasarım desenidir (Builder Design Pattern).</p>
+
+<p>Yapıcı tasarım deseni, nesnelerin yapıcı metotlarını soyutlamak suretiyle gerçekleştirilmilerin farklı şekilde vekalet edilmesine sağlar. Peki bu nasıl olmaktadır, bunu bir örnekle pekiştirelim. Örneğin kahve yapıyorsunuz, kahve bildiğiniz gibi her ülkede farklı yapılır. Türkiye’de kahve küçük fincanda, genellikle şekerli olurken,- Brezilyadaki kahve aynı şekilde servis edilmez. Daha sonra yazılarımda göreceğiniz gibi Yapıcı tasarım modeli fabrika tasarım modeline benzer. Hatta soyut fabrika tasarım modeli ile de aynı şekilde yapabilirsiniz. Ancak bazı farklar vardır. Mesela yapıcı tasarım modelinde product dediğimiz nesnelerimiz soyut olmaz, bu nesnelerin farklı olmasını soyutlanmış yapıcı nesneler sağlar.</p>
+
+<p>Şekilde kahve yapan bir aşçı örneğinin UML diagramı bulunmaktadır. Coffee nesnesi, bazı alanları vardır. Bu alanlar TurkishCoffeeBuilder tarafından çağrıldığında farklı değer, BrazilianCoffeeBuilder tarafından farklı değer yazılmaktadır. Bu sayede hangi yapıcı metot çağrılırsa ona ait değerler nesnenin içinde yer alacaktır.</p>
+
+<p>Bu iki yapıcı nesneyi ( TurkishCoffeeBuilder ile BrazilianCoffeeBuilder) soyutlamak için CoffeeBuilder soyut sınıfından yararlanılır.</p>
+
+<p>Şimdi CoffeeBuilder nesnesinin ve bu soyut sınıftan türetilmiş yapıcı nesnelerin kaynak koduna göz atalım.</p>
+
+<pre><code>package com.rayyildiz.patterns;
+
+public abstract class CoffeeBuilder {
+	private Coffee coffee;
+
+	public Coffee getCoffee() {
+		return coffee;
+	}
+
+	public void createCoffee(){
+		coffee = new Coffee();
+	}
+
+	public abstract void buildTastyCoffee();
+}
+
+public class BrazilianCoffeeBuilder extends CoffeeBuilder {
+	@Override
+	public void buildTastyCoffee() {
+		Coffee coffee = getCoffee();
+		coffee.setColour(ColourType.DarkBrown);
+		coffee.setPrice(10);
+		coffee.setSugar(SugarType.Much);
+		coffee.setName(&quot;Brazilian Coffee&quot;);
+	}	
+}
+
+public class TurkishCoffeeBuilder extends CoffeeBuilder {
+  @Override
+  public void buildTastyCoffee() {
+  	Coffee coffee = getCoffee();
+	coffee.setColour(ColourType.LightBrown);
+	coffee.setPrice(6);
+	coffee.setSugar(SugarType.Much);
+	coffee.setName(&quot;Turkish Coffee&quot;);
+  }
+}</code></pre>
+
+<p>Gördüğünüz gibi CoffeeBuilder buildTastyCoffee adında soyut bir sınıf içermekte, bu nesneden türeyen nesnelerin bu metodu gerçekleştirmesini zorlamaktadır. CoffeeBuilder soyut nesnesinden türeyen bu iki nesne kendisine göre bu metotları değer atamaktadır.</p>
+
+<p>Coffee nesnesi sadece getter-setter içeren bir nesnedir.</p>
+
+<p>Şimdi ise Cook nesnesşne gözatalım.</p>
+
+<pre><code>public class Cook {
+    private CoffeeBuilder coffeeBuilder;
+
+	public void setCoffeeBuilder(CoffeeBuilder coffeeBuilder) {
+		this.coffeeBuilder = coffeeBuilder;
+	}
+
+	public Coffee getCoffee(){
+		return coffeeBuilder.getCoffee();
+	}
+
+	public void constructCoffee(){
+		coffeeBuilder.createCoffee();
+		coffeeBuilder.buildTastyCoffee();
+ 	}
+}</code></pre>
+
+<p>Cook nesnesi hiçbir şekilde hangi yapıcı nesneyi kullandığınız bilmez, sadece CoffeeBuilder bir nesne üzerinden işlem yapar. Peki hangi ülkeye göre çalışacağını nereden bilecek? Bu işlem sadece biryerde yapılır. Bu şekilde, gerek Cook nesnesi, gerekse Coffee nasıl bir yapıcı nesneden kullanıldığını bilmeyecektir. O halde ana sınıfımıza bakalım.</p>
+
+<pre><code>package com.rayyildiz.patterns;
+
+public class Main {
+	public static void main(String[] args) {
+		Cook cook = new Cook();
+		CoffeeBuilder turkishCoffeeBuilder = new TurkishCoffeeBuilder();
+		cook.setCoffeeBuilder(turkishCoffeeBuilder);
+		cook.constructCoffee();
+
+		Coffee coffee = cook.getCoffee();
+		System.out.println(&quot;coffee:&quot; + coffee);
+		if ( System.console()!=null) System.console().readLine();
+  	}
+}</code></pre>
+
+<p>Bu örnekte aşcımız bir Türk kahvesi yapmaktadır. Kaynak kodu indirip çalıştırdığınızda aşağıdaki gibi bir sonuc cıkacaktır.</p>
+
+<p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a title='Design Patterns' href='http://github.com/rayyildiz/DesignPatterns'>DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2010/08/jdk6-da-dependency-injection-serviceloader" title="JDK6 da Dependency Injection (ServiceLoader)">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2010/10/javada-vector-ve-arraylist-performans-karlatirmasi" title="Java’da Vector ve ArrayList Performans Karşılaştırması">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_shortname = 'rayyildiz'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>28 August 2010</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#Tasarım Deseni-ref">Tasarım Deseni <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#Design Pattern-ref">Design Pattern <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#Builder design pattern-ref">Builder design pattern <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Ramazan AYYILDIZ 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-765318-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
+

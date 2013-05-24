@@ -6,6 +6,8 @@ category: Yazılım Geliştirme
 tags: [java, oyun geliştirme]
 ---
 
+{% include JB/setup %}
+
 
 Üniversitedeyken hazırladığım, oyun geliştirmek için hangi programlama dili tercih etmek, avantaj ve dezavantajları gibi başlıca konularda fikir veriebilmesi amacıyla yayınlıyorum.
 

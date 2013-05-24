@@ -6,6 +6,9 @@ category: Genel
 tags: [cloud computing, stax.net, java]
 ---
 
+{% include JB/setup %}
+
+
 Cloud Computing yabancı olanlar için ne olduğu hakkında bilgi vermekle başlayayım. Cloud computing ( kümesel işlemler diye Türkçe’de kullanılıyor)- hesap duyulan birçok işlemin uzaktaki bir veya birden fazla bilgisayar üzerinde yapılabilmesine olanak sunan bir mimari.- Bu konuda başta google ile duymaya başladığımız bu mimari, amazon ws ile cok daha gün yüzüen cıktı. Özellikle Amazon Web Servisleri bu konuda cok yol katetti. Gectiğimiz günlerde, twitter‘ın Amazon WS gecmesi ve hemen arkasından google app engine‘in java desteği sunması, cloud computing kavramını bir anda öne cıkardı.
 
 Özellikle google app engine java desteği, cok önemli bir gelişme oldu. Daha öncesinde sadece python desteği sunan google engine, daha geniş kitleye hitap eden java desteği ile ciddi bir talep almış görünüyor.

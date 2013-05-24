@@ -6,6 +6,9 @@ category: Genel
 tags: [kurulum, linux, ubuntu,oracle]
 ---
 
+{% include JB/setup %}
+
+
 Oracle veritabanı Ubuntu kurulumu iki adımda yapabilrisiniz.
 
 ## Oracle İndirme Sayfasından İndirmek

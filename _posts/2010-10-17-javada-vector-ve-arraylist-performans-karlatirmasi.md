@@ -6,6 +6,9 @@ category: Yaızlım Geliştirme, Genel
 tags: [java]
 ---
 
+{% include JB/setup %}
+
+
 javada, Vector ve ArrayList arasındaki farkın ne olduğunu sorulduğunda, genel olarak şunları söyleriz
 
 * Vector’un thread-safe‘dir.

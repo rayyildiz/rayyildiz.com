@@ -6,6 +6,9 @@ category: Genel
 tags: [git, scm, github]
 ---
 
+{% include JB/setup %}
+
+
 Github, git-scm ile opensource veya kendi projelerinizin kaynak kodlarını yönetmek için bir uygulama. SVN üzerinde yer alan kaynak kodları çok kolay bir şekilde, import edebiliyorsunuz. Ücretsiz sürümü private proje açmanıza izin vermezken, sayısız public proje açabilirsiniz.
 
 Twitter, facebook başta olmak üzere birçok önemli proje şu anda github üzerinde durmakta. Twitter’ın scala ile geliştirdiği gizzard projesi github üzerinden erişmeniz mümkün.

@@ -6,6 +6,9 @@ category: Genel
 tags: [chrome]
 ---
 
+{% include JB/setup %}
+
+
 İlk akla gelen web siteleri, sadece veri göstermeyi hedeflerken, şimdilerde ise bunun yerini etkileşimli siteler tabiri aldı. Artık veri göstermek bir site için sadece küçük bir özellik. Özellikle aynı işi yapan birçok sitenin yer alması, web siteleri arasında rekabetin doğmasına neden oldu. Bu rekabet sonucunda, birkaç sene önce duymaya başladığımız web 2.0 terimi her yerde kullanılır olmaya başladı. Web 2.0 uygulamalarının sayısı her gecen gün aratark devam ediyor.
 
 Web uygulamaları arasında durum böyleyken, web tarayacıları arasında da durum farklı değil. Mosaic tarayıcısından bu yana, gün gectikçe taraycısı sayısı sürekli artıyor. Özellikle Microsoft ‚Äòun ürettiği Internet Explorer 4.0 versiyonundan sonra bu rekabet daha da kızıştı. Özellikle Microsoft un bu sektörde yer alması, Netscape'i popülerliğini hergecen gün yitirmesi, 2002 yılına geldiğimizde %90 a yakın kesimin , Internet Explrere kullanıyor olmasına neden oldu.

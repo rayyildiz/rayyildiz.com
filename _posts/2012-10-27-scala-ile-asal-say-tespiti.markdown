@@ -6,6 +6,9 @@ category: Programlama
 tags: [scala]
 ---
 
+{% include JB/setup %}
+
+
 Scala 
 
 {% highlight scala %}

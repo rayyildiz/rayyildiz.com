@@ -6,6 +6,9 @@ category: Yazılım Geliştirme
 tags: [groovy, java]
 ---
 
+{% include JB/setup %}
+
+
 [Daha önceki yazımda](/2010/08/groovy-ve-grails-kurulumu/) groovy ve grails’in nasıl kurulacağı bilgisini vermiştim. Bu yazımda ise groovy programlamaya başlayacağız.
 
 Groovy java programlama diline alışkın kişilerin, Python, Ruby, Smalltalk yer alan özellikleri kullanabilmesine olanak sunan agile bir programlama dili olarak tanımlanıyor.

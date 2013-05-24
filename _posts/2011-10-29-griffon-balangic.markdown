@@ -5,6 +5,8 @@ category: Yazılım Geliştirme
 tags: [groovy, griffon]
 ---
 
+{% include JB/setup %}
+
 Chicago da gerçekleştirilen SpringOne2GX etkinliği kapsamında epey ilginç ve de güzel seyler gördüm. Etkinliğin son gunü, paralel giden konferanslardan sonuncusunda herhangi bir bilgimin olmadigi ve diğer konuları beğenmediğinden dolayı Griffon a katılmayı tercih ettim. Hakkında çok az şey biliyordum. Ancak sunu soylemeliyim ki etkinlik kapsamında bu kadar beni şaşırtan konu olmamıştı. Bu nedenle hakkında bazı bilgileri paylaşma gereği duyuyorum.
 
 Eğer Groovy ile program yazdıysanız, hele de grails ile proje geliştirdiyseniz, griffon size çok kolay gelecektir.

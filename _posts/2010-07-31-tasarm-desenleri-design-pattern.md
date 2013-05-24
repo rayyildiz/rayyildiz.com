@@ -6,6 +6,9 @@ category: Genel
 tags: [tasarım desenleri, design pattern]
 ---
 
+{% include JB/setup %}
+
+
 Yazılım geliştirmse süreciyle uğraşıyorsanız, özellikle nesneye dayalı programlama ([Object Oriented Programming](http://en.wikipedia.org/wiki/Object-oriented))- ile uğraşıyorsanız mutlaka görmüşsünüzdür. Peki tam olarak nedir tasarım desenleri?
 
 [Tasarım desenleri](http://tr.wikipedia.org/wiki/Tasar%C4%B1m_%C3%B6r%C3%BCnt%C3%BCleri) ([Design Patterns](http://en.wikipedia.org/wiki/Design_pattern_%28computer_science%29)), bir yazılımın değişik durumlarda nasıl davranabileceğine ışık tutan şablondur. Herhangi bir programa dili bağımlı değildir. Projenizde oluşabilecek durumlar karşısında nasıl bir çözüm bulmanız gerektiği konusunda size ışık tutar. Özellikle daha önce sizin karşılaştığınız sorunların benzerleri için geliştirildiğinden size yardımcı olacaktır. Geliştirdiğiniz uygulama nasıl bir yapıda olduğu, ileride yeni özelliklerin eklenebileceği, farklı platformlarda çalışabilmesi… gibi yeni gelecek özelliklere çok hızlı adapte olabilmek için size bazı şablonlar sunar. Bu sayede, tüm uygulamayı yeniden yazmanız gerek kalmaz.

@@ -6,6 +6,9 @@ category:
 tags: []
 ---
 
+{% include JB/setup %}
+
+
 Başlarda firmaları hitap eden web siteleri, zamanla internetin yaygınlaşmasıyla, kişisel sitelerin coğalmasına sağladı. Özellikle hazır portal sistemlerin coğalması, kişisel bir site için gerekli olan tüm sistemleri sağlayan servislerin coğalması, kişisel sitelerin artmasını sağladı. Özellikle web bireyi olarak herkesin, mutlaka bir konuda bile olsa söyleyecekleri vardı. Forum sayılarının artması, web bireylerinin kendi düşüncelerinin biryerde olmasını istemesi gibi nedenler weblog dediğimiz servislerin doğmasına neden oldu. Burada web bireyi dememin nedeni, insanaların kendi adlarını kullanmak yerine bir rumuzu öne cıkarmalarıdır.Weblogları adında kısaltmaya gidilerek, blog adını verildiler. Şu anda bile hala bazı firmalar weblog terimini tercih ediyor. Blog dediğimiz aslında belirli bir hearirşi düzeninde oluşturulmuş yazı, resim, video gibi meteryallerin toplandığı ve bunların web ortamında yayınlanabildiği sistemlerdir. Bloglar genelde tek bir kişi tarafından yazılıp yayınlanır. Sadece yazı değil, diğer görsel öğeleri de içerir. Bazı yerlerde diğer görsel meteryaller için başka isimlendirme yapılabiliyor(video blog : vlog,photblog ... gibi) ama genel anlamda blog terimi kulalınlmaktadır.
 
 Aslında blog, günlük anlamınıda içerdiği için ilk gelişim tarihini günlük ile başladığını iddia edenler de vardır. Ancak bizim anladığımız web ortamındaki yazılı günlük tarzı uygulamalar 1998 de Open Diary ile başladı. Özellikle blogger acılmasıyla blog sayılarında büyük bir artış yaşandı.

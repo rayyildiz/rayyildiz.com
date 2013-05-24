@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Git scm ve GitHub</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ramazan AYYILDIZ">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">rayyildiz.com</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/about.html">Hakkımda</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Arşiv</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Kategoriler</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Sayfalar</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Git scm ve GitHub <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span10">
+    <p>Github, git-scm ile opensource veya kendi projelerinizin kaynak kodlarını yönetmek için bir uygulama. SVN üzerinde yer alan kaynak kodları çok kolay bir şekilde, import edebiliyorsunuz. Ücretsiz sürümü private proje açmanıza izin vermezken, sayısız public proje açabilirsiniz.</p>
+
+<p>Twitter, facebook başta olmak üzere birçok önemli proje şu anda github üzerinde durmakta. Twitter’ın scala ile geliştirdiği gizzard projesi github üzerinden erişmeniz mümkün.</p>
+
+<h2 id='gitscm'>Git-Scm</h2>
+
+<p>Linux Torwalds tarafından geliştirilen kaynak kod paylaşım aracıdır. Özellikle dağıtım kod yönetim sistemi olmasından ve hızlı çalışmasından dolayı gün geçtikçe populer bir hale gelmeye başladı. SVN den farklı olarak merkezi değil, dağıtık bir kod yönetimine sahiptir. Bu ise linux kernel’ın geliştirilmesi sürecinde ihtiyac haline gelen ve gene Linux Torwalds tarafından yazılan bir araç.</p>
+
+<h3 id='github_le_alma'>GitHub İle Çalışma</h3>
+
+<p>Github sitesinde ihtiyacınıza göre üye olmanız gerekmekte. Yeni bir proje açmak ise çok kolay.</p>
+
+<p>Yeni proje açtktan sonra yapmanız gereken git ile ilk halini almak. Git, bilgisayarınıza indirdikten sonra promt dan aşağıdaki adımları yapmanız gerekiyor. (Windows için tafsiyem msysgit i denemeniz) Genel ayarlar</p>
+
+<pre><code>git config –global user.name “ADINIZ SOYADINIZ”
+git config –global user.email [eposta adresiniz]</code></pre>
+
+<p>Projeyi Almak için</p>
+
+<pre><code>mkdir [projenizi_adi]
+cd [projenizi_adi]
+git init
+touch README
+git add README
+git commit -m ‘mesajınız”
+git remote add origin [projenizin adresi] – — örnek: git@github.com:rayyildiz/test_project.git
+git push origin master</code></pre>
+
+<p>Github, ana klaösrde README klasörü kullanmanızı tafsiye etmektedir. Bu şekilde, projenizin sayfanızda bu sayfanın içeriğini göstermektedir.</p>
+
+<h3 id='gitignore'>.gitignore</h3>
+
+<p>Bazı derleme sonucunda ğretilen dosyaları git içinde yer almasını istemezsiniz. Bu durumda yapmanız gereken projenizin ana sayfasında .gitignore diye bir dosya açıp içine istemediğinizi klasör, uzantıları veya dosyaları çıkarmaktır. Bir ASP.NET 3.5 projesinde bin/debug klasörü, .uso gibi dosyalar sürekli değişmekte ve sıkıntı yaşatmaktadır. Bir asp.net projesi için aşağıdaki dosyayı kullanabilirsiniz.</p>
+
+<pre><code>.svn*
+obj/
+bin/
+*.suo
+*.user
+Log/
+log/
+*.db</code></pre>
+
+<p>Çoğunlukla kullandığınız IDE ler için git plugin geliştirlmiştir. Ancak konsoldan git projesi ile çalışmak çok zevkli :) Github duyurduğu haberde, github da yer alan projelerinizi artık svn ile de erişebilecek, code gönderip alabileceksiniz. √áok güzel bir gelişme. Özellikle şu günlerde, git plugin sayısı SVN plugin sayısından az olduğunu düşündüğümüzde, svn kullanan bir kişinin alışkanlığını şimdilik değiştirmesine gerek yok demektir.</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2010/03/netbeans-6-9" title="Netbeans 6.9">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2010/04/nosql-giris-ve-mongodb" title="NoSQL Giriş ve MongoDB">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_shortname = 'rayyildiz'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>18 March 2010</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#git-ref">git <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#scm-ref">scm <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#github-ref">github <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Ramazan AYYILDIZ 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-765318-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
+
