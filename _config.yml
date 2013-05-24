@@ -11,10 +11,9 @@ redirects: yes
 # so be sure to set them if your theme uses them.
 #
 title : rayyildiz.com
-tagline: java, play framework, grails, yeni teknolojiler
+tagline: java, play framework, scala, yeni teknolojiler
 author :
   name : Ramazan AYYILDIZ
-  email : rayyildiz@gmail.com
   github : rayyildiz
   twitter : rayyildiz
 

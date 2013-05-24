@@ -1,40 +1,47 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="author" content="Ramazan AYYILDIZ" />
     <title>Android için Uygulama Geliştirme</title>
-    <meta name="description" content="">
-    <meta name="author" content="Ramazan AYYILDIZ">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <link rel="stylesheet" href="/assets/themes/dinky/css/styles.css">
+    <link rel="stylesheet" href="/assets/themes/dinky/css/pygment_trac.css">
+    <script src="/assets/themes/dinky/js/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
-    <link href="/assets/themes/twitter/css/1.4.0/bootstrap.css" rel="stylesheet">
-    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    
 
-    <!-- Le fav and touch icons -->
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-765318-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
   </head>
-
   <body>
-
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="/">rayyildiz.com</a>
-          <ul class="nav">
-            
-            
-            
+    <div class="wrapper">
+      <header>
+        <h1 class="header"><a href="/">rayyildiz.com</a></h1>
+        <p class="header">java, play framework, grails, yeni teknolojiler</p>
+        <ul>
+          
+          
+          
 
 
   
@@ -89,34 +96,46 @@
 
 
 
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-
-      <div class="content">
+        </ul>
         
-<div class="page-header">
-  <h1>Android için Uygulama Geliştirme <small>Supporting tagline</small></h1>
-</div>
+        
+        <div class="misc vcard">
+          <h4>about</h4>
+          <ul>
+            
+            
+            <li class="github"><a href="http://github.com/rayyildiz/" rel="me">github.com/rayyildiz</a></li>
+            
+            
+            <li class="twitter"><a href="http://twitter.com/rayyildiz/" rel="me">twitter.com/rayyildiz</a></li>
+            
+            
+            
+            
+            
+          </ul>
+        </div><!-- misc -->
+        
+      </header>
 
-<div class="row">
-  <div class="span10">
-    <p>Android ile uygulama geliştirmeye başlamak için <a href='http://developer.android.com/sdk/index.html'>Android SDK</a> indirmeniz gerekiyor. İşletim sisteminize göre bir sürümü indirip açtıktan sonra , windows için Setup.exe kullanadarak linux için ise tools klasörü altında yer alan ./android komutuyla android platform indirmeniz gerekiyor.</p>
+      <section>
+      
+<section>
+  <h1>Android için Uygulama Geliştirme</h1>
+
+  <p>Android ile uygulama geliştirmeye başlamak için <a href='http://developer.android.com/sdk/index.html'>Android SDK</a> indirmeniz gerekiyor. İşletim sisteminize göre bir sürümü indirip açtıktan sonra , windows için Setup.exe kullanadarak linux için ise tools klasörü altında yer alan ./android komutuyla android platform indirmeniz gerekiyor.</p>
 
 <p>Şu anda en son sürüm <a href='http://developer.android.com/sdk/android-2.2.html'>2.2</a> (Android 8) dilerseniz tüm platformları dilerseniz sadece ihtiyacınız olan platformu indirebilirsiniz. Platformu indirmek biraz zaman alabilir.</p>
 
 <p>Bu sırada size tafsiyem UI tasarlayabileniz için <a href='http://www.droiddraw.org/'>droiddraw</a> adındaki bir uygulamayı indirmenizdir. Her ne kadar da eclipse için <a href='http://developer.android.com/sdk/eclipse-adt.html'>ADT</a> paketi yer alsa da ben droiddraw ı daha çok beğendim. Ayrıca biz örneği netbeans ile geliştireceğiz. Bu yüzden droiddraw ı indirmenizde yarar var. Ayrıca netbeans için geliştirilmiş NBAndroid eklentisini- <a href='http://wiki.netbeans.org/IntroAndroidDevNetBeans'>bu adresten</a> yardım alarak veya <a href='http://kenai.com/downloads/nbandroid/updates.xml'>http://kenai.com/downloads/nbandroid/updates.xml</a> update adresiyle kurabilirsiniz. Yapmanız gereken netbeans de Tools-&gt;Plugins oradan da Settings de “Add” butonuna tıklayarak bu plugini eklemek ve Available Plugins tabında Android diye aratıp bu plugin i kurmaktır.</p>
 
-<p><img alt='Nbandroid Plugin Install' src='/images/nbandroid_plugin_install-e1275732394906.png' /></p>
+<p><img src='/images/nbandroid_plugin_install-e1275732394906.png' alt='Nbandroid Plugin Install' /></p>
 
 <p>Daha sonra linux için terminalden aşağıdaki komutu- çalıştırıp DroidDraw ı açın. Windows da eğer Java6 kuruluysa, droiddraw ın içindeki droiddraw.jar ı tıklamanız yeterlidir.</p>
 
 <pre><code>rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &amp;</code></pre>
 
-<p><img alt='Droiddraw' src='/images/droiddraw1.png' /> Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakınız. Daha sonra Button’a tıklayıp Properties tabı na tıklayınız.Burada şu bilgileri değiştirin:</p>
+<p><img src='/images/droiddraw1.png' alt='Droiddraw' /> Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakınız. Daha sonra Button’a tıklayıp Properties tabı na tıklayınız.Burada şu bilgileri değiştirin:</p>
 
 <blockquote>
 <p>id——– : @+id/btnSample</p>
@@ -146,7 +165,7 @@
 &lt;/Button&gt;
 &lt;/AbsoluteLayout&gt;</code></pre>
 
-<p><img alt='Android New Project' src='/images/android_new_project1.png' /></p>
+<p><img src='/images/android_new_project1.png' alt='Android New Project' /></p>
 
 <p>Netbeans de yeni bir proje açalım. NBAdroid eklentisini kurduysanız, yeni bir proje eklerken Android diye bir kısım yer alacaktır. Daha sorna yandaki gibi proje adı, paket adı, activity adı gibi alanları doldurmanız gerekiyor. İlk kez acıyosanız, Manageplatformu tıklayarak kurulum yaptığınız android klasörünü göstermeniz gerekiyor.</p>
 
@@ -194,23 +213,11 @@ private void alert(String message){
 
 <p>Uygulamayı çalıştırdığınızda şöylşe çalışacaktır:</p>
 
-<p><img alt='Application Run' src='/images/application_run1.png' /></p>
+<p><img src='/images/application_run1.png' alt='Application Run' /></p>
 
 <p>Uygulamanın kaynak kodunu şu adresten indirebilirsiniz.<a href='http://github.com/downloads/rayyildiz/TestProject/AndroidSample1-v1_0.tar.gz'>http://github.com/downloads/rayyildiz/TestProject/AndroidSample1-v1_0.tar.gz</a></p>
-    <hr>
-    <div class="pagination">
-      <ul>
-      
-        <li class="prev"><a href="/2010/04/nosql-giris-ve-mongodb" title="NoSQL Giriş ve MongoDB">&larr; Previous</a></li>
-      
-        <li><a href="/archive.html">Archive</a></li>
-      
-        <li class="next"><a href="/2010/06/android-uygulamalarnda-veritabani-islemleri" title="Android Uygulamalarında Veritabanı İşlemleri">Next &rarr;</a></li>
-      
-      </ul>
-    </div>
-    <hr>
-    
+
+  
 
 
   <div id="disqus_thread"></div>
@@ -231,63 +238,16 @@ private void alert(String message){
 
 
 
-  </div>
-  
-  <div class="span4">
-    <h4>Published</h4>
-    <div class="date"><span>05 June 2010</span></div>
-
-  
-    <h4>Tags</h4>
-    <ul class="tag_box">
-    
-    
+</section>
 
 
-  
-     
-    	<li><a href="/tags.html#Android-ref">Android <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#java-ref">java <span>16</span></a></li>
-    
-  
-
-
-
-    </ul>
-    
-  </div>
-</div>
-
-
-      </div>
+      </section>
 
       <footer>
-        <p>&copy; Ramazan AYYILDIZ 2012 
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
+      
       </footer>
-
-    </div> <!-- /container -->
-
-    
-
-
-  <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-765318-11']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-
-
-
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
   </body>
 </html>
 
