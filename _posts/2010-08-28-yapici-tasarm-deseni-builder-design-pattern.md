@@ -18,44 +18,50 @@ Yapıcı tasarım deseni, nesnelerin yapıcı metotlarını soyutlamak suretiyle
 Bu iki yapıcı nesneyi ( TurkishCoffeeBuilder ile BrazilianCoffeeBuilder) soyutlamak için CoffeeBuilder soyut sınıfından yararlanılır.
 
 Şimdi CoffeeBuilder nesnesinin ve bu soyut sınıftan türetilmiş yapıcı nesnelerin kaynak koduna göz atalım.
+
+{% highlight java %}
+package com.rayyildiz.patterns;
+ 
+public abstract class CoffeeBuilder {
+	private Coffee coffee;
+ 
+	public Coffee getCoffee() {
+		return coffee;
+  	}
+ 
+	public void createCoffee(){
+		coffee = new Coffee();
+	}
 	
-	package com.rayyildiz.patterns;
- 
-	public abstract class CoffeeBuilder {
-  		private Coffee coffee;
- 
-  		public Coffee getCoffee() {
-    		return coffee;
-  		}
- 
-  		public void createCoffee(){
-    		coffee = new Coffee();
-  		}
- 
-  		public abstract void buildTastyCoffee();
-	}
- 
-	public class BrazilianCoffeeBuilder extends CoffeeBuilder {
-  		@Override
-  		public void buildTastyCoffee() {
-    		Coffee coffee = getCoffee();
-    		coffee.setColour(ColourType.DarkBrown);
-    		coffee.setPrice(10);
-    		coffee.setSugar(SugarType.Much);
-    		coffee.setName("Brazilian Coffee");
-  		}	
-	}
- 
-	public class TurkishCoffeeBuilder extends CoffeeBuilder {
-  	  @Override
-  	  public void buildTastyCoffee() {
-      	Coffee coffee = getCoffee();
+	public abstract void buildTastyCoffee();
+}
+{% endhighlight %}
+
+{% highlight java %}
+public class BrazilianCoffeeBuilder extends CoffeeBuilder {
+	@Override
+	public void buildTastyCoffee() {
+		Coffee coffee = getCoffee();
+		coffee.setColour(ColourType.DarkBrown);
+		coffee.setPrice(10);
+		coffee.setSugar(SugarType.Much);
+		coffee.setName("Brazilian Coffee");
+	}	
+}
+{% endhighlight %}
+
+{% highlight java %}
+public class TurkishCoffeeBuilder extends CoffeeBuilder {
+	@Override
+	public void buildTastyCoffee() {
+		Coffee coffee = getCoffee();
     	coffee.setColour(ColourType.LightBrown);
     	coffee.setPrice(6);
     	coffee.setSugar(SugarType.Much);
     	coffee.setName("Turkish Coffee");
-  	  }
 	}
+}
+{% endhighlight %}
 
 Gördüğünüz gibi CoffeeBuilder buildTastyCoffee adında soyut bir sınıf içermekte, bu nesneden türeyen nesnelerin bu metodu gerçekleştirmesini zorlamaktadır. CoffeeBuilder soyut nesnesinden türeyen bu iki nesne kendisine göre bu metotları değer atamaktadır.
 
@@ -63,40 +69,42 @@ Coffee nesnesi sadece getter-setter içeren bir nesnedir.
 
 Şimdi ise Cook nesnesşne gözatalım.
 
-	public class Cook {
-  	    private CoffeeBuilder coffeeBuilder;
+{% highlight java %}
+public class Cook {
+	private CoffeeBuilder coffeeBuilder;
  
-  		public void setCoffeeBuilder(CoffeeBuilder coffeeBuilder) {
-    		this.coffeeBuilder = coffeeBuilder;
-  		}
+	public void setCoffeeBuilder(CoffeeBuilder coffeeBuilder) {
+		this.coffeeBuilder = coffeeBuilder;
+	}
  
-  		public Coffee getCoffee(){
-    		return coffeeBuilder.getCoffee();
-  		}
+	public Coffee getCoffee(){
+		return coffeeBuilder.getCoffee();
+	}
  
-  		public void constructCoffee(){
-    		coffeeBuilder.createCoffee();
-    		coffeeBuilder.buildTastyCoffee();
-  	 	}
-    }
+	public void constructCoffee(){
+		coffeeBuilder.createCoffee();
+		coffeeBuilder.buildTastyCoffee();
+	}
+}
+{% endhighlight %}
 
 Cook nesnesi hiçbir şekilde hangi yapıcı nesneyi kullandığınız bilmez, sadece CoffeeBuilder bir nesne üzerinden işlem yapar. Peki hangi ülkeye göre çalışacağını nereden bilecek? Bu işlem sadece biryerde yapılır. Bu şekilde, gerek Cook nesnesi, gerekse Coffee nasıl bir yapıcı nesneden kullanıldığını bilmeyecektir. O halde ana sınıfımıza bakalım.
+{% highlight java %}
+package com.rayyildiz.patterns;
+ 
+public class Main {
+	public static void main(String[] args) {
+		Cook cook = new Cook();
+		CoffeeBuilder turkishCoffeeBuilder = new TurkishCoffeeBuilder();
+		cook.setCoffeeBuilder(turkishCoffeeBuilder);
+		cook.constructCoffee();
 
-	
-	package com.rayyildiz.patterns;
- 
-	public class Main {
-  		public static void main(String[] args) {
-    		Cook cook = new Cook();
-    		CoffeeBuilder turkishCoffeeBuilder = new TurkishCoffeeBuilder();
-    		cook.setCoffeeBuilder(turkishCoffeeBuilder);
-    		cook.constructCoffee();
- 
-    		Coffee coffee = cook.getCoffee();
-    		System.out.println("coffee:" + coffee);
-    		if ( System.console()!=null) System.console().readLine();
-  	  	}
+		Coffee coffee = cook.getCoffee();
+		System.out.println("coffee:" + coffee);
+		if ( System.console()!=null) System.console().readLine();
 	}
+}
+{% endhighlight %}
 
 Bu örnekte aşcımız bir Türk kahvesi yapmaktadır. Kaynak kodu indirip çalıştırdığınızda aşağıdaki gibi bir sonuc cıkacaktır.
 

@@ -25,27 +25,30 @@ Performans karşılaştırılmasında 100.000 tane rastgele oluşturulmuş sayı
 ### Ekleme İşlemi
 
 Vector ve ArrayList e rastgele oluşturulmuş 100.000 element ekleniyor	
+{% highlight java %}
+IList<Integer> vectorList = new IntegerVectorListImpl();
+IList<Integer> arrayList = new IntegerArrayListImpl();
+List<Integer> randomIntegers = getRandomIntegers(100000);
+long start,end;
+ 
+write("Start for inserting ARRAYLIST");
+start = System.currentTimeMillis();
+for(Integer i : randomIntegers) arrayList.insert(i);
+end = System.currentTimeMillis();
 
-	IList<Integer> vectorList = new IntegerVectorListImpl();
-	IList<Integer> arrayList = new IntegerArrayListImpl();
-	List<Integer> randomIntegers = getRandomIntegers(100000);
-	long start,end;
+long differenceOfArrayList = end - start;
+write("ArrayList time difference :" + differenceOfArrayList + " ms");
+write("End for inserting ARRAYLIST");
  
-	write("Start for inserting ARRAYLIST");
-	start = System.currentTimeMillis();
-	for(Integer i : randomIntegers) arrayList.insert(i);
-	end = System.currentTimeMillis();
-	long differenceOfArrayList = end - start;
-	write("ArrayList time difference :" + differenceOfArrayList + " ms");
-	write("End for inserting ARRAYLIST");
- 
-	write("Start for inserting VECTOR");
-	start = System.currentTimeMillis();
-	for(Integer i : randomIntegers) vectorList.insert(i);
-	end = System.currentTimeMillis();
-	long differenceOfVector = end - start;
-	write("Vector time difference :" + differenceOfVector + " ms");
-	write("End for inserting VECTOR");
+write("Start for inserting VECTOR");
+start = System.currentTimeMillis();
+for(Integer i : randomIntegers) vectorList.insert(i);
+end = System.currentTimeMillis();
+
+long differenceOfVector = end - start;
+write("Vector time difference :" + differenceOfVector + " ms");
+write("End for inserting VECTOR");
+{% endhighlight %}
 
 Bu test işlemi sonucunda alınan değerler şu şekilde.
 <table>
@@ -74,32 +77,35 @@ Görüldüğü gibi ArrayList ekleme işlemlerinde daha hızlı çalışıyor.
 ### Arama İşlemi
 
 Bir üstteki örnekte olduğu gibi, 100.000 kayıt eklenerek, bu kayıtlar içinden bir değer aranıyor.
+{% highlight java %}
+IList<Integer> vectorList = new IntegerVectorListImpl();
+IList<Integer> arrayList = new IntegerArrayListImpl();
+List<Integer> randomIntegers = getRandomIntegers(100000);
+long start,end;
+ 
+for(Integer i : randomIntegers) arrayList.insert(i);
+for(Integer i : randomIntegers) vectorList.insert(i);
+ 
+Integer findObj = 777;
+ 
+write("Start for search ARRAYLIST");
+start = System.currentTimeMillis();
+arrayList.search(findObj);
+end = System.currentTimeMillis();
 
-	IList<Integer> vectorList = new IntegerVectorListImpl();
-	IList<Integer> arrayList = new IntegerArrayListImpl();
-	List<Integer> randomIntegers = getRandomIntegers(100000);
-	long start,end;
+long differenceOfArrayList = end -¬† start;
+write("ArrayList time difference :" + differenceOfArrayList + " ms");
+write("End for search ARRAYLIST");
  
-	for(Integer i : randomIntegers) arrayList.insert(i);
-	for(Integer i : randomIntegers) vectorList.insert(i);
- 
-	Integer findObj = 777;
- 
-	write("Start for search ARRAYLIST");
-	start = System.currentTimeMillis();
-	arrayList.search(findObj);
-	end = System.currentTimeMillis();
-	long differenceOfArrayList = end -¬† start;
-	write("ArrayList time difference :" + differenceOfArrayList + " ms");
-	write("End for search ARRAYLIST");
- 
-	write("Start for search VECTOR");
-	start = System.currentTimeMillis();
-	vectorList.search(findObj);
-	end = System.currentTimeMillis();
-	long differenceOfVector = end -¬† start;
-	write("Vector time difference :" + differenceOfVector + " ms");
-	write("End for search VECTOR");
+write("Start for search VECTOR");
+start = System.currentTimeMillis();
+vectorList.search(findObj);
+end = System.currentTimeMillis();
+
+long differenceOfVector = end -¬† start;
+write("Vector time difference :" + differenceOfVector + " ms");
+write("End for search VECTOR");
+{% endhighlight %}
 
 Bununla ilgili sonuc şu şekilde:
 <table>

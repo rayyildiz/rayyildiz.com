@@ -18,31 +18,37 @@ Griffon indirdekten sonra, bazı ayarlar yapmanız gerekiyor. Buradan bilgi alar
 
 Grails de olduğu gibi griffon ile bir proje acmak çok kolay.
 
-{% highlight groovy %}
-		griffon create-app
+{% highlight bash %}
+griffon create-app
 {% endhighlight %}
 
-
-
 Evet sadece bu kadar. Peki hatırlayalım, grails de bir projeyi çalıştırmak için ne yapıyorduk ?
-
-    grails run-app
+{% highlight bash %}
+grails run-app
+{% endhighlight %}
 
 Tahmin edebileceğiniz gibi griffon da bir proyi çalıştırmak grails de projeyi çalıştırmak gibi.
-
-    griffon run-app
+{% highlight bash %}
+griffon run-app
+{% endhighlight %}
 
 Java da çeşitli uygulamaları denince applet de akla gelir. Peki bir griffon ile bir applet nasıl yazarız? Cevap çok kolay herhangi bir şey yapmanıza gerek yok: sadece uygulamanızı yazın ve calistirirken şu sekilde çalıştırın.
 
-    griffon run-applet
+{% highlight bash %}
+griffon run-applet
+{% endhighlight %}
 
 Aklınıza applet güzel ama biz bunu web den calistirabilir bir sekilde nasıl yazarız diye gelebilir. Hemen onun da cevabını söyleyeyim.
 
-    griffon run-webstart
+{% highlight bash %}
+griffon run-webstart
+{% endhighlight %}
 
 Projenizi yazdınız ve deployment yapmak istiyorsunuz. Grails de olduğu gibi
 
-    griffon dev package
+{% highlight bash %}
+griffon dev package
+{% endhighlight %}
 
 demeniz yeterli. Bu sizin için standolone, applet, webstart için paketleri olusuturacaktir. Hatta applet için self signed bir sertifika ile oluşturacaktir.
 
@@ -50,18 +56,23 @@ demeniz yeterli. Bu sizin için standolone, applet, webstart için paketleri olu
 
 Swing ve java ile ugrastiysaniz, jar dosyasını dağıtmanın hiç de mantıklı olmadıgını bilirsiniz. Size tavsiyem installer adında bir plugin var, onu kullanmanızı tavsiye ederim.
 
-    griffon installer-plugin installer
+{% highlight bash %}
+griffon installer-plugin installer
+{% endhighlight %}
 
 Plugin kurduktan sonra şu sekilde projenizi paket oluşturabilirsiniz. Bu size MAC OS, Windows ve debian için kurulum paketleir hazirlayacaktir.
 
-    griffon package dmg izpack deb
+{% highlight bash %}
+griffon package dmg izpack deb
+{% endhighlight %}
 
 Griffon Archtype
 Eğer Groovy bilmiyorsanız, güzel bir haberim var: griffon scala, Java, jython … dillerini de destekliyor. Projenizi olustururken archtype belirterek projenizi istediğiniz bir dilde yazabilirsiniz.
 
-    griffon create-app -archtype=scala
-    griffon create-app -archtype=java
-
+{% highlight bash %}
+griffon create-app -archtype=scala
+griffon create-app -archtype=java
+{% endhighlight %}
 
 ### Bizi Ne Bekliyor
 Proje su anda 0.9.4 sürümü mevcut. Yıl sonunda 1.0 gelecek. Proje epey iyi bir şekilde yoluna devam ediyor. Avusturalya da çok önemli bir şirket tüm uygulamalarını griffon ile yazmış. Amerika’da da epey bir şirket projelerini griffon ile yazmaya başlamış.

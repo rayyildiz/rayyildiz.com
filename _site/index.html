@@ -125,11 +125,25 @@
 
   <p>
 
+	<h3><a href='/2013/05/posterous-google-reader-ve-hayata-dair'>Posterous, Google Reader ve Hayata Dair</a></h3>
+	25 May 2013 Yazan Ramazan AYYILDIZ 
+	<p>
+	<h3 id='google_reader'>Google Reader</h3>
+
+<p>Google 13 Mart tarihinde bazı uyuglamarını <a target='_blank' href='http://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html'>kapatacağını</a> duyurudu. Bu uygulamalardan birisi olan <a target='_blank' href='http://google.com/reader'>google reader</a> kapatılması ise birçok kişi gibi ben de garip karşıladım. Bu sıralarda ise <a target='_blank' href='http://www.feedly.com/'>feedly</a> yeni keşfetmiştim. Neyseki feedly bir çalışma yapaçağını duyurdu. Benim gibi günde 500 den fazla blog&#8217;u takip eden birisi için güzel bir haber bu.</p>
+
+<h3 id='posterous'>Posterous</h3>
+
+<p>Ben uzun bir süre önce blog&#8217;umu wordpress&#8217;ten <a target='_blank' href='http://posterous.com/'>posterous</a> taşımıştım. Posterous twitter tarafından <a href='https://blog.twitter.com/2012/welcoming-posterous-team-flock'> satın </a> alınmıştı. Bu nedenle posterous tercih etmiştim. Ne varki bir <a href='https://twitter.com/posterous/status/329270537329205248'>kapanış haberi de </a> posterous&#8217;tan geldi. Bu esnada <a href='http://www.squarespace.com'>http://www.squarespace.com</a> da inceledim. Ve hatta squarespace olduka başarılı bir proje olduğunu da düşünyorum. Özellikle <a href='http://blog.squarespace.com/blog/2008/9/5/kevin-rose-comes-to-squarespace.html'>Kevin Rose'un</a> takıma katılmasıyla squarespace oldukça değişmiş. Ancak squarespace bir blog engine değil. Bu nedenle squarespace tercih etmedim. Tam bu esnada <a href='http://pages.github.com/'>github pages</a> keşfettim. <a href='http://jekyllrb.com/'>jekyll</a> ile tam istediğim hale geldi. Ücretsiz olması ise ayrı bir artısı.</p>
+	</p>
+	<hr />
+	<br /><br />
+
 	<h3><a href='/2012/10/scala-ile-asal-say-tespiti'>Scala ile Asal Sayı Tespiti</a></h3>
 	27 Oct 2012 Yazan Ramazan AYYILDIZ 
 	<p>
-	<p>Scala</p>
-<div class='highlight'><pre><code class='scala'>	<span class='k'>def</span> <span class='n'>isPrime</span><span class='o'>(</span><span class='n'>n</span><span class='k'>:</span><span class='kt'>Int</span><span class='o'>)</span><span class='k'>:</span> <span class='kt'>Boolean</span> <span class='o'>=</span> <span class='o'>(</span><span class='mi'>2</span> <span class='n'>until</span> <span class='n'>n</span><span class='o'>)</span> <span class='n'>forall</span> <span class='o'>(</span><span class='n'>d</span> <span class='k'>=&gt;</span> <span class='n'>n</span> <span class='o'>%</span> <span class='n'>d</span> <span class='o'>!=</span><span class='mi'>0</span><span class='o'>)</span>
+	<p>Scala ile bir asal sayının tespiti aşağıdaki gibi bir kod ile bulmak mümkün. Bu kod parçası scala&#8217;nın ne denli güçlü olduğunu göstermeye yeterli bence. Daha sonraki yazılarımızda scala ile daha detaylı bir yazı yazacağım.</p>
+<div class='highlight'><pre><code class='scala'><span class='k'>def</span> <span class='n'>isPrime</span><span class='o'>(</span><span class='n'>n</span><span class='k'>:</span><span class='kt'>Int</span><span class='o'>)</span><span class='k'>:</span> <span class='kt'>Boolean</span> <span class='o'>=</span> <span class='o'>(</span><span class='mi'>2</span> <span class='n'>until</span> <span class='n'>n</span><span class='o'>)</span> <span class='n'>forall</span> <span class='o'>(</span><span class='n'>d</span> <span class='k'>=&gt;</span> <span class='n'>n</span> <span class='o'>%</span> <span class='n'>d</span> <span class='o'>!=</span><span class='mi'>0</span><span class='o'>)</span>
 </code></pre></div>
 	</p>
 	<hr />
@@ -149,45 +163,37 @@
 <p>Griffon indirdekten sonra, bazı ayarlar yapmanız gerekiyor. Buradan bilgi alarak bu işlemleri gerçekleştirebilirsiniz.</p>
 
 <p>Grails de olduğu gibi griffon ile bir proje acmak çok kolay.</p>
-<div class='highlight'><pre><code class='groovy'>		<span class='n'>griffon</span> <span class='n'>create</span><span class='o'>-</span><span class='n'>app</span>
+<div class='highlight'><pre><code class='bash'>griffon create-app
 </code></pre></div>
 <p>Evet sadece bu kadar. Peki hatırlayalım, grails de bir projeyi çalıştırmak için ne yapıyorduk ?</p>
-
-<pre><code>grails run-app</code></pre>
-
+<div class='highlight'><pre><code class='bash'>grails run-app
+</code></pre></div>
 <p>Tahmin edebileceğiniz gibi griffon da bir proyi çalıştırmak grails de projeyi çalıştırmak gibi.</p>
-
-<pre><code>griffon run-app</code></pre>
-
+<div class='highlight'><pre><code class='bash'>griffon run-app
+</code></pre></div>
 <p>Java da çeşitli uygulamaları denince applet de akla gelir. Peki bir griffon ile bir applet nasıl yazarız? Cevap çok kolay herhangi bir şey yapmanıza gerek yok: sadece uygulamanızı yazın ve calistirirken şu sekilde çalıştırın.</p>
-
-<pre><code>griffon run-applet</code></pre>
-
+<div class='highlight'><pre><code class='bash'>griffon run-applet
+</code></pre></div>
 <p>Aklınıza applet güzel ama biz bunu web den calistirabilir bir sekilde nasıl yazarız diye gelebilir. Hemen onun da cevabını söyleyeyim.</p>
-
-<pre><code>griffon run-webstart</code></pre>
-
+<div class='highlight'><pre><code class='bash'>griffon run-webstart
+</code></pre></div>
 <p>Projenizi yazdınız ve deployment yapmak istiyorsunuz. Grails de olduğu gibi</p>
-
-<pre><code>griffon dev package</code></pre>
-
+<div class='highlight'><pre><code class='bash'>griffon dev package
+</code></pre></div>
 <p>demeniz yeterli. Bu sizin için standolone, applet, webstart için paketleri olusuturacaktir. Hatta applet için self signed bir sertifika ile oluşturacaktir.</p>
 
-<p><img src='/images/griffon.jpg' alt='Griffon' /></p>
+<p><img alt='Griffon' src='/images/griffon.jpg' /></p>
 
 <p>Swing ve java ile ugrastiysaniz, jar dosyasını dağıtmanın hiç de mantıklı olmadıgını bilirsiniz. Size tavsiyem installer adında bir plugin var, onu kullanmanızı tavsiye ederim.</p>
-
-<pre><code>griffon installer-plugin installer</code></pre>
-
+<div class='highlight'><pre><code class='bash'>griffon installer-plugin installer
+</code></pre></div>
 <p>Plugin kurduktan sonra şu sekilde projenizi paket oluşturabilirsiniz. Bu size MAC OS, Windows ve debian için kurulum paketleir hazirlayacaktir.</p>
-
-<pre><code>griffon package dmg izpack deb</code></pre>
-
+<div class='highlight'><pre><code class='bash'>griffon package dmg izpack deb
+</code></pre></div>
 <p>Griffon Archtype Eğer Groovy bilmiyorsanız, güzel bir haberim var: griffon scala, Java, jython … dillerini de destekliyor. Projenizi olustururken archtype belirterek projenizi istediğiniz bir dilde yazabilirsiniz.</p>
-
-<pre><code>griffon create-app -archtype=scala
-griffon create-app -archtype=java</code></pre>
-
+<div class='highlight'><pre><code class='bash'>griffon create-app -archtype<span class='o'>=</span>scala
+griffon create-app -archtype<span class='o'>=</span>java
+</code></pre></div>
 <h3 id='bizi_ne_bekliyor'>Bizi Ne Bekliyor</h3>
 
 <p>Proje su anda 0.9.4 sürümü mevcut. Yıl sonunda 1.0 gelecek. Proje epey iyi bir şekilde yoluna devam ediyor. Avusturalya da çok önemli bir şirket tüm uygulamalarını griffon ile yazmış. Amerika’da da epey bir şirket projelerini griffon ile yazmaya başlamış. Şu anda veri tabanı işlemi için datasource adındaki plugin i kullanabilirsiniz. Yalnız griffon 2 ile birlikte GORM birlikte gelecek. Bununla beraber griffon 2.0 da scaffold da geliyor.</p>
@@ -204,7 +210,7 @@ griffon create-app -archtype=java</code></pre>
 
 <p>“Keynote” bir hosgeldiniz ve etkinlik kapsamında hangi konuların islenecegi bilgisinin verildiği bir toplantiydi.</p>
 
-<p><img src='/images/springone-keynote.jpg' alt='Springone Keynote' /></p>
+<p><img alt='Springone Keynote' src='/images/springone-keynote.jpg' /></p>
 
 <p>SpringOne ilk süprizini Keynote da öğrendik. <a href='http://www.springone2gx.com/conference/speaker/rod_johnson'>Rod Johnson</a> kolunu kırmış olması ve doktorunun uçma yasağı nedeniyle etkinliğe katılamamasiydi. Ben SpringOne ilk kez katılıyorum ama ben bile etkinliğin Rod olmadan başladığını hatırlamıyorum. Bu Rod un katılmadığı ilk etkinlik olacak. Bunun yaninda Graeme Rocher soğuk algınlığı almış herhalde, sesi çok kötüydü.</p>
 
@@ -236,13 +242,13 @@ griffon create-app -archtype=java</code></pre>
 
 <p>Yarın nasip olursa seminer SpringOne 2GX semineri başlıyor. Bu yazı daha çok chicago üzerine oldu. Daha sonra seminer hakkında fikirlerimi paylaşacağım. Eğer fırsat bulursanız, Chicago yu görmenizi tavsiye ederim.</p>
 
-<p><img src='/images/chicago-1.jpg' alt='Chicago' /></p>
+<p><img alt='Chicago' src='/images/chicago-1.jpg' /></p>
 
-<p><img src='/images/chicago-2.jpg' alt='Chicago' /></p>
+<p><img alt='Chicago' src='/images/chicago-2.jpg' /></p>
 
-<p><img src='/images/chicago-3.jpg' alt='Chicago' /></p>
+<p><img alt='Chicago' src='/images/chicago-3.jpg' /></p>
 
-<p><img src='/images/chicago-4.jpg' alt='Chicago' /></p>
+<p><img alt='Chicago' src='/images/chicago-4.jpg' /></p>
 	</p>
 	<hr />
 	<br /><br />
@@ -256,36 +262,32 @@ griffon create-app -archtype=java</code></pre>
 
 <p>Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten türemiştir. Groovy ile yazılan bir nesne derlendikten sonra bytecode a cevrilir. Oluşan <code>*.class</code> dosyasını classpath’inize eklenerek java tarafından kullamabilirsiniz. Yani java’dan groovy’ye, groovy den ise java’ya erişmek cok kolaydır.</p>
 
-<blockquote>
-<p>Groovy’ de “;” kullanma zorunluğu yoktur.</p>
-</blockquote>
+<pre><code>Groovy’ de “;” kullanma zorunluğu yoktur.</code></pre>
 
 <p>Groovy mevcut dilin kütüphanelerin dışında, diğer kütüphaneler ve JDK yer alan özelliklerin yer aldığı GDK’den oluşmaktadır</p>
 
 <p>Groovy javada yer alan List, Map ‘ e yeni özellikler katar. örneğin şu satır nesnelerin paketlerini ekrana basar.</p>
-
-<pre><code>package com.rayyildiz
-class ListMapTest {
-	static main(args) {
-  		def classes = [String, Date, Long, Boolean]
-  		println(classes.&#39;package&#39;.name);
-	}
-}</code></pre>
-
+<div class='highlight'><pre><code class='groovy'><span class='kn'>package</span> <span class='n'>com</span><span class='o'>.</span><span class='na'>rayyildiz</span>
+<span class='kd'>class</span> <span class='nc'>ListMapTest</span> <span class='o'>{</span>
+   	<span class='kd'>static</span> <span class='nf'>main</span><span class='o'>(</span><span class='n'>args</span><span class='o'>)</span> <span class='o'>{</span>
+      	<span class='kt'>def</span> <span class='n'>classes</span> <span class='o'>=</span> <span class='o'>[</span><span class='n'>String</span><span class='o'>,</span> <span class='n'>Date</span><span class='o'>,</span> <span class='n'>Long</span><span class='o'>,</span> <span class='n'>Boolean</span><span class='o'>]</span>
+      	<span class='n'>println</span><span class='o'>(</span><span class='n'>classes</span><span class='o'>.</span><span class='s1'>&#39;package&#39;</span><span class='o'>.</span><span class='na'>name</span><span class='o'>);</span>
+   	<span class='o'>}</span>
+<span class='o'>}</span>
+</code></pre></div>
 <p>Bir siteye erişip içeriğini okumak için aşağıda bir code yer almakta, görebileceğiniz gibi groovy de bir rss’i almak cok kolay.Groovy de closure code yazmak çok kolaşmakta.</p>
+<div class='highlight'><pre><code class='groovy'><span class='kn'>package</span> <span class='n'>com</span><span class='o'>.</span><span class='na'>rayyildiz</span>
+<span class='kn'>import</span> <span class='nn'>java.net.URL</span>
 
-<pre><code>package com.rayyildiz
-import java.net.URL
-
-class HelloWorld {
-	static main(args) {
-  		def url = new URL(&quot;http://rayyildiz.com/feed&quot;);
-     	url.eachLine { ln -&gt;
-     		println(ln);
-  		}
-	}
-}</code></pre>
-
+<span class='kd'>class</span> <span class='nc'>HelloWorld</span> <span class='o'>{</span>
+	<span class='kd'>static</span> <span class='nf'>main</span><span class='o'>(</span><span class='n'>args</span><span class='o'>)</span> <span class='o'>{</span>
+      	<span class='kt'>def</span> <span class='n'>url</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>URL</span><span class='o'>(</span><span class='s2'>&quot;http://rayyildiz.com/feed&quot;</span><span class='o'>);</span>
+        <span class='n'>url</span><span class='o'>.</span><span class='na'>eachLine</span> <span class='o'>{</span> <span class='n'>ln</span> <span class='o'>-&gt;</span>
+        	<span class='n'>println</span><span class='o'>(</span><span class='n'>ln</span><span class='o'>);</span>
+      	<span class='o'>}</span>
+	<span class='o'>}</span>
+<span class='o'>}</span>
+</code></pre></div>
 <p>Özellikle java programcılarının çok kolay alışabileceği bir dil olan groovy yi incelemenizi tafsiye ederim. Size farklı bir bakış açışı kazandıracaktır.</p>
 	</p>
 	<hr />
@@ -315,28 +317,29 @@ class HelloWorld {
 <h3 id='ekleme_lemi'>Ekleme İşlemi</h3>
 
 <p>Vector ve ArrayList e rastgele oluşturulmuş 100.000 element ekleniyor</p>
+<div class='highlight'><pre><code class='java'><span class='n'>IList</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>vectorList</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>IntegerVectorListImpl</span><span class='o'>();</span>
+<span class='n'>IList</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>arrayList</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>IntegerArrayListImpl</span><span class='o'>();</span>
+<span class='n'>List</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>randomIntegers</span> <span class='o'>=</span> <span class='n'>getRandomIntegers</span><span class='o'>(</span><span class='mi'>100000</span><span class='o'>);</span>
+<span class='kt'>long</span> <span class='n'>start</span><span class='o'>,</span><span class='n'>end</span><span class='o'>;</span>
+ 
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Start for inserting ARRAYLIST&quot;</span><span class='o'>);</span>
+<span class='n'>start</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
+<span class='k'>for</span><span class='o'>(</span><span class='n'>Integer</span> <span class='n'>i</span> <span class='o'>:</span> <span class='n'>randomIntegers</span><span class='o'>)</span> <span class='n'>arrayList</span><span class='o'>.</span><span class='na'>insert</span><span class='o'>(</span><span class='n'>i</span><span class='o'>);</span>
+<span class='n'>end</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
 
-<pre><code>IList&lt;Integer&gt; vectorList = new IntegerVectorListImpl();
-IList&lt;Integer&gt; arrayList = new IntegerArrayListImpl();
-List&lt;Integer&gt; randomIntegers = getRandomIntegers(100000);
-long start,end;
+<span class='kt'>long</span> <span class='n'>differenceOfArrayList</span> <span class='o'>=</span> <span class='n'>end</span> <span class='o'>-</span> <span class='n'>start</span><span class='o'>;</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;ArrayList time difference :&quot;</span> <span class='o'>+</span> <span class='n'>differenceOfArrayList</span> <span class='o'>+</span> <span class='s'>&quot; ms&quot;</span><span class='o'>);</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;End for inserting ARRAYLIST&quot;</span><span class='o'>);</span>
+ 
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Start for inserting VECTOR&quot;</span><span class='o'>);</span>
+<span class='n'>start</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
+<span class='k'>for</span><span class='o'>(</span><span class='n'>Integer</span> <span class='n'>i</span> <span class='o'>:</span> <span class='n'>randomIntegers</span><span class='o'>)</span> <span class='n'>vectorList</span><span class='o'>.</span><span class='na'>insert</span><span class='o'>(</span><span class='n'>i</span><span class='o'>);</span>
+<span class='n'>end</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
 
-write(&quot;Start for inserting ARRAYLIST&quot;);
-start = System.currentTimeMillis();
-for(Integer i : randomIntegers) arrayList.insert(i);
-end = System.currentTimeMillis();
-long differenceOfArrayList = end - start;
-write(&quot;ArrayList time difference :&quot; + differenceOfArrayList + &quot; ms&quot;);
-write(&quot;End for inserting ARRAYLIST&quot;);
-
-write(&quot;Start for inserting VECTOR&quot;);
-start = System.currentTimeMillis();
-for(Integer i : randomIntegers) vectorList.insert(i);
-end = System.currentTimeMillis();
-long differenceOfVector = end - start;
-write(&quot;Vector time difference :&quot; + differenceOfVector + &quot; ms&quot;);
-write(&quot;End for inserting VECTOR&quot;);</code></pre>
-
+<span class='kt'>long</span> <span class='n'>differenceOfVector</span> <span class='o'>=</span> <span class='n'>end</span> <span class='o'>-</span> <span class='n'>start</span><span class='o'>;</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Vector time difference :&quot;</span> <span class='o'>+</span> <span class='n'>differenceOfVector</span> <span class='o'>+</span> <span class='s'>&quot; ms&quot;</span><span class='o'>);</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;End for inserting VECTOR&quot;</span><span class='o'>);</span>
+</code></pre></div>
 <p>Bu test işlemi sonucunda alınan değerler şu şekilde. <table>
 	<tr>
 		<th> </th>
@@ -363,33 +366,34 @@ write(&quot;End for inserting VECTOR&quot;);</code></pre>
 <h3 id='arama_lemi'>Arama İşlemi</h3>
 
 <p>Bir üstteki örnekte olduğu gibi, 100.000 kayıt eklenerek, bu kayıtlar içinden bir değer aranıyor.</p>
+<div class='highlight'><pre><code class='java'><span class='n'>IList</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>vectorList</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>IntegerVectorListImpl</span><span class='o'>();</span>
+<span class='n'>IList</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>arrayList</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>IntegerArrayListImpl</span><span class='o'>();</span>
+<span class='n'>List</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>randomIntegers</span> <span class='o'>=</span> <span class='n'>getRandomIntegers</span><span class='o'>(</span><span class='mi'>100000</span><span class='o'>);</span>
+<span class='kt'>long</span> <span class='n'>start</span><span class='o'>,</span><span class='n'>end</span><span class='o'>;</span>
+ 
+<span class='k'>for</span><span class='o'>(</span><span class='n'>Integer</span> <span class='n'>i</span> <span class='o'>:</span> <span class='n'>randomIntegers</span><span class='o'>)</span> <span class='n'>arrayList</span><span class='o'>.</span><span class='na'>insert</span><span class='o'>(</span><span class='n'>i</span><span class='o'>);</span>
+<span class='k'>for</span><span class='o'>(</span><span class='n'>Integer</span> <span class='n'>i</span> <span class='o'>:</span> <span class='n'>randomIntegers</span><span class='o'>)</span> <span class='n'>vectorList</span><span class='o'>.</span><span class='na'>insert</span><span class='o'>(</span><span class='n'>i</span><span class='o'>);</span>
+ 
+<span class='n'>Integer</span> <span class='n'>findObj</span> <span class='o'>=</span> <span class='mi'>777</span><span class='o'>;</span>
+ 
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Start for search ARRAYLIST&quot;</span><span class='o'>);</span>
+<span class='n'>start</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
+<span class='n'>arrayList</span><span class='o'>.</span><span class='na'>search</span><span class='o'>(</span><span class='n'>findObj</span><span class='o'>);</span>
+<span class='n'>end</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
 
-<pre><code>IList&lt;Integer&gt; vectorList = new IntegerVectorListImpl();
-IList&lt;Integer&gt; arrayList = new IntegerArrayListImpl();
-List&lt;Integer&gt; randomIntegers = getRandomIntegers(100000);
-long start,end;
+<span class='kt'>long</span> <span class='n'>differenceOfArrayList</span> <span class='o'>=</span> <span class='n'>end</span> <span class='o'>-</span><span class='err'>¬†</span> <span class='n'>start</span><span class='o'>;</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;ArrayList time difference :&quot;</span> <span class='o'>+</span> <span class='n'>differenceOfArrayList</span> <span class='o'>+</span> <span class='s'>&quot; ms&quot;</span><span class='o'>);</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;End for search ARRAYLIST&quot;</span><span class='o'>);</span>
+ 
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Start for search VECTOR&quot;</span><span class='o'>);</span>
+<span class='n'>start</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
+<span class='n'>vectorList</span><span class='o'>.</span><span class='na'>search</span><span class='o'>(</span><span class='n'>findObj</span><span class='o'>);</span>
+<span class='n'>end</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
 
-for(Integer i : randomIntegers) arrayList.insert(i);
-for(Integer i : randomIntegers) vectorList.insert(i);
-
-Integer findObj = 777;
-
-write(&quot;Start for search ARRAYLIST&quot;);
-start = System.currentTimeMillis();
-arrayList.search(findObj);
-end = System.currentTimeMillis();
-long differenceOfArrayList = end -¬† start;
-write(&quot;ArrayList time difference :&quot; + differenceOfArrayList + &quot; ms&quot;);
-write(&quot;End for search ARRAYLIST&quot;);
-
-write(&quot;Start for search VECTOR&quot;);
-start = System.currentTimeMillis();
-vectorList.search(findObj);
-end = System.currentTimeMillis();
-long differenceOfVector = end -¬† start;
-write(&quot;Vector time difference :&quot; + differenceOfVector + &quot; ms&quot;);
-write(&quot;End for search VECTOR&quot;);</code></pre>
-
+<span class='kt'>long</span> <span class='n'>differenceOfVector</span> <span class='o'>=</span> <span class='n'>end</span> <span class='o'>-</span><span class='err'>¬†</span> <span class='n'>start</span><span class='o'>;</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Vector time difference :&quot;</span> <span class='o'>+</span> <span class='n'>differenceOfVector</span> <span class='o'>+</span> <span class='s'>&quot; ms&quot;</span><span class='o'>);</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;End for search VECTOR&quot;</span><span class='o'>);</span>
+</code></pre></div>
 <p>Bununla ilgili sonuc şu şekilde: <table>
 	<tr>
 		<th> </th>
@@ -420,105 +424,9 @@ write(&quot;End for search VECTOR&quot;);</code></pre>
 	<hr />
 	<br /><br />
 
-	<h3><a href='/2010/08/yapici-tasarm-deseni-builder-design-pattern'>Yapıcı Tasarım Deseni (Builder Design Pattern)</a></h3>
-	28 Aug 2010 Yazan Ramazan AYYILDIZ 
-	<p>
-	<p>Tasarım desenleri hakkında giriş mahiyetindeki yazıma buradan ulaşabilirsiniz. Bu tasarım desenlerinden yaratım desenleri grubundaki ikinci desen yapıcı tasarım desenidir (Builder Design Pattern).</p>
-
-<p>Yapıcı tasarım deseni, nesnelerin yapıcı metotlarını soyutlamak suretiyle gerçekleştirilmilerin farklı şekilde vekalet edilmesine sağlar. Peki bu nasıl olmaktadır, bunu bir örnekle pekiştirelim. Örneğin kahve yapıyorsunuz, kahve bildiğiniz gibi her ülkede farklı yapılır. Türkiye’de kahve küçük fincanda, genellikle şekerli olurken,- Brezilyadaki kahve aynı şekilde servis edilmez. Daha sonra yazılarımda göreceğiniz gibi Yapıcı tasarım modeli fabrika tasarım modeline benzer. Hatta soyut fabrika tasarım modeli ile de aynı şekilde yapabilirsiniz. Ancak bazı farklar vardır. Mesela yapıcı tasarım modelinde product dediğimiz nesnelerimiz soyut olmaz, bu nesnelerin farklı olmasını soyutlanmış yapıcı nesneler sağlar.</p>
-
-<p>Şekilde kahve yapan bir aşçı örneğinin UML diagramı bulunmaktadır. Coffee nesnesi, bazı alanları vardır. Bu alanlar TurkishCoffeeBuilder tarafından çağrıldığında farklı değer, BrazilianCoffeeBuilder tarafından farklı değer yazılmaktadır. Bu sayede hangi yapıcı metot çağrılırsa ona ait değerler nesnenin içinde yer alacaktır.</p>
-
-<p>Bu iki yapıcı nesneyi ( TurkishCoffeeBuilder ile BrazilianCoffeeBuilder) soyutlamak için CoffeeBuilder soyut sınıfından yararlanılır.</p>
-
-<p>Şimdi CoffeeBuilder nesnesinin ve bu soyut sınıftan türetilmiş yapıcı nesnelerin kaynak koduna göz atalım.</p>
-
-<pre><code>package com.rayyildiz.patterns;
-
-public abstract class CoffeeBuilder {
-	private Coffee coffee;
-
-	public Coffee getCoffee() {
-		return coffee;
-	}
-
-	public void createCoffee(){
-		coffee = new Coffee();
-	}
-
-	public abstract void buildTastyCoffee();
-}
-
-public class BrazilianCoffeeBuilder extends CoffeeBuilder {
-	@Override
-	public void buildTastyCoffee() {
-		Coffee coffee = getCoffee();
-		coffee.setColour(ColourType.DarkBrown);
-		coffee.setPrice(10);
-		coffee.setSugar(SugarType.Much);
-		coffee.setName(&quot;Brazilian Coffee&quot;);
-	}	
-}
-
-public class TurkishCoffeeBuilder extends CoffeeBuilder {
-  @Override
-  public void buildTastyCoffee() {
-  	Coffee coffee = getCoffee();
-	coffee.setColour(ColourType.LightBrown);
-	coffee.setPrice(6);
-	coffee.setSugar(SugarType.Much);
-	coffee.setName(&quot;Turkish Coffee&quot;);
-  }
-}</code></pre>
-
-<p>Gördüğünüz gibi CoffeeBuilder buildTastyCoffee adında soyut bir sınıf içermekte, bu nesneden türeyen nesnelerin bu metodu gerçekleştirmesini zorlamaktadır. CoffeeBuilder soyut nesnesinden türeyen bu iki nesne kendisine göre bu metotları değer atamaktadır.</p>
-
-<p>Coffee nesnesi sadece getter-setter içeren bir nesnedir.</p>
-
-<p>Şimdi ise Cook nesnesşne gözatalım.</p>
-
-<pre><code>public class Cook {
-    private CoffeeBuilder coffeeBuilder;
-
-	public void setCoffeeBuilder(CoffeeBuilder coffeeBuilder) {
-		this.coffeeBuilder = coffeeBuilder;
-	}
-
-	public Coffee getCoffee(){
-		return coffeeBuilder.getCoffee();
-	}
-
-	public void constructCoffee(){
-		coffeeBuilder.createCoffee();
-		coffeeBuilder.buildTastyCoffee();
- 	}
-}</code></pre>
-
-<p>Cook nesnesi hiçbir şekilde hangi yapıcı nesneyi kullandığınız bilmez, sadece CoffeeBuilder bir nesne üzerinden işlem yapar. Peki hangi ülkeye göre çalışacağını nereden bilecek? Bu işlem sadece biryerde yapılır. Bu şekilde, gerek Cook nesnesi, gerekse Coffee nasıl bir yapıcı nesneden kullanıldığını bilmeyecektir. O halde ana sınıfımıza bakalım.</p>
-
-<pre><code>package com.rayyildiz.patterns;
-
-public class Main {
-	public static void main(String[] args) {
-		Cook cook = new Cook();
-		CoffeeBuilder turkishCoffeeBuilder = new TurkishCoffeeBuilder();
-		cook.setCoffeeBuilder(turkishCoffeeBuilder);
-		cook.constructCoffee();
-
-		Coffee coffee = cook.getCoffee();
-		System.out.println(&quot;coffee:&quot; + coffee);
-		if ( System.console()!=null) System.console().readLine();
-  	}
-}</code></pre>
-
-<p>Bu örnekte aşcımız bir Türk kahvesi yapmaktadır. Kaynak kodu indirip çalıştırdığınızda aşağıdaki gibi bir sonuc cıkacaktır.</p>
-
-<p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a href='http://github.com/rayyildiz/DesignPatterns' title='Design Patterns'>DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
-	</p>
-	<hr />
-	<br /><br />
-
 </p><h2>Diğer Yazılar</h2><ul class='posts'>
+  
+    <li><span>25 May 2013</span> &raquo; <a href='/2013/05/posterous-google-reader-ve-hayata-dair'>Posterous, Google Reader ve Hayata Dair</a></li>
   
     <li><span>27 Oct 2012</span> &raquo; <a href='/2012/10/scala-ile-asal-say-tespiti'>Scala ile Asal Sayı Tespiti</a></li>
   

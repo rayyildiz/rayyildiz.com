@@ -144,28 +144,29 @@
 <h3 id='ekleme_lemi'>Ekleme İşlemi</h3>
 
 <p>Vector ve ArrayList e rastgele oluşturulmuş 100.000 element ekleniyor</p>
+<div class='highlight'><pre><code class='java'><span class='n'>IList</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>vectorList</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>IntegerVectorListImpl</span><span class='o'>();</span>
+<span class='n'>IList</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>arrayList</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>IntegerArrayListImpl</span><span class='o'>();</span>
+<span class='n'>List</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>randomIntegers</span> <span class='o'>=</span> <span class='n'>getRandomIntegers</span><span class='o'>(</span><span class='mi'>100000</span><span class='o'>);</span>
+<span class='kt'>long</span> <span class='n'>start</span><span class='o'>,</span><span class='n'>end</span><span class='o'>;</span>
+ 
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Start for inserting ARRAYLIST&quot;</span><span class='o'>);</span>
+<span class='n'>start</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
+<span class='k'>for</span><span class='o'>(</span><span class='n'>Integer</span> <span class='n'>i</span> <span class='o'>:</span> <span class='n'>randomIntegers</span><span class='o'>)</span> <span class='n'>arrayList</span><span class='o'>.</span><span class='na'>insert</span><span class='o'>(</span><span class='n'>i</span><span class='o'>);</span>
+<span class='n'>end</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
 
-<pre><code>IList&lt;Integer&gt; vectorList = new IntegerVectorListImpl();
-IList&lt;Integer&gt; arrayList = new IntegerArrayListImpl();
-List&lt;Integer&gt; randomIntegers = getRandomIntegers(100000);
-long start,end;
+<span class='kt'>long</span> <span class='n'>differenceOfArrayList</span> <span class='o'>=</span> <span class='n'>end</span> <span class='o'>-</span> <span class='n'>start</span><span class='o'>;</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;ArrayList time difference :&quot;</span> <span class='o'>+</span> <span class='n'>differenceOfArrayList</span> <span class='o'>+</span> <span class='s'>&quot; ms&quot;</span><span class='o'>);</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;End for inserting ARRAYLIST&quot;</span><span class='o'>);</span>
+ 
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Start for inserting VECTOR&quot;</span><span class='o'>);</span>
+<span class='n'>start</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
+<span class='k'>for</span><span class='o'>(</span><span class='n'>Integer</span> <span class='n'>i</span> <span class='o'>:</span> <span class='n'>randomIntegers</span><span class='o'>)</span> <span class='n'>vectorList</span><span class='o'>.</span><span class='na'>insert</span><span class='o'>(</span><span class='n'>i</span><span class='o'>);</span>
+<span class='n'>end</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
 
-write(&quot;Start for inserting ARRAYLIST&quot;);
-start = System.currentTimeMillis();
-for(Integer i : randomIntegers) arrayList.insert(i);
-end = System.currentTimeMillis();
-long differenceOfArrayList = end - start;
-write(&quot;ArrayList time difference :&quot; + differenceOfArrayList + &quot; ms&quot;);
-write(&quot;End for inserting ARRAYLIST&quot;);
-
-write(&quot;Start for inserting VECTOR&quot;);
-start = System.currentTimeMillis();
-for(Integer i : randomIntegers) vectorList.insert(i);
-end = System.currentTimeMillis();
-long differenceOfVector = end - start;
-write(&quot;Vector time difference :&quot; + differenceOfVector + &quot; ms&quot;);
-write(&quot;End for inserting VECTOR&quot;);</code></pre>
-
+<span class='kt'>long</span> <span class='n'>differenceOfVector</span> <span class='o'>=</span> <span class='n'>end</span> <span class='o'>-</span> <span class='n'>start</span><span class='o'>;</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Vector time difference :&quot;</span> <span class='o'>+</span> <span class='n'>differenceOfVector</span> <span class='o'>+</span> <span class='s'>&quot; ms&quot;</span><span class='o'>);</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;End for inserting VECTOR&quot;</span><span class='o'>);</span>
+</code></pre></div>
 <p>Bu test işlemi sonucunda alınan değerler şu şekilde. <table>
 	<tr>
 		<th> </th>
@@ -192,33 +193,34 @@ write(&quot;End for inserting VECTOR&quot;);</code></pre>
 <h3 id='arama_lemi'>Arama İşlemi</h3>
 
 <p>Bir üstteki örnekte olduğu gibi, 100.000 kayıt eklenerek, bu kayıtlar içinden bir değer aranıyor.</p>
+<div class='highlight'><pre><code class='java'><span class='n'>IList</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>vectorList</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>IntegerVectorListImpl</span><span class='o'>();</span>
+<span class='n'>IList</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>arrayList</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>IntegerArrayListImpl</span><span class='o'>();</span>
+<span class='n'>List</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>randomIntegers</span> <span class='o'>=</span> <span class='n'>getRandomIntegers</span><span class='o'>(</span><span class='mi'>100000</span><span class='o'>);</span>
+<span class='kt'>long</span> <span class='n'>start</span><span class='o'>,</span><span class='n'>end</span><span class='o'>;</span>
+ 
+<span class='k'>for</span><span class='o'>(</span><span class='n'>Integer</span> <span class='n'>i</span> <span class='o'>:</span> <span class='n'>randomIntegers</span><span class='o'>)</span> <span class='n'>arrayList</span><span class='o'>.</span><span class='na'>insert</span><span class='o'>(</span><span class='n'>i</span><span class='o'>);</span>
+<span class='k'>for</span><span class='o'>(</span><span class='n'>Integer</span> <span class='n'>i</span> <span class='o'>:</span> <span class='n'>randomIntegers</span><span class='o'>)</span> <span class='n'>vectorList</span><span class='o'>.</span><span class='na'>insert</span><span class='o'>(</span><span class='n'>i</span><span class='o'>);</span>
+ 
+<span class='n'>Integer</span> <span class='n'>findObj</span> <span class='o'>=</span> <span class='mi'>777</span><span class='o'>;</span>
+ 
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Start for search ARRAYLIST&quot;</span><span class='o'>);</span>
+<span class='n'>start</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
+<span class='n'>arrayList</span><span class='o'>.</span><span class='na'>search</span><span class='o'>(</span><span class='n'>findObj</span><span class='o'>);</span>
+<span class='n'>end</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
 
-<pre><code>IList&lt;Integer&gt; vectorList = new IntegerVectorListImpl();
-IList&lt;Integer&gt; arrayList = new IntegerArrayListImpl();
-List&lt;Integer&gt; randomIntegers = getRandomIntegers(100000);
-long start,end;
+<span class='kt'>long</span> <span class='n'>differenceOfArrayList</span> <span class='o'>=</span> <span class='n'>end</span> <span class='o'>-</span><span class='err'>¬†</span> <span class='n'>start</span><span class='o'>;</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;ArrayList time difference :&quot;</span> <span class='o'>+</span> <span class='n'>differenceOfArrayList</span> <span class='o'>+</span> <span class='s'>&quot; ms&quot;</span><span class='o'>);</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;End for search ARRAYLIST&quot;</span><span class='o'>);</span>
+ 
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Start for search VECTOR&quot;</span><span class='o'>);</span>
+<span class='n'>start</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
+<span class='n'>vectorList</span><span class='o'>.</span><span class='na'>search</span><span class='o'>(</span><span class='n'>findObj</span><span class='o'>);</span>
+<span class='n'>end</span> <span class='o'>=</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>currentTimeMillis</span><span class='o'>();</span>
 
-for(Integer i : randomIntegers) arrayList.insert(i);
-for(Integer i : randomIntegers) vectorList.insert(i);
-
-Integer findObj = 777;
-
-write(&quot;Start for search ARRAYLIST&quot;);
-start = System.currentTimeMillis();
-arrayList.search(findObj);
-end = System.currentTimeMillis();
-long differenceOfArrayList = end -¬† start;
-write(&quot;ArrayList time difference :&quot; + differenceOfArrayList + &quot; ms&quot;);
-write(&quot;End for search ARRAYLIST&quot;);
-
-write(&quot;Start for search VECTOR&quot;);
-start = System.currentTimeMillis();
-vectorList.search(findObj);
-end = System.currentTimeMillis();
-long differenceOfVector = end -¬† start;
-write(&quot;Vector time difference :&quot; + differenceOfVector + &quot; ms&quot;);
-write(&quot;End for search VECTOR&quot;);</code></pre>
-
+<span class='kt'>long</span> <span class='n'>differenceOfVector</span> <span class='o'>=</span> <span class='n'>end</span> <span class='o'>-</span><span class='err'>¬†</span> <span class='n'>start</span><span class='o'>;</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;Vector time difference :&quot;</span> <span class='o'>+</span> <span class='n'>differenceOfVector</span> <span class='o'>+</span> <span class='s'>&quot; ms&quot;</span><span class='o'>);</span>
+<span class='n'>write</span><span class='o'>(</span><span class='s'>&quot;End for search VECTOR&quot;</span><span class='o'>);</span>
+</code></pre></div>
 <p>Bununla ilgili sonuc şu şekilde: <table>
 	<tr>
 		<th> </th>

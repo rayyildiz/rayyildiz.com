@@ -132,88 +132,83 @@
 <p>Bu iki yapıcı nesneyi ( TurkishCoffeeBuilder ile BrazilianCoffeeBuilder) soyutlamak için CoffeeBuilder soyut sınıfından yararlanılır.</p>
 
 <p>Şimdi CoffeeBuilder nesnesinin ve bu soyut sınıftan türetilmiş yapıcı nesnelerin kaynak koduna göz atalım.</p>
-
-<pre><code>package com.rayyildiz.patterns;
-
-public abstract class CoffeeBuilder {
-	private Coffee coffee;
-
-	public Coffee getCoffee() {
-		return coffee;
-	}
-
-	public void createCoffee(){
-		coffee = new Coffee();
-	}
-
-	public abstract void buildTastyCoffee();
-}
-
-public class BrazilianCoffeeBuilder extends CoffeeBuilder {
-	@Override
-	public void buildTastyCoffee() {
-		Coffee coffee = getCoffee();
-		coffee.setColour(ColourType.DarkBrown);
-		coffee.setPrice(10);
-		coffee.setSugar(SugarType.Much);
-		coffee.setName(&quot;Brazilian Coffee&quot;);
-	}	
-}
-
-public class TurkishCoffeeBuilder extends CoffeeBuilder {
-  @Override
-  public void buildTastyCoffee() {
-  	Coffee coffee = getCoffee();
-	coffee.setColour(ColourType.LightBrown);
-	coffee.setPrice(6);
-	coffee.setSugar(SugarType.Much);
-	coffee.setName(&quot;Turkish Coffee&quot;);
-  }
-}</code></pre>
-
+<div class='highlight'><pre><code class='java'><span class='kn'>package</span> <span class='n'>com</span><span class='o'>.</span><span class='na'>rayyildiz</span><span class='o'>.</span><span class='na'>patterns</span><span class='o'>;</span>
+ 
+<span class='kd'>public</span> <span class='kd'>abstract</span> <span class='kd'>class</span> <span class='nc'>CoffeeBuilder</span> <span class='o'>{</span>
+	<span class='kd'>private</span> <span class='n'>Coffee</span> <span class='n'>coffee</span><span class='o'>;</span>
+ 
+	<span class='kd'>public</span> <span class='n'>Coffee</span> <span class='nf'>getCoffee</span><span class='o'>()</span> <span class='o'>{</span>
+		<span class='k'>return</span> <span class='n'>coffee</span><span class='o'>;</span>
+  	<span class='o'>}</span>
+ 
+	<span class='kd'>public</span> <span class='kt'>void</span> <span class='nf'>createCoffee</span><span class='o'>(){</span>
+		<span class='n'>coffee</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>Coffee</span><span class='o'>();</span>
+	<span class='o'>}</span>
+	
+	<span class='kd'>public</span> <span class='kd'>abstract</span> <span class='kt'>void</span> <span class='nf'>buildTastyCoffee</span><span class='o'>();</span>
+<span class='o'>}</span>
+</code></pre></div><div class='highlight'><pre><code class='java'><span class='kd'>public</span> <span class='kd'>class</span> <span class='nc'>BrazilianCoffeeBuilder</span> <span class='kd'>extends</span> <span class='n'>CoffeeBuilder</span> <span class='o'>{</span>
+	<span class='nd'>@Override</span>
+	<span class='kd'>public</span> <span class='kt'>void</span> <span class='nf'>buildTastyCoffee</span><span class='o'>()</span> <span class='o'>{</span>
+		<span class='n'>Coffee</span> <span class='n'>coffee</span> <span class='o'>=</span> <span class='n'>getCoffee</span><span class='o'>();</span>
+		<span class='n'>coffee</span><span class='o'>.</span><span class='na'>setColour</span><span class='o'>(</span><span class='n'>ColourType</span><span class='o'>.</span><span class='na'>DarkBrown</span><span class='o'>);</span>
+		<span class='n'>coffee</span><span class='o'>.</span><span class='na'>setPrice</span><span class='o'>(</span><span class='mi'>10</span><span class='o'>);</span>
+		<span class='n'>coffee</span><span class='o'>.</span><span class='na'>setSugar</span><span class='o'>(</span><span class='n'>SugarType</span><span class='o'>.</span><span class='na'>Much</span><span class='o'>);</span>
+		<span class='n'>coffee</span><span class='o'>.</span><span class='na'>setName</span><span class='o'>(</span><span class='s'>&quot;Brazilian Coffee&quot;</span><span class='o'>);</span>
+	<span class='o'>}</span>	
+<span class='o'>}</span>
+</code></pre></div><div class='highlight'><pre><code class='java'><span class='kd'>public</span> <span class='kd'>class</span> <span class='nc'>TurkishCoffeeBuilder</span> <span class='kd'>extends</span> <span class='n'>CoffeeBuilder</span> <span class='o'>{</span>
+	<span class='nd'>@Override</span>
+	<span class='kd'>public</span> <span class='kt'>void</span> <span class='nf'>buildTastyCoffee</span><span class='o'>()</span> <span class='o'>{</span>
+		<span class='n'>Coffee</span> <span class='n'>coffee</span> <span class='o'>=</span> <span class='n'>getCoffee</span><span class='o'>();</span>
+    	<span class='n'>coffee</span><span class='o'>.</span><span class='na'>setColour</span><span class='o'>(</span><span class='n'>ColourType</span><span class='o'>.</span><span class='na'>LightBrown</span><span class='o'>);</span>
+    	<span class='n'>coffee</span><span class='o'>.</span><span class='na'>setPrice</span><span class='o'>(</span><span class='mi'>6</span><span class='o'>);</span>
+    	<span class='n'>coffee</span><span class='o'>.</span><span class='na'>setSugar</span><span class='o'>(</span><span class='n'>SugarType</span><span class='o'>.</span><span class='na'>Much</span><span class='o'>);</span>
+    	<span class='n'>coffee</span><span class='o'>.</span><span class='na'>setName</span><span class='o'>(</span><span class='s'>&quot;Turkish Coffee&quot;</span><span class='o'>);</span>
+	<span class='o'>}</span>
+<span class='o'>}</span>
+</code></pre></div>
 <p>Gördüğünüz gibi CoffeeBuilder buildTastyCoffee adında soyut bir sınıf içermekte, bu nesneden türeyen nesnelerin bu metodu gerçekleştirmesini zorlamaktadır. CoffeeBuilder soyut nesnesinden türeyen bu iki nesne kendisine göre bu metotları değer atamaktadır.</p>
 
 <p>Coffee nesnesi sadece getter-setter içeren bir nesnedir.</p>
 
 <p>Şimdi ise Cook nesnesşne gözatalım.</p>
-
-<pre><code>public class Cook {
-    private CoffeeBuilder coffeeBuilder;
-
-	public void setCoffeeBuilder(CoffeeBuilder coffeeBuilder) {
-		this.coffeeBuilder = coffeeBuilder;
-	}
-
-	public Coffee getCoffee(){
-		return coffeeBuilder.getCoffee();
-	}
-
-	public void constructCoffee(){
-		coffeeBuilder.createCoffee();
-		coffeeBuilder.buildTastyCoffee();
- 	}
-}</code></pre>
-
+<div class='highlight'><pre><code class='java'><span class='kd'>public</span> <span class='kd'>class</span> <span class='nc'>Cook</span> <span class='o'>{</span>
+	<span class='kd'>private</span> <span class='n'>CoffeeBuilder</span> <span class='n'>coffeeBuilder</span><span class='o'>;</span>
+ 
+	<span class='kd'>public</span> <span class='kt'>void</span> <span class='nf'>setCoffeeBuilder</span><span class='o'>(</span><span class='n'>CoffeeBuilder</span> <span class='n'>coffeeBuilder</span><span class='o'>)</span> <span class='o'>{</span>
+		<span class='k'>this</span><span class='o'>.</span><span class='na'>coffeeBuilder</span> <span class='o'>=</span> <span class='n'>coffeeBuilder</span><span class='o'>;</span>
+	<span class='o'>}</span>
+ 
+	<span class='kd'>public</span> <span class='n'>Coffee</span> <span class='nf'>getCoffee</span><span class='o'>(){</span>
+		<span class='k'>return</span> <span class='n'>coffeeBuilder</span><span class='o'>.</span><span class='na'>getCoffee</span><span class='o'>();</span>
+	<span class='o'>}</span>
+ 
+	<span class='kd'>public</span> <span class='kt'>void</span> <span class='nf'>constructCoffee</span><span class='o'>(){</span>
+		<span class='n'>coffeeBuilder</span><span class='o'>.</span><span class='na'>createCoffee</span><span class='o'>();</span>
+		<span class='n'>coffeeBuilder</span><span class='o'>.</span><span class='na'>buildTastyCoffee</span><span class='o'>();</span>
+	<span class='o'>}</span>
+<span class='o'>}</span>
+</code></pre></div>
 <p>Cook nesnesi hiçbir şekilde hangi yapıcı nesneyi kullandığınız bilmez, sadece CoffeeBuilder bir nesne üzerinden işlem yapar. Peki hangi ülkeye göre çalışacağını nereden bilecek? Bu işlem sadece biryerde yapılır. Bu şekilde, gerek Cook nesnesi, gerekse Coffee nasıl bir yapıcı nesneden kullanıldığını bilmeyecektir. O halde ana sınıfımıza bakalım.</p>
+<div class='highlight'><pre><code class='java'><span class='kn'>package</span> <span class='n'>com</span><span class='o'>.</span><span class='na'>rayyildiz</span><span class='o'>.</span><span class='na'>patterns</span><span class='o'>;</span>
+ 
+<span class='kd'>public</span> <span class='kd'>class</span> <span class='nc'>Main</span> <span class='o'>{</span>
+	<span class='kd'>public</span> <span class='kd'>static</span> <span class='kt'>void</span> <span class='nf'>main</span><span class='o'>(</span><span class='n'>String</span><span class='o'>[]</span> <span class='n'>args</span><span class='o'>)</span> <span class='o'>{</span>
+		<span class='n'>Cook</span> <span class='n'>cook</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>Cook</span><span class='o'>();</span>
+		<span class='n'>CoffeeBuilder</span> <span class='n'>turkishCoffeeBuilder</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>TurkishCoffeeBuilder</span><span class='o'>();</span>
+		<span class='n'>cook</span><span class='o'>.</span><span class='na'>setCoffeeBuilder</span><span class='o'>(</span><span class='n'>turkishCoffeeBuilder</span><span class='o'>);</span>
+		<span class='n'>cook</span><span class='o'>.</span><span class='na'>constructCoffee</span><span class='o'>();</span>
 
-<pre><code>package com.rayyildiz.patterns;
-
-public class Main {
-	public static void main(String[] args) {
-		Cook cook = new Cook();
-		CoffeeBuilder turkishCoffeeBuilder = new TurkishCoffeeBuilder();
-		cook.setCoffeeBuilder(turkishCoffeeBuilder);
-		cook.constructCoffee();
-
-		Coffee coffee = cook.getCoffee();
-		System.out.println(&quot;coffee:&quot; + coffee);
-		if ( System.console()!=null) System.console().readLine();
-  	}
-}</code></pre>
-
+		<span class='n'>Coffee</span> <span class='n'>coffee</span> <span class='o'>=</span> <span class='n'>cook</span><span class='o'>.</span><span class='na'>getCoffee</span><span class='o'>();</span>
+		<span class='n'>System</span><span class='o'>.</span><span class='na'>out</span><span class='o'>.</span><span class='na'>println</span><span class='o'>(</span><span class='s'>&quot;coffee:&quot;</span> <span class='o'>+</span> <span class='n'>coffee</span><span class='o'>);</span>
+		<span class='k'>if</span> <span class='o'>(</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>console</span><span class='o'>()!=</span><span class='kc'>null</span><span class='o'>)</span> <span class='n'>System</span><span class='o'>.</span><span class='na'>console</span><span class='o'>().</span><span class='na'>readLine</span><span class='o'>();</span>
+	<span class='o'>}</span>
+<span class='o'>}</span>
+</code></pre></div>
 <p>Bu örnekte aşcımız bir Türk kahvesi yapmaktadır. Kaynak kodu indirip çalıştırdığınızda aşağıdaki gibi bir sonuc cıkacaktır.</p>
 
-<p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a href='http://github.com/rayyildiz/DesignPatterns' title='Design Patterns'>DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
+<p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a title='Design Patterns' href='http://github.com/rayyildiz/DesignPatterns'>DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
 
   
 
