@@ -2,7 +2,7 @@
 layout: post
 title: "Posterous, Google Reader ve Hayata Dair"
 description: "Posterous, google reader"
-category: Diğer 
+category: Genel 
 tags: [posterous, google reader]
 ---
 {% include JB/setup %}

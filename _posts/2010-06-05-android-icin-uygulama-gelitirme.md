@@ -2,7 +2,7 @@
 layout: post
 title: "Android için Uygulama Geliştirme"
 description: ""
-category: [Mobil Uygulama, Uygulama Geliştirme]
+category: Mobil
 tags: [Android, java]
 ---
 

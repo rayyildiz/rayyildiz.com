@@ -2,7 +2,7 @@
 layout: post
 title: "Java’da Vector ve ArrayList Performans Karşılaştırması"
 description: ""
-category: Yaızlım Geliştirme, Genel
+category: [Yazılım Geliştirme]
 tags: [java]
 ---
 

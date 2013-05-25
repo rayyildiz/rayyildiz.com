@@ -2,7 +2,7 @@
 layout: post
 title: "Android Uygulamalarında Veritabanı İşlemleri"
 description: ""
-category: Mobil Uygulama
+category: Mobil
 tags: [android, java, db]
 ---
 

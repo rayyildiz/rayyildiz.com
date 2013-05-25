@@ -2,7 +2,7 @@
 layout: post
 title: "Android Platformunda Tablı Ekranlar"
 description: ""
-category: Mobil Uygulama
+category: Mobil
 tags: [android, java]
 ---
 

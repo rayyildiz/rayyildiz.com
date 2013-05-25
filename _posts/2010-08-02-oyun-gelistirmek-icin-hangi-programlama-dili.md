@@ -2,7 +2,7 @@
 layout: post
 title: "Oyun Geliştirmek için Hangi Programlama Dili"
 description: ""
-category: Yazılım Geliştirme
+category: [Yazılım Geliştirme]
 tags: [java, oyun geliştirme]
 ---
 

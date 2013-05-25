@@ -2,7 +2,7 @@
 layout: post
 title: "JDK6 da Dependency Injection (ServiceLoader)"
 description: ""
-category: Uygulama Geliştirme
+category: Yazılım Geliştirme
 tags: [java, dependency injection]
 ---
 

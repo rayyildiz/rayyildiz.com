@@ -2,7 +2,7 @@
 layout: post
 title: "Android Giriş"
 description: "Android Hakkında Genel Bilgiler"
-category: Mobile Programlama
+category: Mobil
 tags: [android, java, mobile, programlama]
 ---
 

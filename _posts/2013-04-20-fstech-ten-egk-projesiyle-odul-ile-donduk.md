@@ -2,7 +2,7 @@
 layout: post
 title: "FSTech'ten EGK Projesiyle Ödül ile Döndük"
 description: "FSTech'ten EGK Projesiyle Ödül ile Döndük"
-category: Diğer 
+category: Genel 
 tags: [fstech, ödül, egk]
 ---
 {% include JB/setup %}

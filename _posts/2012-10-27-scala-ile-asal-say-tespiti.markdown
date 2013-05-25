@@ -2,7 +2,7 @@
 layout: post
 title: "Scala ile Asal Sayı Tespiti"
 description: ""
-category: Programlama
+category: Scala
 tags: [scala]
 ---
 

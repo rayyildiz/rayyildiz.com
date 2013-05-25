@@ -2,7 +2,7 @@
 layout: post
 title: "Java da PHP:Quercus"
 description: ""
-category: [Genel , Yazılım Geliştirme]
+category: [Yazılım Geliştirme]
 tags: [java, php, quercus]
 ---
 

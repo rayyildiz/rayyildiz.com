@@ -2,7 +2,7 @@
 layout: post
 title: "Java Migration Tool : Migrate4j"
 description: ""
-category: [Genel]
+category: Genel
 tags: [java, database]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Blog ve Miniblog"
 description: ""
-category: 
+category: Genel
 tags: []
 ---
 
