@@ -7,10 +7,10 @@ tags: [scala,coding-kata]
 ---
 {% include JB/setup %}
 
-###Scala Coding Kata - FizzBuzz Problemi
+#Scala Coding Kata - FizzBuzz Problemi
 
-####CodingKata Nedir?
-İlk kez [Dave Thomas](http://en.wikipedia.org/wiki/Dave_Thomas_(programmer) tarafından ortaya atılan [Coding-Kata](http://en.wikipedia.org/wiki/Kata_(programming)) ifadesi bir programlama dilindeki yeteneklerinizi geliştirmek amacıyla yapılan örneklere denilir. 
+##CodingKata Nedir?
+İlk kez [Dave Thomas](http://en.wikipedia.org/wiki/Dave_Thomas_programmer) tarafından ortaya atılan [Coding-Kata](http://en.wikipedia.org/wiki/Kata_programming)) ifadesi bir programlama dilindeki yeteneklerinizi geliştirmek amacıyla yapılan örneklere denilir. 
 
 Burada ben de Scala ile aşağıdaki listede yer alan problemleri çözerek burada sizinle paylaşıyor olacağım.
 
@@ -30,18 +30,18 @@ Burada ben de Scala ile aşağıdaki listede yer alan problemleri çözerek bura
 >Bugün yapacağımız ve bundan sonra yapacağımız çözümlerin kaynak kodlarını [Github.com/rayyildiz/codekata-scala](https://github.com/rayyildiz/codekata-scala) adresinden erişebilirsiniz.
 
 
-####FizzBuzz Problemi Nedir?
+##FizzBuzz Problemi Nedir?
 
-Scala ile yazmaya başladığım ilk CodingKata problemimiz FizzBuzz. FizzBuzz en az 2 kiş ile oynanan matematik geliştirmeye yönelik bir oyundur. 1'den başlayarak sırasıyla 1,2,3 diye saymaya başlanır. Eğer söylenen sayı 3'e tam bölünüyorsa Fizz, 5'e tam bölünüyorsa Buzz, hem 3 hem de 5 'e tam bölünüyorsa FizzBuzz denilir. Yanlış yapan elenir.
+Scala ile yazmaya başladığım ilk CodingKata problemimiz FizzBuzz. FizzBuzz en az 2 kişi ile oynanan matematik geliştirmeye yönelik bir oyundur. 1'den başlayarak sırasıyla 1,2,3 diye saymaya başlanır. Eğer söylenen sayı 3'e tam bölünüyorsa *Fizz*, 5'e tam bölünüyorsa *Buzz*, hem 3 hem de 5 'e tam bölünüyorsa *FizzBuzz* denilir. Yanlış yapan elenir.
 
 Buna göre sırasıyla aşağıdaki gibi söylenmesi gerekiyor.
->1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, >26, Fizz, 28, 29, FizzBuzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
+
+>1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, FizzBuzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
 
 
->Aynı oyunu sadece 10'luk düzenle değil, 8'lik , 16'lık düzende de oynanan halleri de vardır. FizzBuzz ile ilgili daha detaylı bilgiye [Tasarım desenleri](http://en.wikipedia.org/wiki/Fizz_buzz) adresinden erişebilirsiniz. 
+Aynı oyunu sadece 10'luk düzenle değil, 8'lik , 16'lık düzende de oynanan halleri de vardır. FizzBuzz ile ilgili daha detaylı bilgiye [Wikipedia](http://en.wikipedia.org/wiki/Fizz_buzz) adresinden erişebilirsiniz. 
 
-
-####FizzBuzz Problemin Çözümü
+##FizzBuzz Problemin Çözümü
 
 FizzBuzz probleminin çözümü için scala da patternt-matching ile çok kolay çözebiliriz. Verilen sayının FizzBuzz problemini çözen kod şu şekildedir.
 
