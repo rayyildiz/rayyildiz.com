@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Scala Kata   FizzBuzz"
+title: "Scala Kata - FizzBuzz"
 description: ""
 category: Genel
-tags: [scala]
+tags: [scala,coding-kata]
 ---
 {% include JB/setup %}
 
