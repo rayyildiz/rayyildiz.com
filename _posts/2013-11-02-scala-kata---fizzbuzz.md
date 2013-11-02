@@ -41,7 +41,7 @@ Aynı oyunu sadece 10'luk düzenle değil, 8'lik , 16'lık düzende de oynanan h
 
 FizzBuzz probleminin çözümü için scala da patternt-matching ile çok kolay çözebiliriz. Verilen sayının FizzBuzz problemini çözen kod şu şekildedir.
 
-Burada i sayısı (i % 3, i % 5) ile hem 3 hem de 5 bölünp bölünmediği hesaplanır. Burada sonuç bir Tuple2 yani (Int,Int) olacaktır. Bu tuple2 ifadesi patern-matching işlemiyle aynı anda tüm durumları test edebiliyor olacağız.
+Burada (i % 3, i % 5) ile hem 3 hem de 5 bölünp bölünmediği hesaplanır. Burada sonuç bir Tuple2 yani (Int,Int) olacaktır. Bu tuple2 ifadesi patern-matching işlemiyle aynı anda tüm durumları test edebiliyor olacağız.
 
 {% highlight scala %}
 def matchTest(i:Int): String = (i % 3, i % 5) match {
