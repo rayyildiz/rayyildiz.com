@@ -10,8 +10,7 @@ tags: [scala,coding-kata]
 ##CodingKata Nedir?
 İlk kez <http://en.wikipedia.org/wiki/Dave_Thomas_(programmer)> tarafından ortaya atılan [Coding-Kata](http://en.wikipedia.org/wiki/Kata_programming)) ifadesi bir programlama dilindeki yeteneklerinizi geliştirmek amacıyla yapılan örneklere denilir. 
 
-Burada ben de Scala ile aşağıdaki listede yer alan problemleri çözerek burada sizinle paylaşıyor olacağım.
-
+Burada ben de Scala ile aşağıdaki listede yer alan problemleri çözerek burada sizinle paylaşıyor olacağım:
 * Fizz Buzz
 * Prime Factors
 * String Calculator
@@ -26,7 +25,6 @@ Burada ben de Scala ile aşağıdaki listede yer alan problemleri çözerek bura
 * Potter
 
 >Bugün yapacağımız ve bundan sonra yapacağımız çözümlerin kaynak kodlarını [Github.com/rayyildiz/codekata-scala](https://github.com/rayyildiz/codekata-scala) adresinden erişebilirsiniz.
-
 
 ##FizzBuzz Problemi Nedir?
 
@@ -83,4 +81,4 @@ class FizzBuzzSpec extends FunSpec {
 }
 {% endhighlight %}
 
-Problemin çözümünü içerek uygulamayı  https://github.com/rayyildiz/codekata-scala/tree/master/FizzBuzz adresinden indirebilirsiniz. Ayrıca [github.com/rayyildiz/codekata-scala](https://github.com/rayyildiz/codekata-scala) github hesabımda diğer coding-kota problemlerini çözümlerini de paylaşacağım.
+Problemin çözümünü içerek uygulamayı  <https://github.com/rayyildiz/codekata-scala/tree/master/FizzBuzz> adresinden indirebilirsiniz. Ayrıca [github.com/rayyildiz/codekata-scala](https://github.com/rayyildiz/codekata-scala) github hesabımda diğer coding-kota problemlerini çözümlerini de paylaşacağım.
