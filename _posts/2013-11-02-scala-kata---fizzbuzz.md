@@ -6,11 +6,9 @@ category: Genel
 tags: [scala,coding-kata]
 ---
 {% include JB/setup %}
-
-#Scala Coding Kata - FizzBuzz Problemi
-
+	
 ##CodingKata Nedir?
-İlk kez [Dave Thomas](http://en.wikipedia.org/wiki/Dave_Thomas_programmer) tarafından ortaya atılan [Coding-Kata](http://en.wikipedia.org/wiki/Kata_programming)) ifadesi bir programlama dilindeki yeteneklerinizi geliştirmek amacıyla yapılan örneklere denilir. 
+İlk kez [Dave Thomas](http://en.wikipedia.org/wiki/Dave_Thomas_(programmer)) tarafından ortaya atılan [Coding-Kata](http://en.wikipedia.org/wiki/Kata_programming)) ifadesi bir programlama dilindeki yeteneklerinizi geliştirmek amacıyla yapılan örneklere denilir. 
 
 Burada ben de Scala ile aşağıdaki listede yer alan problemleri çözerek burada sizinle paylaşıyor olacağım.
 
@@ -45,6 +43,8 @@ Aynı oyunu sadece 10'luk düzenle değil, 8'lik , 16'lık düzende de oynanan h
 
 FizzBuzz probleminin çözümü için scala da patternt-matching ile çok kolay çözebiliriz. Verilen sayının FizzBuzz problemini çözen kod şu şekildedir.
 
+Burada i sayısı (i % 3, i % 5) ile hem 3 hem de 5 bölünp bölünmediği hesaplanır. Burada sonuç bir Tuple2 yani (Int,Int) olacaktır. Bu tuple2 ifadesi patern-matching işlemiyle aynı anda tüm durumları test edebiliyor olacağız.
+
 {% highlight scala %}
 def matchTest(i:Int): String = (i % 3, i % 5) match {
     case (0 , 0) => "FizzBuzz"
@@ -57,8 +57,30 @@ def matchTest(i:Int): String = (i % 3, i % 5) match {
 Bu örneği verilen sayıya kadar hesap ederek bir List[String] dönen çözüm ise şu şekilde olacaktır. 
 
 {% highlight scala %}
-def findFizzBuzz(max:Int):List[String] = (for ( i <- 1 to max) yield (matchTest(i))).toList
+def findFizzBuzz(max:Int):List[String] = 
+	(for ( i <- 1 to max) yield (matchTest(i))).toList
 {% endhighlight %}
 
+###Test Kodu
+
+Test işlemi için [ScalaTest](http://www.scalatest.org/) tercih ediyoruz. Yaptıımız çözümü test eden kod aşağıdaki gibidir.
+
+{% highlight scala %}
+import org.scalatest.FunSpec
+
+class FizzBuzzSpec extends FunSpec {
+  describe("A FizzBuzz"){
+
+    import FizzBuzz.findFizzBuzz
+
+    it("should correct for number is 15") {
+      val expected = List("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz")
+      val actual = findFizzBuzz(15)
+
+      assert ( expected === actual)
+    }
+  }
+}
+{% endhighlight %}
 
 Problemin çözümünü içerek uygulamayı  https://github.com/rayyildiz/codekata-scala/tree/master/FizzBuzz adresinden indirebilirsiniz. Ayrıca [github.com/rayyildiz/codekata-scala](https://github.com/rayyildiz/codekata-scala) github hesabımda diğer coding-kota problemlerini çözümlerini de paylaşacağım.
