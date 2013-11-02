@@ -8,7 +8,7 @@ tags: [scala,coding-kata]
 {% include JB/setup %}
 	
 ##CodingKata Nedir?
-İlk kez <http://en.wikipedia.org/wiki/Dave_Thomas_(programmer)> tarafından ortaya atılan [Coding-Kata](http://en.wikipedia.org/wiki/Kata_programming)) ifadesi bir programlama dilindeki yeteneklerinizi geliştirmek amacıyla yapılan örneklere denilir. 
+İlk kez <http://en.wikipedia.org/wiki/Dave_Thomas_(programmer)> tarafından ortaya atılan [Coding-Kata](http://en.wikipedia.org/wiki/Kata_programming) ifadesi bir programlama dilindeki yeteneklerinizi geliştirmek amacıyla yapılan örneklere denilir. 
 
 Burada ben de Scala ile aşağıdaki listede yer alan problemleri çözerek burada sizinle paylaşıyor olacağım:
 * Fizz Buzz
