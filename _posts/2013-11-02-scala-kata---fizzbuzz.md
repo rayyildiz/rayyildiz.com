@@ -39,7 +39,7 @@ Aynı oyunu sadece 10'luk düzenle değil, 8'lik , 16'lık düzende de oynanan h
 
 ##FizzBuzz Problemin Çözümü
 
-FizzBuzz probleminin çözümü için scala da patternt-matching ile çok kolay çözebiliriz. Verilen sayının FizzBuzz problemini çözen kod şu şekildedir.
+FizzBuzz probleminin çözümü için scala da pattern-matching ile çok kolay çözebiliriz. Verilen sayının FizzBuzz problemini çözen kod şu şekildedir.
 
 Burada (i % 3, i % 5) ile hem 3 hem de 5 bölünüp bölünmediği hesaplanır. Burada sonuç bir Tuple2 yani (Int,Int) olacaktır. Bu tuple2 ifadesi patern-matching işlemiyle aynı anda tüm durumları test edebiliyor olacağız.
 
@@ -52,7 +52,7 @@ def matchTest(i:Int): String = (i % 3, i % 5) match {
   }
 {% endhighlight %}
 
-Bu örneği verilen sayıya kadar hesap ederek bir List[String] dönen çözüm ise şu şekilde olacaktır. 
+Bu örneği verilen sayıya kadar hesap ederek bir List [String] dönen çözüm ise şu şekilde olacaktır. 
 
 {% highlight scala %}
 def findFizzBuzz(max:Int):List[String] = 
@@ -72,7 +72,9 @@ class FizzBuzzSpec extends FunSpec {
     import FizzBuzz.findFizzBuzz
 
     it("should correct for number is 15") {
-      val expected = List("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz")
+      val expected = List("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", 
+	  		"8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz")
+			
       val actual = findFizzBuzz(15)
 
       assert ( expected === actual)
@@ -81,4 +83,4 @@ class FizzBuzzSpec extends FunSpec {
 }
 {% endhighlight %}
 
-Problemin çözümünü içerek uygulamayı  <https://github.com/rayyildiz/codekata-scala/tree/master/FizzBuzz> adresinden indirebilirsiniz. Ayrıca [github.com/rayyildiz/codekata-scala](https://github.com/rayyildiz/codekata-scala) github hesabımda diğer coding-kota problemlerini çözümlerini de paylaşacağım.
+Problemin çözümünü içeren uygulamayı  <https://github.com/rayyildiz/codekata-scala/tree/master/FizzBuzz> adresinden indirebilirsiniz. Ayrıca [github.com/rayyildiz/codekata-scala](https://github.com/rayyildiz/codekata-scala) github hesabımda diğer coding-kota problemlerini çözümlerini de paylaşacağım.
