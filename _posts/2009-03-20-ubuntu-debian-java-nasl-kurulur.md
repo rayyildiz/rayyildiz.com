@@ -1,11 +1,10 @@
 ---
+published: true
+title: Ubuntu/Debian Java Nasıl Kurulur
 layout: post
-title: "Ubuntu/Debian Java Nasıl Kurulur"
-description: ""
-category: Genel
 tags: [java, ubuntu, debian]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
