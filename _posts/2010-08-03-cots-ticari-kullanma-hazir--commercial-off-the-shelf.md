@@ -1,11 +1,10 @@
 ---
+published: true
+title: COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf)
 layout: post
-title: "COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf)"
-description: ""
-category: Genel
 tags: [cots]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
