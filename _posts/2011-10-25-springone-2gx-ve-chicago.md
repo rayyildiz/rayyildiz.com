@@ -1,11 +1,10 @@
 ---
+published: true
+title: SpringOne 2GX ve Chicago
 layout: post
-title: "SpringOne 2GX ve Chicago"
-description: ""
-category: Genel
-tags: [springone, grails, groovy, java, spring framework]
+tags: [springone, grails, groovy, java, spring, framework]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
