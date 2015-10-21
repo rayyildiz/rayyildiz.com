@@ -1,11 +1,10 @@
 ---
+published: true
+title: SpringOne 2GX – KeyNote
 layout: post
-title: "SpringOne 2GX – KeyNote"
-description: ""
-category: Genel
 tags: [sprigone, java, springframewrok, keynote]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
