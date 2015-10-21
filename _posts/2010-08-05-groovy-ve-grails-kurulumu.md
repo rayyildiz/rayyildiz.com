@@ -1,11 +1,10 @@
 ---
+published: true
+title: Groovy ve Grails Kurulumu
 layout: post
-title: "Groovy ve Grails Kurulumu"
-description: ""
-category: Genel
 tags: [groovy, grails, kurulum]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
