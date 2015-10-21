@@ -1,11 +1,10 @@
 ---
+published: true
+title: Cloud Computing Yapmak İstiyorum:Stax.net
 layout: post
-title: "Cloud Computing Yapmak İstiyorum:Stax.net"
-description: ""
-category: Genel 
-tags: [cloud computing, stax.net, java]
+tags: [cloud, computing, stax.net, java]
+categories: [Genel, ]
 ---
-
 {% include JB/setup %}
 
 
