@@ -1,11 +1,10 @@
 ---
+published: true
+title: Fabrika Yöntemi Tasarım Deseni ( Factory Method )
 layout: post
-title: "Fabrika Yöntemi Tasarım Deseni ( Factory Method )"
-description: ""
-category: Genel
-tags: [factroy method, design pattern, tarsarım desenleri]
+tags: [factroy, method, design, pattern, tarsarım, desenleri]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
