@@ -1,11 +1,10 @@
 ---
+published: true
+title: Groovy Programlamaya Giriş
 layout: post
-title: "Groovy Programlamaya Giriş"
-description: ""
-category: Yazılım Geliştirme
 tags: [groovy, java]
+categories: [Yazılım, Geliştirme]
 ---
-
 {% include JB/setup %}
 
 
