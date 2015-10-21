@@ -1,11 +1,10 @@
 ---
+published: true
+title: Google Chrome
 layout: post
-title: "Google Chrome"
-description: ""
-category: Genel
 tags: [chrome]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
