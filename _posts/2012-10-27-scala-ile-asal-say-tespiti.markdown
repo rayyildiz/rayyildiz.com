@@ -1,11 +1,10 @@
 ---
+published: true
+title: Scala ile Asal Sayı Tespiti
 layout: post
-title: "Scala ile Asal Sayı Tespiti"
-description: ""
-category: Scala
 tags: [scala]
+categories: [Scala]
 ---
-
 {% include JB/setup %}
 
 
