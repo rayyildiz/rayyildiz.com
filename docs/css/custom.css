@@ -1,0 +1,16 @@
+body{
+    background-image: url(../images/coding-3013602.jpg) !important;
+    background-size: 2048px 1365px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0em; 
+}
+
+footer#footer {
+    color: black;
+    font-family: -webkit-body;
+    font-size: 1.00em;
+}
+
+h6, .biography {
+    font-size: 0.8em;
+}
