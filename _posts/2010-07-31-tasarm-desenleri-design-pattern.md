@@ -1,11 +1,10 @@
 ---
+published: true
+title: Tasarım Desenleri (Design Pattern)
 layout: post
-title: "Tasarım Desenleri (Design Pattern)"
-description: ""
-category: Genel
-tags: [tasarım desenleri, design pattern]
+tags: [tasarım, desenleri, design, pattern]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
