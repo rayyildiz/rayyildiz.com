@@ -1,11 +1,10 @@
 ---
+published: true
+title: Yapıcı Tasarım Deseni (Builder Design Pattern)
 layout: post
-title: "Yapıcı Tasarım Deseni (Builder Design Pattern)"
-description: ""
-category: Genel
-tags: [Tasarım Deseni, Design Pattern, Builder design pattern]
+tags: [Tasarım, Deseni, Design, Pattern, Builder, design, pattern]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
@@ -109,5 +108,3 @@ public class Main {
 Bu örnekte aşcımız bir Türk kahvesi yapmaktadır. Kaynak kodu indirip çalıştırdığınızda aşağıdaki gibi bir sonuc cıkacaktır.
 
 Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları [DesignPatterns](http://github.com/rayyildiz/DesignPatterns "Design Patterns") adresinden ulaşabilirsiniz.
-
-
