@@ -1,11 +1,9 @@
 ---
+published: true
+title: Blog ve Miniblog
 layout: post
-title: "Blog ve Miniblog"
-description: ""
-category: Genel
-tags: []
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
