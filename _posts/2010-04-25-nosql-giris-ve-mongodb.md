@@ -1,11 +1,10 @@
 ---
+published: true
+title: NoSQL Giriş ve MongoDB
 layout: post
-title: "NoSQL Giriş ve MongoDB"
-description: ""
-category: Genel
 tags: [mongodb, nosql]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
