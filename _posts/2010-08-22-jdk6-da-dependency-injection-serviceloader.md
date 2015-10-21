@@ -1,11 +1,10 @@
 ---
+published: true
+title: JDK6 da Dependency Injection (ServiceLoader)
 layout: post
-title: "JDK6 da Dependency Injection (ServiceLoader)"
-description: ""
-category: Yazılım Geliştirme
-tags: [java, dependency injection]
+tags: [java, dependency, injection]
+categories: [Yazılım, Geliştirme]
 ---
-
 {% include JB/setup %}
 
 
