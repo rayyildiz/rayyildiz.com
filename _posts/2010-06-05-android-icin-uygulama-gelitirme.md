@@ -1,11 +1,10 @@
 ---
+published: true
+title: Android için Uygulama Geliştirme
 layout: post
-title: "Android için Uygulama Geliştirme"
-description: ""
-category: Mobil
 tags: [Android, java]
+categories: [Mobil]
 ---
-
 {% include JB/setup %}
 
 
