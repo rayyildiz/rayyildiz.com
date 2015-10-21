@@ -1,9 +1,9 @@
 ---
+published: true
+title: FSTech'ten EGK Projesiyle Ödül ile Döndük
 layout: post
-title: "FSTech'ten EGK Projesiyle Ödül ile Döndük"
-description: "FSTech'ten EGK Projesiyle Ödül ile Döndük"
-category: Genel 
 tags: [fstech, ödül, egk]
+categories: [Genel, ]
 ---
 {% include JB/setup %}
 
