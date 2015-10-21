@@ -1,11 +1,10 @@
 ---
+published: true
+title: Android Uygulamalarında Veritabanı İşlemleri
 layout: post
-title: "Android Uygulamalarında Veritabanı İşlemleri"
-description: ""
-category: Mobil
 tags: [android, java, db]
+categories: [Mobil]
 ---
-
 {% include JB/setup %}
 
 
