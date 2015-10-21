@@ -3,7 +3,7 @@ published: true
 title: Oyun Geliştirmek için Hangi Programlama Dili
 layout: post
 tags: [java, oyun, geliştirme]
-categories: [[Yazılım, Geliştirme]]
+categories: [Yazılım, Geliştirme]
 ---
 {% include JB/setup %}
 
