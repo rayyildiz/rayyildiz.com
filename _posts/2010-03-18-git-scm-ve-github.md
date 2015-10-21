@@ -1,11 +1,10 @@
 ---
+published: true
+title: Git scm ve GitHub
 layout: post
-title: "Git scm ve GitHub"
-description: ""
-category: Genel 
 tags: [git, scm, github]
+categories: [Genel, ]
 ---
-
 {% include JB/setup %}
 
 
