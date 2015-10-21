@@ -1,11 +1,10 @@
 ---
+published: true
+title: Java da PHP:Quercus
 layout: post
-title: "Java da PHP:Quercus"
-description: ""
-category: [Yazılım Geliştirme]
 tags: [java, php, quercus]
+categories: [[Yazılım, Geliştirme]]
 ---
-
 {% include JB/setup %}
 
 J2EE 5 bir çok yeni özellikle gelmiş olmasına rağmen, özellikle hızlı uygulama gelişitirebilmek istenen uygulamalarda java nın fazla geldiği, basit uygulama geliştirmek için javanın tercih edinirliği azaldığını görmekteyiz. Bu kapsamda j2ee 6 da rapid geliştirme ortamlarının entegre olacağı ve bu sayede de daha küçük ölçekli yazılımlar için bu uygulamaların tercih edilebileceği planlanıyor. Bütün bunlar devam ederken, bazı yazılımlar yeniden yorumlanmaya başladı. Bunlardan birisi ise Quercus.
