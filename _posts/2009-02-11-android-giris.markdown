@@ -1,11 +1,10 @@
 ---
+published: true
+title: Android Giriş
 layout: post
-title: "Android Giriş"
-description: "Android Hakkında Genel Bilgiler"
-category: Mobil
 tags: [android, java, mobile, programlama]
+categories: [Mobil]
 ---
-
 {% include JB/setup %}
 
 
@@ -55,4 +54,3 @@ Bu katmanda çok önemli birkaç yapı bulunmaktadır. Bu yapıları incelemeye 
 ![android takvim](/images/views_datewidgets_example1_pickdate1.png)
 
 Android bu pazarda iddialı olduğunu ilk gün göstermiştir. Gelişen Pazar içinde şirketlerin rekabetleri elbette son kullanıcıya yeni olanaklar sunacaktır. Bu yazımızda bu pazara yeni giren iddialı bir ortamı tanımaya çalıştık. Özellikle google desteğiyle büyük yollar almış görünen bu ortam daha henüz tam manasıyla hazır bile değil. Nitekim uygulama geliştirmek isteyenler ancak emülatörler üzerinde bunu yapabilecekeler, nitekim şu anda sadece gphone üzerine kuruldu, gphone ise tam olarak lansmanı bile yapılan telefon değil henüz en azından Türkiye de. Birgerçek varki google bu sektörde cok iddialı. Bakalım ne tür gelişmeler yaşanacak ileriki günlerde.
-
