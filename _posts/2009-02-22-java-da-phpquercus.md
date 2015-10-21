@@ -3,7 +3,7 @@ published: true
 title: Java da PHP:Quercus
 layout: post
 tags: [java, php, quercus]
-categories: [[Yazılım, Geliştirme]]
+categories: [Yazılım, Geliştirme]
 ---
 {% include JB/setup %}
 
