@@ -1,11 +1,10 @@
 ---
+published: true
+title: Soyut Fabrika Tasarım Deseni (Abstract Factory)
 layout: post
-title: "Soyut Fabrika Tasarım Deseni (Abstract Factory)"
-description: ""
-category: Genel
-tags: [Tasarım Deseni, Design Patterns, Factory Pattern]
+tags: [Tasarım, Deseni, Design, Patterns, Factory, Pattern]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
