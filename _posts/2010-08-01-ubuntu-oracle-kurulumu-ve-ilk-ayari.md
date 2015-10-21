@@ -1,11 +1,10 @@
 ---
+published: true
+title: Ubuntu Oracle Kurulumu ve İlk Ayarı
 layout: post
-title: "Ubuntu Oracle Kurulumu ve İlk Ayarı"
-description: ""
-category: Genel
-tags: [kurulum, linux, ubuntu,oracle]
+tags: [kurulum, linux, ubuntu, oracle]
+categories: [Genel]
 ---
-
 {% include JB/setup %}
 
 
