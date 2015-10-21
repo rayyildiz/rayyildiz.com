@@ -1,11 +1,10 @@
 ---
+published: true
+title: Android Platformunda Tablı Ekranlar
 layout: post
-title: "Android Platformunda Tablı Ekranlar"
-description: ""
-category: Mobil
 tags: [android, java]
+categories: [Mobil]
 ---
-
 {% include JB/setup %}
 
 
