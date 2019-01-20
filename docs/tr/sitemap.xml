@@ -222,6 +222,20 @@
   </url>
   
   <url>
+    <loc>https://rayyildiz.com/tr/hakkimda/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rayyildiz.com/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://rayyildiz.com/tr/hakkimda/"
+                />
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/tags/ide/</loc>
     <lastmod>2009-03-09T00:00:00+00:00</lastmod>
     <priority>0</priority>

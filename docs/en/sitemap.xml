@@ -3,6 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rayyildiz.com/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://rayyildiz.com/tr/hakkimda/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rayyildiz.com/about/"
+                />
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/categories/</loc>
     <priority>0</priority>
     <xhtml:link

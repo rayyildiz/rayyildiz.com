@@ -324,5 +324,14 @@ Uzun bir süredir web 2.0 adapte olabilecek yazılım geliştirme ortamları piy
       <description>Yeni icatlar hep “Nasıl?” sorusunun cevabıymış. Son yıllarda yaşanan teknolojik dev adımları görünce buna hak vermemek mümkün değil. Bilgisayar ilk icat edildiğinde bir odaya bile sığmıyordu. Zamanla mikro bilgisayarların yerini almasıyla ‚Äúteknolojiyi dahada nasıl küçültebiliriz?‚Äù sorusu akıllara gelmeye başladı. Sadece konuşma özelliği bulunan telefonlar acaba nasıl yanımızda taşıyabiliriz sorusu cep telefonlarının icat edilmesiyle sonuçlandı. Bunu takip eden dönemde ise acaba cep telefonlarıyla bilgisayarı nasıl birleştirebiliriz sorusu oldu. Bu sorunun cevabını birkaç yıl önce cevap vermişler, pocket bilgisayar üretildi.</description>
     </item>
     
+    <item>
+      <title>Hakkimda</title>
+      <link>https://rayyildiz.com/tr/hakkimda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/hakkimda/</guid>
+      <description>“Bilgi paylaşldıkça güzelleşir” deyimi ile yazmaya başladığım bu blog, bana bildiğini paylaştığımda daha çok bilmemi sağladı. İlk kez Dos ortamını görmemin hemen arkasından linux ile tanıştım ki bu benim hayatımın akışnda oldukça önemli yer etti. Meslek seçiminde bilgisayar mühendisliği seçmemin en önemli etkilerinden birisi bu oldu. Bu sitede, değişik yerlerde yayınlanan ve/veya yeni yazdığım yazılarımı yayınlamak için açtım. İnternetin çöplük olmaya başladığının bir gerçek olduğu şu zamanlarda, mümkün olduğunca temiz bilgi vermeye çalışyorum.</description>
+    </item>
+    
   </channel>
 </rss>
