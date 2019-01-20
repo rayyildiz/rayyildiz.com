@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ide on Ramazan AYYILDIZ</title>
-    <link>http://rayyildiz.com/tr/tags/ide/</link>
+    <link>https://rayyildiz.com/tr/tags/ide/</link>
     <description>Recent content in Ide on Ramazan AYYILDIZ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 09 Mar 2009 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://rayyildiz.com/tr/tags/ide/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rayyildiz.com/tr/tags/ide/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Netbeans 6.9</title>
-      <link>http://rayyildiz.com/tr/posts/netbeans-6-9-ozellikleri/</link>
+      <link>https://rayyildiz.com/tr/posts/netbeans-6-9-ozellikleri/</link>
       <pubDate>Mon, 09 Mar 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://rayyildiz.com/tr/posts/netbeans-6-9-ozellikleri/</guid>
+      <guid>https://rayyildiz.com/tr/posts/netbeans-6-9-ozellikleri/</guid>
       <description>Netbeans 6.9 beta sürümü yayınlandı. Netbeans 6.9 adresinden detaylarına bakabilir ve indirebilirsiniz. Netbeans 6.9 da benim uzun süredir beklediğim Spring 3.0 desteği en sonunda gelmiş oldu. Daha önceki sürümlerinde netbeans Spring 2.5 desteği sunuyordu. Özellikle spring 3.0 ile gelen özellikleri kullanabileceğiz. Netbeans 6.9, 9 haziranda release olacak.
 Google App Engine için geliştirilmiş plugin de mevcuttur.
 JavaFX Bildiğiniz gibi Sun &amp;amp; Oracle , linux platformunda javafx desteğini sunmuşlardı. Netbeans ise javafx geliştirmek için en uygun ücretsiz IDE olarak yoluna devam ediyor.</description>

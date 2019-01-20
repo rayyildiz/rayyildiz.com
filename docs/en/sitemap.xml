@@ -3,47 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://rayyildiz.com/categories/</loc>
+    <loc>https://rayyildiz.com/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://rayyildiz.com/tr/categories/"
+                href="https://rayyildiz.com/tr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://rayyildiz.com/categories/"
+                href="https://rayyildiz.com/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://rayyildiz.com/</loc>
+    <loc>https://rayyildiz.com/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://rayyildiz.com/tr/"
+                href="https://rayyildiz.com/tr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://rayyildiz.com/"
+                href="https://rayyildiz.com/"
                 />
   </url>
   
   <url>
-    <loc>http://rayyildiz.com/tags/</loc>
+    <loc>https://rayyildiz.com/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="http://rayyildiz.com/tr/tags/"
+                href="https://rayyildiz.com/tr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://rayyildiz.com/tags/"
+                href="https://rayyildiz.com/tags/"
                 />
   </url>
   
