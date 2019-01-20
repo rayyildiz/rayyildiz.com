@@ -7,7 +7,7 @@ categories= ["Genel","Yazilim gelistirme"]
 +++
 
 
-[Daha önceki yazımda](/tr/groovy-ve-grails-kurulumu/) groovy ve grails’in nasıl kurulacağı bilgisini vermiştim. Bu yazımda ise groovy programlamaya başlayacağız.
+[Daha önceki yazımda](/tr/posts/groovy-ve-grails-kurulumu/) groovy ve grails’in nasıl kurulacağı bilgisini vermiştim. Bu yazımda ise groovy programlamaya başlayacağız.
 
 Groovy java programlama diline alışkın kişilerin, Python, Ruby, Smalltalk yer alan özellikleri kullanabilmesine olanak sunan agile bir programlama dili olarak tanımlanıyor.
 
