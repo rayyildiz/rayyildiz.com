@@ -69,11 +69,12 @@ Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten t
       <pubDate>Sun, 22 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://rayyildiz.com/tr/posts/jdk6-ile-dependency-injection/</guid>
-      <description>DI ne olduğuna dair bir yazıyı buradan ulaşabilirsiniz. JDK6 da ise ServiceLoader gelmektedir. ServiceLoader sayesinde bir nevi DI sağlamış olmaktayız. Bunun nasıl yapacağımızı bir örnekle gösterelim.
+      <description>JDK6 da ise ServiceLoader gelmektedir. ServiceLoader sayesinde bir nevi DI sağlamış olmaktayız. Bunun nasıl yapacağımızı bir örnekle gösterelim.
 Uygulamanın örnek test kodlarını github üzerinden bulabilmeniz mümkündür.
 Bu örneği yapabilmek için 3 tane proje oluşturalım. Bu 3 proje ve açıklaması şu şekildedir:
 UserAuth: Arayüzün yer aldığı proje.IUserAuthService diye bir arayüz yer almakta ve bu arayüz login diye bir metot tanımı içermektedir.
-UserAuthImpl: Uygulamanın gerçekleştirildiği sınıf yer alır.</description>
+UserAuthImpl: Uygulamanın gerçekleştirildiği sınıf yer alır.
+UserAuthTest: Main sınıfının yer aldığı örnek uygulamadır.</description>
     </item>
     
     <item>

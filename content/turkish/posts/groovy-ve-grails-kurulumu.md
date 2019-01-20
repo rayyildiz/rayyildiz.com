@@ -7,7 +7,7 @@ categories= ["Genel"]
 +++
 
 
-## Grrovy Nedir?
+## Groovy Nedir?
 
 ![Groovy](/images/groovy_medium.png)
 

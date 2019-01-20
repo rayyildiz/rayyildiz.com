@@ -99,11 +99,12 @@ Yapıcı tasarım deseni, nesnelerin yapıcı metotlarını soyutlamak suretiyle
       <pubDate>Sun, 22 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://rayyildiz.com/tr/posts/jdk6-ile-dependency-injection/</guid>
-      <description>DI ne olduğuna dair bir yazıyı buradan ulaşabilirsiniz. JDK6 da ise ServiceLoader gelmektedir. ServiceLoader sayesinde bir nevi DI sağlamış olmaktayız. Bunun nasıl yapacağımızı bir örnekle gösterelim.
+      <description>JDK6 da ise ServiceLoader gelmektedir. ServiceLoader sayesinde bir nevi DI sağlamış olmaktayız. Bunun nasıl yapacağımızı bir örnekle gösterelim.
 Uygulamanın örnek test kodlarını github üzerinden bulabilmeniz mümkündür.
 Bu örneği yapabilmek için 3 tane proje oluşturalım. Bu 3 proje ve açıklaması şu şekildedir:
 UserAuth: Arayüzün yer aldığı proje.IUserAuthService diye bir arayüz yer almakta ve bu arayüz login diye bir metot tanımı içermektedir.
-UserAuthImpl: Uygulamanın gerçekleştirildiği sınıf yer alır.</description>
+UserAuthImpl: Uygulamanın gerçekleştirildiği sınıf yer alır.
+UserAuthTest: Main sınıfının yer aldığı örnek uygulamadır.</description>
     </item>
     
     <item>
@@ -134,7 +135,7 @@ Soyut fabrika tasarım deseninin amacı, farklı ürün ailelerin için uygulanm
       <pubDate>Thu, 05 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://rayyildiz.com/tr/posts/groovy-ve-grails-kurulumu/</guid>
-      <description>Grrovy Nedir? Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.
+      <description>Groovy Nedir? Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.
 Eclipse, NetBeans ve Intellij Idea da geliştirilmiş eklentiler sayesinde groovy geliştirebilirsiniz.
 Groovy hakkında daha detaylı bilgi için Grails Nedir? Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir.</description>
     </item>

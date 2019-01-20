@@ -13,6 +13,6 @@ Uzun süredir beklediğim SpringOne 2GX ilk gunü geride kaldı. Katılımın y�
 
 ![Springone Keynote](/images/springone-keynote.jpg)
 
-SpringOne ilk süprizini Keynote da öğrendik. [Rod Johnson](http://www.springone2gx.com/conference/speaker/rod_johnson) kolunu kırmış olması ve doktorunun uçma yasağı nedeniyle etkinliğe katılamamasiydi. Ben SpringOne ilk kez katılıyorum ama ben bile etkinliğin Rod olmadan başladığını hatırlamıyorum. Bu Rod un katılmadığı ilk etkinlik olacak. Bunun yaninda Graeme Rocher soğuk algınlığı almış herhalde, sesi çok kötüydü.
+SpringOne ilk süprizini Keynote da öğrendik. [Rod Johnson](https://twitter.com/springrod) kolunu kırmış olması ve doktorunun uçma yasağı nedeniyle etkinliğe katılamamasiydi. Ben SpringOne ilk kez katılıyorum ama ben bile etkinliğin Rod olmadan başladığını hatırlamıyorum. Bu Rod un katılmadığı ilk etkinlik olacak. Bunun yaninda Graeme Rocher soğuk algınlığı almış herhalde, sesi çok kötüydü.
 
 Etkinlik kapsamında başlıca islenilecek konular: Spring data, grails, bulut mimariler. Özellikle bulut mimariler bu etkinliğin en önemli konularını içeriyor. [Heroku](http://www.heroku.com), [cloudfoundry](http://www.cloudfoundry.com), [appfog](http://www.appfog.com) etkinliğe sponsor olmuşlar.

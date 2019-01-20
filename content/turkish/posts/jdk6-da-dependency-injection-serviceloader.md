@@ -8,7 +8,7 @@ categories= ["Genel","Yazilim Gelistirme"]
 
 
 
-DI ne olduğuna dair bir yazıyı [buradan](http://rayyildiz.net/2010/05/what-is-dependency-injection/) ulaşabilirsiniz. JDK6 da ise ServiceLoader gelmektedir. [ServiceLoader](http://download.oracle.com/docs/cd/E17409_01/javase/6/docs/api/java/util/ServiceLoader.html) sayesinde bir nevi DI sağlamış olmaktayız. Bunun nasıl yapacağımızı bir örnekle gösterelim.
+JDK6 da ise ServiceLoader gelmektedir. [ServiceLoader](http://download.oracle.com/docs/cd/E17409_01/javase/6/docs/api/java/util/ServiceLoader.html) sayesinde bir nevi DI sağlamış olmaktayız. Bunun nasıl yapacağımızı bir örnekle gösterelim.
 
 Uygulamanın örnek test kodlarını [github](http://github.com/rayyildiz/UserAuthSample) üzerinden bulabilmeniz mümkündür.
 

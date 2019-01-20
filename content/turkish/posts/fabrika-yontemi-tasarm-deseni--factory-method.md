@@ -8,7 +8,7 @@ categories= ["Genel"]
 
 
 
-Tasarım desenleri hakkında giriş mahiyetindeki yazıma [buradan](/tr/java-ile-tasarim-desenleri/) ulaşabilirsiniz. Bu tasarım desenlerinden yaratım desenleri grubundaki ücüncü desen fabrika tasarım desenidir ( Factory Method)
+Tasarım desenleri hakkında giriş mahiyetindeki yazıma [buradan](/tr/posts/java-ile-tasarim-desenleri/) ulaşabilirsiniz. Bu tasarım desenlerinden yaratım desenleri grubundaki ücüncü desen fabrika tasarım desenidir ( Factory Method)
 
 Fabrika yöntemi tasarım deseni,birçok framework yaygın bir şekilde kullanılan bir tasarım desenidir. Bu tasarım deseninde, parelel seviyedeki nesnelerin hangisinin oluşmasını gerektiğini karar veren bir fabrika metodunu ifade eder. Yani aynı arayüz ( interface) gerçekleştiren paralel sınıfların hangisinin gerçekleşmesini sağlayan bir nesne sayesinde bu ilşemi gerçekleştirebiliriz.
 

@@ -25,7 +25,7 @@ CREATE TABLE "Customer" (
 	);
 ```
 
-Daha sonra ise IDE nizde bir android uygulaması açınız([Android ile Uygulama Geliştirme](/2010/06/android-icin-uygulama-gelitirme/) yazısından faydalanabilirsiniz). Ben daha eski telefonlarda kullanılabilmesi için 1.6 uygulması actım. Daha sonra ise droiddraw ana ekran tasarlıyoruz.
+Daha sonra ise IDE nizde bir android uygulaması açınız([Android ile Uygulama Geliştirme](/tr/posts/android-uygulama-gelistirme/) yazısından faydalanabilirsiniz). Ben daha eski telefonlarda kullanılabilmesi için 1.6 uygulması actım. Daha sonra ise droiddraw ana ekran tasarlıyoruz.
 
 Veritabanı ilk acıldığında tablonun create edilmesi için create script i kod içine almamız gerekir. Aynı şekilde örneğimizde compiled statement kullanıyoruz. Şu anda sadece insert ve getAll metodunu implemente ettik.
 
