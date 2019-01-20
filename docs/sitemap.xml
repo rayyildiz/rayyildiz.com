@@ -2,14 +2,14 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<sitemap>
-	   	<loc>https://rayyildiz.com/tr/sitemap.xml</loc>
-		
-	   	<lastmod>2013-05-25T00:00:00+00:00</lastmod>
+	   	<loc>https://rayyildiz.com/en/sitemap.xml</loc>
 		
 	</sitemap>
 	
 	<sitemap>
-	   	<loc>https://rayyildiz.com/en/sitemap.xml</loc>
+	   	<loc>https://rayyildiz.com/tr/sitemap.xml</loc>
+		
+	   	<lastmod>2013-05-25T00:00:00+00:00</lastmod>
 		
 	</sitemap>
 	

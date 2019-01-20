@@ -3,6 +3,8 @@ title = "Ramazan AYYILDIZ"
 
 theme = "hugo-coder"
 
+
+googleAnalytics ="UA-765318-11"
 languagecode = "en"
 
 paginate = 20
@@ -21,8 +23,7 @@ disqusShortname = "rayyildiz"
     info = "Data Engineer and Software Architect"
     avatarurl = "avatars/rayyildiz.jpg"
     footercontent = "When information is shared, it will grow even more"
-    
-    
+
     dateformat = "January 2, 2006"
 
     hideCredits = true
@@ -49,12 +50,12 @@ disqusShortname = "rayyildiz"
 [[params.social]]
     name = "Twitter"
     icon = "fab fa-twitter"
-    weight = 3
+    weight = 2
     url = "https://twitter.com/rayyildiz/"
 [[params.social]]
     name = "LinkedIn"
     icon = "fab fa-linkedin"
-    weight = 4
+    weight = 3
     url = "https://www.linkedin.com/in/rayyildiz/"
 
 
