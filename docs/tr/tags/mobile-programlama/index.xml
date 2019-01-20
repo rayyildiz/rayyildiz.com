@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile Programlama on Ramazan AYYILDIZ</title>
+    <link>http://rayyildiz.com/tr/tags/mobile-programlama/</link>
+    <description>Recent content in Mobile Programlama on Ramazan AYYILDIZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Feb 2009 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://rayyildiz.com/tr/tags/mobile-programlama/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Giriş</title>
+      <link>http://rayyildiz.com/tr/posts/android-giris/</link>
+      <pubDate>Wed, 11 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://rayyildiz.com/tr/posts/android-giris/</guid>
+      <description>Yeni icatlar hep “Nasıl?” sorusunun cevabıymış. Son yıllarda yaşanan teknolojik dev adımları görünce buna hak vermemek mümkün değil. Bilgisayar ilk icat edildiğinde bir odaya bile sığmıyordu. Zamanla mikro bilgisayarların yerini almasıyla ‚Äúteknolojiyi dahada nasıl küçültebiliriz?‚Äù sorusu akıllara gelmeye başladı. Sadece konuşma özelliği bulunan telefonlar acaba nasıl yanımızda taşıyabiliriz sorusu cep telefonlarının icat edilmesiyle sonuçlandı. Bunu takip eden dönemde ise acaba cep telefonlarıyla bilgisayarı nasıl birleştirebiliriz sorusu oldu. Bu sorunun cevabını birkaç yıl önce cevap vermişler, pocket bilgisayar üretildi.</description>
+    </item>
+    
+  </channel>
+</rss>
