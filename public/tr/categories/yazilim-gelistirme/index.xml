@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yazilim Gelistirme on Ramazan AYYILDIZ</title>
+    <link>https://rayyildiz.com/tr/categories/yazilim-gelistirme/</link>
+    <description>Recent content in Yazilim Gelistirme on Ramazan AYYILDIZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Oct 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rayyildiz.com/tr/categories/yazilim-gelistirme/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scala ile Asal Sayı Tespiti</title>
+      <link>https://rayyildiz.com/tr/posts/scala-ile-asal-sayiti-tespiti/</link>
+      <pubDate>Sat, 27 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/scala-ile-asal-sayiti-tespiti/</guid>
+      <description>Scala ile bir asal sayının tespiti aşağıdaki gibi bir kod ile bulmak mümkün. Bu kod parçası scala&amp;rsquo;nın ne denli güçlü olduğunu göstermeye yeterli bence. Daha sonraki yazılarımızda scala ile daha detaylı bir yazı yazacağım.
+def isPrime(n:Int): Boolean = (2 until n) forall (d =&amp;gt; n % d !</description>
+    </item>
+    
+    <item>
+      <title>Griffon Başlangıç</title>
+      <link>https://rayyildiz.com/tr/posts/griffon-baslangic/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/griffon-baslangic/</guid>
+      <description>Chicago da gerçekleştirilen SpringOne2GX etkinliği kapsamında epey ilginç ve de güzel seyler gördüm. Etkinliğin son gunü, paralel giden konferanslardan sonuncusunda herhangi bir bilgimin olmadigi ve diğer konuları beğenmediğinden dolayı Griffon a katılmayı tercih ettim. Hakkında çok az şey biliyordum. Ancak sunu soylemeliyim ki etkinlik kapsamında bu kadar beni şaşırtan konu olmamıştı. Bu nedenle hakkında bazı bilgileri paylaşma gereği duyuyorum.
+Eğer Groovy ile program yazdıysanız, hele de grails ile proje geliştirdiyseniz, griffon size çok kolay gelecektir.</description>
+    </item>
+    
+    <item>
+      <title>SpringOne 2GX – KeyNote</title>
+      <link>https://rayyildiz.com/tr/posts/springone-2gx-keynote/</link>
+      <pubDate>Thu, 27 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/springone-2gx-keynote/</guid>
+      <description>Uzun süredir beklediğim SpringOne 2GX ilk gunü geride kaldı. Katılımın yüksek olacağı bir etkinliğe benziyor. Bugün gerçekleştirilen “Keynote” çok kalabalıktı .Bu kadar kalabalık olacağını tahmin etmemiştim.
+“Keynote” bir hosgeldiniz ve etkinlik kapsamında hangi konuların islenecegi bilgisinin verildiği bir toplantiydi.
+SpringOne ilk süprizini Keynote da öğrendik. Rod Johnson kolunu kırmış olması ve doktorunun uçma yasağı nedeniyle etkinliğe katılamamasiydi. Ben SpringOne ilk kez katılıyorum ama ben bile etkinliğin Rod olmadan başladığını hatırlamıyorum. Bu Rod un katılmadığı ilk etkinlik olacak.</description>
+    </item>
+    
+    <item>
+      <title> SpringOne 2GX ve Chicago</title>
+      <link>https://rayyildiz.com/tr/posts/springone-2gx-ve-chicago/</link>
+      <pubDate>Tue, 25 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/springone-2gx-ve-chicago/</guid>
+      <description>24 Ekim de başlayıp 28 Ekim tarihleri arasında sürecek olan SpringOne 2GX katılmak üzere Chicago ya geldim. Açıkcası Amerika gibi bir ülkeye gelmek bir nebzede olsa insanı geriyor. Bilmediğin bir yer oluşu, gerek yemek gerekse yasam tarzının farklılığı, dil gibi konularda dusunuyorsun. Bütün bunları düşünürken süren 11 saatlik uzun bir uçak yolculugu ise ayrı bir zorluk.
+İlk geldiğim gün hiçbir yeri tanimayisimdan dolayı zorluk çektim elbette. O ilk gunün ardından ise sehri tanımaya başlayınca anladım ki çok da farklı bir yer değil burası.</description>
+    </item>
+    
+    <item>
+      <title>Groovy Programlamaya Giriş</title>
+      <link>https://rayyildiz.com/tr/posts/groovy-programlamaya-giris/</link>
+      <pubDate>Sat, 19 Feb 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/groovy-programlamaya-giris/</guid>
+      <description>Daha önceki yazımda groovy ve grails’in nasıl kurulacağı bilgisini vermiştim. Bu yazımda ise groovy programlamaya başlayacağız.
+Groovy java programlama diline alışkın kişilerin, Python, Ruby, Smalltalk yer alan özellikleri kullanabilmesine olanak sunan agile bir programlama dili olarak tanımlanıyor.
+Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten türemiştir. Groovy ile yazılan bir nesne derlendikten sonra bytecode a cevrilir. Oluşan *.class dosyasını classpath’inize eklenerek java tarafından kullamabilirsiniz. Yani java’dan groovy’ye, groovy den ise java’ya erişmek cok kolaydır.</description>
+    </item>
+    
+    <item>
+      <title>JDK6 da Dependency Injection (ServiceLoader)</title>
+      <link>https://rayyildiz.com/tr/posts/jdk6-ile-dependency-injection/</link>
+      <pubDate>Sun, 22 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/jdk6-ile-dependency-injection/</guid>
+      <description>DI ne olduğuna dair bir yazıyı buradan ulaşabilirsiniz. JDK6 da ise ServiceLoader gelmektedir. ServiceLoader sayesinde bir nevi DI sağlamış olmaktayız. Bunun nasıl yapacağımızı bir örnekle gösterelim.
+Uygulamanın örnek test kodlarını github üzerinden bulabilmeniz mümkündür.
+Bu örneği yapabilmek için 3 tane proje oluşturalım. Bu 3 proje ve açıklaması şu şekildedir:
+UserAuth: Arayüzün yer aldığı proje.IUserAuthService diye bir arayüz yer almakta ve bu arayüz login diye bir metot tanımı içermektedir.
+UserAuthImpl: Uygulamanın gerçekleştirildiği sınıf yer alır.</description>
+    </item>
+    
+    <item>
+      <title>Java da PHP:Quercus</title>
+      <link>https://rayyildiz.com/tr/posts/java-php-kosturmak/</link>
+      <pubDate>Sun, 22 Feb 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/java-php-kosturmak/</guid>
+      <description>J2EE 5 bir çok yeni özellikle gelmiş olmasına rağmen, özellikle hızlı uygulama gelişitirebilmek istenen uygulamalarda java nın fazla geldiği, basit uygulama geliştirmek için javanın tercih edinirliği azaldığını görmekteyiz. Bu kapsamda j2ee 6 da rapid geliştirme ortamlarının entegre olacağı ve bu sayede de daha küçük ölçekli yazılımlar için bu uygulamaların tercih edilebileceği planlanıyor. Bütün bunlar devam ederken, bazı yazılımlar yeniden yorumlanmaya başladı. Bunlardan birisi ise Quercus.
+caucho-whiteQuercus aslında PHP 5 tamamen java ile GPL lisansıyla yeniden yazılmış halidir.</description>
+    </item>
+    
+  </channel>
+</rss>

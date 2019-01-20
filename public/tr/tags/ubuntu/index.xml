@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Ramazan AYYILDIZ</title>
+    <link>https://rayyildiz.com/tr/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Ramazan AYYILDIZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Aug 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://rayyildiz.com/tr/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu Oracle Kurulumu ve İlk Ayarı</title>
+      <link>https://rayyildiz.com/tr/posts/ubuntu-console-ile-oracle-jdk-kurulumu/</link>
+      <pubDate>Sun, 01 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/ubuntu-console-ile-oracle-jdk-kurulumu/</guid>
+      <description>Oracle veritabanı Ubuntu kurulumu iki adımda yapabilrisiniz.
+Oracle İndirme Sayfasından İndirmek Oracle indirme sayfasınandan(http://www.oracle.com/technetwork/database/express-edition/downloads/102xelinsoft-102048.html) Oracle Database 10g Express Edition (Universal) veritabanının .deb uzantı versiyonunu indirin. (Eğer .rpm versiyonunu indirirseniz, alien komutu kullanarak .rpm versiyonunu .deb uzantılı dosyaya cevirebilirsiniz. Detaylı bilgi buraya tıklayınız). Daha sonra ise kurulum işlemini grafiksel arayüz ortamında çift tıklayarak yapabilirsiniz.
+Oracle Repository Kullanmak Konsole penceresinden veya Software Source arayüzünu kullanarak aşağıdaki repository paketini /etc/apt/source.list dosyasına ekleyiniz.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu/Debian Java Nasıl Kurulur</title>
+      <link>https://rayyildiz.com/tr/posts/ubuntu-debian-da-java-nasil-kurulur-giris/</link>
+      <pubDate>Fri, 20 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/ubuntu-debian-da-java-nasil-kurulur-giris/</guid>
+      <description>Debian türevli bir sistemde sisteme java nasıl kurabiliriz?
+Grafiksel arayüze sahip bir sistemde java kurmak artık cok kolay oldu. Java sitesine girerek edineceğiniz java dosyasını önergeleri takip ederek kurabilirsiniz. Yada Syneptic Paket Yöneticisi yardımıyla cok kolay kurulum gerçekleşgtirebilirsiniz. Terminal den Kurulumu gerçekleştirme
+Grafiksel arayüz ortamı olmayan bir sistemde yada grafik ortamına gerek olmadan kurulum yapmak istiyorsanız aşağıdaki adımlari takip ederek kurulumu gerçekleştirebiliriz.
+Öncelikle source.list içinde gerekli repo olup olmadığına emin olalım.</description>
+    </item>
+    
+  </channel>
+</rss>
