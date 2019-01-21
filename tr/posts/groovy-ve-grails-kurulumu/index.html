@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ramazan AYYILDIZ">
+    <meta name="description" content="Ramazan AYYILDIZ&#39;in kisiel websitesi">
+    <meta name="keywords" content="blog,developer,kisisel">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Groovy ve Grails Kurulumu"/>
+<meta name="twitter:description" content="Groovy Nedir? Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.
+Eclipse, NetBeans ve Intellij Idea da geliştirilmiş eklentiler sayesinde groovy geliştirebilirsiniz.
+Groovy hakkında daha detaylı bilgi için Grails Nedir? Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir."/>
+
+
+    <base href="https://rayyildiz.com/tr/posts/groovy-ve-grails-kurulumu/">
+    <title>
+  Groovy ve Grails Kurulumu · Ramazan AYYILDIZ
+</title>
+
+    <link rel="canonical" href="https://rayyildiz.com/tr/posts/groovy-ve-grails-kurulumu/">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather:300,700|Source+Code+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://rayyildiz.com/css/coder.min.ac37073bc2826cd28ef57364a9fe339de7ebcb26dafc22fd832cb35cf5b1d048.css" integrity="sha256-rDcHO8KCbNKO9XNkqf4znefryyba/CL9gyyzXPWx0Eg=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://rayyildiz.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://rayyildiz.com/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.53" />
+  </head>
+
+  <body class=" ">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://rayyildiz.com">
+      Ramazan AYYILDIZ
+    </a>
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://rayyildiz.com/tr/tags/java/">Java</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://rayyildiz.com/tr/posts/">Tum Yazilar</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://rayyildiz.com/tr/hakkimda/">Hakkimda</a>
+          </li>
+        
+      
+      
+        
+        
+        
+          
+            
+              <li class="navigation-item menu-separator">
+                <span>|</span>
+              </li>
+              
+            
+            <li class="navigation-item">
+              <a href="https://rayyildiz.com/">English</a>
+            </li>
+          
+        
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">Groovy ve Grails Kurulumu</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2010-08-05T00:00:00Z'>
+                August 5, 2010
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              2 minutes read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://rayyildiz.com/tr/categories/genel/">Genel</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://rayyildiz.com/tr/tags/java/">java</a>
+      <span class="separator">•</span>
+    <a href="https://rayyildiz.com/tr/tags/groovy/">groovy</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+
+<h2 id="groovy-nedir">Groovy Nedir?</h2>
+
+<p><img src="https://rayyildiz.com/images/groovy_medium.png" alt="Groovy" /></p>
+
+<p>Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.</p>
+
+<p>Eclipse, NetBeans ve Intellij Idea da geliştirilmiş eklentiler sayesinde groovy geliştirebilirsiniz.</p>
+
+<p>Groovy hakkında daha detaylı bilgi için <http://groovy.codehaus.org/ bakabilirsiniz.></p>
+
+<h2 id="grails-nedir">Grails Nedir?</h2>
+
+<p><img src="https://rayyildiz.com/images/grails_logo1.png" alt="Grails Logo" /></p>
+
+<p>Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir. Yani bir nevi “Ruby On Rails” in, Groovy ile gerçekleştirilmiş halidir.</p>
+
+<p>Java yazılımcıların sürekli kullanmak durumunda kaldığı xml ayar dosyaları grails de yoktur. Grails, ayar işlemlerini, groovy dosyalar üzerinde yazmanızı ister.</p>
+
+<p>Ruby On Rails‘de olduğu gibi, geliştirme, test ve ürün ortamlarını için farklı ayar imkanları sunması oldukça güzel bir özelliktir. Grails için yazılan bir çok eklentin bulunmaktadır ( bu sayı gün geçtikçe artıyor).</p>
+
+<p>Grails hakkında daha detaylı bilgi için <a href="http://www.grails.org/">http://www.grails.org/</a> bakabilirsiniz.</p>
+
+<p>Groovy ve grails hakkında yüzeysel bilgi verdikten sonra, kurulumlarını ve kullanıma hazır hale gelmeleri için yapılması gerekenlere bir göz atalım.
+Groovy Kurulum</p>
+
+<p>Groovy kurulum için groovy indirme sayfasına giderek, işletim sisteminize göre en son kararlı sürümümü indiriniz. Windows işletim sistemi için, Windows Installer versiyonunu indiriniz.</p>
+
+<p>Daha sonra GROOVY_HOME cevre değişkeni tanımlamanız gerekmektedir. Windows kurulum sırasında bunu size tanımlamak istediğini soracaktır. Linux da ise bunu .bashrc dosyasına aşağıdaki şekilde bir satır ekleyerek yapabilirsiniz.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#fff;font-weight:bold">export</span> JDK_HOME=/usr/lib/jvm/java-6-sun
+<span style="color:#fff;font-weight:bold">export</span> GROOVY_HOME=/developer/groovy-1.7.4
+<span style="color:#fff;font-weight:bold">export</span> PATH=$PATH:$JDK_HOME/bin:$GROOVY_HOME/bin</code></pre></div>
+<blockquote>
+<p>Not: Eğer tanımlı değilse, GROOVY_HOME tanımlamak için, JDK_HOME cevresel değişkeni de tanımlamanız gerekiyor.</p>
+</blockquote>
+
+<p>Bu işlemden sonra komut penceresinden aşağıdaki kodu çalıştırarak, groovy kurulumunu test edebilirsiniz.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">groovysh</code></pre></div>
+<h2 id="grails-kurulum">Grails Kurulum</h2>
+
+<p>Grails indirme sayfasına giderek, en son kararlı sürümünü indiriniz. Daha sonra bu klasörü açınız.</p>
+
+<p>Grails kurulumu bu adım yeterlidir. Kullandığınız IDE, size grails kurulum dizinini soracaktır. Ancak yineden GRAILS_HOME cevre değişkeni tanımlarsanız çok sağlıklı olacaktır. Aşağıdakı satırı .bashrc dosyasına ekleyiniz.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#fff;font-weight:bold">export</span> GRAILS_HOME=/developer/grails-1.3.3
+<span style="color:#fff;font-weight:bold">export</span> PATH=$PATH:$GRAILS_HOME/bin</code></pre></div>
+<p>Bu şekilde groovy ve grails kurulumu tamamladık.</p>
+
+      </div>
+
+      <footer>
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rayyildiz" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>Bilgi paylasildikca buyur</p>
+    
+    
+    
+    
+      
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/c0cda3fe752807226766344e9f41fc33444bb7c4">c0cda3f</a>]
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-765318-11', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+  </body>
+
+</html>
