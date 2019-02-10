@@ -9,7 +9,7 @@ languagecode = "en"
 paginate = 25
 canonifyurls = true
 
-pygmentsstyle = "b2"
+pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 

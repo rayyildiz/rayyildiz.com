@@ -3,3 +3,5 @@ resources/_gen
 .vs
 .idea/
 *.stackdump
+docs/
+
