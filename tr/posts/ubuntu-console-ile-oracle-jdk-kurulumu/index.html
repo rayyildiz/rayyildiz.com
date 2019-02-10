@@ -142,9 +142,9 @@ Oracle Repository Kullanmak Konsole penceresinden veya Software Source arayüzü
 <h2 id="oracle-repository-kullanmak">Oracle Repository Kullanmak</h2>
 
 <p>Konsole penceresinden veya Software Source arayüzünu kullanarak aşağıdaki repository paketini /etc/apt/source.list dosyasına ekleyiniz.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">deb http://oss.oracle.com/debian unstable main non-free</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">deb http://oss.oracle.com/debian unstable main non-free</code></pre></div>
 <p>daha sonra aşağıdaki komutları çalıştırın.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget http://oss.oracle.com/el4/RPM-GPG-KEY-oracle  -O- | sudo apt-key add -
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget http://oss.oracle.com/el4/RPM-GPG-KEY-oracle  -O- | sudo apt-key add -
 apt-get update
 apt-get install oracle-xe</code></pre></div>
 <h4 id="oracle-ilk-ayarı">Oracle İlk Ayarı</h4>
@@ -152,9 +152,9 @@ apt-get install oracle-xe</code></pre></div>
 <p>Eğer daha önce windows ortamında oracle kurulum yaptıysanız, size sorulan sorular kurulum sırasında sorulmadığında şaşırmış olabilirsiniz. çünkü henüz kurulum daha bitmedi.</p>
 
 <p>Yukarı adımlardan sonra, oracle yüklendi ama konfigürasyon yapmadınız. Oracle ilk ayarları işlemi için aşağıdaki komutu çalıştırınız.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo /etc/init.d/oracle-xe -configure</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo /etc/init.d/oracle-xe -configure</pre></div>
 <p>Bu ayaralar sırasında aşağıdakine benzer sorular sorulacaktır. Burada yazacağınız şifre, “system” kullanıcısın şifresi olup hatırlayacağınız bir şifre olmasını tafsiye ederim.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Specify the HTTP port that will be used for Oracle Application Express (8080):
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Specify the HTTP port that will be used for Oracle Application Express (8080):
 
 Specify a port that will be used for the database listener (1521) :
 
@@ -220,7 +220,7 @@ To access the Database Home Page go to “http://127.0.0.1:8080/apex”</pre></d
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/7ba7b3ea72d50cd03bb19c105d4107ee52d50083">7ba7b3e</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/0f44b0c715bebfbff0b0b10027c5f33972baee27">0f44b0c</a>]
     
   </section>
 </footer>

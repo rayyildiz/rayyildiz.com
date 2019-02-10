@@ -149,26 +149,26 @@ UserAuthTest: Main sınıfının yer aldığı örnek uygulamadır."/>
 <p><img src="https://rayyildiz.com/images/project_tree1.png" alt="Project Tree" /></p>
 
 <p>Arayüzün yer aldığı UserAuth projesinde farklı olarak META-INF/services klasörü- ve bu klasör içinde com.rayyildiz.userauth.IUserAuthService dosyası yer almaktadır. Bu dosya içine bakarsanız sadece bir satır yer almaktadır.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">com.rayyildiz.userauth.impl.UserAuthService</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">com.rayyildiz.userauth.impl.UserAuthService</pre></div>
 <p>ServiceLoader bu dosyalara bakarak hangi implemantosyunu yüklemesi gerektiğini anlar. UserAuth.jar implementasyonun yer aldığı UserAuthImpl.jar referans olarak bilmez. SericeLoader load sırasında bu implementasyonu arayacaktır.</p>
 
 <p>Burada asıl önemli test projemize bakalım:</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">package</span> com.rayyildiz.userauth;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.userauth<span style="color:#f92672">;</span>
 
-<span style="color:#fff;font-weight:bold">import</span> java.util.Iterator;
-<span style="color:#fff;font-weight:bold">import</span> java.util.ServiceLoader;
+<span style="color:#f92672">import</span> java.util.Iterator<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.ServiceLoader<span style="color:#f92672">;</span>
 
-<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> Main {
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
-		ServiceLoader&lt;IUserAuthService&gt; serviceLoader = ServiceLoader.<span style="color:#007f7f">load</span>(IUserAuthService.<span style="color:#007f7f">class</span>);
-		Iterator&lt;IUserAuthService&gt; iterator = serviceLoader.<span style="color:#007f7f">iterator</span>();-
-		<span style="color:#fff;font-weight:bold">while</span>(iterator!= <span style="color:#fff;font-weight:bold">null</span> &amp;&amp; iterator.<span style="color:#007f7f">hasNext</span>()){
-			IUserAuthService userAuthService = iterator.<span style="color:#007f7f">next</span>();
-			<span style="color:#fff;font-weight:bold">boolean</span> login = userAuthService.<span style="color:#007f7f">login</span>(<span style="color:#0ff;font-weight:bold">&#34;demo&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;password&#34;</span>);
-			System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;Login for username: demo and password:password is &#34;</span> + login);
-		}
-	}
-}</code></pre></div>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		ServiceLoader<span style="color:#f92672">&lt;</span>IUserAuthService<span style="color:#f92672">&gt;</span> serviceLoader <span style="color:#f92672">=</span> ServiceLoader<span style="color:#f92672">.</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>IUserAuthService<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+		Iterator<span style="color:#f92672">&lt;</span>IUserAuthService<span style="color:#f92672">&gt;</span> iterator <span style="color:#f92672">=</span> serviceLoader<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();-</span>
+		<span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>iterator<span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">()){</span>
+			IUserAuthService userAuthService <span style="color:#f92672">=</span> iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+			<span style="color:#66d9ef">boolean</span> login <span style="color:#f92672">=</span> userAuthService<span style="color:#f92672">.</span><span style="color:#a6e22e">login</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;demo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">);</span>
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Login for username: demo and password:password is &#34;</span> <span style="color:#f92672">+</span> login<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>Gördüğünüz gibi test uygulaması implementasyon nesnesini görmez. ServiceLoader META-INF/services içinde yer alan dosyalara bakarak implementasyon nesnelerini örnek projenin olduğu klasörde ve CLASSPATH de arar.</p>
 
       </div>
@@ -211,7 +211,7 @@ UserAuthTest: Main sınıfının yer aldığı örnek uygulamadır."/>
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/7ba7b3ea72d50cd03bb19c105d4107ee52d50083">7ba7b3e</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/0f44b0c715bebfbff0b0b10027c5f33972baee27">0f44b0c</a>]
     
   </section>
 </footer>

@@ -145,29 +145,29 @@ Eğer Groovy ile program yazdıysanız, hele de grails ile proje geliştirdiysen
 <p>Griffon indirdekten sonra, bazı ayarlar yapmanız gerekiyor. Buradan bilgi alarak bu işlemleri gerçekleştirebilirsiniz.</p>
 
 <p>Grails de olduğu gibi griffon ile bir proje acmak çok kolay.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon create-app</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon create-app</code></pre></div>
 <p>Evet sadece bu kadar. Peki hatırlayalım, grails de bir projeyi çalıştırmak için ne yapıyorduk ?</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grails run-app</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grails run-app</code></pre></div>
 <p>Tahmin edebileceğiniz gibi griffon da bir proyi çalıştırmak grails de projeyi çalıştırmak gibi.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-app</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-app</code></pre></div>
 <p>Java da çeşitli uygulamaları denince applet de akla gelir. Peki bir griffon ile bir applet nasıl yazarız? Cevap çok kolay herhangi bir şey yapmanıza gerek yok: sadece uygulamanızı yazın ve calistirirken şu sekilde çalıştırın.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-applet</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-applet</code></pre></div>
 <p>Aklınıza applet güzel ama biz bunu web den calistirabilir bir sekilde nasıl yazarız diye gelebilir. Hemen onun da cevabını söyleyeyim.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-webstart</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-webstart</code></pre></div>
 <p>Projenizi yazdınız ve deployment yapmak istiyorsunuz. Grails de olduğu gibi</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon dev package</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon dev package</code></pre></div>
 <p>demeniz yeterli. Bu sizin için standolone, applet, webstart için paketleri olusuturacaktir. Hatta applet için self signed bir sertifika ile oluşturacaktir.</p>
 
 <p><img src="https://rayyildiz.com/images/griffon.jpg" alt="Griffon" /></p>
 
 <p>Swing ve java ile ugrastiysaniz, jar dosyasını dağıtmanın hiç de mantıklı olmadıgını bilirsiniz. Size tavsiyem installer adında bir plugin var, onu kullanmanızı tavsiye ederim.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon installer-plugin installer</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon installer-plugin installer</code></pre></div>
 <p>Plugin kurduktan sonra şu sekilde projenizi paket oluşturabilirsiniz. Bu size MAC OS, Windows ve debian için kurulum paketleir hazirlayacaktir.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon package dmg izpack deb</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon package dmg izpack deb</code></pre></div>
 <p>Griffon Archtype
 Eğer Groovy bilmiyorsanız, güzel bir haberim var: griffon scala, Java, jython … dillerini de destekliyor. Projenizi olustururken archtype belirterek projenizi istediğiniz bir dilde yazabilirsiniz.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon create-app -archtype=scala
-griffon create-app -archtype=java</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon create-app -archtype<span style="color:#f92672">=</span>scala
+griffon create-app -archtype<span style="color:#f92672">=</span>java</code></pre></div>
 <h3 id="bizi-ne-bekliyor">Bizi Ne Bekliyor</h3>
 
 <p>Proje su anda 0.9.4 sürümü mevcut. Yıl sonunda 1.0 gelecek. Proje epey iyi bir şekilde yoluna devam ediyor. Avusturalya da çok önemli bir şirket tüm uygulamalarını griffon ile yazmış. Amerika’da da epey bir şirket projelerini griffon ile yazmaya başlamış.
@@ -215,7 +215,7 @@ griffon create-app -archtype=java</code></pre></div>
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/7ba7b3ea72d50cd03bb19c105d4107ee52d50083">7ba7b3e</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/0f44b0c715bebfbff0b0b10027c5f33972baee27">0f44b0c</a>]
     
   </section>
 </footer>

@@ -138,35 +138,35 @@ Tabları host edecek olan nesnemiz ise şu şekildedir:"/>
 <p>Göreceğiniz gibi ana layout TabHost’dur. Gördüğünüz bir tane FrameLayout yer almaktadır. Biz code içinde Tab ları ekleyeceğimiz için layout base bir yapıdadır. Tüm Activity leri “<a href="http://developer.android.com/guide/topics/manifest/manifest-intro.html">AndroidManifest.xml</a>” içinde tanımlamalısınız.</p>
 
 <p>Tabları host edecek olan nesnemiz ise şu şekildedir:</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> ApplicationActivity <span style="color:#fff;font-weight:bold">extends</span> TabActivity {
-	@Override
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> onCreate(Bundle icicle) {
-		<span style="color:#fff;font-weight:bold">super</span>.<span style="color:#007f7f">onCreate</span>(icicle);
-		setContentView(R.<span style="color:#007f7f">layout</span>.<span style="color:#007f7f">main</span>);
-		Resources res = getResources();
-		TabHost tabHost = getTabHost();
-		TabHost.<span style="color:#007f7f">TabSpec</span> spec;
-		Intent intent;
-		intent = <span style="color:#fff;font-weight:bold">new</span> Intent().<span style="color:#007f7f">setClass</span>(<span style="color:#fff;font-weight:bold">this</span>, DashboardActivity.<span style="color:#007f7f">class</span>);
-		spec = tabHost.<span style="color:#007f7f">newTabSpec</span>(<span style="color:#0ff;font-weight:bold">&#34;home&#34;</span>).<span style="color:#007f7f">setIndicator</span>(<span style="color:#0ff;font-weight:bold">&#34;Home&#34;</span>,
-		res.<span style="color:#007f7f">getDrawable</span> (R.<span style="color:#007f7f">drawable</span>.<span style="color:#007f7f">ic_tab_dashboard</span>)).<span style="color:#007f7f">setContent</span>(intent);
-		tabHost.<span style="color:#007f7f">addTab</span>(spec);
-		intent = <span style="color:#fff;font-weight:bold">new</span> Intent().<span style="color:#007f7f">setClass</span>(<span style="color:#fff;font-weight:bold">this</span>, CreditCardActivity.<span style="color:#007f7f">class</span>);
-		spec = tabHost.<span style="color:#007f7f">newTabSpec</span>(<span style="color:#0ff;font-weight:bold">&#34;sample1&#34;</span>).<span style="color:#007f7f">setIndicator</span>(<span style="color:#0ff;font-weight:bold">&#34;Sample Tab&#34;</span>,
-		res.<span style="color:#007f7f">getDrawable</span> (R.<span style="color:#007f7f">drawable</span>.<span style="color:#007f7f">ic_tab_sample1</span>)).<span style="color:#007f7f">setContent</span>(intent);
-		tabHost.<span style="color:#007f7f">addTab</span>(spec);
-		intent = <span style="color:#fff;font-weight:bold">new</span> Intent().<span style="color:#007f7f">setClass</span>(<span style="color:#fff;font-weight:bold">this</span>, SettingActivity.<span style="color:#007f7f">class</span>);
-		spec = tabHost.<span style="color:#007f7f">newTabSpec</span>(<span style="color:#0ff;font-weight:bold">&#34;sample2&#34;</span>).<span style="color:#007f7f">setIndicator</span>(<span style="color:#0ff;font-weight:bold">&#34;Sample Tab 2&#34;</span>,
-		res.<span style="color:#007f7f">getDrawable</span> (R.<span style="color:#007f7f">drawable</span>.<span style="color:#007f7f">ic_tab_sample2</span>)).<span style="color:#007f7f">setContent</span>(intent);
-		tabHost.<span style="color:#007f7f">addTab</span>(spec);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApplicationActivity</span> <span style="color:#66d9ef">extends</span> TabActivity <span style="color:#f92672">{</span>
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>Bundle icicle<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>icicle<span style="color:#f92672">);</span>
+		setContentView<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">main</span><span style="color:#f92672">);</span>
+		Resources res <span style="color:#f92672">=</span> getResources<span style="color:#f92672">();</span>
+		TabHost tabHost <span style="color:#f92672">=</span> getTabHost<span style="color:#f92672">();</span>
+		TabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">TabSpec</span> spec<span style="color:#f92672">;</span>
+		Intent intent<span style="color:#f92672">;</span>
+		intent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Intent<span style="color:#f92672">().</span><span style="color:#a6e22e">setClass</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> DashboardActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+		spec <span style="color:#f92672">=</span> tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">newTabSpec</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;home&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setIndicator</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Home&#34;</span><span style="color:#f92672">,</span>
+		res<span style="color:#f92672">.</span><span style="color:#a6e22e">getDrawable</span> <span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">drawable</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ic_tab_dashboard</span><span style="color:#f92672">)).</span><span style="color:#a6e22e">setContent</span><span style="color:#f92672">(</span>intent<span style="color:#f92672">);</span>
+		tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">addTab</span><span style="color:#f92672">(</span>spec<span style="color:#f92672">);</span>
+		intent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Intent<span style="color:#f92672">().</span><span style="color:#a6e22e">setClass</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> CreditCardActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+		spec <span style="color:#f92672">=</span> tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">newTabSpec</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sample1&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setIndicator</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sample Tab&#34;</span><span style="color:#f92672">,</span>
+		res<span style="color:#f92672">.</span><span style="color:#a6e22e">getDrawable</span> <span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">drawable</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ic_tab_sample1</span><span style="color:#f92672">)).</span><span style="color:#a6e22e">setContent</span><span style="color:#f92672">(</span>intent<span style="color:#f92672">);</span>
+		tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">addTab</span><span style="color:#f92672">(</span>spec<span style="color:#f92672">);</span>
+		intent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Intent<span style="color:#f92672">().</span><span style="color:#a6e22e">setClass</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> SettingActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+		spec <span style="color:#f92672">=</span> tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">newTabSpec</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sample2&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setIndicator</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sample Tab 2&#34;</span><span style="color:#f92672">,</span>
+		res<span style="color:#f92672">.</span><span style="color:#a6e22e">getDrawable</span> <span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">drawable</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ic_tab_sample2</span><span style="color:#f92672">)).</span><span style="color:#a6e22e">setContent</span><span style="color:#f92672">(</span>intent<span style="color:#f92672">);</span>
+		tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">addTab</span><span style="color:#f92672">(</span>spec<span style="color:#f92672">);</span>
 
-		intent = <span style="color:#fff;font-weight:bold">new</span> Intent().<span style="color:#007f7f">setClass</span>(<span style="color:#fff;font-weight:bold">this</span>, AboutActivity.<span style="color:#007f7f">class</span>);
-		spec = tabHost.<span style="color:#007f7f">newTabSpec</span>(<span style="color:#0ff;font-weight:bold">&#34;about&#34;</span>).<span style="color:#007f7f">setIndicator</span>(<span style="color:#0ff;font-weight:bold">&#34;Sample Tab 3&#34;</span>,
-		res.<span style="color:#007f7f">getDrawable</span> (R.<span style="color:#007f7f">drawable</span>.<span style="color:#007f7f">ic_tab_about</span>)).<span style="color:#007f7f">setContent</span>(intent);
-		tabHost.<span style="color:#007f7f">addTab</span>(spec);
-		tabHost.<span style="color:#007f7f">setCurrentTab</span>(0);
-	}
-}</code></pre></div>
+		intent <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Intent<span style="color:#f92672">().</span><span style="color:#a6e22e">setClass</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> AboutActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+		spec <span style="color:#f92672">=</span> tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">newTabSpec</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;about&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setIndicator</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Sample Tab 3&#34;</span><span style="color:#f92672">,</span>
+		res<span style="color:#f92672">.</span><span style="color:#a6e22e">getDrawable</span> <span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">drawable</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ic_tab_about</span><span style="color:#f92672">)).</span><span style="color:#a6e22e">setContent</span><span style="color:#f92672">(</span>intent<span style="color:#f92672">);</span>
+		tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">addTab</span><span style="color:#f92672">(</span>spec<span style="color:#f92672">);</span>
+		tabHost<span style="color:#f92672">.</span><span style="color:#a6e22e">setCurrentTab</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>Ben burada daha şık olması amacıyla Tab seçili iken farklı bir ikon görünmesi amacıyla “ic_tab_xxx” dosyalarını kullandım. Bunlar şuna benzer bir yapıdadır:</p>
 
 <p>Uygulamamızı çalıştırdığımızda ekran görünütüsü buna benzer olmaktadır.</p>
@@ -215,7 +215,7 @@ Tabları host edecek olan nesnemiz ise şu şekildedir:"/>
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/7ba7b3ea72d50cd03bb19c105d4107ee52d50083">7ba7b3e</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/0f44b0c715bebfbff0b0b10027c5f33972baee27">0f44b0c</a>]
     
   </section>
 </footer>

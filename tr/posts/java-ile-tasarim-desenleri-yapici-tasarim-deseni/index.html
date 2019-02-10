@@ -139,75 +139,75 @@ Yapıcı tasarım deseni, nesnelerin yapıcı metotlarını soyutlamak suretiyle
 <p>Bu iki yapıcı nesneyi ( TurkishCoffeeBuilder ile BrazilianCoffeeBuilder) soyutlamak için CoffeeBuilder soyut sınıfından yararlanılır.</p>
 
 <p>Şimdi CoffeeBuilder nesnesinin ve bu soyut sınıftan türetilmiş yapıcı nesnelerin kaynak koduna göz atalım.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">package</span> com.rayyildiz.patterns;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
  
-<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">abstract</span> <span style="color:#fff;font-weight:bold">class</span> CoffeeBuilder {
-	<span style="color:#fff;font-weight:bold">private</span> Coffee coffee;
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CoffeeBuilder</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">private</span> Coffee coffee<span style="color:#f92672">;</span>
  
-	<span style="color:#fff;font-weight:bold">public</span> Coffee getCoffee() {
-		<span style="color:#fff;font-weight:bold">return</span> coffee;
-  	}
+	<span style="color:#66d9ef">public</span> Coffee <span style="color:#a6e22e">getCoffee</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> coffee<span style="color:#f92672">;</span>
+  	<span style="color:#f92672">}</span>
  
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> createCoffee(){
-		coffee = <span style="color:#fff;font-weight:bold">new</span> Coffee();
-	}
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">createCoffee</span><span style="color:#f92672">(){</span>
+		coffee <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Coffee<span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
 	
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">abstract</span> <span style="color:#fff;font-weight:bold">void</span> buildTastyCoffee();
-}</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> BrazilianCoffeeBuilder <span style="color:#fff;font-weight:bold">extends</span> CoffeeBuilder {
-	@Override
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> buildTastyCoffee() {
-		Coffee coffee = getCoffee();
-		coffee.<span style="color:#007f7f">setColour</span>(ColourType.<span style="color:#007f7f">DarkBrown</span>);
-		coffee.<span style="color:#007f7f">setPrice</span>(10);
-		coffee.<span style="color:#007f7f">setSugar</span>(SugarType.<span style="color:#007f7f">Much</span>);
-		coffee.<span style="color:#007f7f">setName</span>(<span style="color:#0ff;font-weight:bold">&#34;Brazilian Coffee&#34;</span>);
-	}	
-}</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> TurkishCoffeeBuilder <span style="color:#fff;font-weight:bold">extends</span> CoffeeBuilder {
-	@Override
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> buildTastyCoffee() {
-		Coffee coffee = getCoffee();
-    	coffee.<span style="color:#007f7f">setColour</span>(ColourType.<span style="color:#007f7f">LightBrown</span>);
-    	coffee.<span style="color:#007f7f">setPrice</span>(6);
-    	coffee.<span style="color:#007f7f">setSugar</span>(SugarType.<span style="color:#007f7f">Much</span>);
-    	coffee.<span style="color:#007f7f">setName</span>(<span style="color:#0ff;font-weight:bold">&#34;Turkish Coffee&#34;</span>);
-	}
-}</code></pre></div>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">buildTastyCoffee</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BrazilianCoffeeBuilder</span> <span style="color:#66d9ef">extends</span> CoffeeBuilder <span style="color:#f92672">{</span>
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">buildTastyCoffee</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		Coffee coffee <span style="color:#f92672">=</span> getCoffee<span style="color:#f92672">();</span>
+		coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">setColour</span><span style="color:#f92672">(</span>ColourType<span style="color:#f92672">.</span><span style="color:#a6e22e">DarkBrown</span><span style="color:#f92672">);</span>
+		coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">setPrice</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
+		coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">setSugar</span><span style="color:#f92672">(</span>SugarType<span style="color:#f92672">.</span><span style="color:#a6e22e">Much</span><span style="color:#f92672">);</span>
+		coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Brazilian Coffee&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>	
+<span style="color:#f92672">}</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TurkishCoffeeBuilder</span> <span style="color:#66d9ef">extends</span> CoffeeBuilder <span style="color:#f92672">{</span>
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">buildTastyCoffee</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		Coffee coffee <span style="color:#f92672">=</span> getCoffee<span style="color:#f92672">();</span>
+    	coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">setColour</span><span style="color:#f92672">(</span>ColourType<span style="color:#f92672">.</span><span style="color:#a6e22e">LightBrown</span><span style="color:#f92672">);</span>
+    	coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">setPrice</span><span style="color:#f92672">(</span>6<span style="color:#f92672">);</span>
+    	coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">setSugar</span><span style="color:#f92672">(</span>SugarType<span style="color:#f92672">.</span><span style="color:#a6e22e">Much</span><span style="color:#f92672">);</span>
+    	coffee<span style="color:#f92672">.</span><span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Turkish Coffee&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>Gördüğünüz gibi CoffeeBuilder buildTastyCoffee adında soyut bir sınıf içermekte, bu nesneden türeyen nesnelerin bu metodu gerçekleştirmesini zorlamaktadır. CoffeeBuilder soyut nesnesinden türeyen bu iki nesne kendisine göre bu metotları değer atamaktadır.</p>
 
 <p>Coffee nesnesi sadece getter-setter içeren bir nesnedir.</p>
 
 <p>Şimdi ise Cook nesnesine gözatalım.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> Cook {
-	<span style="color:#fff;font-weight:bold">private</span> CoffeeBuilder coffeeBuilder;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cook</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">private</span> CoffeeBuilder coffeeBuilder<span style="color:#f92672">;</span>
  
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> setCoffeeBuilder(CoffeeBuilder coffeeBuilder) {
-		<span style="color:#fff;font-weight:bold">this</span>.<span style="color:#007f7f">coffeeBuilder</span> = coffeeBuilder;
-	}
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setCoffeeBuilder</span><span style="color:#f92672">(</span>CoffeeBuilder coffeeBuilder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">coffeeBuilder</span> <span style="color:#f92672">=</span> coffeeBuilder<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
  
-	<span style="color:#fff;font-weight:bold">public</span> Coffee getCoffee(){
-		<span style="color:#fff;font-weight:bold">return</span> coffeeBuilder.<span style="color:#007f7f">getCoffee</span>();
-	}
+	<span style="color:#66d9ef">public</span> Coffee <span style="color:#a6e22e">getCoffee</span><span style="color:#f92672">(){</span>
+		<span style="color:#66d9ef">return</span> coffeeBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">getCoffee</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
  
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> constructCoffee(){
-		coffeeBuilder.<span style="color:#007f7f">createCoffee</span>();
-		coffeeBuilder.<span style="color:#007f7f">buildTastyCoffee</span>();
-	}
-}</code></pre></div>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">constructCoffee</span><span style="color:#f92672">(){</span>
+		coffeeBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">createCoffee</span><span style="color:#f92672">();</span>
+		coffeeBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">buildTastyCoffee</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>Bu ornekteki <code>Cook</code> nesnesi hiçbir şekilde hangi yapıcı nesneyi kullandığınız bilmez, sadece CoffeeBuilder bir nesne üzerinden işlem yapar. Peki hangi ülkeye göre çalışacağını nereden bilecek? Bu işlem sadece biryerde yapılır. Bu şekilde, gerek Cook nesnesi, gerekse Coffee nasıl bir yapıcı nesneden kullanıldığını bilmeyecektir. O halde ana sınıfımıza bakalım.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">package</span> com.rayyildiz.patterns;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
  
-<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">class</span> Main {
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">void</span> main(String[] args) {
-		Cook cook = <span style="color:#fff;font-weight:bold">new</span> Cook();
-		CoffeeBuilder turkishCoffeeBuilder = <span style="color:#fff;font-weight:bold">new</span> TurkishCoffeeBuilder();
-		cook.<span style="color:#007f7f">setCoffeeBuilder</span>(turkishCoffeeBuilder);
-		cook.<span style="color:#007f7f">constructCoffee</span>();
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Cook cook <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cook<span style="color:#f92672">();</span>
+		CoffeeBuilder turkishCoffeeBuilder <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TurkishCoffeeBuilder<span style="color:#f92672">();</span>
+		cook<span style="color:#f92672">.</span><span style="color:#a6e22e">setCoffeeBuilder</span><span style="color:#f92672">(</span>turkishCoffeeBuilder<span style="color:#f92672">);</span>
+		cook<span style="color:#f92672">.</span><span style="color:#a6e22e">constructCoffee</span><span style="color:#f92672">();</span>
 
-		Coffee coffee = cook.<span style="color:#007f7f">getCoffee</span>();
-		System.<span style="color:#007f7f">out</span>.<span style="color:#007f7f">println</span>(<span style="color:#0ff;font-weight:bold">&#34;coffee:&#34;</span> + coffee);
-		<span style="color:#fff;font-weight:bold">if</span> ( System.<span style="color:#007f7f">console</span>()!=<span style="color:#fff;font-weight:bold">null</span>) System.<span style="color:#007f7f">console</span>().<span style="color:#007f7f">readLine</span>();
-	}
-}</code></pre></div>
+		Coffee coffee <span style="color:#f92672">=</span> cook<span style="color:#f92672">.</span><span style="color:#a6e22e">getCoffee</span><span style="color:#f92672">();</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;coffee:&#34;</span> <span style="color:#f92672">+</span> coffee<span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">console</span><span style="color:#f92672">()!=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">console</span><span style="color:#f92672">().</span><span style="color:#a6e22e">readLine</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>Bu örnekte aşcımız bir Türk kahvesi yapmaktadır. Kaynak kodu indirip çalıştırdığınızda aşağıdaki gibi bir sonuc cıkacaktır.</p>
 
 <p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a href="http://github.com/rayyildiz/DesignPatterns" title="Design Patterns">DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
@@ -252,7 +252,7 @@ Yapıcı tasarım deseni, nesnelerin yapıcı metotlarını soyutlamak suretiyle
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/7ba7b3ea72d50cd03bb19c105d4107ee52d50083">7ba7b3e</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/0f44b0c715bebfbff0b0b10027c5f33972baee27">0f44b0c</a>]
     
   </section>
 </footer>

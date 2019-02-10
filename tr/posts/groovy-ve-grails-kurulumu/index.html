@@ -161,22 +161,22 @@ Groovy Kurulum</p>
 <p>Groovy kurulum için groovy indirme sayfasına giderek, işletim sisteminize göre en son kararlı sürümümü indiriniz. Windows işletim sistemi için, Windows Installer versiyonunu indiriniz.</p>
 
 <p>Daha sonra GROOVY_HOME cevre değişkeni tanımlamanız gerekmektedir. Windows kurulum sırasında bunu size tanımlamak istediğini soracaktır. Linux da ise bunu .bashrc dosyasına aşağıdaki şekilde bir satır ekleyerek yapabilirsiniz.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#fff;font-weight:bold">export</span> JDK_HOME=/usr/lib/jvm/java-6-sun
-<span style="color:#fff;font-weight:bold">export</span> GROOVY_HOME=/developer/groovy-1.7.4
-<span style="color:#fff;font-weight:bold">export</span> PATH=$PATH:$JDK_HOME/bin:$GROOVY_HOME/bin</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export JDK_HOME<span style="color:#f92672">=</span>/usr/lib/jvm/java-6-sun
+export GROOVY_HOME<span style="color:#f92672">=</span>/developer/groovy-1.7.4
+export PATH<span style="color:#f92672">=</span>$PATH:$JDK_HOME/bin:$GROOVY_HOME/bin</code></pre></div>
 <blockquote>
 <p>Not: Eğer tanımlı değilse, GROOVY_HOME tanımlamak için, JDK_HOME cevresel değişkeni de tanımlamanız gerekiyor.</p>
 </blockquote>
 
 <p>Bu işlemden sonra komut penceresinden aşağıdaki kodu çalıştırarak, groovy kurulumunu test edebilirsiniz.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">groovysh</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">groovysh</code></pre></div>
 <h2 id="grails-kurulum">Grails Kurulum</h2>
 
 <p>Grails indirme sayfasına giderek, en son kararlı sürümünü indiriniz. Daha sonra bu klasörü açınız.</p>
 
 <p>Grails kurulumu bu adım yeterlidir. Kullandığınız IDE, size grails kurulum dizinini soracaktır. Ancak yineden GRAILS_HOME cevre değişkeni tanımlarsanız çok sağlıklı olacaktır. Aşağıdakı satırı .bashrc dosyasına ekleyiniz.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#fff;font-weight:bold">export</span> GRAILS_HOME=/developer/grails-1.3.3
-<span style="color:#fff;font-weight:bold">export</span> PATH=$PATH:$GRAILS_HOME/bin</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export GRAILS_HOME<span style="color:#f92672">=</span>/developer/grails-1.3.3
+export PATH<span style="color:#f92672">=</span>$PATH:$GRAILS_HOME/bin</code></pre></div>
 <p>Bu şekilde groovy ve grails kurulumu tamamladık.</p>
 
       </div>
@@ -219,7 +219,7 @@ Groovy Kurulum</p>
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/7ba7b3ea72d50cd03bb19c105d4107ee52d50083">7ba7b3e</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/0f44b0c715bebfbff0b0b10027c5f33972baee27">0f44b0c</a>]
     
   </section>
 </footer>

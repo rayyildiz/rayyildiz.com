@@ -142,7 +142,7 @@ Bu sırada size tafsiyem UI tasarlayabileniz için droiddraw adındaki bir uygul
 <p><img src="https://rayyildiz.com/images/nbandroid_plugin_install-e1275732394906.png" alt="Nbandroid Plugin Install" /></p>
 
 <p>Daha sonra linux için terminalden aşağıdaki komutu- çalıştırıp DroidDraw ı açın. Windows da eğer Java6 kuruluysa, droiddraw ın içindeki droiddraw.jar ı tıklamanız yeterlidir.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &amp;</pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &amp;</pre></div>
 <p><img src="https://rayyildiz.com/images/droiddraw1.png" alt="Droiddraw" />
 Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakınız. Daha sonra Button’a tıklayıp Properties tabı na tıklayınız.Burada şu bilgileri değiştirin:</p>
 
@@ -155,23 +155,23 @@ Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakın�
 </blockquote>
 
 <p>Bunları değiştirip Apply düğmensine basın. Sizde diğer özellikleri bakabilirsiniz. Burada sadece şu aklınızda olsun; Width, height, left margin değerleri gibi yerlerde mutlaka px ekleyin. Yani 100 değil 100px olmalı. Bu işlemleri tamamlayıp Generete tıklanız. Output ekranında aşağıdakine benzer bir xml üretecek. Bu xml sizin UI nı oluşturacaktır.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#0f0;font-weight:bold">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span style="font-weight:bold">&lt;AbsoluteLayout</span>
-	<span style="color:#007f7f">android:id=</span><span style="color:#0ff;font-weight:bold">&#34;@+id/widget0&#34;</span>
-	<span style="color:#007f7f">android:layout_width=</span><span style="color:#0ff;font-weight:bold">&#34;fill_parent&#34;</span>
-	<span style="color:#007f7f">android:layout_height=</span><span style="color:#0ff;font-weight:bold">&#34;fill_parent&#34;</span>
-	<span style="color:#007f7f">xmlns:android=</span><span style="color:#0ff;font-weight:bold">&#34;http://schemas.android.com/apk/res/android&#34;</span>
-	<span style="font-weight:bold">&gt;</span>
-	<span style="font-weight:bold">&lt;Button</span>
-		<span style="color:#007f7f">android:id=</span><span style="color:#0ff;font-weight:bold">&#34;@+id/btnSample&#34;</span>
-		<span style="color:#007f7f">android:layout_width=</span><span style="color:#0ff;font-weight:bold">&#34;100px&#34;</span>
-		<span style="color:#007f7f">android:layout_height=</span><span style="color:#0ff;font-weight:bold">&#34;wrap_content&#34;</span>
-		<span style="color:#007f7f">android:text=</span><span style="color:#0ff;font-weight:bold">&#34;Hi&#34;</span>
-		<span style="color:#007f7f">android:layout_x=</span><span style="color:#0ff;font-weight:bold">&#34;90px&#34;</span>
-		<span style="color:#007f7f">android:layout_y=</span><span style="color:#0ff;font-weight:bold">&#34;32px&#34;</span>
-	<span style="font-weight:bold">&gt;</span>
-<span style="font-weight:bold">&lt;/Button&gt;</span>
-<span style="font-weight:bold">&lt;/AbsoluteLayout&gt;</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;AbsoluteLayout</span>
+	<span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/widget0&#34;</span>
+	<span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+	<span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+	<span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+	<span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;Button</span>
+		<span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/btnSample&#34;</span>
+		<span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;100px&#34;</span>
+		<span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+		<span style="color:#a6e22e">android:text=</span><span style="color:#e6db74">&#34;Hi&#34;</span>
+		<span style="color:#a6e22e">android:layout_x=</span><span style="color:#e6db74">&#34;90px&#34;</span>
+		<span style="color:#a6e22e">android:layout_y=</span><span style="color:#e6db74">&#34;32px&#34;</span>
+	<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;/Button&gt;</span>
+<span style="color:#f92672">&lt;/AbsoluteLayout&gt;</span></code></pre></div>
 <p><img src="https://rayyildiz.com/images/android_new_project1.png" alt="Android New Project" /></p>
 
 <p>Netbeans de yeni bir proje açalım. NBAdroid eklentisini kurduysanız, yeni bir proje eklerken Android diye bir kısım yer alacaktır. Daha sorna yandaki gibi proje adı, paket adı, activity adı gibi alanları doldurmanız gerekiyor. İlk kez acıyosanız, Manageplatformu tıklayarak kurulum yaptığınız android klasörünü göstermeniz gerekiyor.</p>
@@ -179,41 +179,41 @@ Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakın�
 <p>İlk kez projeyi actığınızda, Shift + F10 ile projeyi çalıştırabilirsiniz. Burada android emulator acılıp projenizi yükleyecektir ve ekrana klasik “Hello World” yazacaktır.</p>
 
 <p>Şimdi uygulamaya geri dönüp Resources/layouts altında yer alan main.xml- i droiddraw ile üretttiğimiz xml i kopyalayıp yağıştıralım. Bunu yaptıktan sonra uygulamayı bir kere build etmenizde yarar var. Bu işlem sonuda otomatik üretilen R.java dosyasında aşağıaki gibi değişiklikler olacaktır.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">class</span> R {
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">class</span> attr { }
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">R</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">attr</span> <span style="color:#f92672">{</span> <span style="color:#f92672">}</span>
 
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">class</span> id {
-		<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">int</span> btnSample=0x7f040001;
-		<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">int</span> widget0=0x7f040000;
-	}
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> btnSample<span style="color:#f92672">=</span>0x7f040001<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> widget0<span style="color:#f92672">=</span>0x7f040000<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
 
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">class</span> layout {
-		<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">int</span> main=0x7f020000;
-	}
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">layout</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> main<span style="color:#f92672">=</span>0x7f020000<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
 
-	<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">class</span> string {
-		<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">static</span> <span style="color:#fff;font-weight:bold">final</span> <span style="color:#fff;font-weight:bold">int</span> app_name=0x7f030000;
-	}
-}</code></pre></div>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> app_name<span style="color:#f92672">=</span>0x7f030000<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>Daha sonra aşağıdaki kodu <code>MainActivity.java</code> içine yazınız.</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">@Override
-<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> onCreate(Bundle icicle) {
-	<span style="color:#fff;font-weight:bold">super</span>.<span style="color:#007f7f">onCreate</span>(icicle);
-	setContentView(R.<span style="color:#007f7f">layout</span>.<span style="color:#007f7f">main</span>);
-	<span style="color:#fff;font-weight:bold">final</span> Button button = (Button) findViewById(R.<span style="color:#007f7f">id</span>.<span style="color:#007f7f">btnSample</span>);
-	button.<span style="color:#007f7f">setOnClickListener</span>(<span style="color:#fff;font-weight:bold">new</span> View.<span style="color:#007f7f">OnClickListener</span>() {
-		<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> onClick(View v) {
-			alert(<span style="color:#0ff;font-weight:bold">&#34;Hello world&#34;</span>);
-		}
-	});
-}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Override</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>Bundle icicle<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>icicle<span style="color:#f92672">);</span>
+	setContentView<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">main</span><span style="color:#f92672">);</span>
+	<span style="color:#66d9ef">final</span> Button button <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Button<span style="color:#f92672">)</span> findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">btnSample</span><span style="color:#f92672">);</span>
+	button<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnClickListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> View<span style="color:#f92672">.</span><span style="color:#a6e22e">OnClickListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">(</span>View v<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			alert<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello world&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">});</span>
+<span style="color:#f92672">}</span>
 
-<span style="color:#fff;font-weight:bold">private</span> <span style="color:#fff;font-weight:bold">void</span> alert(String message){
-	<span style="color:#fff;font-weight:bold">new</span> AlertDialog.<span style="color:#007f7f">Builder</span>(<span style="color:#fff;font-weight:bold">this</span>).<span style="color:#007f7f">setTitle</span>(<span style="color:#0ff;font-weight:bold">&#34;rayyildiz.com&#34;</span>).<span style="color:#007f7f">setMessage</span>(message).<span style="color:#007f7f">setNeutralButton</span>(<span style="color:#0ff;font-weight:bold">&#34;Ok&#34;</span>,
-	<span style="color:#fff;font-weight:bold">new</span> DialogInterface.<span style="color:#007f7f">OnClickListener</span>() {
-		<span style="color:#fff;font-weight:bold">public</span> <span style="color:#fff;font-weight:bold">void</span> onClick(DialogInterface dialog,<span style="color:#fff;font-weight:bold">int</span> which) { }
-	}).<span style="color:#007f7f">show</span>();
-}</code></pre></div>
+<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>String message<span style="color:#f92672">){</span>
+	<span style="color:#66d9ef">new</span> AlertDialog<span style="color:#f92672">.</span><span style="color:#a6e22e">Builder</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setTitle</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;rayyildiz.com&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setMessage</span><span style="color:#f92672">(</span>message<span style="color:#f92672">).</span><span style="color:#a6e22e">setNeutralButton</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Ok&#34;</span><span style="color:#f92672">,</span>
+	<span style="color:#66d9ef">new</span> DialogInterface<span style="color:#f92672">.</span><span style="color:#a6e22e">OnClickListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">(</span>DialogInterface dialog<span style="color:#f92672">,</span><span style="color:#66d9ef">int</span> which<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">}</span>
+	<span style="color:#f92672">}).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span></code></pre></div>
 <p>Uygulamayı çalıştırdığınızda şöyle çalışacaktır:</p>
 
 <p><img src="https://rayyildiz.com/images/application_run1.png" alt="Application Run" /></p>
@@ -260,7 +260,7 @@ Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakın�
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/7ba7b3ea72d50cd03bb19c105d4107ee52d50083">7ba7b3e</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/0f44b0c715bebfbff0b0b10027c5f33972baee27">0f44b0c</a>]
     
   </section>
 </footer>
