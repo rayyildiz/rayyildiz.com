@@ -1,7 +1,7 @@
 +++
 date= "2011-10-25"
-title= " SpringOne 2GX ve Chicago"
-slug="springone-2gx-ve-chicago"
+title= "SpringOne 2GX ve Chicago"
+slug= "springone-2gx-ve-chicago"
 tags= ["java","groovy","spring framework"]
 categories= ["Genel","Yazilim gelistirme"]
 +++
