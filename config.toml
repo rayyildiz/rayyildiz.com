@@ -19,7 +19,7 @@ disqusShortname = "rayyildiz"
     author = "Ramazan AYYILDIZ"
     description = "Ramazan AYYILDIZ's personal website"
     keywords = "blog,developer,personal"
-    info = "BigData Engineer and Software Architect"
+    info = "Software Engineer"
     avatarurl = "avatars/rayyildiz.jpg"
     footercontent = "When information is shared, it will grow even more"
 
@@ -57,6 +57,11 @@ disqusShortname = "rayyildiz"
     weight = 3
     url = "https://www.linkedin.com/in/rayyildiz"
 
+[[params.social]]
+    name = "Json"
+    icon = "fas fa-hashtag"
+    weight = 4
+    url = "https://json.rayyildiz.com"
 
 [languages]
     [languages.en]
