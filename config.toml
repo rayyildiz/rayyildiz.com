@@ -61,7 +61,7 @@ disqusShortname = "rayyildiz"
     name = "Json"
     icon = "fas fa-hashtag"
     weight = 4
-    url = "https://json.rayyildiz.com"
+    url = "https://api.rayyildiz.com"
 
 [languages]
     [languages.en]
