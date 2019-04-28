@@ -73,7 +73,7 @@ disqusShortname = "rayyildiz"
         # You can configure the theme parameter for each language.
         [languages.en.params]
             author = "Ramazan AYYILDIZ"
-            info = "BigData Engineer and Software Architect"
+            info = "Big data Engineer"
             description = "Ramazan AYYILDIZ's personal website"
             keywords = "blog,developer,personal"
 
