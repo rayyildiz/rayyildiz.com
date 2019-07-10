@@ -6,6 +6,7 @@
     <description>Recent content in Categories on Ramazan AYYILDIZ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Sat, 25 May 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rayyildiz.com/tr/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,15 +17,6 @@
       <pubDate>Sat, 25 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://rayyildiz.com/tr/categories/genel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobil</title>
-      <link>https://rayyildiz.com/tr/categories/mobil/</link>
-      <pubDate>Sun, 13 Jun 2010 00:00:00 +0000</pubDate>
-      
-      <guid>https://rayyildiz.com/tr/categories/mobil/</guid>
       <description></description>
     </item>
     
@@ -43,6 +35,15 @@
       <pubDate>Sat, 27 Oct 2012 00:00:00 +0000</pubDate>
       
       <guid>https://rayyildiz.com/tr/categories/yazilim-gelistirme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobil</title>
+      <link>https://rayyildiz.com/tr/categories/mobil/</link>
+      <pubDate>Sun, 13 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/categories/mobil/</guid>
       <description></description>
     </item>
     

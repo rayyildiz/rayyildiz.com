@@ -3,8 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rayyildiz.com/tr/categories/</loc>
+    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rayyildiz.com/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://rayyildiz.com/tr/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/categories/genel/</loc>
+    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/posts/postreus-ve-google-reader/</loc>
     <lastmod>2013-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/posts/</loc>
+    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/</loc>
+    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rayyildiz.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://rayyildiz.com/tr/"
+                />
   </url>
   
   <url>
@@ -13,8 +57,48 @@
   </url>
   
   <url>
+    <loc>https://rayyildiz.com/tr/categories/scala/</loc>
+    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/posts/scala-ile-asal-sayiti-tespiti/</loc>
     <lastmod>2012-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/</loc>
+    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rayyildiz.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="tr"
+                href="https://rayyildiz.com/tr/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/categories/yazilim-gelistirme/</loc>
+    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/java/</loc>
+    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/scala/</loc>
+    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -23,8 +107,20 @@
   </url>
   
   <url>
+    <loc>https://rayyildiz.com/tr/tags/groovy/</loc>
+    <lastmod>2011-10-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/posts/springone-2gx-keynote/</loc>
     <lastmod>2011-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/spring-framework/</loc>
+    <lastmod>2011-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -35,6 +131,12 @@
   <url>
     <loc>https://rayyildiz.com/tr/posts/groovy-programlamaya-giris/</loc>
     <lastmod>2011-02-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/design-pattern/</loc>
+    <lastmod>2010-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -68,6 +170,12 @@
   </url>
   
   <url>
+    <loc>https://rayyildiz.com/tr/tags/oyun-gelistirme/</loc>
+    <lastmod>2010-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/posts/oyun-gelistirmek-icin-hangi-programlama-dili/</loc>
     <lastmod>2010-08-02T00:00:00+00:00</lastmod>
   </url>
@@ -75,6 +183,12 @@
   <url>
     <loc>https://rayyildiz.com/tr/posts/ubuntu-console-ile-oracle-jdk-kurulumu/</loc>
     <lastmod>2010-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/ubuntu/</loc>
+    <lastmod>2010-08-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -88,8 +202,26 @@
   </url>
   
   <url>
+    <loc>https://rayyildiz.com/tr/categories/mobil/</loc>
+    <lastmod>2010-06-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/android/</loc>
+    <lastmod>2010-06-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/</loc>
     <lastmod>2010-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/database/</loc>
+    <lastmod>2010-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -103,8 +235,38 @@
   </url>
   
   <url>
+    <loc>https://rayyildiz.com/tr/tags/mongodb/</loc>
+    <lastmod>2010-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/nosql/</loc>
+    <lastmod>2010-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/posts/git-kod-kontrol-sistemi-ve-github/</loc>
     <lastmod>2010-03-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/git/</loc>
+    <lastmod>2010-03-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/bigdata/</loc>
+    <lastmod>2009-04-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/cloud/</loc>
+    <lastmod>2009-04-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -128,6 +290,18 @@
   </url>
   
   <url>
+    <loc>https://rayyildiz.com/tr/tags/debian/</loc>
+    <lastmod>2009-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/kurulum/</loc>
+    <lastmod>2009-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/posts/google-chrome-tarayici/</loc>
     <lastmod>2009-03-13T00:00:00+00:00</lastmod>
   </url>
@@ -138,8 +312,26 @@
   </url>
   
   <url>
+    <loc>https://rayyildiz.com/tr/tags/ide/</loc>
+    <lastmod>2009-03-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/netbeans/</loc>
+    <lastmod>2009-03-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://rayyildiz.com/tr/posts/java-php-kosturmak/</loc>
     <lastmod>2009-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/php/</loc>
+    <lastmod>2009-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -153,71 +345,8 @@
   </url>
   
   <url>
-    <loc>https://rayyildiz.com/tr/tags/android/</loc>
-    <lastmod>2010-06-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/bigdata/</loc>
-    <lastmod>2009-04-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/categories/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://rayyildiz.com/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="https://rayyildiz.com/tr/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/cloud/</loc>
-    <lastmod>2009-04-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/database/</loc>
-    <lastmod>2010-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/debian/</loc>
-    <lastmod>2009-03-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/design-pattern/</loc>
-    <lastmod>2010-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/categories/genel/</loc>
-    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/git/</loc>
-    <lastmod>2010-03-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/groovy/</loc>
-    <lastmod>2011-10-29T00:00:00+00:00</lastmod>
+    <loc>https://rayyildiz.com/tr/tags/mobile-programlama/</loc>
+    <lastmod>2009-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -233,134 +362,6 @@
                 hreflang="tr"
                 href="https://rayyildiz.com/tr/hakkimda/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/ide/</loc>
-    <lastmod>2009-03-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/java/</loc>
-    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/kurulum/</loc>
-    <lastmod>2009-03-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/categories/mobil/</loc>
-    <lastmod>2010-06-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/mobile-programlama/</loc>
-    <lastmod>2009-02-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/mongodb/</loc>
-    <lastmod>2010-04-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/netbeans/</loc>
-    <lastmod>2009-03-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/nosql/</loc>
-    <lastmod>2010-04-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/oyun-gelistirme/</loc>
-    <lastmod>2010-08-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/php/</loc>
-    <lastmod>2009-02-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/posts/</loc>
-    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/</loc>
-    <lastmod>2013-05-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://rayyildiz.com/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="https://rayyildiz.com/tr/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/scala/</loc>
-    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/categories/scala/</loc>
-    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/spring-framework/</loc>
-    <lastmod>2011-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/</loc>
-    <lastmod>2010-06-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://rayyildiz.com/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="https://rayyildiz.com/tr/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/tags/ubuntu/</loc>
-    <lastmod>2010-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rayyildiz.com/tr/categories/yazilim-gelistirme/</loc>
-    <lastmod>2012-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
