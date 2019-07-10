@@ -40,7 +40,7 @@ func gitCommit(comment string) {
 	panicOnError(err, "could not execute 'git add .'")
 	color.Yellow(string(out))
 
-	out, err = exec.Command("git", "commit", "-m", comment).Output()
+	out, err = exec.Command("git", "commit", "-S", "-m", comment).Output()
 	panicOnError(err, "could not execute 'git comment -m [COMMENT]'")
 	color.Yellow(string(out))
 }

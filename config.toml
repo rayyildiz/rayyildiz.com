@@ -17,11 +17,11 @@ disqusShortname = "rayyildiz"
 
 [params]
     author = "Ramazan AYYILDIZ"
-    description = "Ramazan AYYILDIZ's personal website"
-    keywords = "blog,developer,personal"
+    description = "Ramazan AYYILDIZ"
+    keywords = "blog,developer,personal,software engineer,java,golang,scala,cloud native,serverless"
     info = "Software Engineer"
     avatarurl = "avatars/rayyildiz.jpg"
-    footercontent = "When information is shared, it will grow even more"
+    footercontent = "Just for fun"
 
     dateformat = "January 2, 2006"
 
@@ -73,7 +73,7 @@ disqusShortname = "rayyildiz"
         # You can configure the theme parameter for each language.
         [languages.en.params]
             author = "Ramazan AYYILDIZ"
-            info = "Big data Engineer"
+            info = "Software Engineer"
             description = "Ramazan AYYILDIZ's personal website"
             keywords = "blog,developer,personal"
 
@@ -109,7 +109,7 @@ disqusShortname = "rayyildiz"
             author = "Ramazan AYYILDIZ"
             description = "Ramazan AYYILDIZ'in kisiel websitesi"
             keywords = "blog,developer,kisisel"
-            info = "BigData Engineer and Software Architect"
+            info = "Senior Software Architect"
             footercontent = "Bilgi paylasildikca buyur"
            # dateformat = "Jan 2, 2006"
 
