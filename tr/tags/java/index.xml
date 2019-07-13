@@ -6,10 +6,20 @@
     <description>Recent content in java on Ramazan AYYILDIZ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 27 Oct 2012 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rayyildiz.com/tr/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reactive Programlama</title>
+      <link>https://rayyildiz.com/tr/posts/reactive-programlama/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/reactive-programlama/</guid>
+      <description>Reactive Programlama Giris Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen Oject Oriented Programming biliyordur. Ben de diger bircok kisi gibi programlaya Pascal ile basladim. Daha sonra ise C,C++, ve Java seklinde bir ogrenme sureci gordum.
+Imperative Style Butun bu programlama dilleri aslinda sizin bilgisayara ne yapmasi gerektigini tek tek emir vererek gelistirdiginiz bir ortam. Basit bir ornekten gitmek gerekirse asagidaki super compleks matematik islemi icin kullandigimiz yontem imperative programladir.</description>
+    </item>
     
     <item>
       <title>Scala ile Asal Sayı Tespiti</title>
