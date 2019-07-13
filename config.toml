@@ -115,20 +115,20 @@ disqusShortname = "rayyildiz"
 
         [languages.tr.menu]
 
-            [[languages.tr.menu.main]]
-            name = "Hakkimda"
-            weight = 20
-            url = "/tr/hakkimda/"
+            #[[languages.tr.menu.main]]
+            #name = "Hakkimda"
+            #weight = 20
+            #url = "/tr/hakkimda/"
 
             [[languages.tr.menu.main]]
             name = "Java"
             weight = 1
             url = "/tr/tags/java/"
 
-            # [[languages.tr.menu.main]]
-            # name = "Big Data"
-            # weight = 3
-            # url = "/tr/tags/big-data/"
+            [[languages.tr.menu.main]]
+            name = "Yazilim Gelistirme"
+            weight = 3
+            url = "/tr/tags/software-development/"
 
             [[languages.tr.menu.main]]
             name = "Tum Yazilar"

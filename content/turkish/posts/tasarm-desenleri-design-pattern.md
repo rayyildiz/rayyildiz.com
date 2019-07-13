@@ -2,7 +2,7 @@
 date= "2010-07-31"
 title= "Tasarım Desenleri (Design Pattern)"
 slug="java-ile-tasarim-desenleri"
-tags= ["java","Design Pattern"]
+tags= ["java","Design Pattern","Software Development"]
 categories= ["Genel"]
 +++
 

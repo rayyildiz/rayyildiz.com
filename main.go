@@ -97,7 +97,7 @@ func main() {
 	commentMessage := strings.Join(args, " ")
 	color.Green("comment message '%s'", commentMessage)
 
-	color.Green("Building sites...")
+	color.Green("Building sites")
 
 	color.Green("Add and commit changes...")
 	gitCommit(commentMessage)

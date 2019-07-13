@@ -1,18 +1,28 @@
 +++
 date= "2019-07-10"
-title= "Reactive Programlama"
-slug="reactive-programlama"
-tags= ["java"]
+title= "Impereative Programlama"
+slug="reactive-programlama-1"
+tags= ["java","Software Development"]
 categories= ["Genel"]
 +++
 
-# Reactive Programlama
+# Imperative Programllama
 
-## Giris
+Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:
+
+- Impereative Programming
+- [Reactive Programming](/tr/posts/reactive-programlama-2)
+- [Functional Programming](#soon)
+
+> Butun terimlerin Turkce'sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
+
+# Giris
 
 Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen [Oject Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming) biliyordur. Ben de diger bircok kisi gibi programlaya [Pascal](https://www.freepascal.org/) ile basladim. Daha sonra ise [C](https://gcc.gnu.org/),[C++](http://www.cplusplus.com/), ve [Java](https://openjdk.java.net/) seklinde bir ogrenme sureci gordum. 
 
-## Imperative Style
+
+
+## Imperative Programlama (IP)
 
 Butun bu programlama dilleri aslinda sizin bilgisayara ne yapmasi gerektigini tek tek emir vererek gelistirdiginiz bir ortam. Basit bir ornekten gitmek gerekirse asagidaki super compleks matematik islemi icin kullandigimiz yontem imperative programladir. 
 
@@ -58,13 +68,13 @@ Buraya kadar olan konulari bildiginize eminim. Asil soru bundan sonra basliyor. 
 
 Adil olmak gerekirse **imperative style** bircok guzel tarafi var, negatif yonlerini vermeden once bu stilin hangi durumlarda basarili olduguna bakalim.
 
-### Imperative-style: Avantajlari 
+### IP Avantajlari 
 
 Oncelikli olarak cok daha basit bir stil. Programci olarak okudugunuz her bir satirda ne olacagini ongormeniz mumkun. Satirlarin calismasinda bir sira var. Bir satir calismasi bitmeden diger satira uygulama atlayamaz. Bu ise size kod ustunde buyuk bir kontrol gucu veriyor (yada gibi gorunur). 
 
 OOP, producedural yapinin sebep oldugu karmasayi engellemek icin  guzel cozumler sunuyor.  Herseyin birer object oldugu, inheritence ve abstraction ile karmasayi azaltiyor, interface ile metot imzalarinin ayni olmasini compile asamasinda garanti ediyor.  
 
-### Imperative-style: Sorunlu yonleri
+### IP Sorunlu Taraflari
 
 Imperetive-style, en buyuk problem teskil ettigi yer state saklamasidir. Ozellikle global state fonksiyonun sonucunu predict edilememesine neden olmaktadir. Ayni ornekten gidelim. 
 
@@ -128,38 +138,3 @@ public static void main(String[] args) throws InterruptedException {
 ```
 
 Bunun haricinde ise sistemin donmasina neden olan [Dead Lock](https://www.geeksforgeeks.org/operating-system-process-management-deadlock-introduction/) ayrica baska bir sorun. Bu konuda daha once yaptigim bir sunum vardi, Concurrency ve paralel programlama ile ilgili sunumu [Slideshare](https://www.slideshare.net/rayyildiz/concurrency-parallel-programming) bulabilirsiniz.
-
-
-## Declerative Programlama 
-
-Imperative programlamanin tam tersi ise declerative programlamadir. Burada asil husus olay ustune kuruludur. Burada bilgisayara satir satir ne yapacagini vermek yerine, bir olay oldugunda uygulamanin nasil davranmasi gerektigini soylersiniz. Bu konu baya genis bir konu oldugu icin sadece bir bolumune odaklanacagiz: reactive programlama.
-
-### Reactive Programlama
-
-Ilk ornekte yer alan [compleks matematik problemini](#imperative-style)  reactive seklinde yazmak istiyorsak su sekilde bir kod yazmamiz gerekirdi. Kisaca aciklamak gerekirse burada bir [accumalator](https://towardsdatascience.com/what-is-tail-recursion-elimination-or-why-functional-programming-can-be-awesome-43091d76915e) kullaniyoruz. Bu sayede stack-overflow error almayi engellemis oluyoruz.
-
-```java
-
-public class ComplexMath {
-
-  private int sumAcc(final Iterator<Integer> xs,final Integer accumulator) {
-    if (xs.hasNext()) {
-      return sumAcc(xs, xs.next() + accumulator);
-    } else {
-      return accumulator;
-    }
-  }
-
-  public int sum(List<Integer> xs) {
-    return sumAcc(xs.iterator(), 0);
-  }
-}
-```
-
-Burada ustteki ornekten cok compleks birsey yapmiyoruz. Sadece for-loop yerine recursive fonksiyon kullandik burada. Burada local ya da global degisken tutmak yerine recursive olarak fonsksiyonun kendisini cagirdik. Bu sekilde hesaplama bitince kadar devam edecek ve listenin sonuna geldiginde ```accumalor``` sakladigimiz degeri sonuc olarak donuyoruz. Bu sekilde yapmamizin nedeni olasi stack-overflow-error engellemek.  Bu konuya tail-recursive da denilir. 
-
-Bunun IP den farki nedir:
-
-- Oncelikli olarak hem ```sum``` hem de ```sumAcc``` sonuclari her zaman ayni input ile ayni sonucu verecektir. Cok detaya girmeyecegim ama bu matematikte **kume teorisi** olarak hatirliyor olmaniz gerekiyor. [Category Theory](https://en.wikipedia.org/wiki/Category_theory)
-- State olmadigi icin dead-lock, race-condition gibi sorunlar olmuyor.
-
