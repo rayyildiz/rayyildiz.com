@@ -12,7 +12,7 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Reactive Programlama"/>
 <meta name="twitter:description" content="Reactive Programlama Giris Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen Oject Oriented Programming biliyordur. Ben de diger bircok kisi gibi programlaya Pascal ile basladim. Daha sonra ise C,C&#43;&#43;, ve Java seklinde bir ogrenme sureci gordum.
-Imperative Style Butun bu programlama dilleri aslinda sizin bilgisayara ne yapmasi gerektigini tek tek emir vererek gelistirdiginiz bir ortam. Basit bir ornekten gitmek gerekirse asagidaki super compleks matematik islemi icin kullandigimiz yontem imperative programladir."/>
+Imperative Programlama (IP) Butun bu programlama dilleri aslinda sizin bilgisayara ne yapmasi gerektigini tek tek emir vererek gelistirdiginiz bir ortam. Basit bir ornekten gitmek gerekirse asagidaki super compleks matematik islemi icin kullandigimiz yontem imperative programladir."/>
 
 
     <base href="https://rayyildiz.com/tr/posts/reactive-programlama/">
@@ -136,7 +136,7 @@ Imperative Style Butun bu programlama dilleri aslinda sizin bilgisayara ne yapma
 
 <p>Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Oject Oriented Programming</a> biliyordur. Ben de diger bircok kisi gibi programlaya <a href="https://www.freepascal.org/">Pascal</a> ile basladim. Daha sonra ise <a href="https://gcc.gnu.org/">C</a>,<a href="http://www.cplusplus.com/">C++</a>, ve <a href="https://openjdk.java.net/">Java</a> seklinde bir ogrenme sureci gordum.</p>
 
-<h2 id="imperative-style">Imperative Style</h2>
+<h2 id="imperative-programlama-ip">Imperative Programlama (IP)</h2>
 
 <p>Butun bu programlama dilleri aslinda sizin bilgisayara ne yapmasi gerektigini tek tek emir vererek gelistirdiginiz bir ortam. Basit bir ornekten gitmek gerekirse asagidaki super compleks matematik islemi icin kullandigimiz yontem imperative programladir.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ComplexMath</span> <span style="color:#f92672">{</span>
@@ -256,6 +256,10 @@ math<span style="color:#f92672">.</span><span style="color:#a6e22e">initialValue
     <span style="color:#66d9ef">return</span> sumAcc<span style="color:#f92672">(</span>xs<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">(),</span> 0<span style="color:#f92672">);</span>
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span></code></pre></div>
+<blockquote>
+<p>Dogruyu soylemek gerekirse ustteki ornek aslinda fonksiyonel programalaya giriste anlatilan bir ornektir. Burada her <code>onNext</code> olayinda toplama islemi yapiliyor, vurgulamaya calistigim yer burasi.</p>
+</blockquote>
+
 <p>Burada ustteki ornekten cok compleks birsey yapmiyoruz. Sadece for-loop yerine recursive fonksiyon kullandik burada. Burada local ya da global degisken tutmak yerine recursive olarak fonsksiyonun kendisini cagirdik. Bu sekilde hesaplama bitince kadar devam edecek ve listenin sonuna geldiginde <code>accumalor</code> sakladigimiz degeri sonuc olarak donuyoruz. Bu sekilde yapmamizin nedeni olasi stack-overflow-error engellemek.  Bu konuya tail-recursive da denilir.</p>
 
 <p>Bunun IP den farki nedir:</p>
@@ -305,7 +309,7 @@ math<span style="color:#f92672">.</span><span style="color:#a6e22e">initialValue
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/4a421303f8d122ab41582b1ddc260f15e2e2a072">4a42130</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/fa96005b9a7e8a14b5b907edeaa9b96dafe7f84b">fa96005</a>]
     
   </section>
 </footer>
