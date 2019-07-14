@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://rayyildiz.com/tr/categories/</loc>
-    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -20,19 +20,19 @@
   
   <url>
     <loc>https://rayyildiz.com/tr/categories/genel/</loc>
-    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rayyildiz.com/tr/posts/</loc>
-    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rayyildiz.com/tr/</loc>
-    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -47,13 +47,19 @@
   </url>
   
   <url>
-    <loc>https://rayyildiz.com/tr/posts/reactive-programlama/</loc>
-    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
+    <loc>https://rayyildiz.com/tr/posts/reactive-programlama-2/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/tags/software-development/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rayyildiz.com/tr/tags/</loc>
-    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -69,8 +75,13 @@
   
   <url>
     <loc>https://rayyildiz.com/tr/tags/java/</loc>
-    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rayyildiz.com/tr/posts/reactive-programlama-1/</loc>
+    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>

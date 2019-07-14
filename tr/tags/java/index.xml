@@ -6,19 +6,31 @@
     <description>Recent content in java on Ramazan AYYILDIZ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rayyildiz.com/tr/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Reactive Programlama</title>
-      <link>https://rayyildiz.com/tr/posts/reactive-programlama/</link>
+      <link>https://rayyildiz.com/tr/posts/reactive-programlama-2/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/posts/reactive-programlama-2/</guid>
+      <description>Decleretaive Programlama Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:
+ Impereative Programming Reactive Programming Functional Programming   Butun terimlerin Turkce&amp;rsquo;sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
+ Giris Imperative programlamanin tam tersi ise declerative programlamadir. Burada asil husus olay ustune kuruludur. Burada bilgisayara satir satir ne yapacagini vermek yerine, bir olay oldugunda uygulamanin nasil davranmasi gerektigini soylersiniz.</description>
+    </item>
+    
+    <item>
+      <title>Impereative Programlama</title>
+      <link>https://rayyildiz.com/tr/posts/reactive-programlama-1/</link>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://rayyildiz.com/tr/posts/reactive-programlama/</guid>
-      <description>Reactive Programlama Giris Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen Oject Oriented Programming biliyordur. Ben de diger bircok kisi gibi programlaya Pascal ile basladim. Daha sonra ise C,C++, ve Java seklinde bir ogrenme sureci gordum.
-Imperative Programlama (IP) Butun bu programlama dilleri aslinda sizin bilgisayara ne yapmasi gerektigini tek tek emir vererek gelistirdiginiz bir ortam. Basit bir ornekten gitmek gerekirse asagidaki super compleks matematik islemi icin kullandigimiz yontem imperative programladir.</description>
+      <guid>https://rayyildiz.com/tr/posts/reactive-programlama-1/</guid>
+      <description>Imperative Programllama Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:
+ Impereative Programming Reactive Programming Functional Programming   Butun terimlerin Turkce&amp;rsquo;sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
+ Giris Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen Oject Oriented Programming biliyordur. Ben de diger bircok kisi gibi programlaya Pascal ile basladim.</description>
     </item>
     
     <item>
