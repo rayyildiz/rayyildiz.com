@@ -16,6 +16,9 @@ pygmentscodefencesguesssyntax = true
 disqusShortname = "rayyildiz"
 enableRobotsTXT = true
 
+[taxonomies]
+  series = "series"
+  
 [params]
     author = "Ramazan AYYILDIZ"
     description = "Ramazan AYYILDIZ"
@@ -23,7 +26,8 @@ enableRobotsTXT = true
     info = "Software Engineer"
     avatarurl = "avatars/rayyildiz.jpg"
     footercontent = "Just for fun"
-
+    images = ["avatars/rayyildiz.jpg"]
+    
     dateformat = "January 2, 2006"
 
     hideCredits = true
