@@ -17,20 +17,6 @@
   </url>
   
   <url>
-    <loc>https://rayyildiz.com/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="tr"
-                href="https://rayyildiz.com/tr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://rayyildiz.com/categories/"
-                />
-  </url>
-  
-  <url>
     <loc>https://rayyildiz.com/</loc>
     <xhtml:link
                 rel="alternate"
@@ -45,16 +31,16 @@
   </url>
   
   <url>
-    <loc>https://rayyildiz.com/tags/</loc>
+    <loc>https://rayyildiz.com/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="tr"
-                href="https://rayyildiz.com/tr/tags/"
+                href="https://rayyildiz.com/tr/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://rayyildiz.com/tags/"
+                href="https://rayyildiz.com/series/"
                 />
   </url>
   
