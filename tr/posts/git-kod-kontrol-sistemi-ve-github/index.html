@@ -44,7 +44,7 @@ Git-Scm Linux Torwalds tarafından geliştirilen kaynak kod paylaşım aracıdı
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -129,46 +129,39 @@ Git-Scm Linux Torwalds tarafından geliştirilen kaynak kod paylaşım aracıdı
       </header>
 
       <div>
-        
-
-<p>Github, git-scm ile opensource veya kendi projelerinizin kaynak kodlarını yönetmek için bir uygulama. SVN üzerinde yer alan kaynak kodları çok kolay bir şekilde, import edebiliyorsunuz. Ücretsiz sürümü private proje açmanıza izin vermezken, sayısız public proje açabilirsiniz.</p>
-
+        <p>Github, git-scm ile opensource veya kendi projelerinizin kaynak kodlarını yönetmek için bir uygulama. SVN üzerinde yer alan kaynak kodları çok kolay bir şekilde, import edebiliyorsunuz. Ücretsiz sürümü private proje açmanıza izin vermezken, sayısız public proje açabilirsiniz.</p>
 <p>Twitter, facebook başta olmak üzere birçok önemli proje şu anda github üzerinde durmakta. Twitter’ın scala ile geliştirdiği gizzard projesi github üzerinden erişmeniz mümkün.</p>
-
 <h2 id="git-scm">Git-Scm</h2>
-
 <p>Linux Torwalds tarafından geliştirilen kaynak kod paylaşım aracıdır. Özellikle dağıtım kod yönetim sistemi olmasından ve hızlı çalışmasından dolayı gün geçtikçe populer bir hale gelmeye başladı. SVN den farklı olarak merkezi değil, dağıtık bir kod yönetimine sahiptir. Bu ise linux kernel’ın geliştirilmesi sürecinde ihtiyac haline gelen ve gene Linux Torwalds tarafından yazılan bir araç.</p>
-
 <h3 id="github-ile-çalışma">GitHub İle Çalışma</h3>
-
 <p>Github sitesinde ihtiyacınıza göre üye olmanız gerekmekte. Yeni bir proje açmak ise çok kolay.</p>
-
 <p>Yeni proje açtktan sonra yapmanız gereken git ile ilk halini almak. Git, bilgisayarınıza indirdikten sonra promt dan aşağıdaki adımları yapmanız gerekiyor. (Windows için tafsiyem msysgit i denemeniz)
 Genel ayarlar</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git config –global user.name “ADINIZ SOYADINIZ”
-git config –global user.email [eposta adresiniz]</pre></div>
+<pre><code>git config –global user.name “ADINIZ SOYADINIZ”
+git config –global user.email [eposta adresiniz]
+</code></pre>
 <p>Projeyi Almak için</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">mkdir [projenizi_adi]
+<pre><code>mkdir [projenizi_adi]
 cd [projenizi_adi]
 git init
 touch README
 git add README
 git commit -m ‘mesajınız”
 git remote add origin [projenizin adresi] – — örnek: git@github.com:rayyildiz/test_project.git
-git push origin master</pre></div>
+git push origin master
+</code></pre>
 <p>Github, ana klaösrde README klasörü kullanmanızı tafsiye etmektedir. Bu şekilde, projenizin sayfanızda bu sayfanın içeriğini göstermektedir.</p>
-
 <h3 id="gitignore">.gitignore</h3>
-
 <p>Bazı derleme sonucunda ğretilen dosyaları git içinde yer almasını istemezsiniz. Bu durumda yapmanız gereken projenizin ana sayfasında .gitignore diye bir dosya açıp içine istemediğinizi klasör, uzantıları veya dosyaları çıkarmaktır. Bir ASP.NET 3.5 projesinde bin/debug klasörü, .uso gibi dosyalar sürekli değişmekte ve sıkıntı yaşatmaktadır. Bir asp.net projesi için aşağıdaki dosyayı kullanabilirsiniz.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">.svn*
+<pre><code>.svn*
 obj/
 bin/
 *.suo
 *.user
 Log/
 log/
-*.db</pre></div>
+*.db
+</code></pre>
 <p>Çoğunlukla kullandığınız IDE ler için git plugin geliştirlmiştir. Ancak konsoldan git projesi ile çalışmak çok zevkli :)
 Github duyurduğu haberde, github da yer alan projelerinizi artık svn ile de erişebilecek, code gönderip alabileceksiniz. √áok güzel bir gelişme. Özellikle şu günlerde, git plugin sayısı SVN plugin sayısından az olduğunu düşündüğümüzde, svn kullanan bir kişinin alışkanlığını şimdilik değiştirmesine gerek yok demektir.</p>
 
@@ -212,7 +205,7 @@ Github duyurduğu haberde, github da yer alan projelerinizi artık svn ile de er
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

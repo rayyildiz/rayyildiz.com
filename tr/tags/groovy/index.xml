@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>groovy on Ramazan AYYILDIZ</title>
@@ -61,7 +61,8 @@ Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten t
       <guid>https://rayyildiz.com/tr/posts/groovy-ve-grails-kurulumu/</guid>
       <description>Groovy Nedir? Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.
 Eclipse, NetBeans ve Intellij Idea da geliştirilmiş eklentiler sayesinde groovy geliştirebilirsiniz.
-Groovy hakkında daha detaylı bilgi için Grails Nedir? Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir.</description>
+Groovy hakkında daha detaylı bilgi için &amp;lt;http://groovy.codehaus.org/ bakabilirsiniz.&amp;gt;
+Grails Nedir? Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir.</description>
     </item>
     
   </channel>

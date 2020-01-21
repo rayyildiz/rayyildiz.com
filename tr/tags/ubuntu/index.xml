@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ubuntu on Ramazan AYYILDIZ</title>
@@ -19,7 +19,8 @@
       <guid>https://rayyildiz.com/tr/posts/ubuntu-console-ile-oracle-jdk-kurulumu/</guid>
       <description>Oracle veritabanı Ubuntu kurulumu iki adımda yapabilrisiniz.
 Oracle İndirme Sayfasından İndirmek Oracle indirme sayfasınandan(http://www.oracle.com/technetwork/database/express-edition/downloads/102xelinsoft-102048.html) Oracle Database 10g Express Edition (Universal) veritabanının .deb uzantı versiyonunu indirin. (Eğer .rpm versiyonunu indirirseniz, alien komutu kullanarak .rpm versiyonunu .deb uzantılı dosyaya cevirebilirsiniz. Detaylı bilgi buraya tıklayınız). Daha sonra ise kurulum işlemini grafiksel arayüz ortamında çift tıklayarak yapabilirsiniz.
-Oracle Repository Kullanmak Konsole penceresinden veya Software Source arayüzünu kullanarak aşağıdaki repository paketini /etc/apt/source.list dosyasına ekleyiniz.</description>
+Oracle Repository Kullanmak Konsole penceresinden veya Software Source arayüzünu kullanarak aşağıdaki repository paketini /etc/apt/source.list dosyasına ekleyiniz.
+deb http://oss.</description>
     </item>
     
     <item>

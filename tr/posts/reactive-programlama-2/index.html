@@ -12,7 +12,7 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Reactive Programlama"/>
 <meta name="twitter:description" content="Decleretaive Programlama Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:
- Impereative Programming Reactive Programming Functional Programming   Butun terimlerin Turkce&rsquo;sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
+ Impereative Programming Reactive Programming Functional Programming   Butun terimlerin Turkce&#39;sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
  Giris Imperative programlamanin tam tersi ise declerative programlamadir. Burada asil husus olay ustune kuruludur. Burada bilgisayara satir satir ne yapacagini vermek yerine, bir olay oldugunda uygulamanin nasil davranmasi gerektigini soylersiniz."/>
 
 
@@ -44,7 +44,7 @@
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -131,51 +131,40 @@
       </header>
 
       <div>
-        
-
-<h1 id="decleretaive-programlama">Decleretaive Programlama</h1>
-
+        <h1 id="decleretaive-programlama">Decleretaive Programlama</h1>
 <p>Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:</p>
-
 <ul>
 <li><a href="https://rayyildiz.com/tr/posts/reactive-programlama-1">Impereative Programming</a></li>
 <li>Reactive Programming</li>
 <li><a href="#soon">Functional Programming</a></li>
 </ul>
-
 <blockquote>
-<p>Butun terimlerin Turkce&rsquo;sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.</p>
+<p>Butun terimlerin Turkce'sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.</p>
 </blockquote>
-
 <h1 id="giris">Giris</h1>
-
 <p>Imperative programlamanin tam tersi ise declerative programlamadir. Burada asil husus olay ustune kuruludur. Burada bilgisayara satir satir ne yapacagini vermek yerine, bir olay oldugunda uygulamanin nasil davranmasi gerektigini soylersiniz. Bu konu baya genis bir konu oldugu icin sadece bir bolumune odaklanacagiz: reactive programlama.</p>
-
 <h2 id="reactive-programlama">Reactive Programlama</h2>
-
 <p>Ilk ornekte yer alan <a href="#imperative-style">compleks matematik problemini</a>  reactive seklinde yazmak istiyorsak su sekilde bir kod yazmamiz gerekirdi. Kisaca aciklamak gerekirse burada bir <a href="https://towardsdatascience.com/what-is-tail-recursion-elimination-or-why-functional-programming-can-be-awesome-43091d76915e">accumalator</a> kullaniyoruz. Bu sayede stack-overflow error almayi engellemis oluyoruz.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ComplexMath</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ComplexMath</span> <span style="color:#f92672">{</span>
 
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">sumAcc</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Iterator<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> xs<span style="color:#f92672">,</span><span style="color:#66d9ef">final</span> Integer accumulator<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>xs<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">return</span> sumAcc<span style="color:#f92672">(</span>xs<span style="color:#f92672">,</span> xs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> accumulator<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>xs<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">return</span> sumAcc<span style="color:#f92672">(</span>xs<span style="color:#f92672">,</span> xs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> accumulator<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">return</span> accumulator<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
   <span style="color:#f92672">}</span>
 
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">sum</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> xs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> sumAcc<span style="color:#f92672">(</span>xs<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">(),</span> 0<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> sumAcc<span style="color:#f92672">(</span>xs<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<blockquote>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
 <p>Dogruyu soylemek gerekirse ustteki ornek aslinda fonksiyonel programalaya giriste anlatilan bir ornektir. Burada her <code>onNext</code> olayinda toplama islemi yapiliyor, vurgulamaya calistigim yer burasi.</p>
 </blockquote>
-
 <p>Burada ustteki ornekten cok compleks birsey yapmiyoruz. Sadece for-loop yerine recursive fonksiyon kullandik burada. Burada local ya da global degisken tutmak yerine recursive olarak fonsksiyonun kendisini cagirdik. Bu sekilde hesaplama bitince kadar devam edecek ve listenin sonuna geldiginde <code>accumalor</code> sakladigimiz degeri sonuc olarak donuyoruz. Bu sekilde yapmamizin nedeni olasi stack-overflow-error engellemek.  Bu konuya tail-recursive da denilir.</p>
-
 <p>Bunun IP den farki nedir:</p>
-
 <ul>
 <li>Oncelikli olarak hem <code>sum</code> hem de <code>sumAcc</code> sonuclari her zaman ayni input ile ayni sonucu verecektir. Cok detaya girmeyecegim ama bu matematikte <strong>kume teorisi</strong> olarak hatirliyor olmaniz gerekiyor. <a href="https://en.wikipedia.org/wiki/Category_theory">Category Theory</a></li>
 <li>State olmadigi icin dead-lock, race-condition gibi sorunlar olmuyor.</li>
@@ -221,7 +210,7 @@
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

@@ -13,7 +13,8 @@
 <meta name="twitter:title" content="Groovy ve Grails Kurulumu"/>
 <meta name="twitter:description" content="Groovy Nedir? Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.
 Eclipse, NetBeans ve Intellij Idea da geliştirilmiş eklentiler sayesinde groovy geliştirebilirsiniz.
-Groovy hakkında daha detaylı bilgi için Grails Nedir? Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir."/>
+Groovy hakkında daha detaylı bilgi için &lt;http://groovy.codehaus.org/ bakabilirsiniz.&gt;
+Grails Nedir? Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir."/>
 
 
     <base href="https://rayyildiz.com/tr/posts/groovy-ve-grails-kurulumu/">
@@ -44,7 +45,7 @@ Groovy hakkında daha detaylı bilgi için Grails Nedir? Grails, groovy programl
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -131,53 +132,35 @@ Groovy hakkında daha detaylı bilgi için Grails Nedir? Grails, groovy programl
       </header>
 
       <div>
-        
-
-<h2 id="groovy-nedir">Groovy Nedir?</h2>
-
-<p><img src="https://rayyildiz.com/images/groovy_medium.png" alt="Groovy" /></p>
-
+        <h2 id="groovy-nedir">Groovy Nedir?</h2>
+<p><img src="https://rayyildiz.com/images/groovy_medium.png" alt="Groovy"></p>
 <p>Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.</p>
-
 <p>Eclipse, NetBeans ve Intellij Idea da geliştirilmiş eklentiler sayesinde groovy geliştirebilirsiniz.</p>
-
-<p>Groovy hakkında daha detaylı bilgi için <http://groovy.codehaus.org/ bakabilirsiniz.></p>
-
+<p>Groovy hakkında daha detaylı bilgi için &lt;http://groovy.codehaus.org/ bakabilirsiniz.&gt;</p>
 <h2 id="grails-nedir">Grails Nedir?</h2>
-
-<p><img src="https://rayyildiz.com/images/grails_logo1.png" alt="Grails Logo" /></p>
-
+<p><img src="https://rayyildiz.com/images/grails_logo1.png" alt="Grails Logo"></p>
 <p>Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir. Yani bir nevi “Ruby On Rails” in, Groovy ile gerçekleştirilmiş halidir.</p>
-
 <p>Java yazılımcıların sürekli kullanmak durumunda kaldığı xml ayar dosyaları grails de yoktur. Grails, ayar işlemlerini, groovy dosyalar üzerinde yazmanızı ister.</p>
-
 <p>Ruby On Rails‘de olduğu gibi, geliştirme, test ve ürün ortamlarını için farklı ayar imkanları sunması oldukça güzel bir özelliktir. Grails için yazılan bir çok eklentin bulunmaktadır ( bu sayı gün geçtikçe artıyor).</p>
-
 <p>Grails hakkında daha detaylı bilgi için <a href="http://www.grails.org/">http://www.grails.org/</a> bakabilirsiniz.</p>
-
 <p>Groovy ve grails hakkında yüzeysel bilgi verdikten sonra, kurulumlarını ve kullanıma hazır hale gelmeleri için yapılması gerekenlere bir göz atalım.
 Groovy Kurulum</p>
-
 <p>Groovy kurulum için groovy indirme sayfasına giderek, işletim sisteminize göre en son kararlı sürümümü indiriniz. Windows işletim sistemi için, Windows Installer versiyonunu indiriniz.</p>
-
 <p>Daha sonra GROOVY_HOME cevre değişkeni tanımlamanız gerekmektedir. Windows kurulum sırasında bunu size tanımlamak istediğini soracaktır. Linux da ise bunu .bashrc dosyasına aşağıdaki şekilde bir satır ekleyerek yapabilirsiniz.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export JDK_HOME<span style="color:#f92672">=</span>/usr/lib/jvm/java-6-sun
 export GROOVY_HOME<span style="color:#f92672">=</span>/developer/groovy-1.7.4
-export PATH<span style="color:#f92672">=</span>$PATH:$JDK_HOME/bin:$GROOVY_HOME/bin</code></pre></div>
-<blockquote>
+export PATH<span style="color:#f92672">=</span>$PATH:$JDK_HOME/bin:$GROOVY_HOME/bin
+</code></pre></div><blockquote>
 <p>Not: Eğer tanımlı değilse, GROOVY_HOME tanımlamak için, JDK_HOME cevresel değişkeni de tanımlamanız gerekiyor.</p>
 </blockquote>
-
 <p>Bu işlemden sonra komut penceresinden aşağıdaki kodu çalıştırarak, groovy kurulumunu test edebilirsiniz.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">groovysh</code></pre></div>
-<h2 id="grails-kurulum">Grails Kurulum</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">groovysh
+</code></pre></div><h2 id="grails-kurulum">Grails Kurulum</h2>
 <p>Grails indirme sayfasına giderek, en son kararlı sürümünü indiriniz. Daha sonra bu klasörü açınız.</p>
-
 <p>Grails kurulumu bu adım yeterlidir. Kullandığınız IDE, size grails kurulum dizinini soracaktır. Ancak yineden GRAILS_HOME cevre değişkeni tanımlarsanız çok sağlıklı olacaktır. Aşağıdakı satırı .bashrc dosyasına ekleyiniz.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export GRAILS_HOME<span style="color:#f92672">=</span>/developer/grails-1.3.3
-export PATH<span style="color:#f92672">=</span>$PATH:$GRAILS_HOME/bin</code></pre></div>
-<p>Bu şekilde groovy ve grails kurulumu tamamladık.</p>
+export PATH<span style="color:#f92672">=</span>$PATH:$GRAILS_HOME/bin
+</code></pre></div><p>Bu şekilde groovy ve grails kurulumu tamamladık.</p>
 
       </div>
 
@@ -219,7 +202,7 @@ export PATH<span style="color:#f92672">=</span>$PATH:$GRAILS_HOME/bin</code></pr
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

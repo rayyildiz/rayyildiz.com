@@ -45,7 +45,7 @@ Grafiksel arayüz ortamı olmayan bir sistemde yada grafik ortamına gerek olmad
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -137,31 +137,33 @@ Grafiksel arayüz ortamı olmayan bir sistemde yada grafik ortamına gerek olmad
 
       <div>
         <p>Debian türevli bir sistemde sisteme java nasıl kurabiliriz?</p>
-
 <p>Grafiksel arayüze sahip bir sistemde java kurmak artık cok kolay oldu. Java sitesine girerek edineceğiniz java dosyasını önergeleri takip ederek kurabilirsiniz. Yada Syneptic Paket Yöneticisi yardımıyla cok kolay kurulum gerçekleşgtirebilirsiniz.
 Terminal den Kurulumu gerçekleştirme</p>
-
 <p>Grafiksel arayüz ortamı olmayan bir sistemde yada grafik ortamına gerek olmadan kurulum yapmak istiyorsanız aşağıdaki adımlari takip ederek kurulumu gerçekleştirebiliriz.</p>
-
 <p>Öncelikle source.list içinde gerekli repo olup olmadığına emin olalım. Bunun için terminal ekranından aşağıdaki komutu kullanarak ilgili repoları ekleyelim.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo nano /etc/apt/sources.list</pre></div>
+<pre><code>sudo nano /etc/apt/sources.list
+</code></pre>
 <p>Daha sonra eğer yoksa aşağıdaki repo ları ekleyelim.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">deb http://us.archive.ubuntu.com/ubuntu feisty main restricted
-deb http://us.archive.ubuntu.com/ubuntu feisty universe multiverse</pre></div>
+<pre><code>deb http://us.archive.ubuntu.com/ubuntu feisty main restricted
+deb http://us.archive.ubuntu.com/ubuntu feisty universe multiverse
+</code></pre>
 <p>Daha sonra Ctrl +X- ile nano editörünü kapatalım. Tabiki kayıt edip etmeyeceğimizi soracaktır. ‚ÄòY‚Äô yaparak bu dosyayı yazalım. Bu aşamadan sonra paketleri güncellememiz gerekiyor. Bunun için yapmamız gereken şu:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo apt-get update</pre></div>
+<pre><code>sudo apt-get update
+</code></pre>
 <p>Bu işlem repoları bakarak paketleri güncelleyecektir. Daha sonra sun java- 6 sürümünü indirip kurulumunu yapalım. Bunun yapmanız gereken aşağıdaki komutu çalıştırmak.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo apt-get install  sun-java6-jdk  sun-java6-jre sun-java6-jdk</pre></div>
+<pre><code>sudo apt-get install  sun-java6-jdk  sun-java6-jre sun-java6-jdk
+</code></pre>
 <p>Bu sayede gerekli süürmler indirilerek kurulum yapılacaktır. Bu kurulum sırasında size encoding ile ilgili ayar cıkacaktır. Dileğiniz doğrultusunda kurulacak encoding paketlerini seçebilirsiniz.</p>
-
 <p>Bu işlemler sonunda</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">java -version</pre></div>
+<pre><code>java -version
+</code></pre>
 <p>yaparak kurulumu test edebilirsiniz. Eğer Sun Java Version 6 ya dair bir mesaj gelmezse yapmanız gereken</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">update-java-alternatives -l</pre></div>
+<pre><code>update-java-alternatives -l
+</code></pre>
 <p>Bu komutsistemde birden fazla jvm varsa listeleyecektir. Bunlardan birisini aktif edebilmek için aşağıdaki komutu çalıştırmanız yeterli.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo update-java-alternatives -s java-1.6.0-sun</pre></div>
+<pre><code>sudo update-java-alternatives -s java-1.6.0-sun
+</code></pre>
 <p>Eğer herhangi bir hata gelmediyse java -version diyerek kurulumu test edebilirsiniz. Bu sayede sun java sistemimize kurmuş olduk.</p>
-
 <p>Kolay gelsin</p>
 
       </div>
@@ -204,7 +206,7 @@ deb http://us.archive.ubuntu.com/ubuntu feisty universe multiverse</pre></div>
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

@@ -12,7 +12,7 @@
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Impereative Programlama"/>
 <meta name="twitter:description" content="Imperative Programllama Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:
- Impereative Programming Reactive Programming Functional Programming   Butun terimlerin Turkce&rsquo;sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
+ Impereative Programming Reactive Programming Functional Programming   Butun terimlerin Turkce&#39;sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
  Giris Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen Oject Oriented Programming biliyordur. Ben de diger bircok kisi gibi programlaya Pascal ile basladim."/>
 
 
@@ -44,7 +44,7 @@
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -131,47 +131,37 @@
       </header>
 
       <div>
-        
-
-<h1 id="imperative-programllama">Imperative Programllama</h1>
-
+        <h1 id="imperative-programllama">Imperative Programllama</h1>
 <p>Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:</p>
-
 <ul>
 <li>Impereative Programming</li>
 <li><a href="https://rayyildiz.com/tr/posts/reactive-programlama-2">Reactive Programming</a></li>
 <li><a href="#soon">Functional Programming</a></li>
 </ul>
-
 <blockquote>
-<p>Butun terimlerin Turkce&rsquo;sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.</p>
+<p>Butun terimlerin Turkce'sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.</p>
 </blockquote>
-
 <h1 id="giris">Giris</h1>
-
 <p>Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Oject Oriented Programming</a> biliyordur. Ben de diger bircok kisi gibi programlaya <a href="https://www.freepascal.org/">Pascal</a> ile basladim. Daha sonra ise <a href="https://gcc.gnu.org/">C</a>,<a href="http://www.cplusplus.com/">C++</a>, ve <a href="https://openjdk.java.net/">Java</a> seklinde bir ogrenme sureci gordum.</p>
-
 <h2 id="imperative-programlama-ip">Imperative Programlama (IP)</h2>
-
 <p>Butun bu programlama dilleri aslinda sizin bilgisayara ne yapmasi gerektigini tek tek emir vererek gelistirdiginiz bir ortam. Basit bir ornekten gitmek gerekirse asagidaki super compleks matematik islemi icin kullandigimiz yontem imperative programladir.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ComplexMath</span> <span style="color:#f92672">{</span>
 
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">sum</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> list<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       sum <span style="color:#f92672">=</span> sum <span style="color:#f92672">+</span> x<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#66d9ef">return</span> sum<span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Burada satir satir aciklamak gerekiyorsa:</p>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Burada satir satir aciklamak gerekiyorsa:</p>
 <ul>
 <li><code>list.get(i)</code> ile listenin <code>i</code>. elemanini ver,</li>
 <li>bu degeri <code>x</code> diye tanimlanmis degiskene ata,</li>
@@ -179,27 +169,16 @@
 <li><code>i</code> degiskeni ile <code>list.size</code> karsilastir, <code>list</code> bitmediyse ayni islemleri tekrarla,</li>
 <li>sonucu dondur.</li>
 </ul>
-
 <p>seklinde bir yol izliyoruz. Flowchart hatirliyorsunuz degil mi?</p>
-
-<p><img src="https://rayyildiz.com/images/flowchart.jpg"></p>
-
+<!-- raw HTML omitted -->
 <h3 id="object-oriented-programming">Object Oriented Programming</h3>
-
 <p>Object Oriented Programming (a.k.a. OOP) , bir imperative programlama stilidir. Cogu kisi tarafindan OOP ile IP aslinda karistirildigina sahit oldum. Herhalde OOP cok yaygin oldugu icin bu sekilde dusunuluyor. Diger bir ifade ile Pascal,Cobol,Fortran fazla yaygin kullanilmadigi icin, OOP ile imperative-style birbirlerinin yerine kullaniliyor. OOP kisaca herseyin birer object oldugu bir yapi ustune kurulu bir teknik. Gunumuzdeki en populer Java,C++,Python,C#&hellip; gibi bircok programlama dili bu teknigi benimsemistir.</p>
-
 <p>Buraya kadar olan konulari bildiginize eminim. Asil soru bundan sonra basliyor. Peki ne problem vardi da bu <strong>structured</strong> programlama ustune birseyler bulmaya calisiyoruz? Veya ihtiyacimiz var mi?</p>
-
 <p>Adil olmak gerekirse <strong>imperative style</strong> bircok guzel tarafi var, negatif yonlerini vermeden once bu stilin hangi durumlarda basarili olduguna bakalim.</p>
-
 <h3 id="ip-avantajlari">IP Avantajlari</h3>
-
 <p>Oncelikli olarak cok daha basit bir stil. Programci olarak okudugunuz her bir satirda ne olacagini ongormeniz mumkun. Satirlarin calismasinda bir sira var. Bir satir calismasi bitmeden diger satira uygulama atlayamaz. Bu ise size kod ustunde buyuk bir kontrol gucu veriyor (yada gibi gorunur).</p>
-
 <p>OOP, producedural yapinin sebep oldugu karmasayi engellemek icin  guzel cozumler sunuyor.  Herseyin birer object oldugu, inheritence ve abstraction ile karmasayi azaltiyor, interface ile metot imzalarinin ayni olmasini compile asamasinda garanti ediyor.</p>
-
 <h3 id="ip-sorunlu-taraflari">IP Sorunlu Taraflari</h3>
-
 <p>Imperetive-style, en buyuk problem teskil ettigi yer state saklamasidir. Ozellikle global state fonksiyonun sonucunu predict edilememesine neden olmaktadir. Ayni ornekten gidelim.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ComplexMath</span> <span style="color:#f92672">{</span>
   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> initialValue <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
@@ -207,48 +186,47 @@
   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">sum</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> xs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> initialValue<span style="color:#f92672">;</span>
     
-    <span style="color:#f92672">...</span>
-  <span style="color:#f92672">}</span></code></pre></div>
-<p>Masumane bir sekilde <code>sum</code> degiskenin ilk degerini bir global bir <code>initialValue</code> degiskeninden aldik. Asagidaki sonucun <code>result1 != result</code> cikmasi cok normal. Cunku <code>math.initialValue=3</code> diyerek global bir state degistirmis olduk. Bu sayede ayni parametre ile fonksiyon farkli sonuclar dondu. <strong>&ldquo;Benim bilgisayarimda calisiyordu&rdquo;</strong> sozu tanidik geldi mi size? Aslinda bu konuda <strong>side-effect</strong> de denilir.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ComplexMath math <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ComplexMath<span style="color:#f92672">();</span>
-List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 6<span style="color:#f92672">);</span>
-<span style="color:#66d9ef">int</span> result1 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span><span style="color:#f92672">(</span>list<span style="color:#f92672">);</span>
+    <span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><p>Masumane bir sekilde <code>sum</code> degiskenin ilk degerini bir global bir <code>initialValue</code> degiskeninden aldik. Asagidaki sonucun <code>result1 != result</code> cikmasi cok normal. Cunku <code>math.initialValue=3</code> diyerek global bir state degistirmis olduk. Bu sayede ayni parametre ile fonksiyon farkli sonuclar dondu. <strong>&ldquo;Benim bilgisayarimda calisiyordu&rdquo;</strong> sozu tanidik geldi mi size? Aslinda bu konuda <strong>side-effect</strong> de denilir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ComplexMath math <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ComplexMath<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">asList</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 6<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> result1 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span><span style="color:#f92672">(</span>list<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
 math<span style="color:#f92672">.</span><span style="color:#a6e22e">initialValue</span> <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">int</span> result2 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span><span style="color:#f92672">(</span>list<span style="color:#f92672">);</span></code></pre></div>
-<p>Diger bir sorun olan konu ise ozellikle OOP nin modular yapisi ile ilgili. Ozellikle <a href="https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf">SOLID (pdf)</a> prensiplerinin uygulamazsaniz bu karisiniza cikacak bir sorundur. (Not : Ileriki bir zamanda SOLID prensipleri hakkinda bir yazi yayinlayacagim, burada sorunlari daha detayli yazarim)</p>
-
+<span style="color:#66d9ef">int</span> result2 <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span><span style="color:#a6e22e">sum</span><span style="color:#f92672">(</span>list<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+</code></pre></div><p>Diger bir sorun olan konu ise ozellikle OOP nin modular yapisi ile ilgili. Ozellikle <a href="https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf">SOLID (pdf)</a> prensiplerinin uygulamazsaniz bu karisiniza cikacak bir sorundur. (Not : Ileriki bir zamanda SOLID prensipleri hakkinda bir yazi yayinlayacagim, burada sorunlari daha detayli yazarim)</p>
 <p>Bir baska sorun ise concurrency. Bunun icin kucuk bir ornek paylasayim. Burada <code>Counter.increment()</code> fonksiyonu her islem <em>5ms</em> aldigi simule ediliyor. 2 tane <code>Thread</code> calismaya basliyor ve her birinin  1 den 100 e kadar sayip <code>result</code> bir artirmasi gerekiyor. Bu durumda 2 thread <em>ayni nesnenin local degiskenini</em> birer artiriyor, 2 therad oldugu icin de sonucun 200 olmasi gerektigini bekliyoruz. Ancak farkli bir deger yazacaktir. Bunun nedeni iki threadin yarismasi, bir diger ifade ile <a href="http://www.javacreed.com/what-is-race-condition-and-how-to-prevent-it/">race condition</a> olustu.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Counter</span> <span style="color:#f92672">{</span>
   <span style="color:#66d9ef">int</span> result<span style="color:#f92672">;</span>
 
-  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">increment</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">increment</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    Thread<span style="color:#f92672">.</span><span style="color:#a6e22e">sleep</span><span style="color:#f92672">(</span>5<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    result<span style="color:#f92672">++;</span>
+    result<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
   <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> InterruptedException <span style="color:#f92672">{</span>
-    Counter counter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Counter<span style="color:#f92672">();</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> InterruptedException <span style="color:#f92672">{</span>
+    Counter counter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Counter<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    Runnable r <span style="color:#f92672">=</span> <span style="color:#f92672">()</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
-      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> 100<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-        counter<span style="color:#f92672">.</span><span style="color:#a6e22e">increment</span><span style="color:#f92672">();</span>
+    Runnable r <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> 100<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        counter<span style="color:#f92672">.</span><span style="color:#a6e22e">increment</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       <span style="color:#f92672">}</span>
-    <span style="color:#f92672">};</span>
+    <span style="color:#f92672">}</span><span style="color:#f92672">;</span>
 
-    Thread thread1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span>r<span style="color:#f92672">);</span>
-    Thread thread2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span>r<span style="color:#f92672">);</span>
+    Thread thread1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span>r<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    Thread thread2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span>r<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    thread1<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
-    thread2<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
-    thread1<span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">();</span>
-    thread2<span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">();</span>
+    thread1<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    thread2<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    thread1<span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    thread2<span style="color:#f92672">.</span><span style="color:#a6e22e">join</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>counter<span style="color:#f92672">.</span><span style="color:#a6e22e">result</span><span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Bunun haricinde ise sistemin donmasina neden olan <a href="https://www.geeksforgeeks.org/operating-system-process-management-deadlock-introduction/">Dead Lock</a> ayrica baska bir sorun. Bu konuda daha once yaptigim bir sunum vardi, Concurrency ve paralel programlama ile ilgili sunumu <a href="https://www.slideshare.net/rayyildiz/concurrency-parallel-programming">Slideshare</a> bulabilirsiniz.</p>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>counter<span style="color:#f92672">.</span><span style="color:#a6e22e">result</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Bunun haricinde ise sistemin donmasina neden olan <a href="https://www.geeksforgeeks.org/operating-system-process-management-deadlock-introduction/">Dead Lock</a> ayrica baska bir sorun. Bu konuda daha once yaptigim bir sunum vardi, Concurrency ve paralel programlama ile ilgili sunumu <a href="https://www.slideshare.net/rayyildiz/concurrency-parallel-programming">Slideshare</a> bulabilirsiniz.</p>
 
       </div>
 
@@ -290,7 +268,7 @@ math<span style="color:#f92672">.</span><span style="color:#a6e22e">initialValue
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

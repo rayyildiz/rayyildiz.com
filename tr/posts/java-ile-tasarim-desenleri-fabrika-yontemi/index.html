@@ -44,7 +44,7 @@ Fabrika yöntemi tasarım deseni,birçok framework yaygın bir şekilde kullanı
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -134,39 +134,36 @@ Fabrika yöntemi tasarım deseni,birçok framework yaygın bir şekilde kullanı
 
       <div>
         <p>Tasarım desenleri hakkında giriş mahiyetindeki yazıma <a href="https://rayyildiz.com/tr/posts/java-ile-tasarim-desenleri/">buradan</a> ulaşabilirsiniz. Bu tasarım desenlerinden yaratım desenleri grubundaki ücüncü desen fabrika tasarım desenidir ( Factory Method)</p>
-
 <p>Fabrika yöntemi tasarım deseni,birçok framework yaygın bir şekilde kullanılan bir tasarım desenidir. Bu tasarım deseninde, parelel seviyedeki nesnelerin hangisinin oluşmasını gerektiğini karar veren bir fabrika metodunu ifade eder. Yani aynı arayüz ( interface) gerçekleştiren paralel sınıfların hangisinin gerçekleşmesini sağlayan bir nesne sayesinde bu ilşemi gerçekleştirebiliriz.</p>
-
 <p>Örneğimiz üzerinden düşünelim. örnekte IDbConnection adında bir arayüzümüz mevcut olup, bu arayüzü OracleDbConnection, MySqlDbConnection ve MssqlDbConnection adında 3 tane nesne vardır. Bu üç nesneden hangisinin oluşması gerektiğini karar veren DbConnectionFactory adında bir nesnemiz var. Bu DbConnectionFactory nesnesi içinde yer alan static bir metod ve (metodun adı : createDbConnection)¬† metoda geçirilen parametreden hangi nesneyi gerçekleştireceğine karar verir.</p>
-
 <p>Arayüz ve bu 3 nesnenin kaynak koduna bakalım.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IDbConnection</span> <span style="color:#f92672">{</span>
-	String <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">();</span>
+	String <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OracleDbConnection</span> <span style="color:#66d9ef">implements</span> IDbConnection <span style="color:#f92672">{</span>
 	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Oracle Data Connection&#34;</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySqlDbConnection</span> <span style="color:#66d9ef">implements</span> IDbConnection <span style="color:#f92672">{</span>
 	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;MySql Data Connection&#34;</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MssqlDbConnection</span> <span style="color:#66d9ef">implements</span> IDbConnection <span style="color:#f92672">{</span>
 	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Mssql Data Connection&#34;</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Şimdi ise fabrika yöntemini yapan metodu görelim:</p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Şimdi ise fabrika yöntemini yapan metodu görelim:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> DbConnectionType <span style="color:#f92672">{</span>
@@ -178,20 +175,20 @@ Fabrika yöntemi tasarım deseni,birçok framework yaygın bir şekilde kullanı
 <span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DbConnectionFactory</span> <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> IDbConnection <span style="color:#a6e22e">createDbConnection</span><span style="color:#f92672">(</span>DbConnectionType dbConnType<span style="color:#f92672">){</span>
-		<span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>dbConnType<span style="color:#f92672">){</span>
-			<span style="color:#66d9ef">case</span> Oracle:
-				<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> OracleDbConnection<span style="color:#f92672">();</span>
-			<span style="color:#66d9ef">case</span> Mysql:
-				<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> MySqlDbConnection<span style="color:#f92672">();</span>
-			<span style="color:#66d9ef">case</span> Mssql:
-				<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> MssqlDbConnection<span style="color:#f92672">();</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> IDbConnection <span style="color:#a6e22e">createDbConnection</span><span style="color:#f92672">(</span>DbConnectionType dbConnType<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>dbConnType<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">case</span> Oracle<span style="color:#f92672">:</span>
+				<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> OracleDbConnection<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+			<span style="color:#66d9ef">case</span> Mysql<span style="color:#f92672">:</span>
+				<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> MySqlDbConnection<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+			<span style="color:#66d9ef">case</span> Mssql<span style="color:#f92672">:</span>
+				<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> MssqlDbConnection<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 			
 		<span style="color:#f92672">}</span>
 		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a href="http://github.com/rayyildiz/DesignPatterns">http://github.com/rayyildiz/DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a href="http://github.com/rayyildiz/DesignPatterns">http://github.com/rayyildiz/DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
 
       </div>
 
@@ -233,7 +230,7 @@ Fabrika yöntemi tasarım deseni,birçok framework yaygın bir şekilde kullanı
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

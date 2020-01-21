@@ -13,7 +13,8 @@
 <meta name="twitter:title" content="Ubuntu Oracle Kurulumu ve İlk Ayarı"/>
 <meta name="twitter:description" content="Oracle veritabanı Ubuntu kurulumu iki adımda yapabilrisiniz.
 Oracle İndirme Sayfasından İndirmek Oracle indirme sayfasınandan(http://www.oracle.com/technetwork/database/express-edition/downloads/102xelinsoft-102048.html) Oracle Database 10g Express Edition (Universal) veritabanının .deb uzantı versiyonunu indirin. (Eğer .rpm versiyonunu indirirseniz, alien komutu kullanarak .rpm versiyonunu .deb uzantılı dosyaya cevirebilirsiniz. Detaylı bilgi buraya tıklayınız). Daha sonra ise kurulum işlemini grafiksel arayüz ortamında çift tıklayarak yapabilirsiniz.
-Oracle Repository Kullanmak Konsole penceresinden veya Software Source arayüzünu kullanarak aşağıdaki repository paketini /etc/apt/source.list dosyasına ekleyiniz."/>
+Oracle Repository Kullanmak Konsole penceresinden veya Software Source arayüzünu kullanarak aşağıdaki repository paketini /etc/apt/source.list dosyasına ekleyiniz.
+deb http://oss."/>
 
 
     <base href="https://rayyildiz.com/tr/posts/ubuntu-console-ile-oracle-jdk-kurulumu/">
@@ -44,7 +45,7 @@ Oracle Repository Kullanmak Konsole penceresinden veya Software Source arayüzü
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -131,30 +132,23 @@ Oracle Repository Kullanmak Konsole penceresinden veya Software Source arayüzü
       </header>
 
       <div>
-        
-
-<p>Oracle veritabanı Ubuntu kurulumu iki adımda yapabilrisiniz.</p>
-
+        <p>Oracle veritabanı Ubuntu kurulumu iki adımda yapabilrisiniz.</p>
 <h2 id="oracle-indirme-sayfasından-indirmek">Oracle İndirme Sayfasından İndirmek</h2>
-
 <p>Oracle indirme sayfasınandan(<a href="http://www.oracle.com/technetwork/database/express-edition/downloads/102xelinsoft-102048.html">http://www.oracle.com/technetwork/database/express-edition/downloads/102xelinsoft-102048.html</a>) Oracle Database 10g Express Edition (Universal) veritabanının .deb uzantı versiyonunu indirin. (Eğer .rpm versiyonunu indirirseniz, alien komutu kullanarak .rpm versiyonunu .deb uzantılı dosyaya cevirebilirsiniz. Detaylı bilgi buraya tıklayınız). Daha sonra ise kurulum işlemini grafiksel arayüz ortamında çift tıklayarak yapabilirsiniz.</p>
-
 <h2 id="oracle-repository-kullanmak">Oracle Repository Kullanmak</h2>
-
 <p>Konsole penceresinden veya Software Source arayüzünu kullanarak aşağıdaki repository paketini /etc/apt/source.list dosyasına ekleyiniz.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">deb http://oss.oracle.com/debian unstable main non-free</code></pre></div>
-<p>daha sonra aşağıdaki komutları çalıştırın.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">deb http://oss.oracle.com/debian unstable main non-free
+</code></pre></div><p>daha sonra aşağıdaki komutları çalıştırın.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget http://oss.oracle.com/el4/RPM-GPG-KEY-oracle  -O- | sudo apt-key add -
 apt-get update
-apt-get install oracle-xe</code></pre></div>
-<h4 id="oracle-ilk-ayarı">Oracle İlk Ayarı</h4>
-
+apt-get install oracle-xe
+</code></pre></div><h4 id="oracle-ilk-ayarı">Oracle İlk Ayarı</h4>
 <p>Eğer daha önce windows ortamında oracle kurulum yaptıysanız, size sorulan sorular kurulum sırasında sorulmadığında şaşırmış olabilirsiniz. çünkü henüz kurulum daha bitmedi.</p>
-
 <p>Yukarı adımlardan sonra, oracle yüklendi ama konfigürasyon yapmadınız. Oracle ilk ayarları işlemi için aşağıdaki komutu çalıştırınız.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo /etc/init.d/oracle-xe -configure</pre></div>
+<pre><code>sudo /etc/init.d/oracle-xe -configure
+</code></pre>
 <p>Bu ayaralar sırasında aşağıdakine benzer sorular sorulacaktır. Burada yazacağınız şifre, “system” kullanıcısın şifresi olup hatırlayacağınız bir şifre olmasını tafsiye ederim.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Specify the HTTP port that will be used for Oracle Application Express (8080):
+<pre><code>Specify the HTTP port that will be used for Oracle Application Express (8080):
 
 Specify a port that will be used for the database listener (1521) :
 
@@ -162,7 +156,7 @@ Specify a password to be used for database accounts. Note that the same
 password will be used for SYS and SYSTEM. Oracle recommends the use of
 different passwords for each database account. This can be done after
 initial configuration:
-
+  
 Confirm the password: ( make sure you remember this password )
 
 Do you want Oracle Database 10g Express Edition to be started on boot (y/n) (y): y
@@ -171,13 +165,11 @@ Starting Oracle Net Listener…Done
 Configuring Database…Done
 Starting Oracle Database 10g Express Edition Instance…Done
 Installation Completed Successfully.
-To access the Database Home Page go to “http://127.0.0.1:8080/apex”</pre></div>
-<p>Normal ayarlara göre kururulum yaparsanız, tarayınızdan <a href="http://127.0.0.1:8080/apex">http://127.0.0.1:8080/apex</a> açınız. Burada kullanıcı adı olarak “system”, şifre- olarak ise az önce kurulumda yazdığınız şifreyi yazınız. Bu arayüzü size birtakım güzel olanaklar sunacaktır(detaylı bilgi için buraya tıklayınız). Ben ise daha sonraki yazılarımda Sql Developer ile nasıl bağlanabileceğinizi ve basit veritabanı işlemleri yapabilmenizi anlatacağım.</p>
-
-<p><img src="https://rayyildiz.com/images/oracle1.jpg" alt="Oracle" /></p>
-
+To access the Database Home Page go to “http://127.0.0.1:8080/apex”
+</code></pre>
+<p>Normal ayarlara göre kururulum yaparsanız, tarayınızdan http://127.0.0.1:8080/apex açınız. Burada kullanıcı adı olarak “system”, şifre- olarak ise az önce kurulumda yazdığınız şifreyi yazınız. Bu arayüzü size birtakım güzel olanaklar sunacaktır(detaylı bilgi için buraya tıklayınız). Ben ise daha sonraki yazılarımda Sql Developer ile nasıl bağlanabileceğinizi ve basit veritabanı işlemleri yapabilmenizi anlatacağım.</p>
+<p><img src="https://rayyildiz.com/images/oracle1.jpg" alt="Oracle"></p>
 <p>Toad ise Wine ile kurabilseniz dahi malesef ubuntu ortamında sorun cıkartıyor, o yüzden linux ortamında oracle veri tabanı işlemleri için size tafsiye edeceğim araç sql developer olacaktır.</p>
-
 <p>Not: Eğer kullanıcınız dba grubunda değilse, oracle durdurma ve yeniden başlatma işlemleri sırasında sorun yaşayabilirsiniz. Benim tafsiyem kullanıcınızı dba grubuna eklemeniz.</p>
 
       </div>
@@ -220,7 +212,7 @@ To access the Database Home Page go to “http://127.0.0.1:8080/apex”</pre></d
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

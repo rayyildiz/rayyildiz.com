@@ -43,7 +43,7 @@ Eğer Groovy ile program yazdıysanız, hele de grails ile proje geliştirdiysen
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -132,47 +132,36 @@ Eğer Groovy ile program yazdıysanız, hele de grails ile proje geliştirdiysen
       </header>
 
       <div>
-        
-
-<p>Chicago da gerçekleştirilen SpringOne2GX etkinliği kapsamında epey ilginç ve de güzel seyler gördüm. Etkinliğin son gunü, paralel giden konferanslardan sonuncusunda herhangi bir bilgimin olmadigi ve diğer konuları beğenmediğinden dolayı Griffon a katılmayı tercih ettim. Hakkında çok az şey biliyordum. Ancak sunu soylemeliyim ki etkinlik kapsamında bu kadar beni şaşırtan konu olmamıştı. Bu nedenle hakkında bazı bilgileri paylaşma gereği duyuyorum.</p>
-
+        <p>Chicago da gerçekleştirilen SpringOne2GX etkinliği kapsamında epey ilginç ve de güzel seyler gördüm. Etkinliğin son gunü, paralel giden konferanslardan sonuncusunda herhangi bir bilgimin olmadigi ve diğer konuları beğenmediğinden dolayı Griffon a katılmayı tercih ettim. Hakkında çok az şey biliyordum. Ancak sunu soylemeliyim ki etkinlik kapsamında bu kadar beni şaşırtan konu olmamıştı. Bu nedenle hakkında bazı bilgileri paylaşma gereği duyuyorum.</p>
 <p>Eğer Groovy ile program yazdıysanız, hele de grails ile proje geliştirdiyseniz, griffon size çok kolay gelecektir.</p>
-
 <p>Griffon grails gibi proje geliştirmek için gelistirilmis bir proje. Griffon JSR 295 ve JSR 296 uyumlu. Su an itibariyle 170 ten fazla plugin e sahip.</p>
-
 <h2 id="griffon-başlangıç">Griffon Başlangıç</h2>
-
 <p>Griffon indirdekten sonra, bazı ayarlar yapmanız gerekiyor. Buradan bilgi alarak bu işlemleri gerçekleştirebilirsiniz.</p>
-
 <p>Grails de olduğu gibi griffon ile bir proje acmak çok kolay.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon create-app</code></pre></div>
-<p>Evet sadece bu kadar. Peki hatırlayalım, grails de bir projeyi çalıştırmak için ne yapıyorduk ?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grails run-app</code></pre></div>
-<p>Tahmin edebileceğiniz gibi griffon da bir proyi çalıştırmak grails de projeyi çalıştırmak gibi.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-app</code></pre></div>
-<p>Java da çeşitli uygulamaları denince applet de akla gelir. Peki bir griffon ile bir applet nasıl yazarız? Cevap çok kolay herhangi bir şey yapmanıza gerek yok: sadece uygulamanızı yazın ve calistirirken şu sekilde çalıştırın.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-applet</code></pre></div>
-<p>Aklınıza applet güzel ama biz bunu web den calistirabilir bir sekilde nasıl yazarız diye gelebilir. Hemen onun da cevabını söyleyeyim.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-webstart</code></pre></div>
-<p>Projenizi yazdınız ve deployment yapmak istiyorsunuz. Grails de olduğu gibi</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon dev package</code></pre></div>
-<p>demeniz yeterli. Bu sizin için standolone, applet, webstart için paketleri olusuturacaktir. Hatta applet için self signed bir sertifika ile oluşturacaktir.</p>
-
-<p><img src="https://rayyildiz.com/images/griffon.jpg" alt="Griffon" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon create-app
+</code></pre></div><p>Evet sadece bu kadar. Peki hatırlayalım, grails de bir projeyi çalıştırmak için ne yapıyorduk ?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grails run-app
+</code></pre></div><p>Tahmin edebileceğiniz gibi griffon da bir proyi çalıştırmak grails de projeyi çalıştırmak gibi.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-app
+</code></pre></div><p>Java da çeşitli uygulamaları denince applet de akla gelir. Peki bir griffon ile bir applet nasıl yazarız? Cevap çok kolay herhangi bir şey yapmanıza gerek yok: sadece uygulamanızı yazın ve calistirirken şu sekilde çalıştırın.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-applet
+</code></pre></div><p>Aklınıza applet güzel ama biz bunu web den calistirabilir bir sekilde nasıl yazarız diye gelebilir. Hemen onun da cevabını söyleyeyim.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon run-webstart
+</code></pre></div><p>Projenizi yazdınız ve deployment yapmak istiyorsunuz. Grails de olduğu gibi</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon dev package
+</code></pre></div><p>demeniz yeterli. Bu sizin için standolone, applet, webstart için paketleri olusuturacaktir. Hatta applet için self signed bir sertifika ile oluşturacaktir.</p>
+<p><img src="https://rayyildiz.com/images/griffon.jpg" alt="Griffon"></p>
 <p>Swing ve java ile ugrastiysaniz, jar dosyasını dağıtmanın hiç de mantıklı olmadıgını bilirsiniz. Size tavsiyem installer adında bir plugin var, onu kullanmanızı tavsiye ederim.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon installer-plugin installer</code></pre></div>
-<p>Plugin kurduktan sonra şu sekilde projenizi paket oluşturabilirsiniz. Bu size MAC OS, Windows ve debian için kurulum paketleir hazirlayacaktir.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon package dmg izpack deb</code></pre></div>
-<p>Griffon Archtype
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon installer-plugin installer
+</code></pre></div><p>Plugin kurduktan sonra şu sekilde projenizi paket oluşturabilirsiniz. Bu size MAC OS, Windows ve debian için kurulum paketleir hazirlayacaktir.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon package dmg izpack deb
+</code></pre></div><p>Griffon Archtype
 Eğer Groovy bilmiyorsanız, güzel bir haberim var: griffon scala, Java, jython … dillerini de destekliyor. Projenizi olustururken archtype belirterek projenizi istediğiniz bir dilde yazabilirsiniz.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">griffon create-app -archtype<span style="color:#f92672">=</span>scala
-griffon create-app -archtype<span style="color:#f92672">=</span>java</code></pre></div>
-<h3 id="bizi-ne-bekliyor">Bizi Ne Bekliyor</h3>
-
+griffon create-app -archtype<span style="color:#f92672">=</span>java
+</code></pre></div><h3 id="bizi-ne-bekliyor">Bizi Ne Bekliyor</h3>
 <p>Proje su anda 0.9.4 sürümü mevcut. Yıl sonunda 1.0 gelecek. Proje epey iyi bir şekilde yoluna devam ediyor. Avusturalya da çok önemli bir şirket tüm uygulamalarını griffon ile yazmış. Amerika’da da epey bir şirket projelerini griffon ile yazmaya başlamış.
 Şu anda veri tabanı işlemi için datasource adındaki plugin i kullanabilirsiniz. Yalnız griffon 2 ile birlikte GORM birlikte gelecek. Bununla beraber griffon 2.0 da scaffold da geliyor.</p>
-
 <p>Son söz olarak, bu projeyi oldukça başarılı bulduğumu tekrar belirtmek isterim. Desktop projelerimde griffon u kullanmayı hedefliyorum. Şimdilik bu kadar, eve gidince griffon ile geliştireceğim projeleri ve griffon hakkında daha detaylı calışmalarımı paylaşacağım.</p>
 
       </div>
@@ -215,7 +204,7 @@ griffon create-app -archtype<span style="color:#f92672">=</span>java</code></pre
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

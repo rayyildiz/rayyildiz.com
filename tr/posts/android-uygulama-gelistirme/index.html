@@ -44,7 +44,7 @@ Bu sırada size tafsiyem UI tasarlayabileniz için droiddraw adındaki bir uygul
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -134,26 +134,19 @@ Bu sırada size tafsiyem UI tasarlayabileniz için droiddraw adındaki bir uygul
 
       <div>
         <p>Android ile uygulama geliştirmeye başlamak için <a href="http://developer.android.com/sdk/index.html">Android SDK</a> indirmeniz gerekiyor. İşletim sisteminize göre bir sürümü indirip açtıktan sonra , windows için Setup.exe kullanadarak linux için ise tools klasörü altında yer alan ./android komutuyla android platform indirmeniz gerekiyor.</p>
-
 <p>Şu anda en son sürüm <a href="http://developer.android.com/sdk/android-2.2.html">2.2</a> (Android 8) dilerseniz tüm platformları dilerseniz sadece ihtiyacınız olan platformu indirebilirsiniz. Platformu indirmek biraz zaman alabilir.</p>
-
 <p>Bu sırada size tafsiyem UI tasarlayabileniz için <a href="http://www.droiddraw.org/">droiddraw</a> adındaki bir uygulamayı indirmenizdir. Her ne kadar da eclipse için <a href="http://developer.android.com/sdk/eclipse-adt.html">ADT</a> paketi yer alsa da ben droiddraw ı daha çok beğendim. Ayrıca biz örneği netbeans ile geliştireceğiz. Bu yüzden droiddraw ı indirmenizde yarar var. Ayrıca netbeans için geliştirilmiş NBAndroid eklentisini- <a href="http://wiki.netbeans.org/IntroAndroidDevNetBeans">bu adresten</a> yardım alarak veya <a href="http://kenai.com/downloads/nbandroid/updates.xml">http://kenai.com/downloads/nbandroid/updates.xml</a> update adresiyle kurabilirsiniz. Yapmanız gereken netbeans de Tools-&gt;Plugins oradan da Settings de “Add” butonuna tıklayarak bu plugini eklemek ve Available Plugins tabında Android diye aratıp bu plugin i kurmaktır.</p>
-
-<p><img src="https://rayyildiz.com/images/nbandroid_plugin_install-e1275732394906.png" alt="Nbandroid Plugin Install" /></p>
-
+<p><img src="https://rayyildiz.com/images/nbandroid_plugin_install-e1275732394906.png" alt="Nbandroid Plugin Install"></p>
 <p>Daha sonra linux için terminalden aşağıdaki komutu- çalıştırıp DroidDraw ı açın. Windows da eğer Java6 kuruluysa, droiddraw ın içindeki droiddraw.jar ı tıklamanız yeterlidir.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &amp;</pre></div>
-<p><img src="https://rayyildiz.com/images/droiddraw1.png" alt="Droiddraw" />
+<pre><code>rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &amp;
+</code></pre>
+<p><img src="https://rayyildiz.com/images/droiddraw1.png" alt="Droiddraw">
 Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakınız. Daha sonra Button’a tıklayıp Properties tabı na tıklayınız.Burada şu bilgileri değiştirin:</p>
-
 <blockquote>
 <p>id——– : @+id/btnSample</p>
-
 <p>Width : 100px</p>
-
 <p>Text—- : Hi</p>
 </blockquote>
-
 <p>Bunları değiştirip Apply düğmensine basın. Sizde diğer özellikleri bakabilirsiniz. Burada sadece şu aklınızda olsun; Width, height, left margin değerleri gibi yerlerde mutlaka px ekleyin. Yani 100 değil 100px olmalı. Bu işlemleri tamamlayıp Generete tıklanız. Output ekranında aşağıdakine benzer bir xml üretecek. Bu xml sizin UI nı oluşturacaktır.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 <span style="color:#f92672">&lt;AbsoluteLayout</span>
@@ -171,13 +164,10 @@ Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakın�
 		<span style="color:#a6e22e">android:layout_y=</span><span style="color:#e6db74">&#34;32px&#34;</span>
 	<span style="color:#f92672">&gt;</span>
 <span style="color:#f92672">&lt;/Button&gt;</span>
-<span style="color:#f92672">&lt;/AbsoluteLayout&gt;</span></code></pre></div>
-<p><img src="https://rayyildiz.com/images/android_new_project1.png" alt="Android New Project" /></p>
-
+<span style="color:#f92672">&lt;/AbsoluteLayout&gt;</span>
+</code></pre></div><p><img src="https://rayyildiz.com/images/android_new_project1.png" alt="Android New Project"></p>
 <p>Netbeans de yeni bir proje açalım. NBAdroid eklentisini kurduysanız, yeni bir proje eklerken Android diye bir kısım yer alacaktır. Daha sorna yandaki gibi proje adı, paket adı, activity adı gibi alanları doldurmanız gerekiyor. İlk kez acıyosanız, Manageplatformu tıklayarak kurulum yaptığınız android klasörünü göstermeniz gerekiyor.</p>
-
 <p>İlk kez projeyi actığınızda, Shift + F10 ile projeyi çalıştırabilirsiniz. Burada android emulator acılıp projenizi yükleyecektir ve ekrana klasik “Hello World” yazacaktır.</p>
-
 <p>Şimdi uygulamaya geri dönüp Resources/layouts altında yer alan main.xml- i droiddraw ile üretttiğimiz xml i kopyalayıp yağıştıralım. Bunu yaptıktan sonra uygulamayı bir kere build etmenizde yarar var. Bu işlem sonuda otomatik üretilen R.java dosyasında aşağıaki gibi değişiklikler olacaktır.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">R</span> <span style="color:#f92672">{</span>
 	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">attr</span> <span style="color:#f92672">{</span> <span style="color:#f92672">}</span>
@@ -194,30 +184,28 @@ Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakın�
 	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">string</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> app_name<span style="color:#f92672">=</span>0x7f030000<span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Daha sonra aşağıdaki kodu <code>MainActivity.java</code> içine yazınız.</p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Daha sonra aşağıdaki kodu <code>MainActivity.java</code> içine yazınız.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Override</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>Bundle icicle<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>icicle<span style="color:#f92672">);</span>
-	setContentView<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">main</span><span style="color:#f92672">);</span>
-	<span style="color:#66d9ef">final</span> Button button <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Button<span style="color:#f92672">)</span> findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">btnSample</span><span style="color:#f92672">);</span>
-	button<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnClickListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> View<span style="color:#f92672">.</span><span style="color:#a6e22e">OnClickListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>icicle<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+	setContentView<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">main</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">final</span> Button button <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Button<span style="color:#f92672">)</span> findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">btnSample</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+	button<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnClickListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> View<span style="color:#f92672">.</span><span style="color:#a6e22e">OnClickListener</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">(</span>View v<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			alert<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello world&#34;</span><span style="color:#f92672">);</span>
+			alert<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello world&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">});</span>
+	<span style="color:#f92672">}</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
-<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>String message<span style="color:#f92672">){</span>
-	<span style="color:#66d9ef">new</span> AlertDialog<span style="color:#f92672">.</span><span style="color:#a6e22e">Builder</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setTitle</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;rayyildiz.com&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setMessage</span><span style="color:#f92672">(</span>message<span style="color:#f92672">).</span><span style="color:#a6e22e">setNeutralButton</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Ok&#34;</span><span style="color:#f92672">,</span>
-	<span style="color:#66d9ef">new</span> DialogInterface<span style="color:#f92672">.</span><span style="color:#a6e22e">OnClickListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">alert</span><span style="color:#f92672">(</span>String message<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">new</span> AlertDialog<span style="color:#f92672">.</span><span style="color:#a6e22e">Builder</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setTitle</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;rayyildiz.com&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setMessage</span><span style="color:#f92672">(</span>message<span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setNeutralButton</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Ok&#34;</span><span style="color:#f92672">,</span>
+	<span style="color:#66d9ef">new</span> DialogInterface<span style="color:#f92672">.</span><span style="color:#a6e22e">OnClickListener</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">(</span>DialogInterface dialog<span style="color:#f92672">,</span><span style="color:#66d9ef">int</span> which<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#f92672">}</span>
-	<span style="color:#f92672">}).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Uygulamayı çalıştırdığınızda şöyle çalışacaktır:</p>
-
-<p><img src="https://rayyildiz.com/images/application_run1.png" alt="Application Run" /></p>
-
+	<span style="color:#f92672">}</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Uygulamayı çalıştırdığınızda şöyle çalışacaktır:</p>
+<p><img src="https://rayyildiz.com/images/application_run1.png" alt="Application Run"></p>
 <p>Uygulamanın kaynak kodunu şu adresten indirebilirsiniz.<a href="http://github.com/downloads/rayyildiz/TestProject/AndroidSample1-v1_0.tar.gz">http://github.com/downloads/rayyildiz/TestProject/AndroidSample1-v1_0.tar.gz</a></p>
 
       </div>
@@ -260,7 +248,7 @@ Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakın�
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

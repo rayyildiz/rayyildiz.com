@@ -44,7 +44,7 @@ Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten t
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -134,34 +134,32 @@ Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten t
 
       <div>
         <p><a href="https://rayyildiz.com/tr/posts/groovy-ve-grails-kurulumu/">Daha önceki yazımda</a> groovy ve grails’in nasıl kurulacağı bilgisini vermiştim. Bu yazımda ise groovy programlamaya başlayacağız.</p>
-
 <p>Groovy java programlama diline alışkın kişilerin, Python, Ruby, Smalltalk yer alan özellikleri kullanabilmesine olanak sunan agile bir programlama dili olarak tanımlanıyor.</p>
-
 <p>Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten türemiştir. Groovy ile yazılan bir nesne derlendikten sonra bytecode a cevrilir. Oluşan <code>*.class</code> dosyasını classpath’inize eklenerek java tarafından kullamabilirsiniz. Yani java’dan groovy’ye, groovy den ise java’ya erişmek cok kolaydır.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Groovy’ de “;” kullanma zorunluğu yoktur.</pre></div>
+<pre><code>Groovy’ de “;” kullanma zorunluğu yoktur.
+</code></pre>
 <p>Groovy mevcut dilin kütüphanelerin dışında, diğer kütüphaneler ve JDK yer alan özelliklerin yer aldığı GDK’den oluşmaktadır</p>
-
 <p>Groovy javada yer alan List, Map ‘ e yeni özellikler katar. örneğin şu satır nesnelerin paketlerini ekrana basar.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy"><span style="color:#f92672">package</span> com<span style="color:#f92672">.</span><span style="color:#a6e22e">rayyildiz</span>
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ListMapTest</span> <span style="color:#f92672">{</span>
    	<span style="color:#66d9ef">static</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
       	<span style="color:#66d9ef">def</span> classes <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>String<span style="color:#f92672">,</span> Date<span style="color:#f92672">,</span> Long<span style="color:#f92672">,</span> Boolean<span style="color:#f92672">]</span>
-      	<span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>classes<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;package&#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span>
+      	println<span style="color:#f92672">(</span>classes<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;package&#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
    	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Bir siteye erişip içeriğini okumak için aşağıda bir code yer almakta, görebileceğiniz gibi groovy de bir rss’i almak cok kolay.Groovy de closure code yazmak çok kolaşmakta.</p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Bir siteye erişip içeriğini okumak için aşağıda bir code yer almakta, görebileceğiniz gibi groovy de bir rss’i almak cok kolay.Groovy de closure code yazmak çok kolaşmakta.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy"><span style="color:#f92672">package</span> com<span style="color:#f92672">.</span><span style="color:#a6e22e">rayyildiz</span>
 <span style="color:#f92672">import</span> java.net.URL
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">{</span>
 	<span style="color:#66d9ef">static</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-      	<span style="color:#66d9ef">def</span> url <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">URL</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://rayyildiz.com/feed&#34;</span><span style="color:#f92672">);</span>
-        url<span style="color:#f92672">.</span><span style="color:#a6e22e">eachLine</span> <span style="color:#f92672">{</span> ln <span style="color:#f92672">-&gt;</span>
-        	println<span style="color:#f92672">(</span>ln<span style="color:#f92672">);</span>
+      	<span style="color:#66d9ef">def</span> url <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> URL<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;http://rayyildiz.com/feed&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        url<span style="color:#f92672">.</span><span style="color:#a6e22e">eachLine</span> <span style="color:#f92672">{</span> ln <span style="color:#f92672">-</span><span style="color:#f92672">&gt;</span>
+        	println<span style="color:#f92672">(</span>ln<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
       	<span style="color:#f92672">}</span>
 	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Özellikle java programcılarının çok kolay alışabileceği bir dil olan groovy yi incelemenizi tafsiye ederim. Size farklı bir bakış açışı kazandıracaktır.</p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Özellikle java programcılarının çok kolay alışabileceği bir dil olan groovy yi incelemenizi tafsiye ederim. Size farklı bir bakış açışı kazandıracaktır.</p>
 
       </div>
 
@@ -203,7 +201,7 @@ Groovy JVM üzerinde çalışır ve tüm groovy nesneleri java.lang.Object ten t
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

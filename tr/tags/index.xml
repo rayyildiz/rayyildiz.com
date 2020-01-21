@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ramazan AYYILDIZ</title>
@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>Software Development</title>
-      <link>https://rayyildiz.com/tr/tags/software-development/</link>
-      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://rayyildiz.com/tr/tags/software-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>java</title>
       <link>https://rayyildiz.com/tr/tags/java/</link>
       <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://rayyildiz.com/tr/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Development</title>
+      <link>https://rayyildiz.com/tr/tags/software-development/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rayyildiz.com/tr/tags/software-development/</guid>
       <description></description>
     </item>
     

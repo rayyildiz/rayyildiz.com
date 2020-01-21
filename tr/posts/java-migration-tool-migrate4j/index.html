@@ -42,7 +42,7 @@
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -130,17 +130,14 @@
 
       <div>
         <p>Migrate4j , java ortamı için geliştirilmiş bir &lsquo;migration&rsquo; aracıdır. &lsquo;Migration&rsquo; bu konuda yakın olan kişilerin cok da kullandığı bir kelime olduğu için aynen bu kelimeyi kullanmak daha doğru geldi bana. Bu araç aslında veritabanını biryerden başka yere taşırken yada yeni özellikler eklerken kullanılan bir araçtır. √áoğunlukla birden fazla kişinin aynı anda üzerinde çalıştığı veritabanlarında buna benzer sorunlar yaşanabilir. Geliştiricelerden birisi yeni tablo eklerken, diğeri ise başka tablolarda sütun ekelem yada cıkarma işlemi yapmış olabilir. İşte bu gibi nedenlerden dolayı veritabanlarının senkronize olması istenir, eksik tabloların ve yeni sütunarın otomatik olarak kurulması, eğer tablo yoksa yeni tablo oluşturulması, varsa üzerinde oynanan sütunların değiştirilmesi istenir. İşte bu tarz sorunları çözmek için çeşitli &lsquo;migration&rsquo; araçları vardır. Bunlardan birisi Migrate4j uygulaması.</p>
-
 <p>Migrate4j diğer araçlardan biraz daha fazla özellik içerir. Örneğin sorgular native SQL değil java ile yazılmaktadır. Ayrıca farklı veritabanları motorlarında sorunsuzca çalışabilmektedir.
 Nasıl Kullanırım?</p>
-
 <p>Migrate4j uygulamasını <a href="http://migrate4j.sourceforge.net/">http://migrate4j.sourceforge.net/</a> adresinden hem daha fazla detaylı bilgi alarak bakabilir hemd e bu adresten indirebilirsiniz. İndirdiğiniz paket içinden cıkan Migrate4j.jar dosyasını kullandığınız editörten tanımlayarak yada console ile derleyecekseniz ilgili classpath içine almanız yeterli. Daha sonra uygulamanızın an dizininde migrate4j.properties ayar dosyası oluşturmanı gerekiyor. Bu dosya içinde genel ayarlar ile bağlantı çümlesi ve driver seçenekleri olmalıdır. Örnek bir migrate4j.properties şu şekilde olabilir.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">connection<span style="color:#f92672">.</span><span style="color:#a6e22e">url</span><span style="color:#f92672">=</span>jdbc:mysql:<span style="color:#75715e">//localhost:3306/testdb
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">connection<span style="color:#f92672">.</span><span style="color:#a6e22e">url</span><span style="color:#f92672">=</span>jdbc<span style="color:#f92672">:</span>mysql<span style="color:#f92672">:</span><span style="color:#75715e">//localhost:3306/testdb
 </span><span style="color:#75715e"></span>connection<span style="color:#f92672">.</span><span style="color:#a6e22e">driver</span><span style="color:#f92672">=</span>com<span style="color:#f92672">.</span><span style="color:#a6e22e">mysql</span><span style="color:#f92672">.</span><span style="color:#a6e22e">jdbc</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Driver</span>
 connection<span style="color:#f92672">.</span><span style="color:#a6e22e">password</span><span style="color:#f92672">=</span>passw<span style="color:#a6e22e">@rd</span>
-migration<span style="color:#f92672">.</span><span style="color:#a6e22e">package</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>test<span style="color:#f92672">.</span><span style="color:#a6e22e">migratebase</span></code></pre></div>
-<p>Bu dosya içinde bağlantı için mysql deki testdb veritabanını kullandığımızı ve migration paketlerinin test.migratebase içinde yer aldığını belirttik. Daha sonra yazacağımız migrate sınıflarını bu paket içinde oluşturmamız gerekli.</p>
-
+migration<span style="color:#f92672">.</span><span style="color:#a6e22e">package</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">=</span>test<span style="color:#f92672">.</span><span style="color:#a6e22e">migratebase</span>
+</code></pre></div><p>Bu dosya içinde bağlantı için mysql deki testdb veritabanını kullandığımızı ve migration paketlerinin test.migratebase içinde yer aldığını belirttik. Daha sonra yazacağımız migrate sınıflarını bu paket içinde oluşturmamız gerekli.</p>
 <p>Örneğin Student diye bir tablomuz var. Eğer sistemiizmde bu tablo yoksa oluşmasını, sistemden silmek istediğimizde ise bu tablonun silinmesini sağlayan nesnemiz şu şekildedir:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> test.migratebase<span style="color:#f92672">;</span>
 
@@ -150,20 +147,19 @@ migration<span style="color:#f92672">.</span><span style="color:#a6e22e">package
 <span style="color:#f92672">import</span> com.eroi.migrate.Migration<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#66d9ef">implements</span> Migration <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">up</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">up</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     	createTable<span style="color:#f92672">(</span>table<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;student_table&#34;</span><span style="color:#f92672">,</span>
-       	column<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">,</span> INTEGER<span style="color:#f92672">,</span> primarykey<span style="color:#f92672">(),</span> notnull<span style="color:#f92672">()),</span>
-       	column<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;firstname&#34;</span><span style="color:#f92672">,</span> VARCHAR<span style="color:#f92672">,</span> length<span style="color:#f92672">(</span>50<span style="color:#f92672">),</span> defaultValue<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;NA&#34;</span><span style="color:#f92672">)),</span>
-       	column<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;lastname&#34;</span><span style="color:#f92672">,</span> VARCHAR<span style="color:#f92672">,</span> length<span style="color:#f92672">(</span>50<span style="color:#f92672">),</span> defaultValue<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;NA&#34;</span><span style="color:#f92672">)),</span>
-       	column<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;number&#34;</span><span style="color:#f92672">,</span> VARCHAR<span style="color:#f92672">,</span> length<span style="color:#f92672">(</span>15<span style="color:#f92672">),</span> defaultValue<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;NA&#34;</span><span style="color:#f92672">))));</span>
+       	column<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">,</span> INTEGER<span style="color:#f92672">,</span> primarykey<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">,</span> notnull<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">,</span>
+       	column<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;firstname&#34;</span><span style="color:#f92672">,</span> VARCHAR<span style="color:#f92672">,</span> length<span style="color:#f92672">(</span>50<span style="color:#f92672">)</span><span style="color:#f92672">,</span> defaultValue<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;NA&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">,</span>
+       	column<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;lastname&#34;</span><span style="color:#f92672">,</span> VARCHAR<span style="color:#f92672">,</span> length<span style="color:#f92672">(</span>50<span style="color:#f92672">)</span><span style="color:#f92672">,</span> defaultValue<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;NA&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">,</span>
+       	column<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;number&#34;</span><span style="color:#f92672">,</span> VARCHAR<span style="color:#f92672">,</span> length<span style="color:#f92672">(</span>15<span style="color:#f92672">)</span><span style="color:#f92672">,</span> defaultValue<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;NA&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   	<span style="color:#f92672">}</span>
 
-  	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">down</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-     	dropTable<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;student_table&#34;</span><span style="color:#f92672">);</span>
+  	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">down</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+     	dropTable<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;student_table&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
   	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Evet aslında bu nesne bizim için student_table tablosu yoksa oluşturmayı varsa silmek istediğimizde ise silmeyi sağlıyor. genel olarak eğer bir tablo oluşturulucaksa <strong>up</strong> silmek istenilirse <strong>down</strong> metodu çağrılacaktır.</p>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Evet aslında bu nesne bizim için student_table tablosu yoksa oluşturmayı varsa silmek istediğimizde ise silmeyi sağlıyor. genel olarak eğer bir tablo oluşturulucaksa <strong>up</strong> silmek istenilirse <strong>down</strong> metodu çağrılacaktır.</p>
 <p>Kabaca bir tablonun bir migration araçla nasıl silinip kurulacağını gördük. Elbette bu yeterli değildir. Sitesine girerek detaylı bilgi alabilirsiniz. Eğer bir sorunla karşılaşırsanız yardımcı olmaya çalışırız.</p>
 
       </div>
@@ -206,7 +202,7 @@ migration<span style="color:#f92672">.</span><span style="color:#a6e22e">package
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>

@@ -44,7 +44,7 @@ Soyut fabrika tasarım deseninin amacı, farklı ürün ailelerin için uygulanm
 
     
 
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.62.2" />
   </head>
 
   <body class=" ">
@@ -134,102 +134,95 @@ Soyut fabrika tasarım deseninin amacı, farklı ürün ailelerin için uygulanm
 
       <div>
         <p>Tasarım desenleri hakkında giriş mahiyetindeki yazıma buradan ulaşabilirsiniz. Bu tasarım desenlerinden ilki olan soyut fabrika tasarım deseni (Abstract Factory) bu yazımızda genel olarak göreceğiz.</p>
-
 <p>Soyut fabrika tasarım deseninin amacı, farklı ürün ailelerin için uygulanması söz konusu olduğu durumlarda tercih edilir. Mesela yazdığınız uygulamanın hem macos hem de windows platformunda çalışması sözkonusu olduğu durumlarda UI nasıl oluşması gerektiğini soyutlandırarak daha hızlı adapte edebileceğiniz bir yapı geliştirebilirsiniz.</p>
-
 <p>Şekilde de görebileceğiniz gibi Application, hangi platformda çalıştığını bilmez, Application sadece GUIFactory arayüzünden uygulanmış bir nesne geelcektir. Burada hem macos için hem de windows için birer tane factory ve birer tane de Button nesneleri geliştirmeniz gerekir ancak asıl Application nesneniz işletim sistemine göre dallanmayacak ve daha sade bir yapıda olacaktır.</p>
-
 <p>Bunu başka bir örnekle pekiştirelim. Diyelim ki kullanıcıların adres bilgilerini tutmakta için bir sınıfınız var. Farkettiniz ki Türkiye için ülke kodu “tr_TR” kullanmanız gerekirken, ABD için “us_US” kullanmanız gerekiyor. Bunu nasıl tutardınız? Hangi koşulda Türkiye için, hangi koşulda ABD için sonuc dönmeniz gerekiyor? Bunu çözmeniz için nesneye yapıcı metoduna parametre göndrerek yapabilirsiniz.</p>
-
 <p>Bu örnekte country yapıcı metottan bir sayı olarak gönderiliyor ve- getCode metodunda bu sayıya göre sonuc dönüyor. 3. bir ülke gelmesi durumunda ise bu gibi yerleri düzeltmeniz gerekiyor.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getCode</span><span style="color:#f92672">(){</span>
-	<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> country <span style="color:#f92672">==</span> 1<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;tr_TR&#34;</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getCode</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> country <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 1<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;tr_TR&#34;</span><span style="color:#f92672">;</span>
 	<span style="color:#66d9ef">else</span> <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;us_US&#34;</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p><img src="https://rayyildiz.com/images/abstract_design_pattern1.jpg" alt="Abstract Design Pattern" /></p>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p><img src="https://rayyildiz.com/images/abstract_design_pattern1.jpg" alt="Abstract Design Pattern"></p>
 <p>Üstteki şekilde örnek uygulamamızın UML diagramı bulunmakta. Bu diagramda görebileceğiniz gibi soyut bir fabrika sınıfı ve soyut bir Address nesnesi yer almakta. Şimdi soyut sınıfımızın ve bu sınıftan türeyen fabrika nesnelerinin kodlarına bakalım.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">AbstractFactory</span> <span style="color:#f92672">{</span>
-	Address <span style="color:#a6e22e">createAddress</span><span style="color:#f92672">();</span>
+	Address <span style="color:#a6e22e">createAddress</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TurkeyFactory</span> <span style="color:#66d9ef">implements</span> AbstractFactory <span style="color:#f92672">{</span>
 	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">public</span> Address <span style="color:#a6e22e">createAddress</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> TurkeyAddress<span style="color:#f92672">();</span>
+	<span style="color:#66d9ef">public</span> Address <span style="color:#a6e22e">createAddress</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> TurkeyAddress<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">USAFactory</span> <span style="color:#66d9ef">implements</span> AbstractFactory <span style="color:#f92672">{</span>
 	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">public</span> Address <span style="color:#a6e22e">createAddress</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> USAAddress<span style="color:#f92672">();</span>
+	<span style="color:#66d9ef">public</span> Address <span style="color:#a6e22e">createAddress</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> USAAddress<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Gördünüz gibi her ülke kendisi için uygulanmış neseneyi döndürüyor. Peki bu nesnelerin içlerine bakalım şimdi de:</p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Gördünüz gibi her ülke kendisi için uygulanmış neseneyi döndürüyor. Peki bu nesnelerin içlerine bakalım şimdi de:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span> <span style="color:#f92672">{</span>
-	<span style="color:#f92672">..</span>
-	<span style="color:#66d9ef">abstract</span> String <span style="color:#a6e22e">getCountryCode</span><span style="color:#f92672">();</span>
-	<span style="color:#f92672">..</span>
+	<span style="color:#f92672">.</span><span style="color:#f92672">.</span>
+	<span style="color:#66d9ef">abstract</span> String <span style="color:#a6e22e">getCountryCode</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">.</span><span style="color:#f92672">.</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TurkeyAddress</span> <span style="color:#66d9ef">extends</span> Address <span style="color:#f92672">{</span>
 	<span style="color:#a6e22e">@Override</span>
-	String <span style="color:#a6e22e">getCountryCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	String <span style="color:#a6e22e">getCountryCode</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;tr_TR&#34;</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">USAAddress</span> <span style="color:#66d9ef">extends</span> Address <span style="color:#f92672">{</span>
 	<span style="color:#a6e22e">@Override</span>
-	String <span style="color:#a6e22e">getCountryCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+	String <span style="color:#a6e22e">getCountryCode</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 		<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;us_US&#34;</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Peki üçüncü bir ülke geldiğinde yapmamız gereken ne oalcak? Bir tane fabrika sınıfı ve kendisi için bir nesne yazmamız yeterli. Asıl uygulamamızda hiçbirşey yazmamıza gerek kalmayacak.</p>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Peki üçüncü bir ülke geldiğinde yapmamız gereken ne oalcak? Bir tane fabrika sınıfı ve kendisi için bir nesne yazmamız yeterli. Asıl uygulamamızda hiçbirşey yazmamıza gerek kalmayacak.</p>
 <p>Şimdi ise Application nesnesine göz atalım.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Application</span> <span style="color:#f92672">{</span>
 	AbstractFactory _factory<span style="color:#f92672">;</span>
 	<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Application</span><span style="color:#f92672">(</span>AbstractFactory factory<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">super</span><span style="color:#f92672">();</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 		_factory <span style="color:#f92672">=</span> factory<span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
 
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(){</span>
-		Address address <span style="color:#f92672">=</span> _factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createAddress</span><span style="color:#f92672">();</span>
-		address<span style="color:#f92672">.</span><span style="color:#a6e22e">setAddress</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">);</span>
-		address<span style="color:#f92672">.</span><span style="color:#a6e22e">setCity</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+		Address address <span style="color:#f92672">=</span> _factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createAddress</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+		address<span style="color:#f92672">.</span><span style="color:#a6e22e">setAddress</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+		address<span style="color:#f92672">.</span><span style="color:#a6e22e">setCity</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;address :&#34;</span> <span style="color:#f92672">+</span> address<span style="color:#f92672">);</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;address :&#34;</span> <span style="color:#f92672">+</span> address<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Main.class ise</p>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Main.class ise</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.rayyildiz.patterns<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> java.util.Random<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		Random rnd <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random<span style="color:#f92672">();</span>
-		<span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> rnd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span>
-		<span style="color:#66d9ef">boolean</span> odd <span style="color:#f92672">=</span> <span style="color:#f92672">((</span>number <span style="color:#f92672">%</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">);</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		Random rnd <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Random<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> rnd<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">(</span>10<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">boolean</span> odd <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#f92672">(</span>number <span style="color:#f92672">%</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-		AbstractFactory factory <span style="color:#f92672">=</span> odd <span style="color:#f92672">?</span> <span style="color:#66d9ef">new</span> TurkeyFactory<span style="color:#f92672">():</span> <span style="color:#66d9ef">new</span><span style="color:#f92672">-</span> USAFactory<span style="color:#f92672">();</span>
-		Application app <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Application<span style="color:#f92672">(</span>factory<span style="color:#f92672">);</span>
-		app<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+		AbstractFactory factory <span style="color:#f92672">=</span> odd <span style="color:#f92672">?</span> <span style="color:#66d9ef">new</span> TurkeyFactory<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span><span style="color:#f92672">-</span> USAFactory<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+		Application app <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Application<span style="color:#f92672">(</span>factory<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+		app<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">console</span><span style="color:#f92672">()!=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">console</span><span style="color:#f92672">().</span><span style="color:#a6e22e">readLine</span><span style="color:#f92672">();</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">console</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">!</span><span style="color:#f92672">=</span><span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">console</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">readLine</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
-<p>Burada sadece örnek olması için rastgele bir sayı üretilmekte, bu üretilen sayıya göre USAFactory veya TurkeyFactory nesnesi oluşturulmaktadır. Göreceğiniz gibi uygulamanın ne kırıldığı yer burası. 3. bir ülke gelmesi durumunda burası değiştirmekle (hatta gerekirse XML den okuyarak da) uygulamamızı bu yeni platforma adapte edebiliriz.</p>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Burada sadece örnek olması için rastgele bir sayı üretilmekte, bu üretilen sayıya göre USAFactory veya TurkeyFactory nesnesi oluşturulmaktadır. Göreceğiniz gibi uygulamanın ne kırıldığı yer burası. 3. bir ülke gelmesi durumunda burası değiştirmekle (hatta gerekirse XML den okuyarak da) uygulamamızı bu yeni platforma adapte edebiliriz.</p>
 <p>Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları <a href="http://github.com/rayyildiz/DesignPatterns">http://github.com/rayyildiz/DesignPatterns</a> adresinden ulaşabilirsiniz.</p>
 
       </div>
@@ -272,7 +265,7 @@ Soyut fabrika tasarım deseninin amacı, farklı ürün ailelerin için uygulanm
     
     
       
-      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/76b58e13ff0f2b1c4463d00a0690b88651127b0b">76b58e1</a>]
+      [<a href="https://github.com/rayyildiz/rayyildiz.com/tree/a506e9a74d0bc9273da4201812c956101483beef">a506e9a</a>]
     
   </section>
 </footer>
