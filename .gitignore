@@ -5,3 +5,5 @@ resources/_gen
 *.stackdump
 docs/
 
+gh-pages
+gh-pages.pub

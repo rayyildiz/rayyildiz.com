@@ -63,14 +63,20 @@ enableRobotsTXT = true
     url = "https://www.linkedin.com/in/rayyildiz"
 
 [[params.social]]
+    name = "Stackshare"
+    icon = "fas fa-layer-group"
+    weight = 4
+    url = "https://stackshare.io/rayyildiz/stack"
+
+[[params.social]]
     name = "Json"
     icon = "fas fa-hashtag"
-    weight = 4
+    weight = 5
     url = "https://api.rayyildiz.com"
 
 [languages]
     [languages.en]
-        languagename = "English" # The language name to be displayed in the selector.
+        languagename = "English"
         title = "Ramazan AYYILDIZ"
         contentDir = "content/english"
         weight = 10
@@ -82,7 +88,7 @@ enableRobotsTXT = true
             description = "Ramazan AYYILDIZ's personal website"
             keywords = "blog,developer,personal"
 
-        [languages.en.menu] # It is possible to change the menu too.
+        [languages.en.menu]
             #[[languages.en.menu.main]]
             #name = "Blog"
             #weight = 10

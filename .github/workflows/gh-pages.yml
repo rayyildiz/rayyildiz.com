@@ -1,0 +1,37 @@
+name: hugo generator
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    env:
+      GIT_COMMIT_SHA_SHORT: ${GITHUB_SHA:8}
+      GIT_COMMIT_SHA: ${GITHUB_SHA}
+    
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          cname: rayyildiz.com
+          # personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
