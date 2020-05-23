@@ -7,11 +7,11 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     env:
-      GIT_COMMIT_SHA_SHORT: ${GITHUB_SHA:8}
-      GIT_COMMIT_SHA: ${GITHUB_SHA}
-    
+      GIT_COMMIT_SHA_SHORT: "github"
+      GIT_COMMIT_SHA: ""
+
     steps:
       - uses: actions/checkout@v1
         with:
@@ -26,11 +26,11 @@ jobs:
       - name: Build
         run: hugo --minify
 
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           cname: rayyildiz.com
-          # personal_token: ${{ secrets.PERSONAL_TOKEN }}
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
