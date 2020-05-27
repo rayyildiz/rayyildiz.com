@@ -20,15 +20,16 @@ enableRobotsTXT = true
   series = "series"
   category = "categories"
   tag = "tags"
+
   
 [params]
     author = "Ramazan AYYILDIZ"
     description = "Ramazan AYYILDIZ"
     keywords = "blog,developer,personal,software engineer,java,golang,scala,cloud native,serverless"
     info = "Software Engineer"
-    avatarurl = "avatars/rayyildiz.jpg"
+    avatarurl = "avatars/rayyildiz.webp"
     footercontent = "Just for fun"
-    images = ["avatars/rayyildiz.jpg"]
+    images = ["avatars/rayyildiz.webp"]
     
     dateformat = "January 2, 2006"
 
@@ -53,11 +54,13 @@ enableRobotsTXT = true
     icon = "fab fa-github"
     weight = 1
     url = "https://github.com/rayyildiz"
+
 [[params.social]]
     name = "Twitter"
     icon = "fab fa-twitter"
     weight = 2
     url = "https://twitter.com/rayyildiz"
+
 [[params.social]]
     name = "LinkedIn"
     icon = "fab fa-linkedin"
@@ -127,12 +130,6 @@ enableRobotsTXT = true
            # dateformat = "Jan 2, 2006"
 
         [languages.tr.menu]
-
-            #[[languages.tr.menu.main]]
-            #name = "Hakkimda"
-            #weight = 20
-            #url = "/tr/hakkimda/"
-
             [[languages.tr.menu.main]]
             name = "Java"
             weight = 1

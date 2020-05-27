@@ -19,7 +19,7 @@ Groovy hakkında daha detaylı bilgi için <http://groovy.codehaus.org/ bakabili
 
 ## Grails Nedir?
 
-![Grails Logo](/images/grails_logo1.png)
+![Grails Logo](/images/grails_logo1.webp)
 
 Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir. Yani bir nevi “Ruby On Rails” in, Groovy ile gerçekleştirilmiş halidir.
 

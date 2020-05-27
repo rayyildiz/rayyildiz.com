@@ -21,11 +21,11 @@ MongoDB denemek amacıyla örnek bir java projesi yazacağız. MongoDB ye odakla
 
 İlk önce yapmanız gereken [mongo-java-driver](http://github.com/mongodb/mongo-java-driver/downloads) indirmek. Ben şu an stable versiyonu mongo-1-4.jar ı tercih ettim.
 
-![Nb Create Project](/images/nb_create_project1.png)
+![Nb Create Project](/images/nb_create_project1.webp)
 
 Daha sonra netbeans ile örnek bir java uygulaması açıyorum. Bundan sonra yapmanız gereken, mongo java driver library olarak eklemek. Bunun için şu şelilde yapabilrisiniz.
 
-![Get MongoDB Driver](/images/get_mongo_driver1.png)
+![Get MongoDB Driver](/images/get_mongo_driver1.webp)
 
 Bşir tane Book adında kitap sınıfı yazalım. Bu yazdığımız nesne, “BasicDBObject” nesnesinden türetiyoruz ve getXxx- setXxx, BasicDBObject dan gelen put ve get metotlarını kullanacağız.
 

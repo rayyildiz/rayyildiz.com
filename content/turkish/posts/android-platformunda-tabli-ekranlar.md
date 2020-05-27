@@ -50,6 +50,6 @@ Ben burada daha şık olması amacıyla Tab seçili iken farklı bir ikon görü
 
 Uygulamamızı çalıştırdığımızda ekran görünütüsü buna benzer olmaktadır.
 
-![Android Sample Tab](/images/android_sample_tab21.png)
+![Android Sample Tab](/images/android_sample_tab21.webp)
 
 Daha sonra daha detaylı bilgi paylaşıyor olacağım, şimdilik hoşcakalın.

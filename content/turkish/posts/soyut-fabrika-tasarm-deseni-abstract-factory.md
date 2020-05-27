@@ -24,7 +24,7 @@ public String getCode(){
 }
 ```
 
-![Abstract Design Pattern](/images/abstract_design_pattern1.jpg)
+![Abstract Design Pattern](/images/abstract_design_pattern1.webp)
 
 Üstteki şekilde örnek uygulamamızın UML diagramı bulunmakta. Bu diagramda görebileceğiniz gibi soyut bir fabrika sınıfı ve soyut bir Address nesnesi yer almakta. Şimdi soyut sınıfımızın ve bu sınıftan türeyen fabrika nesnelerinin kodlarına bakalım.
 	

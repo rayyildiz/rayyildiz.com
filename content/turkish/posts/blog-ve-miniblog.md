@@ -14,7 +14,8 @@ Bazı blog servisleri ve özellikler şu şekildedir:
 
 ###Blogger.com:
 Blogger 2003 yılında Google tarafından satın alındı. Özellikle Google hizmetlerini hızlı şekilde kullanılabildiği ücretsiz bir servis olan blogger, birçok dil desteği sunmaktadır. Farklı blogların iletişimi, birden fazla blog acılabilmesi, hızlı bir şekilde içerik girilebilmesi, cok iyi derecede google hizmetlerini kullanabilmesi artı özelliklerindendir. Özellikle kişisel amaçlı blog için çok iyidir.
-![blogger](/images/blogger1.jpg)
+
+![blogger](/images/blogger1.webp)
 
 ###Blog.com:
 Domain il kayıt eidlenlenlerden birisi olan blog.com, ismine göre cokgeride kalmıştır. Özellikle yetersiz dil desteği ve performans problemi onu yeterli bir saygınlığa kavuşturamamıştır.
@@ -36,7 +37,7 @@ Bu servis sizin şu anda ne yaptığınız tutmak için kullanılan bir servisti
 ###Okunuyoruz.Biz:
 İdris Cin adındaki bir Türk blog yazarı tarafındangeliştirlen bu servis, en cok hangi konların beğenildiği ve konuların ne kadar okunduğpu gibi bilgileri sunan bir servistir. Bütün bu bilgileri istatistiki bilgi olarak sunan bu servis, bloglardaki içerik kalitesini artırmaya yönelik geliştirilmiştir.
 
-![Springwidget1](/images/springwidget1.jpg)
+![Springwidget1](/images/springwidget1.webp)
 
 ###Feedburner:
 Bu hizmet içinde birçok güzel miniblog içerir. Google satın aldığı bu hizmet, blog ziyaret bilgilerinin tutulması, haber listesi tarzı yönetim, site abone yönetimi, springwidget... gibi birçok servis içerir. çok aktif olarak kullanılan bu servisleri 750 bin kişi tercih etmektedir.

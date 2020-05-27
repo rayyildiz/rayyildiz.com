@@ -19,7 +19,7 @@ Daha sonra linux için terminalden aşağıdaki komutu- çalıştırıp DroidDra
 
 	rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &
 	
-![Droiddraw](/images/droiddraw1.png)
+![Droiddraw](/images/droiddraw1.webp)
 Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakınız. Daha sonra Button’a tıklayıp Properties tabı na tıklayınız.Burada şu bilgileri değiştirin:
 
 >id——– : @+id/btnSample
@@ -50,7 +50,7 @@ Bunları değiştirip Apply düğmensine basın. Sizde diğer özellikleri bakab
 </AbsoluteLayout>
 ```
 	
-![Android New Project](/images/android_new_project1.png)
+![Android New Project](/images/android_new_project1.webp)
 
 Netbeans de yeni bir proje açalım. NBAdroid eklentisini kurduysanız, yeni bir proje eklerken Android diye bir kısım yer alacaktır. Daha sorna yandaki gibi proje adı, paket adı, activity adı gibi alanları doldurmanız gerekiyor. İlk kez acıyosanız, Manageplatformu tıklayarak kurulum yaptığınız android klasörünü göstermeniz gerekiyor.
 
@@ -102,6 +102,6 @@ private void alert(String message){
 
 Uygulamayı çalıştırdığınızda şöyle çalışacaktır:
 
-![Application Run](/images/application_run1.png)
+![Application Run](/images/application_run1.webp)
 
 Uygulamanın kaynak kodunu şu adresten indirebilirsiniz.<http://github.com/downloads/rayyildiz/TestProject/AndroidSample1-v1_0.tar.gz>

@@ -15,7 +15,7 @@ Bunun farkında olan Microsoft WPF ‚ÄòI duyurdu. Bunun üzerine Adobe Apollo
 
 Bu bahsedilen tüm uygulamaların asıl amacı, HTML, JavaScript, Ajax, Flash gibi değişik ortamları tek catı altında birleştirmek. JavaFX farklı olarak bunlara ek olarak java paketlerini destekleyor. Yani herhangi bir java kütüphanesi javafx ile kullanılabilecek. √ústlik JavaFX çalışabilmesi için sistemde küçük bir java runtime versiyonu kurulu olması yeterli. JavaFX, JavaFX script ve javaMobil diye alt ürünlerden oluşuyor. Yani Sun, JavaFX ile daha once ‚Äúbir kere yaz heryerde çalışsın‚Äù sözünü tutarak, aynı kodun hem masaüstünde hemde cep telefonlarda çalışmasını sağlayacağını bildirmekte. Hatta Sun biraz daha ileri giderek, JavaFX'i digital TV ve analog TV ortamlarında da çalıştırmayı hedeflemektedir.
 
-![javaFX mimarisi](/images/ig_javafx_architecture1.jpg)
+![javaFX mimarisi](/images/ig_javafx_architecture1.webp)
 
 javafx mimarisi Yalnız burada JavaFX , swing yerine gelen bir ürün değildir. Sun dediği gibi JavaFX Swing'in performansını artıran bir teknolojidir.JavaFX Script ile gelen event oluşturma ve yürütme konusundaki iyileştirmelerden Swing uygulamaları da faydalanacak ve umuyoruz ki daha performanslı Swing uygulamaları göreceğiz. Şu anda JRE (Java RunTime Enviroment) ile JavaFX Script uygulamalarını masaüstünde çalıştırma imkanına sahibiz.
 Henüz üzerinde 2 ay geçmeden, örnek cok iyi örnekler hazırlanmaya başladı. İnanılması zor ama aşağıdaki örnekler ne flash need HTML yapılmıştır, tamamen JavaFX.
