@@ -6,23 +6,21 @@ tags= ["java","Software Development"]
 categories= ["Genel"]
 +++
 
-# Decleretaive Programlama
-
-Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:
+Reaktif programlamaya açıklamaya calışacağım bu yazı dizisinde ile ilgili diğer yazılar:
 
 - [Impereative Programming](/tr/posts/reactive-programlama-1)
 - Reactive Programming
 - [Functional Programming](#soon)
 
-> Butun terimlerin Turkce'sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
+> Butun terimlerin Turkçe'sini çevirmek biraz zor olduğu ve internette arastırma yaptığınızda orijinal tabirleri bulacağınız için, bu yazı dizisinde terimlerin orijinallerini kullanmaya çalısacağım.
 
 # Giris
 
-Imperative programlamanin tam tersi ise declerative programlamadir. Burada asil husus olay ustune kuruludur. Burada bilgisayara satir satir ne yapacagini vermek yerine, bir olay oldugunda uygulamanin nasil davranmasi gerektigini soylersiniz. Bu konu baya genis bir konu oldugu icin sadece bir bolumune odaklanacagiz: reactive programlama.
+Imperative programlamanın tam tersi ise declerative programlamadır. Burada asıl husus olay ustune kuruludur. Burada bilgisayara satır satır ne yapacağını vermek yerine, bir olay olduğunda uygulamanın nasıl davranması gerektiğini soylersiniz. Bu konu baya genis bir konu olduğu için sadece bir bolumune odaklanacağız: reactive programlama.
 
 ## Reactive Programlama
 
-Ilk ornekte yer alan [compleks matematik problemini](#imperative-style)  reactive seklinde yazmak istiyorsak su sekilde bir kod yazmamiz gerekirdi. Kisaca aciklamak gerekirse burada bir [accumalator](https://towardsdatascience.com/what-is-tail-recursion-elimination-or-why-functional-programming-can-be-awesome-43091d76915e) kullaniyoruz. Bu sayede stack-overflow error almayi engellemis oluyoruz.
+Ilk ornekte yer alan [compleks matematik problemini](#imperative-style)  reactive seklinde yazmak istiyorsak su sekilde bir kod yazmamız gerekirdi. Kısaca açıklamak gerekirse burada bir [accumalator](https://towardsdatascience.com/what-is-tail-recursion-elimination-or-why-functional-programming-can-be-awesome-43091d76915e) kullanıyoruz. Bu sayede stack-overflow error almayı engellemis oluyoruz.
 
 ```java
 
@@ -42,11 +40,11 @@ public class ComplexMath {
 }
 ```
 
-> Dogruyu soylemek gerekirse ustteki ornek aslinda fonksiyonel programalaya giriste anlatilan bir ornektir. Burada her ```onNext``` olayinda toplama islemi yapiliyor, vurgulamaya calistigim yer burasi. 
+> Dogruyu soylemek gerekirse ustteki ornek aslında fonksiyonel programalaya giriste anlatılan bir ornektir. Burada her ```onNext``` olayında toplama islemi yapılıyor, vurgulamaya calıstığım yer burası. 
 
-Burada ustteki ornekten cok compleks birsey yapmiyoruz. Sadece for-loop yerine recursive fonksiyon kullandik burada. Burada local ya da global degisken tutmak yerine recursive olarak fonsksiyonun kendisini cagirdik. Bu sekilde hesaplama bitince kadar devam edecek ve listenin sonuna geldiginde ```accumalor``` sakladigimiz degeri sonuc olarak donuyoruz. Bu sekilde yapmamizin nedeni olasi stack-overflow-error engellemek.  Bu konuya tail-recursive da denilir. 
+Burada ustteki ornekten çok compleks birsey yapmıyoruz. Sadece for-loop yerine recursive fonksiyon kullandık burada. Burada local ya da global değisken tutmak yerine recursive olarak fonsksiyonun kendisini çağırdık. Bu sekilde hesaplama bitince kadar devam edecek ve listenin sonuna geldiğinde ```accumalor``` sakladığımız değeri sonuç olarak donuyoruz. Bu sekilde yapmamızın nedeni olası stack-overflow-error engellemek.  Bu konuya tail-recursive da denilir.
 
-Bunun IP den farki nedir:
+Bunun IP den farkı nedir:
 
-- Oncelikli olarak hem ```sum``` hem de ```sumAcc``` sonuclari her zaman ayni input ile ayni sonucu verecektir. Cok detaya girmeyecegim ama bu matematikte **kume teorisi** olarak hatirliyor olmaniz gerekiyor. [Category Theory](https://en.wikipedia.org/wiki/Category_theory)
-- State olmadigi icin dead-lock, race-condition gibi sorunlar olmuyor.
+- Oncelikli olarak hem ```sum``` hem de ```sumAcc``` sonucları her zaman aynı input ile aynı sonucu verecektir. Cok detaya girmeyeceğim ama bu matematikte **kume teorisi** olarak hatırlıyor olmanız gerekiyor. [Category Theory](https://en.wikipedia.org/wiki/Category_theory)
+- State olmadığı icin dead-lock, race-condition gibi sorunlar olmuyor.

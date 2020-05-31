@@ -116,7 +116,7 @@ enableRobotsTXT = true
 
 
     [languages.tr]
-        languagename = "Turkce"
+        languagename = "Türkçe"
         title = "Ramazan AYYILDIZ"
         contentDir = "content/turkish"
         weight = 20
@@ -124,9 +124,9 @@ enableRobotsTXT = true
         [languages.tr.params]
             author = "Ramazan AYYILDIZ"
             description = "Ramazan AYYILDIZ'in kisiel websitesi"
-            keywords = "blog,developer,kisisel"
+            keywords = "blog,developer,kişisel"
             info = "Senior Software Architect"
-            footercontent = "Bilgi paylasildikca buyur"
+            footercontent = "Bilgi paylaşıldıkça büyür"
            # dateformat = "Jan 2, 2006"
 
         [languages.tr.menu]
@@ -136,12 +136,12 @@ enableRobotsTXT = true
             url = "/tr/tags/java/"
 
             [[languages.tr.menu.main]]
-            name = "Yazilim Gelistirme"
+            name = "Yazılım Geliştirme"
             weight = 3
             url = "/tr/tags/software-development/"
 
             [[languages.tr.menu.main]]
-            name = "Tum Yazilar"
+            name = "Tüm Yazılar"
             weight = 10
             url = "/tr/posts/"
 

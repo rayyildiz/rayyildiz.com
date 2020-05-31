@@ -34,12 +34,15 @@ h4.Kernel Seviyesi
 Android, linux kernel 2.6 üzerine inşa edildi. Linux kernel 2.6 gerekli sürüclerle desteklenerek oluşturuldu. Bu sürücüler, ekran sürücülerinden wifi sürücüleirne, bluetooth sürücülerinden, tuş takımı sürüclerine kadar hemen hemen ihtiyac duyulan tüm sürücler yüklenmiş durumda. Bunun yanında genel işletim sistemi özellikleri yanında, güç yönetimi, bellek yönetimi de bu seviyede.
 
 #### Kütüphaneler
+
 Android içinde gerekli olan açık kaynak kütüphaneler eklnemyi unutulmamış. Bu kütüphanelerin başlıcaları SGL, SSL, WebKit, Sqlite şeklinde. Bu kütüphaneler daha üst seviyede uygulama catısının temellerini oluşturmak için kullanılıyor. Örneğin bunlardan Sqlite uygulamaların verileri tutabilmesi için minik bir veritabanı olarak görev yapıyor. Aynı şekilde Webkit ise entegre çalışan browser için motor görevini yapıyor.
 
 #### Android Runtime
+
 Bu katman üst katmanların çalışmasını olanak sunacak sanal makina vardır. Bu sanal makina Dalvik adı verilen bir makinedir. Özellikel düşük bellekli makinalar için tasarlanmış olan ve aynı anda birden fazla sanal makinanın çalışmasına olanak sunduğu için google tarafından tercih edilmiştir.android sistem yapısı
 
 #### Uygulama Geliştirme Ortamı:
+
 Bu kısım aslında SDK adını verdiğimiz, android için uygulama geliştirme ortamının adıdır. Yazılan tüm uygualamalar bu çatının üstünde yapılır. Bu sayede alt seviyeye uygulama geliştirme catının izin veridğinin dışında müdahele imkanı ortadan kalkmaktadır. Buda makinanın züerinde daha sağlam uygulamaların yazılması anlamına gelmektedir.
 Bu katmanda çok önemli birkaç yapı bulunmaktadır. Bu yapıları incelemeye çalışalım.
 

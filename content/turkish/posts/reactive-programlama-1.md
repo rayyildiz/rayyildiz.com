@@ -6,25 +6,21 @@ tags= ["java","Software Development"]
 categories= ["Genel"]
 +++
 
-# Imperative Programllama
-
-Reaktif programlamaya aciklamaya calisacagim bu yazi dizisinde ile ilgili diger yazilar:
+Reaktif programlamaya acıklamaya calışacağım bu yazı dizisinde ile ilgili diğer yazılar:
 
 - Impereative Programming
 - [Reactive Programming](/tr/posts/reactive-programlama-2)
 - [Functional Programming](#soon)
 
-> Butun terimlerin Turkce'sini cevirmek biraz zor oldugu ve internette arastirma yaptiginizda orijinal tabirleri bulacaginiz icin, bu yazi dizisinde terimlerin orijinallerini kullanmaya calisacagim.
+> Bütün terimlerin Türkçe'sini çevirmek biraz zor olduğu ve internette araştırma yaptığınızda orijinal tabirleri bulacağınız için, bu yazi dizisinde terimlerin orijinallerini kullanmaya calısacağım.
 
-# Giris
+# Giriş
 
-Universitede bilgisayar bilimleri veya programala iceren benzer bolumlerden mezun olan bircok kisi muhtemelen [Oject Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming) biliyordur. Ben de diger bircok kisi gibi programlaya [Pascal](https://www.freepascal.org/) ile basladim. Daha sonra ise [C](https://gcc.gnu.org/),[C++](http://www.cplusplus.com/), ve [Java](https://openjdk.java.net/) seklinde bir ogrenme sureci gordum. 
-
-
+Üniversitede bilgisayar bilimleri veya programala iceren benzer bölümlerden mezun olan birçok kişi muhtemelen [Oject Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming) biliyordur. Ben de diğer birçok kişi gibi programlaya [Pascal](https://www.freepascal.org/) ile başladım. Daha sonra ise [C](https://gcc.gnu.org/),[C++](http://www.cplusplus.com/), ve [Java](https://openjdk.java.net/) şeklinde bir öğrenme süreci gördüm.
 
 ## Imperative Programlama (IP)
 
-Butun bu programlama dilleri aslinda sizin bilgisayara ne yapmasi gerektigini tek tek emir vererek gelistirdiginiz bir ortam. Basit bir ornekten gitmek gerekirse asagidaki super compleks matematik islemi icin kullandigimiz yontem imperative programladir. 
+Bütün bu programlama dilleri aslında sizin bilgisayara ne yapmasi gerektiğini tek tek emir vererek geliştirdiğiniz bir ortam. Basit bir örnekten gitmek gerekirse, aşagıdaki süper compleks matematik işlemi için kullandığımız yöntem imperative programladir.
 
 ```java
 public class ComplexMath {
@@ -45,38 +41,35 @@ public class ComplexMath {
 }
 ```
 
-Burada satir satir aciklamak gerekiyorsa:
+Burada satır satır aciklamak gerekiyorsa:
 
-- ```list.get(i)``` ile listenin ```i```. elemanini ver, 
-- bu degeri ```x``` diye tanimlanmis degiskene ata,
-- ```sum``` degiskenini bu sayi ile topla,
-- ```i``` degiskeni ile ```list.size``` karsilastir, ```list``` bitmediyse ayni islemleri tekrarla,
+- ```list.get(i)``` ile listenin ```i```. elemanini ver,
+- bu değeri ```x``` diye tanımlanmis degişkene ata,
+- ```sum``` degişkenini bu sayı ile topla,
+- ```i``` değiskeni ile ```list.size``` karşılastır, ```list``` bitmediyse aynı işlemleri tekrarla,
 - sonucu dondur.
- 
 
-seklinde bir yol izliyoruz. Flowchart hatirliyorsunuz degil mi? 
+şeklinde bir yol izliyoruz. Flowchart hatırlıyorsunuz değil mi?
 
-<img src="/images/flowchart.jpg">
-
+![Flow chart](/images/flowchart.webp)
 
 ### Object Oriented Programming
 
-Object Oriented Programming (a.k.a. OOP) , bir imperative programlama stilidir. Cogu kisi tarafindan OOP ile IP aslinda karistirildigina sahit oldum. Herhalde OOP cok yaygin oldugu icin bu sekilde dusunuluyor. Diger bir ifade ile Pascal,Cobol,Fortran fazla yaygin kullanilmadigi icin, OOP ile imperative-style birbirlerinin yerine kullaniliyor. OOP kisaca herseyin birer object oldugu bir yapi ustune kurulu bir teknik. Gunumuzdeki en populer Java,C++,Python,C#... gibi bircok programlama dili bu teknigi benimsemistir. 
+Object Oriented Programming (a.k.a. OOP) , bir imperative programlama stilidir. Coğu kişi tarafindan OOP ile IP aslında karıştırıldığına şahit oldum. Herhalde OOP çok yaygın olduğu için bu şekilde düşünülüyor. Diğer bir ifade ile Pascal,Cobol,Fortran fazla yaygın kullanılmadiği için, OOP ile imperative-style birbirlerin yerlerine kullanılıyor. OOP kısaca herşeyin birer object olduğu bir yapı üstüne kurulu bir teknik. Günümüzdeki en populer Java,C++,Python,C#... gibi bircok programlama dili bu tekniği benimsemiştir.
 
+Buraya kadar olan konulari bildiğinize eminim. Asıl soru bundan sonra başlıyor. Peki ne problem vardı da bu **structured** programlama üstüne birşeyler bulmaya calışıyoruz? Veya ihtiyacımız var mı?
 
-Buraya kadar olan konulari bildiginize eminim. Asil soru bundan sonra basliyor. Peki ne problem vardi da bu **structured** programlama ustune birseyler bulmaya calisiyoruz? Veya ihtiyacimiz var mi?
+Adil olmak gerekirse **imperative style** birçok güzel tarafı var, negatif yönlerini yer vermeden önce bu stilin hangi durumlarda başarılı olduğuna bakalım.
 
-Adil olmak gerekirse **imperative style** bircok guzel tarafi var, negatif yonlerini vermeden once bu stilin hangi durumlarda basarili olduguna bakalim.
+### IP Avantajları
 
-### IP Avantajlari 
+Öncelikli olarak çok daha basit bir stil. Programcı olarak okuduğunuz her bir satırda ne olacağını öngörmeniz mümkün. Satırların çalismasında bir sıra var. Bir satır calışması bitmeden diğer satıra uygulama atlayamaz. Bu ise size kod üstünde büyük bir kontrol gücü veriyor (yada gibi gorunur).
 
-Oncelikli olarak cok daha basit bir stil. Programci olarak okudugunuz her bir satirda ne olacagini ongormeniz mumkun. Satirlarin calismasinda bir sira var. Bir satir calismasi bitmeden diger satira uygulama atlayamaz. Bu ise size kod ustunde buyuk bir kontrol gucu veriyor (yada gibi gorunur). 
+OOP, producedural yapının sebep olduğu karmaşayı engellemek için  güzel cözümler sunuyor.  Herşeyin birer object oldugu, inheritence ve abstraction ile karmaşayı azaltıyor, interface ile metot imzalarının aynı olmasını compile aşamasında garanti ediyor.  
 
-OOP, producedural yapinin sebep oldugu karmasayi engellemek icin  guzel cozumler sunuyor.  Herseyin birer object oldugu, inheritence ve abstraction ile karmasayi azaltiyor, interface ile metot imzalarinin ayni olmasini compile asamasinda garanti ediyor.  
+### IP Sorunlu Tarafları
 
-### IP Sorunlu Taraflari
-
-Imperetive-style, en buyuk problem teskil ettigi yer state saklamasidir. Ozellikle global state fonksiyonun sonucunu predict edilememesine neden olmaktadir. Ayni ornekten gidelim. 
+Imperetive-style, en büyük problem teşkil ettiği yer state saklamasıdır. Özellikle global state fonksiyonun sonucunu predict edilememesine neden olmaktadır. Aynı örnekten gidelim.
 
 ```java
 public class ComplexMath {
@@ -84,12 +77,12 @@ public class ComplexMath {
 
   public int sum(List<Integer> xs) {
     int sum = initialValue;
-    
+
     ...
   }
 ```
 
-Masumane bir sekilde ```sum``` degiskenin ilk degerini bir global bir ```initialValue``` degiskeninden aldik. Asagidaki sonucun ```result1 != result``` cikmasi cok normal. Cunku ```math.initialValue=3``` diyerek global bir state degistirmis olduk. Bu sayede ayni parametre ile fonksiyon farkli sonuclar dondu. **"Benim bilgisayarimda calisiyordu"** sozu tanidik geldi mi size? Aslinda bu konuda **side-effect** de denilir. 
+Masumane bir şekilde ```sum``` değiskenin ilk değerini bir global bir ```initialValue``` değişkeninden aldık. Aşağıdaki sonucun ```result1 != result``` cıkması cok normal. Cünkü ```math.initialValue=3``` diyerek global bir state değiştirmiş olduk. Bu sayede aynı parametre ile fonksiyon farklı sonuclar döndü. **"Benim bilgisayarimda calisiyordu"** sozu tanıdık geldi mi size? Aslinda bu konuda **side-effect** de denilir.
 
 ```java
 ComplexMath math = new ComplexMath();
@@ -100,10 +93,11 @@ math.initialValue = 3;
 int result2 = math.sum(list);
 ```
 
-Diger bir sorun olan konu ise ozellikle OOP nin modular yapisi ile ilgili. Ozellikle [SOLID (pdf)](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf) prensiplerinin uygulamazsaniz bu karisiniza cikacak bir sorundur. (Not : Ileriki bir zamanda SOLID prensipleri hakkinda bir yazi yayinlayacagim, burada sorunlari daha detayli yazarim)
+> Burada bu hatayı görmek belkı mümkün ama inanın bana proje büyüdüğünde bu şekilde bir hata yapma olasılığı çok fazla.
 
+Diğer bir sorun olan konu ise özellikle OOP nin modular yapısı ile ilgili. Özellikle [SOLID (pdf)](https://fi.ort.edu.uy/innovaportal/file/2032/1/design_principles.pdf) prensiplerine sadık kalmazsanız, bu karşınıza çıkacak bir soruna neden olur.
 
-Bir baska sorun ise concurrency. Bunun icin kucuk bir ornek paylasayim. Burada ```Counter.increment()``` fonksiyonu her islem _5ms_ aldigi simule ediliyor. 2 tane ```Thread``` calismaya basliyor ve her birinin  1 den 100 e kadar sayip ```result``` bir artirmasi gerekiyor. Bu durumda 2 thread _ayni nesnenin local degiskenini_ birer artiriyor, 2 therad oldugu icin de sonucun 200 olmasi gerektigini bekliyoruz. Ancak farkli bir deger yazacaktir. Bunun nedeni iki threadin yarismasi, bir diger ifade ile [race condition](http://www.javacreed.com/what-is-race-condition-and-how-to-prevent-it/) olustu.
+Bir başka sorun ise [race condition](https://stackoverflow.com/questions/34510/what-is-a-race-condition). Bunun için küçük bir örnek paylaşayım. Burada ```Counter.increment()``` fonksiyonu her işlem _5 ms_ aldığı simule ediliyoruz. 2 tane ```Thread``` calışmaya başlıyor ve her birinin  1 den 100 e kadar sayıp ```result``` bir artırması gerekiyor. Bu durumda 2 thread _ayni nesnenin local değişkenini_ birer artırıyor, 2 therad oldugu icin de sonucun 200 olmasi gerektigini bekliyoruz. Ancak farkli bir deger yazacaktir. Bunun nedeni iki threadin yarismasi, bir diger ifade ile *race condition* oluştu.
 
 ```java
 class Counter {
@@ -137,4 +131,4 @@ public static void main(String[] args) throws InterruptedException {
 }
 ```
 
-Bunun haricinde ise sistemin donmasina neden olan [Dead Lock](https://www.geeksforgeeks.org/operating-system-process-management-deadlock-introduction/) ayrica baska bir sorun. Bu konuda daha once yaptigim bir sunum vardi, Concurrency ve paralel programlama ile ilgili sunumu [Slideshare](https://www.slideshare.net/rayyildiz/concurrency-parallel-programming) bulabilirsiniz.
+Bunun haricinde ise sistemin donmasına neden olan [Dead Lock](https://www.geeksforgeeks.org/operating-system-process-management-deadlock-introduction/) bir başka sorun. Bu konuda daha once yaptığım bir sunum vardı, Concurrency ve paralel programlama ile ilgili sunumu [Slideshare](https://www.slideshare.net/rayyildiz/concurrency-parallel-programming) bulabilirsiniz.
