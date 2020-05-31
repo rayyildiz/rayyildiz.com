@@ -15,7 +15,7 @@ Benimde bu konuda araştırma yaparken karşılaştığım bir servis var: stax.
 
 Sitesine girerek üye olduğunuzda size onay maili gelecektir(üyelik onayı birkaç gün sürebiliyor) . Daha sonra siteye giriş yaparak, yeni bir uygulama acabilirsiniz.
 
-![Stax Net](/images/stax-net.webp)
+![Stax Net](/images/stax-net.jpg)
 
 Yeni bir uygulama actıktan sonra, bunu uygulamanızı kendi bilgisayarınıza indirmeniz ve geliştirmenizi devam etmelisiniz. Size uygun bir template seçerek ilk uygulamanızı acabilirsiniz.
 

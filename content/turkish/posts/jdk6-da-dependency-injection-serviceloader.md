@@ -20,7 +20,7 @@ Bu örneği yapabilmek için 3 tane proje oluşturalım. Bu 3 proje ve açıklam
 
 **UserAuthTest**: Main sınıfının yer aldığı örnek uygulamadır.
 
-![Project Tree](/images/project_tree1.webp)
+![Project Tree](/images/project_tree1.jpg)
 
 Arayüzün yer aldığı UserAuth projesinde farklı olarak META-INF/services klasörü- ve bu klasör içinde com.rayyildiz.userauth.IUserAuthService dosyası yer almaktadır. Bu dosya içine bakarsanız sadece bir satır yer almaktadır.
 	

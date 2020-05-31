@@ -61,7 +61,7 @@ Bu ayaralar sırasında aşağıdakine benzer sorular sorulacaktır. Burada yaza
 
 Normal ayarlara göre kururulum yaparsanız, tarayınızdan http://127.0.0.1:8080/apex açınız. Burada kullanıcı adı olarak “system”, şifre- olarak ise az önce kurulumda yazdığınız şifreyi yazınız. Bu arayüzü size birtakım güzel olanaklar sunacaktır(detaylı bilgi için buraya tıklayınız). Ben ise daha sonraki yazılarımda Sql Developer ile nasıl bağlanabileceğinizi ve basit veritabanı işlemleri yapabilmenizi anlatacağım.
 
-![Oracle](/images/oracle1.webp)
+![Oracle](/images/oracle1.jpg)
 
 Toad ise Wine ile kurabilseniz dahi malesef ubuntu ortamında sorun cıkartıyor, o yüzden linux ortamında oracle veri tabanı işlemleri için size tafsiye edeceğim araç sql developer olacaktır.
 

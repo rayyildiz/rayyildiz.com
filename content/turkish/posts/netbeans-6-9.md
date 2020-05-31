@@ -9,7 +9,7 @@ categories= ["Genel"]
 
 
 Netbeans 6.9 beta sürümü yayınlandı. Netbeans 6.9 adresinden detaylarına bakabilir ve indirebilirsiniz.
-![Enterprise Cdi1](/images/enterprise-cdi1.webp)
+![Enterprise Cdi1](/images/enterprise-cdi1.jpg)
 
 Netbeans 6.9 da benim uzun süredir beklediğim Spring 3.0 desteği en sonunda gelmiş oldu. Daha önceki sürümlerinde netbeans Spring 2.5 desteği sunuyordu. Özellikle spring 3.0 ile gelen özellikleri kullanabileceğiz. Netbeans 6.9, 9 haziranda release olacak.
 
@@ -23,4 +23,4 @@ Bildiğiniz gibi Sun & Oracle , linux platformunda javafx desteğini sunmuşlard
 
 Ayrıca Netbeans Scala ve- git desteği bulunmaktadır.
 
-![Scalaeditor ](/images/scalaeditor_080729_scala1.webp)
+![Scalaeditor ](/images/scalaeditor_080729_scala1.jpg)

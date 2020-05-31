@@ -308,8 +308,8 @@ public class MainActivity extends Activity {
 
 Örnek uygulamamızın ekran görüntüleri
 
-![Add Customer](/images/add_customer1.webp)
+![Add Customer](/images/add_customer1.jpg)
 
-![List Customers](/images/list_customers1.webp)
+![List Customers](/images/list_customers1.jpg)
 
 Uygulamanın kaynak kodunu ise [Githup](https://github.com/rayyildiz/nbase) üzerinden indirebilirsiniz.

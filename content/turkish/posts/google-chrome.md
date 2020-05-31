@@ -22,7 +22,7 @@ Google Chrome, cıkarmadan önce Scott McCloud- tarafından hazırlanan karikat�
 
 http://www.google.com/chrome adresinden indirebileceğiniz google chrome, ilk kurduğunuzda hemen ilk göreceğiniz ‚Äúçok sade' özelliği olacak. Yaptığı tüm uygulamalarındaki esas özelliği sadelik olan google, tarayıcısını da cok sade bir şekilde yapmış.
 
-![chrome](/images/chrome_21.webp)
+![chrome](/images/chrome_21.jpg)
 
 ## Olumlu Özellikleri:
 

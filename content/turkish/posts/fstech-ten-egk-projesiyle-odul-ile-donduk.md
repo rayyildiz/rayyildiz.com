@@ -13,10 +13,10 @@ Yeni Türk Ticaret Kanunuyle birlikte borsaya kote olan firmaların <a href="htt
 17 Nisan tarihinde Londra'da yapılan gala gecesinde, "Best Use of Online Service" dalında ödülü bizim geliştirdiğimiz <a href="http://www.fstech.co.uk/awards/winners.php">EGK projesi kazandı</a>. Oldukça yoğun bir çalışma sonrasında böyle bir ödül kazanmak, bütün çalışmamıza değdi açıkcası.  
 
 
-![Big Ben](/images/fstech_award.webp)
+![Big Ben](/images/fstech_award.jpg)
 
-![Big Ben](/images/london_bigben.webp)
+![Big Ben](/images/london_bigben.jpg)
 
-![London](/images/london_1.webp)
+![London](/images/london_1.jpg)
 
-![London](/images/london_2.webp)
+![London](/images/london_2.jpg)

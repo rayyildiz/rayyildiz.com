@@ -13,13 +13,13 @@ Android ile uygulama geliştirmeye başlamak için [Android SDK](http://develope
 
 Bu sırada size tafsiyem UI tasarlayabileniz için [droiddraw](http://www.droiddraw.org/) adındaki bir uygulamayı indirmenizdir. Her ne kadar da eclipse için [ADT](http://developer.android.com/sdk/eclipse-adt.html) paketi yer alsa da ben droiddraw ı daha çok beğendim. Ayrıca biz örneği netbeans ile geliştireceğiz. Bu yüzden droiddraw ı indirmenizde yarar var. Ayrıca netbeans için geliştirilmiş NBAndroid eklentisini- [bu adresten](http://wiki.netbeans.org/IntroAndroidDevNetBeans) yardım alarak veya <http://kenai.com/downloads/nbandroid/updates.xml> update adresiyle kurabilirsiniz. Yapmanız gereken netbeans de Tools->Plugins oradan da Settings de “Add” butonuna tıklayarak bu plugini eklemek ve Available Plugins tabında Android diye aratıp bu plugin i kurmaktır.
 
-![Nbandroid Plugin Install](/images/nbandroid_plugin_install-e1275732394906.png)
+![Nbandroid Plugin Install](/images/nbandroid_plugin_install-e1275732394906.jpg)
 
 Daha sonra linux için terminalden aşağıdaki komutu- çalıştırıp DroidDraw ı açın. Windows da eğer Java6 kuruluysa, droiddraw ın içindeki droiddraw.jar ı tıklamanız yeterlidir.
 
 	rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &
 	
-![Droiddraw](/images/droiddraw1.webp)
+![Droiddraw](/images/droiddraw1.jpg)
 Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakınız. Daha sonra Button’a tıklayıp Properties tabı na tıklayınız.Burada şu bilgileri değiştirin:
 
 >id——– : @+id/btnSample
@@ -50,7 +50,7 @@ Bunları değiştirip Apply düğmensine basın. Sizde diğer özellikleri bakab
 </AbsoluteLayout>
 ```
 	
-![Android New Project](/images/android_new_project1.webp)
+![Android New Project](/images/android_new_project1.jpg)
 
 Netbeans de yeni bir proje açalım. NBAdroid eklentisini kurduysanız, yeni bir proje eklerken Android diye bir kısım yer alacaktır. Daha sorna yandaki gibi proje adı, paket adı, activity adı gibi alanları doldurmanız gerekiyor. İlk kez acıyosanız, Manageplatformu tıklayarak kurulum yaptığınız android klasörünü göstermeniz gerekiyor.
 
@@ -102,6 +102,6 @@ private void alert(String message){
 
 Uygulamayı çalıştırdığınızda şöyle çalışacaktır:
 
-![Application Run](/images/application_run1.webp)
+![Application Run](/images/application_run1.jpg)
 
 Uygulamanın kaynak kodunu şu adresten indirebilirsiniz.<http://github.com/downloads/rayyildiz/TestProject/AndroidSample1-v1_0.tar.gz>

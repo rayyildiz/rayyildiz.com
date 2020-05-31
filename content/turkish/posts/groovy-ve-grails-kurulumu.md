@@ -9,7 +9,7 @@ categories= ["Genel"]
 
 ## Groovy Nedir?
 
-![Groovy](/images/groovy_medium.png)
+![Groovy](/images/groovy_medium.jpg)
 
 Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.
 
@@ -19,7 +19,7 @@ Groovy hakkında daha detaylı bilgi için <http://groovy.codehaus.org/ bakabili
 
 ## Grails Nedir?
 
-![Grails Logo](/images/grails_logo1.webp)
+![Grails Logo](/images/grails_logo1.jpg)
 
 Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir. Yani bir nevi “Ruby On Rails” in, Groovy ile gerçekleştirilmiş halidir.
 

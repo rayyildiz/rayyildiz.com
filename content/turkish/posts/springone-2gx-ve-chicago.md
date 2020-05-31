@@ -27,10 +27,10 @@ Birde TV yi bakıyorum da , herhangi bir çikolata, deterjan, cocuk bezi … rek
 
 Yarın nasip olursa seminer SpringOne 2GX semineri başlıyor. Bu yazı daha çok chicago üzerine oldu. Daha sonra seminer hakkında fikirlerimi paylaşacağım. Eğer fırsat bulursanız, Chicago yu görmenizi tavsiye ederim.
 
-![Chicago ](/images/chicago-1.webp)
+![Chicago ](/images/chicago-1.jpg)
 
-![Chicago ](/images/chicago-2.webp)
+![Chicago ](/images/chicago-2.jpg)
 
-![Chicago ](/images/chicago-3.webp)
+![Chicago ](/images/chicago-3.jpg)
 
-![Chicago ](/images/chicago-4.webp)
+![Chicago ](/images/chicago-4.jpg)

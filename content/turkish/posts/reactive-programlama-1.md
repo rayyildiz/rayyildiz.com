@@ -51,7 +51,7 @@ Burada satır satır aciklamak gerekiyorsa:
 
 şeklinde bir yol izliyoruz. Flowchart hatırlıyorsunuz değil mi?
 
-![Flow chart](/images/flowchart.webp)
+![Flow chart](/images/flowchart.jpg)
 
 ### Object Oriented Programming
 
