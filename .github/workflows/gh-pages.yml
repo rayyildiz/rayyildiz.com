@@ -8,9 +8,9 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    env:
-      GIT_COMMIT_SHA_SHORT: "github"
-      GIT_COMMIT_SHA: ""
+    # env:
+    #   GIT_COMMIT_SHA_SHORT: "github"
+    #   GIT_COMMIT_SHA: ""
 
     steps:
       - uses: actions/checkout@v1
@@ -30,7 +30,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           cname: rayyildiz.com
-          # deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./public
