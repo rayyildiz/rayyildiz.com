@@ -9,7 +9,8 @@ languagecode = "en"
 paginate = 25
 canonifyurls = true
 
-pygmentsstyle = "monokai"
+#  dracula, vim
+pygmentsstyle = "dracula"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
@@ -28,7 +29,7 @@ enableRobotsTXT = true
     keywords = "blog,developer,personal,software engineer,java,golang,scala,cloud native,serverless"
     info = "Software Engineer"
     avatarurl = "avatars/rayyildiz.jpg"
-    footercontent = "Just for fun"
+    footercontent = "<a href='https://github.com/rayyildiz/rayyildiz.com/blob/master/LICENSE'>Copytight</a> © rayyildiz.com"
     images = ["avatars/rayyildiz.jpg"]
     
     dateformat = "January 2, 2006"
@@ -126,7 +127,7 @@ enableRobotsTXT = true
             description = "Ramazan AYYILDIZ'in kisiel websitesi"
             keywords = "blog,developer,kişisel"
             info = "Senior Software Architect"
-            footercontent = "Bilgi paylaşıldıkça büyür"
+            footercontent = "<a href='https://github.com/rayyildiz/rayyildiz.com/blob/master/LICENSE'>Copytight</a> © rayyildiz.com"
            # dateformat = "Jan 2, 2006"
 
         [languages.tr.menu]

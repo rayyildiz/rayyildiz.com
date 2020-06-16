@@ -40,8 +40,8 @@ import java.util.ServiceLoader;
 
 public class Main {
 	public static void main(String[] args) {
-		ServiceLoader<IUserAuthService> serviceLoader = ServiceLoader.load(IUserAuthService.class);
-		Iterator<IUserAuthService> iterator = serviceLoader.iterator();-
+		ServiceLoader<IUserAuthService> loader = ServiceLoader.load(IUserAuthService.class);
+		Iterator<IUserAuthService> iterator = loader.iterator();
 		while(iterator!= null && iterator.hasNext()){
 			IUserAuthService userAuthService = iterator.next();
 			boolean login = userAuthService.login("demo", "password");

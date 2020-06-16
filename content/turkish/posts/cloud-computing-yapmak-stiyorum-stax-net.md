@@ -31,6 +31,6 @@ Yanda da görebileceğiniz gibi şu anda stax 5′e kadar shared cluster imkanı
 
 Güzel özelliklerden bir diğeri ise, uygulamanızı app.username.staxapps.net gibi erişebilecekken, gerekli ayarlamaları yaparak bir domain olarak da erişebilmenize olanak sunması. Gerekli ayarları configuration tab altında bulabilmeniz mümkün.
 
->Stax.net in güzel bir özelliği ise mysql veritabanı sunması.
+> Stax.net in güzel bir özelliği ise mysql veritabanı sunması.
 
 Beta sürecinde bile olsa, verdikleri hizmetler acısından ve de ücretsiz olarak java uygulamanızı yayınlayabileceğiniz yer sunmaları acısından başarılı buldum. Bu konuda bir pazarın eksik olduğu kesin.

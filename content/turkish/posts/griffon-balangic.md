@@ -17,35 +17,35 @@ Griffon indirdekten sonra, bazı ayarlar yapmanız gerekiyor. Buradan bilgi alar
 
 Grails de olduğu gibi griffon ile bir proje acmak çok kolay.
 
-```bash
+```sh
 griffon create-app
 ```
 
 Evet sadece bu kadar. Peki hatırlayalım, grails de bir projeyi çalıştırmak için ne yapıyorduk ?
-```bash
+```sh
 grails run-app
 ```
 
 Tahmin edebileceğiniz gibi griffon da bir proyi çalıştırmak grails de projeyi çalıştırmak gibi.
-```bash
+```sh
 griffon run-app
 ```
 
 Java da çeşitli uygulamaları denince applet de akla gelir. Peki bir griffon ile bir applet nasıl yazarız? Cevap çok kolay herhangi bir şey yapmanıza gerek yok: sadece uygulamanızı yazın ve calistirirken şu sekilde çalıştırın.
 
-```bash
+```sh
 griffon run-applet
 ```
 
 Aklınıza applet güzel ama biz bunu web den calistirabilir bir sekilde nasıl yazarız diye gelebilir. Hemen onun da cevabını söyleyeyim.
 
-```bash
+```sh
 griffon run-webstart
 ```
 
 Projenizi yazdınız ve deployment yapmak istiyorsunuz. Grails de olduğu gibi
 
-```bash
+```sh
 griffon dev package
 ```
 
@@ -55,20 +55,20 @@ demeniz yeterli. Bu sizin için standolone, applet, webstart için paketleri olu
 
 Swing ve java ile ugrastiysaniz, jar dosyasını dağıtmanın hiç de mantıklı olmadıgını bilirsiniz. Size tavsiyem installer adında bir plugin var, onu kullanmanızı tavsiye ederim.
 
-```bash
+```sh
 griffon installer-plugin installer
 ```
 
 Plugin kurduktan sonra şu sekilde projenizi paket oluşturabilirsiniz. Bu size MAC OS, Windows ve debian için kurulum paketleir hazirlayacaktir.
 
-```bash
+```sh
 griffon package dmg izpack deb
 ```
 
 Griffon Archtype
 Eğer Groovy bilmiyorsanız, güzel bir haberim var: griffon scala, Java, jython … dillerini de destekliyor. Projenizi olustururken archtype belirterek projenizi istediğiniz bir dilde yazabilirsiniz.
 
-```bash
+```sh
 griffon create-app -archtype=scala
 griffon create-app -archtype=java
 ```

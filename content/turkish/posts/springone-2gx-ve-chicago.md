@@ -15,7 +15,7 @@ Chicago da ilk dikkatimi çeken nokta mimari yapısı oldu. Planlamaları çok i
 
 Burada bisiklet çok seviliyor, bisiklet yolları yapılmış. Sürekli yanından bisikletle birileri geçiyor. Tabi golün kenarında bu güzel manzarada bisiklet sürmek eğlenceli olsa gerek.
 
-Spora da çok dikkat ediyorlar. Amerikaya gelmeden önce Amerikan halkı obez tabirini çok duymuştum , belki buraya has bir ozelliktir, ama herkes spor yapıyor. Birtek spor yapmayan benim gibi misafirler galiba :)
+Spora da çok dikkat ediyorlar. Amerikaya gelmeden önce Amerikan halkı obez tabirini çok duymuştum , belki buraya has bir ozelliktir, ama herkes spor yapıyor. Birtek spor yapmayan benim gibi misafirler galiba 😀
 
 Trafik ise pek kalabalık görmedim; yalnız sabah erken saatte televizyona baktığımda hava durumu gibi trafik haberlerinin verildiğini gördüm. “The Loop” adı verilen bir tren sistemi var. Bugün yanlışlıkla bindigim hat ile sehir dısını da görme şansım oldu. Sehir merkezinin dısında güzel yerleşim yerleri var, 2-3 katlı müstakil evler. Muhtemelen insanlar şehir dısında yaşayıp, sehir merkezinde çalışıyor. Trafiğin nedeni bu olsa gerek.
 

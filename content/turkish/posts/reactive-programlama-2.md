@@ -23,7 +23,6 @@ Imperative programlamanın tam tersi ise declerative programlamadır. Burada as�
 Ilk ornekte yer alan [compleks matematik problemini](#imperative-style)  reactive seklinde yazmak istiyorsak su sekilde bir kod yazmamız gerekirdi. Kısaca açıklamak gerekirse burada bir [accumalator](https://towardsdatascience.com/what-is-tail-recursion-elimination-or-why-functional-programming-can-be-awesome-43091d76915e) kullanıyoruz. Bu sayede stack-overflow error almayı engellemis oluyoruz.
 
 ```java
-
 public class ComplexMath {
 
   private int sumAcc(final Iterator<Integer> xs,final Integer accumulator) {

@@ -20,9 +20,9 @@ Genel olarak tasarım modelleri 3 kategoride değerlendirilir:
 
 ### Yaratım Desenleri:
 
-* Soyut Fabrika ( Abstract Factory)
-* Yapıcı (Builder)
-* Fabrika Yöntemi (Factory Method)
+* [Soyut Fabrika ( Abstract Factory)](/tr/posts/java-ile-tasarim-desenleri-soyut-tasarim-deseni)
+* [Yapıcı (Builder)](/tr/posts/java-ile-tasarim-desenleri-yapici-tasarim-deseni)
+* [Fabrika Yöntemi (Factory Method)](/tr/posts/java-ile-tasarim-desenleri-fabrika-yontemi)
 * Örnek (Prototype)
 * Yegane(Singleton)
 

@@ -4,6 +4,7 @@ title= "Scala ile Asal Sayı Tespiti"
 slug="scala-ile-asal-sayiti-tespiti"
 tags= ["java","scala"]
 categories= ["Genel","Yazilim gelistirme","Scala"]
+draft= true
 +++
 
 

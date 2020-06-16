@@ -109,4 +109,4 @@ public class Main {
 
 Bu örnekte aşcımız bir Türk kahvesi yapmaktadır. Kaynak kodu indirip çalıştırdığınızda aşağıdaki gibi bir sonuc cıkacaktır.
 
-Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları [DesignPatterns](http://github.com/rayyildiz/DesignPatterns "Design Patterns") adresinden ulaşabilirsiniz.
+Bu ve zamanla uygulanan diğer tasarım desenleri hakkındaki örnek uygulamaları [DesignPatterns](http://github.com/rayyildiz/DesignPatterns) adresinden ulaşabilirsiniz.

@@ -7,9 +7,9 @@ categories= ["Genel","Yazilim gelistirme"]
 +++
 
 
-Uzun süredir beklediğim SpringOne 2GX ilk gunü geride kaldı. Katılımın yüksek olacağı bir etkinliğe benziyor. Bugün gerçekleştirilen “Keynote” çok kalabalıktı .Bu kadar kalabalık olacağını tahmin etmemiştim.
+Uzun süredir beklediğim SpringOne 2GX ilk gunü geride kaldı. Katılımın yüksek olacağı bir etkinliğe benziyor. Bugün gerçekleştirilen _Keynote_ çok kalabalıktı .Bu kadar kalabalık olacağını tahmin etmemiştim.
 
-“Keynote” bir hosgeldiniz ve etkinlik kapsamında hangi konuların islenecegi bilgisinin verildiği bir toplantiydi.
+_Keynote_ bir hosgeldiniz ve etkinlik kapsamında hangi konuların islenecegi bilgisinin verildiği bir toplantiydi.
 
 ![Springone Keynote](/images/springone-keynote.jpg)
 

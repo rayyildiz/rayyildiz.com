@@ -22,19 +22,22 @@ Github sitesinde ihtiyacınıza göre üye olmanız gerekmekte. Yeni bir proje a
 Yeni proje açtktan sonra yapmanız gereken git ile ilk halini almak. Git, bilgisayarınıza indirdikten sonra promt dan aşağıdaki adımları yapmanız gerekiyor. (Windows için tafsiyem msysgit i denemeniz)
 Genel ayarlar
 
-    git config –global user.name “ADINIZ SOYADINIZ”
-    git config –global user.email [eposta adresiniz]
+```sh
+git config –global user.name “ADINIZ SOYADINIZ”
+git config –global user.email [eposta adresiniz]
+```
 
 Projeyi Almak için
-
-    mkdir [projenizi_adi]
-    cd [projenizi_adi]
-    git init
-    touch README
-    git add README
-    git commit -m ‘mesajınız”
-    git remote add origin [projenizin adresi] – — örnek: git@github.com:rayyildiz/test_project.git
-    git push origin master
+```sh
+mkdir [projenizi_adi]
+cd [projenizi_adi]
+git init
+touch README
+git add README
+git commit -m "mesajınız"
+git remote add origin [projenizin adresi] – — örnek: git@github.com:rayyildiz/test_project.git
+git push origin master
+```
 
 Github, ana klaösrde README klasörü kullanmanızı tafsiye etmektedir. Bu şekilde, projenizin sayfanızda bu sayfanın içeriğini göstermektedir.
 
@@ -42,14 +45,16 @@ Github, ana klaösrde README klasörü kullanmanızı tafsiye etmektedir. Bu şe
 
 Bazı derleme sonucunda ğretilen dosyaları git içinde yer almasını istemezsiniz. Bu durumda yapmanız gereken projenizin ana sayfasında .gitignore diye bir dosya açıp içine istemediğinizi klasör, uzantıları veya dosyaları çıkarmaktır. Bir ASP.NET 3.5 projesinde bin/debug klasörü, .uso gibi dosyalar sürekli değişmekte ve sıkıntı yaşatmaktadır. Bir asp.net projesi için aşağıdaki dosyayı kullanabilirsiniz.
 
-	.svn*
-	obj/
-	bin/
-	*.suo
-    *.user
-    Log/
-    log/
-    *.db
+```
+.svn*
+obj/
+bin/
+*.suo
+*.user
+Log/
+log/
+*.db
+```
 
 Çoğunlukla kullandığınız IDE ler için git plugin geliştirlmiştir. Ancak konsoldan git projesi ile çalışmak çok zevkli :)
 Github duyurduğu haberde, github da yer alan projelerinizi artık svn ile de erişebilecek, code gönderip alabileceksiniz. √áok güzel bir gelişme. Özellikle şu günlerde, git plugin sayısı SVN plugin sayısından az olduğunu düşündüğümüzde, svn kullanan bir kişinin alışkanlığını şimdilik değiştirmesine gerek yok demektir.
