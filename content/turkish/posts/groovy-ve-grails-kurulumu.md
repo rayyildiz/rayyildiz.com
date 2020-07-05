@@ -9,17 +9,17 @@ categories= ["Genel"]
 
 ## Groovy Nedir?
 
-![Groovy](/images/groovy_medium.jpg)
+![Groovy](/images/groovy_medium.jpg#floatleft)
 
 Groovy JVM çalışan bir dinamik bir scripting dildir. Groovy bünyesinde, python, ruby, perl ve smaltalk programlama dillerinden özellikler içerdiği gibi, java kütüphanelerini kullanması, Groovy’ye oldukça önemli artı katmaktadır. Groovy, yazılan bir kodu direkt JVM bytecode çevirir.
 
 Eclipse, NetBeans ve Intellij Idea da geliştirilmiş eklentiler sayesinde groovy geliştirebilirsiniz.
 
-Groovy hakkında daha detaylı bilgi için <http://groovy.codehaus.org/ bakabilirsiniz.>
+Groovy hakkında daha detaylı bilgi için [bakabilirsiniz](http://groovy.codehaus.org/).
 
 ## Grails Nedir?
 
-![Grails Logo](/images/grails_logo1.jpg)
+![Grails Logo](/images/grails_logo.jpg#floatleft)
 
 Grails, groovy programlama dilinde yazılmış, bir web catısıdr ( web framework). Grails ilk başlarda bilindiği gibi “Groovy on Rails” dir. Yani bir nevi “Ruby On Rails” in, Groovy ile gerçekleştirilmiş halidir.
 
@@ -56,7 +56,7 @@ Grails indirme sayfasına giderek, en son kararlı sürümünü indiriniz. Daha 
 
 Grails kurulumu bu adım yeterlidir. Kullandığınız IDE, size grails kurulum dizinini soracaktır. Ancak yineden GRAILS_HOME cevre değişkeni tanımlarsanız çok sağlıklı olacaktır. Aşağıdakı satırı .bashrc dosyasına ekleyiniz.
 	
-```sh
+```bash
 export GRAILS_HOME=/developer/grails-1.3.3
 export PATH=$PATH:$GRAILS_HOME/bin
 ```

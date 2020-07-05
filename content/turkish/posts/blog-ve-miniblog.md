@@ -13,9 +13,11 @@ Aslında blog, günlük anlamınıda içerdiği için ilk gelişim tarihini gün
 Bazı blog servisleri ve özellikler şu şekildedir:
 
 ### Blogger.com:
+
+![blogger](/images/blogger1.jpg#floatleft)
 Blogger 2003 yılında Google tarafından satın alındı. Özellikle Google hizmetlerini hızlı şekilde kullanılabildiği ücretsiz bir servis olan blogger, birçok dil desteği sunmaktadır. Farklı blogların iletişimi, birden fazla blog acılabilmesi, hızlı bir şekilde içerik girilebilmesi, cok iyi derecede google hizmetlerini kullanabilmesi artı özelliklerindendir. Özellikle kişisel amaçlı blog için çok iyidir.
 
-![blogger](/images/blogger1.jpg)
+
 
 ### Blog.com:
 Domain il kayıt eidlenlenlerden birisi olan blog.com, ismine göre cokgeride kalmıştır. Özellikle yetersiz dil desteği ve performans problemi onu yeterli bir saygınlığa kavuşturamamıştır.
@@ -35,11 +37,13 @@ Bu servis sizin şu anda ne yaptığınız tutmak için kullanılan bir servisti
 
 
 ### Okunuyoruz.Biz:
+
 İdris Cin adındaki bir Türk blog yazarı tarafındangeliştirlen bu servis, en cok hangi konların beğenildiği ve konuların ne kadar okunduğpu gibi bilgileri sunan bir servistir. Bütün bu bilgileri istatistiki bilgi olarak sunan bu servis, bloglardaki içerik kalitesini artırmaya yönelik geliştirilmiştir.
 
-![Springwidget1](/images/springwidget1.jpg)
 
 ### Feedburner:
+
+![Springwidget1](/images/springwidget1.jpg#floatleft)
 Bu hizmet içinde birçok güzel miniblog içerir. Google satın aldığı bu hizmet, blog ziyaret bilgilerinin tutulması, haber listesi tarzı yönetim, site abone yönetimi, springwidget... gibi birçok servis içerir. çok aktif olarak kullanılan bu servisleri 750 bin kişi tercih etmektedir.
 
 Blog ve yakınzamanda miniblog özellikle kişisel amaçlı bir site için gerekli tüm hizmetleri yerine getirmekyedirler. Ancak buradaki en büyük sorun, içeriklerin kalitesinin düşmesi. çoğunlukla başka bloglardan alınan yazıların, kaynak gösterilmeden yayınlanması, her konuda yazıların yazılması bloglar içinde içerik kalitesini düşürmeye başlamıştır. Ancak genede blog okurlarının sayısının süreekli artması, yeni blogların sürekli acılması okuma seviyesi düşük bir toplum acısından düşündüğümüzde olumlu bir gelişmedir. Umarız kaliteli blogların sayısında arta olur.

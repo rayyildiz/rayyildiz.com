@@ -51,9 +51,11 @@ griffon dev package
 
 demeniz yeterli. Bu sizin için standolone, applet, webstart için paketleri olusuturacaktir. Hatta applet için self signed bir sertifika ile oluşturacaktir.
 
-![Griffon](/images/griffon.jpg)
+![Griffon](/images/griffon.jpg#floatleft)
 
 Swing ve java ile ugrastiysaniz, jar dosyasını dağıtmanın hiç de mantıklı olmadıgını bilirsiniz. Size tavsiyem installer adında bir plugin var, onu kullanmanızı tavsiye ederim.
+
+<span>&nbsp;</span>
 
 ```sh
 griffon installer-plugin installer

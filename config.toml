@@ -3,7 +3,7 @@ title = "Ramazan AYYILDIZ"
 
 theme = "coder"
 
-googleAnalytics ="UA-765318-11"
+# googleAnalytics ="UA-765318-11"
 languagecode = "en"
 
 paginate = 25
@@ -48,7 +48,7 @@ enableRobotsTXT = true
     inverted = false
 
     # Custom CSS
-    custom_css = []
+    custom_css = ["custom.css"]
 
 [[params.social]]
     name = "Github"
