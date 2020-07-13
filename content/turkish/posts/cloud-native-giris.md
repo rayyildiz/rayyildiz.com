@@ -4,6 +4,7 @@ title= "Cloud Native Giriş"
 slug="cloud-native-giris"
 tags= ["go","cloud","cloud native"]
 categories= ["cloud"]
+draft=true
 +++
 
 ## Giris
