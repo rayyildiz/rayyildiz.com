@@ -10,8 +10,7 @@ categories= ["Genel","Mobil"]
 
 Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
 
-![Sqlite](/images/sqlite1.gif)
-
+![Sqlite](/images/sqlite1.gif#floatleft)
 [Sqlite](http://www.sqlite.org/), oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi [test edilmiş](http://www.sqlite.org/th3.html) bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir.
 
 Bu giriş bilgilerinden sonra örnek bir uygulama geliştirelim. Uygulamamız, ad, soyad ve telefon numarası kayıt edeceğimiz bir “customer” tablosu olsun. Linux ‘ta sqliteman gibi bir uygulama ile veritabanınızı oluştururun. Örneğimizde kullanacağımız tablonun scripti şu şekildedir:
@@ -182,7 +181,7 @@ public class AddCustomerActivity extends Activity {
 }
 ```
 
-Ve Main Activity şu şekildedir
+Ve Main Activity şu şekildedir:
 
 ```java
 public class MainActivity extends Activity {
@@ -308,7 +307,7 @@ public class MainActivity extends Activity {
 
 Örnek uygulamamızın ekran görüntüleri
 
-![Add Customer](/images/add_customer1.jpg)
+![Add Customer](/images/add_customer1.jpg#floatleft)
 
 ![List Customers](/images/list_customers1.jpg)
 

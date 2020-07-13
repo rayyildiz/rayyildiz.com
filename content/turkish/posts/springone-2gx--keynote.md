@@ -11,7 +11,7 @@ Uzun süredir beklediğim SpringOne 2GX ilk gunü geride kaldı. Katılımın y�
 
 _Keynote_ bir hosgeldiniz ve etkinlik kapsamında hangi konuların islenecegi bilgisinin verildiği bir toplantiydi.
 
-![Springone Keynote](/images/springone-keynote.jpg)
+![Springone Keynote](/images/springone-keynote.jpg#floatright)
 
 SpringOne ilk süprizini Keynote da öğrendik. [Rod Johnson](https://twitter.com/springrod) kolunu kırmış olması ve doktorunun uçma yasağı nedeniyle etkinliğe katılamamasiydi. Ben SpringOne ilk kez katılıyorum ama ben bile etkinliğin Rod olmadan başladığını hatırlamıyorum. Bu Rod un katılmadığı ilk etkinlik olacak. Bunun yaninda Graeme Rocher soğuk algınlığı almış herhalde, sesi çok kötüydü.
 
