@@ -8,12 +8,9 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    # env:
-    #   GIT_COMMIT_SHA_SHORT: "github"
-    #   GIT_COMMIT_SHA: ""
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           submodules: true
 
