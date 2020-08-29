@@ -4,6 +4,7 @@ title= "Android Giriş"
 slug="android-giris"
 tags= ["android", "java", "mobile programlama"]
 categories= ["Mobil"]
+series = ["Android"]
 +++
 
 

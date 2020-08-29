@@ -4,6 +4,7 @@ title= "Android Platformunda Tablı Ekranlar"
 slug="android-tabli-ekranlar"
 tags= ["android","java"]
 categories= ["Genel","Mobil"]
+series = ["Android"]
 +++
 
 

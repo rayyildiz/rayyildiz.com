@@ -4,6 +4,7 @@ title= "Android Uygulamalarında Veritabanı İşlemleri"
 slug="android-uygulamalarinda-veritabani-islemleri"
 tags= ["android","java","database"]
 categories= ["Genel","Mobil"]
+series = ["Android"]
 +++
 
 

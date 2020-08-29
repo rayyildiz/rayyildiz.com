@@ -4,6 +4,7 @@ title= "Impereative Programlama"
 slug="reactive-programlama-1"
 tags= ["java","Software Development"]
 categories= ["Genel"]
+series = ["Reaktif Programlama"]
 +++
 
 Reaktif programlamaya acıklamaya calışacağım bu yazı dizisinde ile ilgili diğer yazılar:

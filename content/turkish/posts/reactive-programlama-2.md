@@ -4,6 +4,7 @@ title= "Reactive Programlama"
 slug="reactive-programlama-2"
 tags= ["java","Software Development"]
 categories= ["Genel"]
+series = ["Reaktif Programlama"]
 +++
 
 Reaktif programlamaya açıklamaya calışacağım bu yazı dizisinde ile ilgili diğer yazılar:

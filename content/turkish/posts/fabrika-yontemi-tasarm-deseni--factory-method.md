@@ -4,6 +4,7 @@ title= "Fabrika Yöntemi Tasarım Deseni ( Factory Method )"
 slug="java-ile-tasarim-desenleri-fabrika-yontemi"
 tags= ["java","Design Pattern","Software Development"]
 categories= ["Genel"]
+series = ["Design Pattern"]
 +++
 
 

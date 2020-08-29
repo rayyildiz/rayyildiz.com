@@ -45,6 +45,8 @@ enableRobotsTXT = true
     rtl = false
 
     disable_comments = false
+    enableTwemoji = true
+    maxSeeAlsoItems = 5
 
     # Use inverted colors
     inverted = false
@@ -133,15 +135,20 @@ enableRobotsTXT = true
            # dateformat = "Jan 2, 2006"
 
         [languages.tr.menu]
-            [[languages.tr.menu.main]]
-            name = "Java"
-            weight = 1
-            url = "/tr/tags/java/"
+            # [[languages.tr.menu.main]]
+            # name = "Java"
+            # weight = 1
+            # url = "/tr/tags/java/"
 
             [[languages.tr.menu.main]]
-            name = "Yazılım Geliştirme"
+            name = "Cloud Computing"
             weight = 3
-            url = "/tr/tags/software-development/"
+            url = "/tr/series/cloud-computing/"
+
+            [[languages.tr.menu.main]]
+            name = "Yazı Dizileri"
+            weight = 4
+            url = "/tr/series"
 
             [[languages.tr.menu.main]]
             name = "Tüm Yazılar"

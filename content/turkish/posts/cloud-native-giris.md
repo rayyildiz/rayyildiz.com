@@ -5,6 +5,7 @@ slug="cloud-native-giris"
 tags= ["go","cloud","cloud native"]
 categories= ["cloud"]
 draft=true
+series = ["Cloud Computing"]
 +++
 
 ## Giris

@@ -4,6 +4,7 @@ title= "Soyut Fabrika Tasarım Deseni (Abstract Factory)"
 slug="java-ile-tasarim-desenleri-soyut-tasarim-deseni"
 tags= ["java","Design Pattern","Software Development"]
 categories= ["Genel"]
+series = ["Design Pattern"]
 +++
 
 

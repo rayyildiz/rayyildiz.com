@@ -4,6 +4,7 @@ title= "Yapıcı Tasarım Deseni (Builder Design Pattern)"
 slug="java-ile-tasarim-desenleri-yapici-tasarim-deseni"
 tags= ["java","Design Pattern","Software Development"]
 categories= ["Genel"]
+series = ["Design Pattern"]
 +++
 
 

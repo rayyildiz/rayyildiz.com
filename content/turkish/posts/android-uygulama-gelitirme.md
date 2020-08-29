@@ -4,6 +4,7 @@ title= "Android Uygulama Geliştirme"
 slug="android-uygulama-gelistirme"
 tags= ["android","java"]
 categories= ["Genel","Mobil"]
+series = ["Android"]
 +++
 
 

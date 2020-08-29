@@ -4,6 +4,7 @@ date: 2020-05-01T21:13:24+02:00
 draft: true
 tags: ["go"]
 categories: ["Yazilim Gelistirme","Go"]
+series: ["Go"]
 ---
 
 # Giris

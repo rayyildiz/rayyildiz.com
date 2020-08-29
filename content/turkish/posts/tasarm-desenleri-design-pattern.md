@@ -4,6 +4,7 @@ title= "Tasarım Desenleri (Design Pattern)"
 slug="java-ile-tasarim-desenleri"
 tags= ["java","Design Pattern","Software Development"]
 categories= ["Genel"]
+series = ["Design Pattern"]
 +++
 
 

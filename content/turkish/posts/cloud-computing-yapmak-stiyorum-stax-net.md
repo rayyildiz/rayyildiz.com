@@ -4,6 +4,7 @@ title= "Cloud Computing Yapmak İstiyorum:Stax.net"
 slug="cloud-computing-cozumu-stax-net"
 tags= ["java", "Cloud","BigData"]
 categories= ["Genel"]
+series = ["Cloud Computing"]
 +++
 
 
