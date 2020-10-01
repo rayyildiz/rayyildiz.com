@@ -74,13 +74,13 @@ enableRobotsTXT = true
 
 [[params.social]]
     name = "Stackshare"
-    icon = "fa fa-cubes"
+    icon = "fa fa-terminal"
     weight = 4
     url = "https://stackshare.io/rayyildiz/stack"
 
 [[params.social]]
     name = "Json"
-    icon = "fa fa-hashtag"
+    icon = "fa fa-code"
     weight = 5
     url = "https://api.rayyildiz.com"
 
