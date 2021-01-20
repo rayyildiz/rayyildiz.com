@@ -66,11 +66,11 @@ enableRobotsTXT = true
     weight = 2
     url = "https://twitter.com/rayyildiz"
 
-[[params.social]]
-    name = "LinkedIn"
-    icon = "fa fa-linkedin"
-    weight = 3
-    url = "https://www.linkedin.com/in/rayyildiz"
+# [[params.social]]
+#     name = "LinkedIn"
+#     icon = "fa fa-linkedin"
+#     weight = 3
+#     url = "https://www.linkedin.com/in/rayyildiz"
 
 [[params.social]]
     name = "Stackshare"
