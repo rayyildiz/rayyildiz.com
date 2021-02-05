@@ -14,7 +14,7 @@ pygmentsstyle = "dracula"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "rayyildiz"
+# disqusShortname = "rayyildiz"
 enableRobotsTXT = true
 
 [taxonomies]
