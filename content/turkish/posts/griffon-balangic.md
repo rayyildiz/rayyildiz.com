@@ -3,7 +3,7 @@ date= "2011-10-29"
 title= "Griffon Başlangıç"
 slug="griffon-baslangic"
 tags= ["java","groovy"]
-categories= ["Genel","Yazilim gelistirme"]
+categories= ["Arsiv","Yazilim gelistirme"]
 +++
 
 Chicago da gerçekleştirilen SpringOne2GX etkinliği kapsamında epey ilginç ve de güzel seyler gördüm. Etkinliğin son gunü, paralel giden konferanslardan sonuncusunda herhangi bir bilgimin olmadigi ve diğer konuları beğenmediğinden dolayı Griffon a katılmayı tercih ettim. Hakkında çok az şey biliyordum. Ancak sunu soylemeliyim ki etkinlik kapsamında bu kadar beni şaşırtan konu olmamıştı. Bu nedenle hakkında bazı bilgileri paylaşma gereği duyuyorum.

@@ -2,7 +2,7 @@
 date= "2009-03-13"
 title= "Google Chrome"
 slug="google-chrome-tarayici"
-categories= ["Genel"]
+categories= ["Arsiv"]
 +++
 
 

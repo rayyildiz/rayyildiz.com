@@ -3,7 +3,7 @@ date= "2010-08-01"
 title= "Ubuntu Oracle Kurulumu ve İlk Ayarı"
 slug="ubuntu-console-ile-oracle-jdk-kurulumu"
 tags= ["java","ubuntu"]
-categories= ["Genel"]
+categories= ["Arsiv"]
 +++
 
 

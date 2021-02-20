@@ -3,7 +3,7 @@ date= "2009-02-22"
 title= "Java da PHP:Quercus"
 slug= "java-php-kosturmak"
 tags= ["java","php"]
-categories= ["Yazilim Gelistirme"]
+categories= ["Arsiv","Yazilim Gelistirme"]
 +++
 
 

@@ -3,7 +3,7 @@ date= "2011-02-19"
 title= "Groovy Programlamaya Giriş"
 slug="groovy-programlamaya-giris"
 tags= ["java","groovy"]
-categories= ["Genel","Yazilim gelistirme"]
+categories= ["Arsiv","Yazilim gelistirme"]
 +++
 
 

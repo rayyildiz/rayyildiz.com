@@ -94,7 +94,7 @@ enableRobotsTXT = true
         # You can configure the theme parameter for each language.
         [languages.en.params]
             author = "Ramazan AYYILDIZ"
-            info = "Software Engineer"
+            info = ""
             description = "Ramazan AYYILDIZ's personal website"
             keywords = "blog,developer,personal"
 
@@ -130,7 +130,7 @@ enableRobotsTXT = true
             author = "Ramazan AYYILDIZ"
             description = "Ramazan AYYILDIZ'in kisiel websitesi"
             keywords = "blog,developer,kişisel"
-            info = "Senior Software Architect"
+            info = ""
             footercontent = "<a href='https://github.com/rayyildiz/rayyildiz.com/blob/master/LICENSE'>Copytight</a> © rayyildiz.com"
            # dateformat = "Jan 2, 2006"
 
@@ -139,21 +139,22 @@ enableRobotsTXT = true
             # name = "Java"
             # weight = 1
             # url = "/tr/tags/java/"
+            [[languages.tr.menu.main]]
+            name = "Tüm Yazılar"
+            weight = 2
+            url = "/tr/posts/"
 
             [[languages.tr.menu.main]]
-            name = "Cloud Computing"
-            weight = 3
-            url = "/tr/series/cloud-computing/"
+            name = "Arşiv"
+            weight = 4
+            url = "/tr/categories/arsiv/"
 
             [[languages.tr.menu.main]]
             name = "Yazı Dizileri"
-            weight = 4
+            weight = 3
             url = "/tr/series"
 
-            [[languages.tr.menu.main]]
-            name = "Tüm Yazılar"
-            weight = 10
-            url = "/tr/posts/"
+
 
             # [[languages.tr.menu.main]]
             # name = "Projeler"

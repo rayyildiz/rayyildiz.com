@@ -3,7 +3,7 @@ date= "2009-03-09"
 title= "Netbeans 6.9"
 slug="netbeans-6-9-ozellikleri"
 tags= ["java", "ide","netbeans"]
-categories= ["Genel"]
+categories= ["Arsiv"]
 +++
 
 

@@ -3,7 +3,7 @@ date= "2010-08-02"
 title= "Oyun Geliştirmek için Hangi Programlama Dili"
 slug="oyun-gelistirmek-icin-hangi-programlama-dili"
 tags= ["java","Oyun Gelistirme"]
-categories= ["Genel"]
+categories= ["Arsiv"]
 +++
 
 

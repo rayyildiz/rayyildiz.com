@@ -3,7 +3,7 @@ date= "2009-03-22"
 title= "Java Migration Tool Migrate4j"
 slug="java-migration-tool-migrate4j"
 tags= ["java", "database"]
-categories= ["Genel"]
+categories= ["Arsiv"]
 +++
 
 

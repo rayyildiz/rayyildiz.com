@@ -3,7 +3,7 @@ date= "2013-05-25"
 title= "Posterous, Google Reader"
 slug="postreus-ve-google-reader"
 tags= []
-categories= ["Genel"]
+categories= ["Arsiv"]
 +++
 
 

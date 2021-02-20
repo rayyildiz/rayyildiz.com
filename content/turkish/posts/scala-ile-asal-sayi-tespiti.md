@@ -3,7 +3,7 @@ date= "2012-10-27"
 title= "Scala ile Asal Sayı Tespiti"
 slug="scala-ile-asal-sayiti-tespiti"
 tags= ["java","scala"]
-categories= ["Genel","Yazilim gelistirme","Scala"]
+categories= ["Arsiv","Yazilim gelistirme"]
 draft= true
 +++
 

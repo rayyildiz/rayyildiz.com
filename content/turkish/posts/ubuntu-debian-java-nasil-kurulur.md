@@ -3,7 +3,7 @@ date= "2009-03-20"
 title= "Ubuntu/Debian Java Nasıl Kurulur"
 slug="ubuntu-debian-da-java-nasil-kurulur-giris"
 tags= ["ubuntu", "java", "debian","kurulum"]
-categories= ["Genel"]
+categories= ["Arsiv"]
 +++
 
 

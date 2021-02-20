@@ -3,7 +3,7 @@ date= "2010-08-05"
 title= "Groovy ve Grails Kurulumu"
 slug="groovy-ve-grails-kurulumu"
 tags= ["java","groovy"]
-categories= ["Genel"]
+categories= ["Arsiv"]
 +++
 
 
