@@ -68,7 +68,7 @@ COTS getirdiği faydalar gibi sahip olduğu bir takım hatalarda da vardır.
 
 Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.
 
-# Referanslar
+## Referanslar
 
 1. COTS Classificiton: A proposal by- Marco Torchiano ( Marco.Torchiano@idi.ntnu.no ) <http://www.idi.ntnu.no/~marco/>
 

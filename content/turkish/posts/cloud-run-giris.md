@@ -8,8 +8,6 @@ draft= true
 
 Ilk kez 2019 [GoogleNext etkinliginde](https://twitter.com/steren/status/1115648277356077058) duyruluan [Cloud Run](https://cloud.google.com/run), [Google](https://cloud.google.com) tarafindan gelistirilen bir serverless cozumudur. 
 
-
-
 ## Knative
 
 ![knative](/images/knative.jpg#floatleft)

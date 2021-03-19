@@ -15,7 +15,7 @@ Reaktif programlamaya acıklamaya calışacağım bu yazı dizisinde ile ilgili 
 
 > Bütün terimlerin Türkçe'sini çevirmek biraz zor olduğu ve internette araştırma yaptığınızda orijinal tabirleri bulacağınız için, bu yazi dizisinde terimlerin orijinallerini kullanmaya calısacağım.
 
-# Giriş
+## Giriş
 
 Üniversitede bilgisayar bilimleri veya programala iceren benzer bölümlerden mezun olan birçok kişi muhtemelen [Oject Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming) biliyordur. Ben de diğer birçok kişi gibi programlaya [Pascal](https://www.freepascal.org/) ile başladım. Daha sonra ise [C](https://gcc.gnu.org/),[C++](http://www.cplusplus.com/), ve [Java](https://openjdk.java.net/) şeklinde bir öğrenme süreci gördüm.
 

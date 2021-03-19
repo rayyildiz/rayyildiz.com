@@ -20,18 +20,18 @@ Google Chrome Tanıyalım
 
 Google Chrome, cıkarmadan önce Scott McCloud- tarafından hazırlanan karikatürle tanıtımı yapıldı. Tanıtımı yine google ın Sürpriz sunumlarından birisi olarak gerçekleşti.
 
-http://www.google.com/chrome adresinden indirebileceğiniz google chrome, ilk kurduğunuzda hemen ilk göreceğiniz ‚Äúçok sade' özelliği olacak. Yaptığı tüm uygulamalarındaki esas özelliği sadelik olan google, tarayıcısını da cok sade bir şekilde yapmış.
+<http://www.google.com/chrome> adresinden indirebileceğiniz google chrome, ilk kurduğunuzda hemen ilk göreceğiniz ‚Äúçok sade' özelliği olacak. Yaptığı tüm uygulamalarındaki esas özelliği sadelik olan google, tarayıcısını da cok sade bir şekilde yapmış.
 
 ![chrome](/images/chrome_21.jpg)
 
-## Olumlu Özellikleri:
+## Olumlu Özellikleri
 
 * Chrome ilk baktığınızda ilk özelliği sadelik olması olacaktır. Ayrıca ekran cok ergonomik kullanılmış ve şimdiye kadarki- tarayıcıların aksine sekmeler bile tarayıcının başlık cubuğu üzerine konulmuş. Bu sayede cok geniş bir tarayıcı ekranı olarak göze carpıyor.
 
 * Yine ilk dikkatini cekeceği özelliği cok hızlı olması. Gerek Internet Explorer gerekse Firefox a göre cık hızlı şekilde açılıyor. Aynı şekilde google gear kullanıyor olmasından dolayı, siteleri açma hızı cok yüksek.
 
 * Chrome, safari tarayıcısında da kullanılan webkit motorunu kullanıyor. Bu motor sayesinde, siteleri aynen safaride olduğu gibi tek resimmiş gibi göstererek, sitelerin bir bütünlük cercevesinde gösteriyor. Bu da sitelerin daha güzel görünmesine neden oluyor.
- 
+
 * Chrome içinde V8 adını verdiği yeni bir javascript motoruyla geliyor. Bu motor sayesinde gün gectikçe önemi artan javascript leri cok daha hızlı çalıştırmayı hedefliyor. Şimdilik fena gözükmeyene v8, özellikle google ın kendi uygulamalarında cok ciddi fark oluşturuyor.
 
 * Opera kullanıcıları bildiği SpeedDial özelliğini içinde barındırıyor. Yani son gezdiğiniz siteleri küçük resimlerle size tavsiyede bulunuyor.
@@ -44,7 +44,7 @@ http://www.google.com/chrome adresinden indirebileceğiniz google chrome, ilk ku
 
 * Açık kaynak olması güzel bir artı olarak yanında duruyor.
 
-## Olumsuz Özellikleri:
+## Olumsuz Özellikleri
 
 * Özellikle firefox kullanıcılarının ilk şikayet edecekleri, ‚Äúneden plugin desteği yok?' sorusu olacaktır. Evet ilk dikakti ceken olumsuz özelliği eklenti desteğinin olmayışı.
 

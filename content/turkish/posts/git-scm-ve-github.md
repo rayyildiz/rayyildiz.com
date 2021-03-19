@@ -28,7 +28,8 @@ git config –global user.email [eposta adresiniz]
 ```
 
 Projeyi Almak için
-```sh
+
+```shell
 mkdir [projenizi_adi]
 cd [projenizi_adi]
 git init
@@ -45,7 +46,7 @@ Github, ana klaösrde README klasörü kullanmanızı tafsiye etmektedir. Bu şe
 
 Bazı derleme sonucunda ğretilen dosyaları git içinde yer almasını istemezsiniz. Bu durumda yapmanız gereken projenizin ana sayfasında .gitignore diye bir dosya açıp içine istemediğinizi klasör, uzantıları veya dosyaları çıkarmaktır. Bir ASP.NET 3.5 projesinde bin/debug klasörü, .uso gibi dosyalar sürekli değişmekte ve sıkıntı yaşatmaktadır. Bir asp.net projesi için aşağıdaki dosyayı kullanabilirsiniz.
 
-```
+```dotfiles
 .svn*
 obj/
 bin/

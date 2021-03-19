@@ -23,8 +23,8 @@ Bu örneği yapabilmek için 3 tane proje oluşturalım. Bu 3 proje ve açıklam
 ![Project Tree](/images/project_tree1.jpg)
 
 Arayüzün yer aldığı UserAuth projesinde farklı olarak META-INF/services klasörü- ve bu klasör içinde com.rayyildiz.userauth.IUserAuthService dosyası yer almaktadır. Bu dosya içine bakarsanız sadece bir satır yer almaktadır.
-	
-```
+
+```properties
 com.rayyildiz.userauth.impl.UserAuthService
 ```
 
@@ -39,15 +39,15 @@ import java.util.Iterator;
 import java.util.ServiceLoader;
 
 public class Main {
-	public static void main(String[] args) {
-		ServiceLoader<IUserAuthService> loader = ServiceLoader.load(IUserAuthService.class);
-		Iterator<IUserAuthService> iterator = loader.iterator();
-		while(iterator!= null && iterator.hasNext()){
-			IUserAuthService userAuthService = iterator.next();
-			boolean login = userAuthService.login("demo", "password");
-			System.out.println("Login for username: demo and password:password is " + login);
-		}
-	}
+    public static void main(String[] args) {
+        ServiceLoader<IUserAuthService> loader = ServiceLoader.load(IUserAuthService.class);
+        Iterator<IUserAuthService> iterator = loader.iterator();
+        while(iterator!= null && iterator.hasNext()){
+            IUserAuthService userAuthService = iterator.next();
+            boolean login = userAuthService.login("demo", "password");
+            System.out.println("Login for username: demo and password:password is " + login);
+        }
+    }
 }
 ```
 

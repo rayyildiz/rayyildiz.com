@@ -7,7 +7,6 @@ categories= ["Arsiv","Yazilim Gelistirme"]
 +++
 
 
-
 J2EE 5 bir çok yeni özellikle gelmiş olmasına rağmen, özellikle hızlı uygulama gelişitirebilmek istenen uygulamalarda java nın fazla geldiği, basit uygulama geliştirmek için javanın tercih edinirliği azaldığını görmekteyiz. Bu kapsamda j2ee 6 da rapid geliştirme ortamlarının entegre olacağı ve bu sayede de daha küçük ölçekli yazılımlar için bu uygulamaların tercih edilebileceği planlanıyor. Bütün bunlar devam ederken, bazı yazılımlar yeniden yorumlanmaya başladı. Bunlardan birisi ise Quercus.
 
 caucho-whiteQuercus aslında PHP 5 tamamen java ile GPL lisansıyla yeniden yazılmış halidir. PHP 5 içerdiği tüm özellikleri barındırır. Ayrıca PHP nin kullandığı temel modüller olan Mysql, json, pdf gibi modüller de yazılmıştır. PHP den farklı olarak ise java servisleri ile çok iyi entegre edilmiştir.

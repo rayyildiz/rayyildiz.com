@@ -15,7 +15,7 @@ Reaktif programlamaya açıklamaya calışacağım bu yazı dizisinde ile ilgili
 
 > Butun terimlerin Turkçe'sini çevirmek biraz zor olduğu ve internette arastırma yaptığınızda orijinal tabirleri bulacağınız için, bu yazı dizisinde terimlerin orijinallerini kullanmaya çalısacağım.
 
-# Giris
+## Giris
 
 Imperative programlamanın tam tersi ise declerative programlamadır. Burada asıl husus olay ustune kuruludur. Burada bilgisayara satır satır ne yapacağını vermek yerine, bir olay olduğunda uygulamanın nasıl davranması gerektiğini soylersiniz. Bu konu baya genis bir konu olduğu için sadece bir bolumune odaklanacağız: reactive programlama.
 

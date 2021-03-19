@@ -23,43 +23,43 @@ Bu iki yapıcı nesneyi ( TurkishCoffeeBuilder ile BrazilianCoffeeBuilder) soyut
 package com.rayyildiz.patterns;
  
 public abstract class CoffeeBuilder {
-	private Coffee coffee;
+    private Coffee coffee;
  
-	public Coffee getCoffee() {
-		return coffee;
-  	}
+    public Coffee getCoffee() {
+        return coffee;
+    }
  
-	public void createCoffee(){
-		coffee = new Coffee();
-	}
-	
-	public abstract void buildTastyCoffee();
+    public void createCoffee(){
+        coffee = new Coffee();
+    }
+    
+    public abstract void buildTastyCoffee();
 }
 ```
 
 ```java
 public class BrazilianCoffeeBuilder extends CoffeeBuilder {
-	@Override
-	public void buildTastyCoffee() {
-		Coffee coffee = getCoffee();
-		coffee.setColour(ColourType.DarkBrown);
-		coffee.setPrice(10);
-		coffee.setSugar(SugarType.Much);
-		coffee.setName("Brazilian Coffee");
-	}	
+    @Override
+    public void buildTastyCoffee() {
+        Coffee coffee = getCoffee();
+        coffee.setColour(ColourType.DarkBrown);
+        coffee.setPrice(10);
+        coffee.setSugar(SugarType.Much);
+        coffee.setName("Brazilian Coffee");
+    }    
 }
 ```
 
 ```java
 public class TurkishCoffeeBuilder extends CoffeeBuilder {
-	@Override
-	public void buildTastyCoffee() {
-		Coffee coffee = getCoffee();
-    	coffee.setColour(ColourType.LightBrown);
-    	coffee.setPrice(6);
-    	coffee.setSugar(SugarType.Much);
-    	coffee.setName("Turkish Coffee");
-	}
+    @Override
+    public void buildTastyCoffee() {
+        Coffee coffee = getCoffee();
+        coffee.setColour(ColourType.LightBrown);
+        coffee.setPrice(6);
+        coffee.setSugar(SugarType.Much);
+        coffee.setName("Turkish Coffee");
+    }
 }
 ```
 
@@ -71,20 +71,20 @@ Coffee nesnesi sadece getter-setter içeren bir nesnedir.
 
 ```java
 public class Cook {
-	private CoffeeBuilder coffeeBuilder;
+    private CoffeeBuilder coffeeBuilder;
  
-	public void setCoffeeBuilder(CoffeeBuilder coffeeBuilder) {
-		this.coffeeBuilder = coffeeBuilder;
-	}
+    public void setCoffeeBuilder(CoffeeBuilder coffeeBuilder) {
+        this.coffeeBuilder = coffeeBuilder;
+    }
  
-	public Coffee getCoffee(){
-		return coffeeBuilder.getCoffee();
-	}
+    public Coffee getCoffee(){
+        return coffeeBuilder.getCoffee();
+    }
  
-	public void constructCoffee(){
-		coffeeBuilder.createCoffee();
-		coffeeBuilder.buildTastyCoffee();
-	}
+    public void constructCoffee(){
+        coffeeBuilder.createCoffee();
+        coffeeBuilder.buildTastyCoffee();
+    }
 }
 ```
 
@@ -95,16 +95,16 @@ Bu ornekteki ```Cook``` nesnesi hiçbir şekilde hangi yapıcı nesneyi kulland�
 package com.rayyildiz.patterns;
  
 public class Main {
-	public static void main(String[] args) {
-		Cook cook = new Cook();
-		CoffeeBuilder turkishCoffeeBuilder = new TurkishCoffeeBuilder();
-		cook.setCoffeeBuilder(turkishCoffeeBuilder);
-		cook.constructCoffee();
+    public static void main(String[] args) {
+        Cook cook = new Cook();
+        CoffeeBuilder turkishCoffeeBuilder = new TurkishCoffeeBuilder();
+        cook.setCoffeeBuilder(turkishCoffeeBuilder);
+        cook.constructCoffee();
 
-		Coffee coffee = cook.getCoffee();
-		System.out.println("coffee:" + coffee);
-		if ( System.console()!=null) System.console().readLine();
-	}
+        Coffee coffee = cook.getCoffee();
+        System.out.println("coffee:" + coffee);
+        if ( System.console()!=null) System.console().readLine();
+    }
 }
 ```
 

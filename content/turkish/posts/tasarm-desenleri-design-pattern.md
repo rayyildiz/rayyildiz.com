@@ -19,7 +19,7 @@ Yazılım geliştirmse süreciyle uğraşıyorsanız, özellikle nesneye dayalı
 
 Genel olarak tasarım modelleri 3 kategoride değerlendirilir:
 
-### Yaratım Desenleri:
+### Yaratım Desenleri
 
 * [Soyut Fabrika ( Abstract Factory)](/tr/posts/java-ile-tasarim-desenleri-soyut-tasarim-deseni)
 * [Yapıcı (Builder)](/tr/posts/java-ile-tasarim-desenleri-yapici-tasarim-deseni)
@@ -27,7 +27,7 @@ Genel olarak tasarım modelleri 3 kategoride değerlendirilir:
 * Örnek (Prototype)
 * Yegane(Singleton)
 
-### Yapısal Desenler:
+### Yapısal Desenler
 
 * Uyumlayıcı(Adapter)
 * Köprü (Bridge)
@@ -37,7 +37,7 @@ Genel olarak tasarım modelleri 3 kategoride değerlendirilir:
 * Sineksiklet(Flyweight)
 * Vekil(Proxy)
 
-### Davranış Desenleri:
+### Davranış Desenleri
 
 * Sorumluluk Zinciri (Chain of Responsibility)
 * Komut(Command)

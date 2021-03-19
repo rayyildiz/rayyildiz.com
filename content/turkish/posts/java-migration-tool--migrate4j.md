@@ -34,17 +34,18 @@ import static com.eroi.migrate.Execute.*;
 import com.eroi.migrate.Migration;
 
 public class Student implements Migration {
-	public void up() {
-    	createTable(table("student_table",
-       	column("id", INTEGER, primarykey(), notnull()),
-       	column("firstname", VARCHAR, length(50), defaultValue("NA")),
-       	column("lastname", VARCHAR, length(50), defaultValue("NA")),
-       	column("number", VARCHAR, length(15), defaultValue("NA"))));
-  	}
+    public void up() {
+        createTable(table("student_table",
+           column("id", INTEGER, primarykey(), notnull()),
+           column("firstname", VARCHAR, length(50), defaultValue("NA")),
+           column("lastname", VARCHAR, length(50), defaultValue("NA")),
+           column("number", VARCHAR, length(15), defaultValue("NA")))
+        );
+    }
 
-  	public void down() {
-     	dropTable("student_table");
-  	}
+    public void down() {
+        dropTable("student_table");
+    }
 }
 ```
 

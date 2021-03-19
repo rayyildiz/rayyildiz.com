@@ -16,19 +16,18 @@ Bilgisayar ilk icat edildiğinde bir odaya bile sığmıyordu. Zamanla mikro bil
 
 Teknolojideki bu gelişmeleri yakından takip eden Google, 2005 yılında Android Inc. Satın alarak bu sektörde de var olduğunu duyurmuş oldu. Gecen sayılarımızda iPhone telefonları yine burada anlatmıştık. Bu gelişmelerden cokda uzak olmayan google, gPhone ile cep telefonları için geliştirilmiş Android işletim sistemiyle karşımızda.
 
-
 İşletim sistemi, bir bilgisayarın ilk çalışmasını sağlayan programdır. Bilgisayar ilk icat edildikten kısa bir süre sonra işletim sisteminin asıl ve tek görevi açılış ve kapanışları cok uzun süren ve oldukça karmaşık işleri yapmasına yönelik gelişitirilmiş programlardır. Ancak zamanla mikro bilgisayarların günlük hayata girmesiyle, işletim sistemleri daha yetenekli olmaya başladılar. Aynı durum cep telefonu içinde gecerli. Cep telefonu için bahsedeceğimiz işletim sistemleri başlarda basit işlevleri yerine getiriyordu, hatta cep telefonu için işletim sistemi tabiri bile tercih edilmiyordu. Ancak gelişen teknolojinin dahada küçülmesi, daha küçük bilgisayar üretmek yerine, herkesde bulunan cep telefonuna bilgisayar özelliği ekleyelim fikri sonucunda, cep telefonları için de işletim sistemi tabiri kullanılmaya başlandı.
 
 Teknolojideki bu gelişmeleri yakından takip eden Google, 2005 yılında Android Inc. Satın alarak bu sektörde de var olduğunu duyurmuş oldu. Gecen sayılarımızda iPhone telefonları yine burada anlatmıştık. Bu gelişmelerden cokda uzak olmayan google, gPhone ile cep telefonları için geliştirilmiş Android işletim sistemiyle karşımızda.
 
 Android 12 kasım tarihinde duyuruldu. √úrün satmak yerine popularitesini dahada artırma niyetinde olan google, android‚Äôi open source(açık kaynak) yaptı. Bu davranışı bilişim dünyasında ses getirdi ve daha duyurulmasının 2 gün sonrasında google da açılan android grubuna 6000 mesaj düştü. Birde google, en iyi android programı diye actığı yarışma bu kadar popular olmasını etkilemiş olsa gerek, zira bu yarışma 10milyon $ dağıtacağını duyurdu.
 
-
-## Andorid Özellikleri:
+## Andorid Özellikleri
 
 Android Gelişmiş bir uygulama geliştirme catısını içinde barındırıyor. Bu çatı Dalvika dı verilen bir sanal makina üzerinde çalışarak daha üst katmanlarda daha kolay uygulam gelliştirmeye olanak sunuyor. İçerisinde entegre edilmiş bir browser da barındıran android, verilerin tutulmasına olanak sunacak SQLite içeriyor. MPEG4, H.264, MP3, AAC, AMR, JPG, PNG, GIF gibi medya formatlarını sorunsuz destekleyen android, üzerinde çalıştığı cihaza bağlı olarak 3G, WiFi, Bluetooth, EDGE gibi özellikleri de sorunsz şekilde destekliyor. En çok dikkat çeken özelliği ise belkide Eclipse için geliştirilmiş plugin. Bu sayede eclise üzerinde zengin içerikli uygulama geliştirme cok kolaylaşmış durumda.
 
 ### Android Mimarisi
+
 Bu kadar tanıtımdan sonra android mimarisini inceleyelim.
 
 h4.Kernel Seviyesi
@@ -42,7 +41,7 @@ Android içinde gerekli olan açık kaynak kütüphaneler eklnemyi unutulmamış
 
 Bu katman üst katmanların çalışmasını olanak sunacak sanal makina vardır. Bu sanal makina Dalvik adı verilen bir makinedir. Özellikel düşük bellekli makinalar için tasarlanmış olan ve aynı anda birden fazla sanal makinanın çalışmasına olanak sunduğu için google tarafından tercih edilmiştir.android sistem yapısı
 
-#### Uygulama Geliştirme Ortamı:
+#### Uygulama Geliştirme Ortamı
 
 Bu kısım aslında SDK adını verdiğimiz, android için uygulama geliştirme ortamının adıdır. Yazılan tüm uygualamalar bu çatının üstünde yapılır. Bu sayede alt seviyeye uygulama geliştirme catının izin veridğinin dışında müdahele imkanı ortadan kalkmaktadır. Buda makinanın züerinde daha sağlam uygulamaların yazılması anlamına gelmektedir.
 Bu katmanda çok önemli birkaç yapı bulunmaktadır. Bu yapıları incelemeye çalışalım.

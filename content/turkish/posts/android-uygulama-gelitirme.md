@@ -18,8 +18,10 @@ Bu sırada size tafsiyem UI tasarlayabileniz için [droiddraw](http://www.droidd
 
 Daha sonra linux için terminalden aşağıdaki komutu- çalıştırıp DroidDraw ı açın. Windows da eğer Java6 kuruluysa, droiddraw ın içindeki droiddraw.jar ı tıklamanız yeterlidir.
 
-	rayyildiz@iceface:~/Downloads/developer/droiddraw-r1b14$ sh droiddraw.sh &
-	
+```shell
+sh droiddraw.sh &
+```
+
 ![Droiddraw](/images/droiddraw1.jpg)
 Droiddraw ile widgets tab ındaki Button u sürükleyip yandaki alana bırakınız. Daha sonra Button’a tıklayıp Properties tabı na tıklayınız.Burada şu bilgileri değiştirin:
 
@@ -34,23 +36,23 @@ Bunları değiştirip Apply düğmensine basın. Sizde diğer özellikleri bakab
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <AbsoluteLayout
-	android:id="@+id/widget0"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	>
-	<Button
-		android:id="@+id/btnSample"
-		android:layout_width="100px"
-		android:layout_height="wrap_content"
-		android:text="Hi"
-		android:layout_x="90px"
-		android:layout_y="32px"
-	>
+    android:id="@+id/widget0"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+ 
+    <Button
+        android:id="@+id/btnSample"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:text="Hi"
+        android:layout_x="90px"
+        android:layout_y="32px"
+    >
 </Button>
 </AbsoluteLayout>
 ```
-	
+
 ![Android New Project](/images/android_new_project1.jpg)
 
 Netbeans de yeni bir proje açalım. NBAdroid eklentisini kurduysanız, yeni bir proje eklerken Android diye bir kısım yer alacaktır. Daha sorna yandaki gibi proje adı, paket adı, activity adı gibi alanları doldurmanız gerekiyor. İlk kez acıyosanız, Manageplatformu tıklayarak kurulum yaptığınız android klasörünü göstermeniz gerekiyor.
@@ -61,20 +63,20 @@ Netbeans de yeni bir proje açalım. NBAdroid eklentisini kurduysanız, yeni bir
 
 ```java
 public final class R {
-	public static final class attr { }
+    public static final class attr { }
 
-	public static final class id {
-		public static final int btnSample=0x7f040001;
-		public static final int widget0=0x7f040000;
-	}
+    public static final class id {
+        public static final int btnSample=0x7f040001;
+        public static final int widget0=0x7f040000;
+    }
 
-	public static final class layout {
-		public static final int main=0x7f020000;
-	}
+    public static final class layout {
+        public static final int main=0x7f020000;
+    }
 
-	public static final class string {
-		public static final int app_name=0x7f030000;
-	}
+    public static final class string {
+        public static final int app_name=0x7f030000;
+    }
 }
 ```
 
@@ -83,21 +85,21 @@ Daha sonra aşağıdaki kodu ```MainActivity.java``` içine yazınız.
 ```java
 @Override
 public void onCreate(Bundle icicle) {
-	super.onCreate(icicle);
-	setContentView(R.layout.main);
-	final Button button = (Button) findViewById(R.id.btnSample);
-	button.setOnClickListener(new View.OnClickListener() {
-		public void onClick(View v) {
-			alert("Hello world");
-		}
-	});
+    super.onCreate(icicle);
+    setContentView(R.layout.main);
+    final Button button = (Button) findViewById(R.id.btnSample);
+    button.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View v) {
+            alert("Hello world");
+       }
+    });
 }
 
 private void alert(String message){
-	new AlertDialog.Builder(this).setTitle("rayyildiz.com").setMessage(message).setNeutralButton("Ok",
-	new DialogInterface.OnClickListener() {
-		public void onClick(DialogInterface dialog,int which) { }
-	}).show();
+    new AlertDialog.Builder(this).setTitle("rayyildiz.com").setMessage(message).setNeutralButton("Ok",
+    new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog,int which) { }
+    }).show();
 }
 ```
 

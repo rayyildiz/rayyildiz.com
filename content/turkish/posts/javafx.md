@@ -25,8 +25,10 @@ Bunun yanında kısa süre geçmiş olmasına rağmen JafaFX tasarlama ortamlar�
 
 Özellikle google'ın başı çektiği web 2.0 ortamı bu ortamların daha yaykın kullanılmaya başlanması ile daha değişik boyutlara ulaşacak. Bakalım görsel rekabetler bizi nasıl ufuklara götürecek.
 
+## Bilgi
 
-> **_Bilgi:_**
-> * Ajax, Asynchrony JavaScript Application with XML baş harflerinden oluşan asenkron javascirpt uygulamalarına dayanan bir teknolojidir. En çok google tarafındanyoğun bir şekilde kullanılan ve bu sayede beğeni toplayan Ajax, kullanım alışkanlığını da değiştirerek internetin, web 2.0 adıya anılmasına neden olmuştur.
-> * RIA, Rich Internet Application baş harflerinde oluşan ve sengin internet içerikleri anlamına gelen bir terimdir. İlk kez Macromedi tarafından 2002 de duyuruldu. Masaüstü ortamları kadar zengin içeriğe sahip web uygulamarına verilen addır. Asıl veri yine sunucu tarafında olur. Bu bakımdan masaüstü yazılımlarından farklılık oluşturur.Sandbox adıylada anılır.
-> * Adobe , Flash geliştiren Macromedia firmasını 2005 yılında satın alarak, kendi bünyesine katmış ve Macromedi'nın ürettiği ürünleri Adobe altında üretmeye devam etmiştir.
+* Ajax, Asynchrony JavaScript Application with XML baş harflerinden oluşan asenkron javascirpt uygulamalarına dayanan bir teknolojidir. En çok google tarafındanyoğun bir şekilde kullanılan ve bu sayede beğeni toplayan Ajax, kullanım alışkanlığını da değiştirerek internetin, web 2.0 adıya anılmasına neden olmuştur.
+
+* RIA, Rich Internet Application baş harflerinde oluşan ve sengin internet içerikleri anlamına gelen bir terimdir. İlk kez Macromedi tarafından 2002 de duyuruldu. Masaüstü ortamları kadar zengin içeriğe sahip web uygulamarına verilen addır. Asıl veri yine sunucu tarafında olur. Bu bakımdan masaüstü yazılımlarından farklılık oluşturur.Sandbox adıylada anılır.
+
+* Adobe , Flash geliştiren Macromedia firmasını 2005 yılında satın alarak, kendi bünyesine katmış ve Macromedi'nın ürettiği ürünleri Adobe altında üretmeye devam etmiştir.

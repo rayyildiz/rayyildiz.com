@@ -21,28 +21,28 @@ Arayüz ve bu 3 nesnenin kaynak koduna bakalım.
 package com.rayyildiz.patterns;
 
 public interface IDbConnection {
-	String getConnection();
+  String getConnection();
 }
 
 public class OracleDbConnection implements IDbConnection {
-	@Override
-	public String getConnection() {
-		return "Oracle Data Connection";
-	}
+  @Override
+  public String getConnection() {
+    return "Oracle Data Connection";
+  }
 }
 
 public class MySqlDbConnection implements IDbConnection {
-	@Override
-	public String getConnection() {
-		return "MySql Data Connection";
-	}
+  @Override
+  public String getConnection() {
+    return "MySql Data Connection";
+  }
 }
 
 public class MssqlDbConnection implements IDbConnection {
-	@Override
-	public String getConnection() {
-		return "Mssql Data Connection";
-	}
+  @Override
+  public String getConnection() {
+    return "Mssql Data Connection";
+  }
 }
 ```
 
@@ -52,26 +52,26 @@ public class MssqlDbConnection implements IDbConnection {
 package com.rayyildiz.patterns;
 
 public enum DbConnectionType {
-	Oracle,
-	Mysql,
-	Mssql
+  Oracle,
+  Mysql,
+  Mssql
 }
 
 package com.rayyildiz.patterns;
 
 public class DbConnectionFactory {
-	public static IDbConnection createDbConnection(DbConnectionType dbConnType){
-		switch(dbConnType){
-			case Oracle:
-				return new OracleDbConnection();
-			case Mysql:
-				return new MySqlDbConnection();
-			case Mssql:
-				return new MssqlDbConnection();
-			
-		}
-		return null;
-	}
+  public static IDbConnection createDbConnection(DbConnectionType dbConnType){
+    switch(dbConnType){
+      case Oracle:
+        return new OracleDbConnection();
+      case Mysql:
+        return new MySqlDbConnection();
+      case Mssql:
+        return new MssqlDbConnection();
+      
+    }
+    return null;
+  }
 }
 ```
 

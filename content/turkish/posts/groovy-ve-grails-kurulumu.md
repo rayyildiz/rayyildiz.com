@@ -36,7 +36,7 @@ Groovy kurulum için groovy indirme sayfasına giderek, işletim sisteminize gö
 
 Daha sonra GROOVY_HOME cevre değişkeni tanımlamanız gerekmektedir. Windows kurulum sırasında bunu size tanımlamak istediğini soracaktır. Linux da ise bunu .bashrc dosyasına aşağıdaki şekilde bir satır ekleyerek yapabilirsiniz.
 
-```sh
+```shell
 export JDK_HOME=/usr/lib/jvm/java-6-sun
 export GROOVY_HOME=/developer/groovy-1.7.4
 export PATH=$PATH:$JDK_HOME/bin:$GROOVY_HOME/bin
@@ -46,7 +46,7 @@ export PATH=$PATH:$JDK_HOME/bin:$GROOVY_HOME/bin
 
 Bu işlemden sonra komut penceresinden aşağıdaki kodu çalıştırarak, groovy kurulumunu test edebilirsiniz.
 
-```sh
+```shell
 groovysh
 ```
 
@@ -55,8 +55,8 @@ groovysh
 Grails indirme sayfasına giderek, en son kararlı sürümünü indiriniz. Daha sonra bu klasörü açınız.
 
 Grails kurulumu bu adım yeterlidir. Kullandığınız IDE, size grails kurulum dizinini soracaktır. Ancak yineden GRAILS_HOME cevre değişkeni tanımlarsanız çok sağlıklı olacaktır. Aşağıdakı satırı .bashrc dosyasına ekleyiniz.
-	
-```bash
+
+```shell
 export GRAILS_HOME=/developer/grails-1.3.3
 export PATH=$PATH:$GRAILS_HOME/bin
 ```

@@ -1,5 +1,5 @@
 +++
-date= "2013-04-20"
+date= "2014-04-20"
 title= "FSTech'ten EGK Projesiyle Ödül ile Döndük"
 slug="fstech-te-egk-projesi-odul-ile-dondu"
 tags= []
@@ -7,11 +7,9 @@ categories= ["Genel"]
 +++
 
 
-Yeni Türk Ticaret Kanunuyle birlikte borsaya kote olan firmaların <a href="https://www.mkk.com.tr/wps/portal/MKK/YatirimciHizmetleri/eGenelKurulSistemi">genel kurullarını elektronik ortamda yapma zorunluluğu</a> geldi. Bu projenin geliştirimesi <a href="https://www.mkk.com.tr">Merkezi Kayıt Kuruluşu</a> verildi. Bu kapsama geliştirdiğimiz <a href="https://egk.mkk.com.tr/egkweb"> Elektronik Genel Kurul</a> projesi FSTech te "Best Use of Online Service" <a href="http://www.fstech.co.uk/awards/shortlist.php">finale</a> kaldı. Bu kapsamda 17 Nisan tarihinde Gala gecesine katılmak üzere Londra'ya davetliydik.
+Yeni Türk Ticaret Kanunuyle birlikte borsaya kote olan firmaların [genel kurullarını elektronik ortamda yapma zorunluluğu](https://www.mkk.com.tr/wps/portal/MKK/YatirimciHizmetleri/eGenelKurulSistemi) geldi. Bu projenin geliştirimesi [Merkezi Kayıt Kuruluşu](https://www.mkk.com.tr) verildi. Bu kapsama geliştirdiğimiz [Elektronik Genel Kurul](href="https://egk.mkk.com.tr/egkweb) projesi FSTech te "Best Use of Online Service" [finale](http://www.fstech.co.uk/awards/shortlist.php) kaldı. Bu kapsamda 17 Nisan tarihinde Gala gecesine katılmak üzere Londra'ya davetliydik.
 
-
-17 Nisan tarihinde Londra'da yapılan gala gecesinde, "Best Use of Online Service" dalında ödülü bizim geliştirdiğimiz <a href="http://www.fstech.co.uk/awards/winners.php">EGK projesi kazandı</a>. Oldukça yoğun bir çalışma sonrasında böyle bir ödül kazanmak, bütün çalışmamıza değdi açıkcası.  
-
+17 Nisan tarihinde Londra'da yapılan gala gecesinde, "Best Use of Online Service" dalında ödülü bizim geliştirdiğimiz [EGK projesi kazandı](http://www.fstech.co.uk/awards/winners.php). Oldukça yoğun bir çalışma sonrasında böyle bir ödül kazanmak, bütün çalışmamıza değdi açıkcası.  
 
 ![Big Ben](/images/fstech_award.jpg)
 
