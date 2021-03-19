@@ -1,12 +1,15 @@
 +++
 date= "2009-04-22"
-title= "Cloud Computing Yapmak İstiyorum:Stax.net"
+title= "Cloud Computing ilk urunlerinden: stax.net"
 slug="cloud-computing-cozumu-stax-net"
 tags= ["java", "Cloud","BigData"]
 categories= ["Genel"]
 series = ["Cloud Computing"]
 +++
 
+
+> [Stax Networks](https://www.crunchbase.com/organization/stax-networks) firmasi [CloudBees](https://www.cloudbees.com/) tarafindan satin alindiktan kisa bir sure sonra ne yazikki proje sonlandirildi.
+> Benzer zamanda cikan [dotCloud](https://www.docker.com/docker-news-and-press/dotcloud-inc-now-docker-inc) ise hayatini *docker* diye devam etti, ve cloud computing in onemli bir aktoru haline geldi.
 
 Cloud Computing yabancı olanlar için ne olduğu hakkında bilgi vermekle başlayayım. Cloud computing ( kümesel işlemler diye Türkçe’de kullanılıyor)- hesap duyulan birçok işlemin uzaktaki bir veya birden fazla bilgisayar üzerinde yapılabilmesine olanak sunan bir mimari.- Bu konuda başta google ile duymaya başladığımız bu mimari, amazon ws ile cok daha gün yüzüen cıktı. Özellikle Amazon Web Servisleri bu konuda cok yol katetti. Gectiğimiz günlerde, twitter‘ın Amazon WS gecmesi ve hemen arkasından google app engine‘in java desteği sunması, cloud computing kavramını bir anda öne cıkardı.
 
