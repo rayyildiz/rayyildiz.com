@@ -1,5 +1,5 @@
 +++
-date= "2014-04-20"
+date= "2013-04-20"
 title= "FSTech'ten EGK Projesiyle Ödül ile Döndük"
 slug="fstech-te-egk-projesi-odul-ile-dondu"
 tags= []
