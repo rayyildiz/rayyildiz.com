@@ -1,21 +1,232 @@
-<!doctype html><html lang=tr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="tr"><meta name=color-scheme content="light dark"><meta name=author content="Ramazan AYYILDIZ"><meta name=description content="Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.
-Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir."><meta name=keywords content="blog,developer,kişisel"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta name=twitter:title content=" COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf)"><meta name=twitter:description content="Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.
-Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir."><meta property="og:title" content=" COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf)"><meta property="og:description" content="Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.
-Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir."><meta property="og:type" content="article"><meta property="og:url" content="https://rayyildiz.com/tr/posts/cots-ticari-kullanma-hazir-commercial-off-the-shelf/"><meta property="og:image" content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2010-08-03T00:00:00+00:00"><meta property="article:modified_time" content="2010-08-03T00:00:00+00:00"><meta property="og:site_name" content="Ramazan AYYILDIZ"><title>COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf) · Ramazan AYYILDIZ</title><link rel=canonical href=https://rayyildiz.com/tr/posts/cots-ticari-kullanma-hazir-commercial-off-the-shelf/><link rel=preload href="https://rayyildiz.com/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=https://rayyildiz.com/css/coder.min.34dfa7b2f5cdeb0f5302b2628f4a7a4bfe88a2431e1397ee4ec605c56ab69701.css integrity="sha256-NN+nsvXN6w9TArJij0p6S/6IokMeE5fuTsYFxWq2lwE=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://rayyildiz.com/css/coder-dark.min.d8f89ef09509afb63b9b2595ee174e53cc51ce02a6f6a2179e1621f9389e4340.css integrity="sha256-2Pie8JUJr7Y7myWV7hdOU8xRzgKm9qIXnhYh+TieQ0A=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=https://rayyildiz.com/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=https://rayyildiz.com/images/apple-touch-icon.png><script defer src=https://twemoji.maxcdn.com/v/13.0.2/twemoji.min.js integrity=sha384-wyB/MspSJ/r2bT2kCj44qtsYRYlpzO2oAPhRj5myrWD63dt6qWv4x8AZe7Fl3K3b crossorigin=anonymous></script><meta name=generator content="Hugo 0.84.3"></head><body class="preload-transitions colorscheme-auto" onload=twemoji.parse(document.body)><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://rayyildiz.com/tr>Ramazan AYYILDIZ</a>
+<!doctype html><html lang=tr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="tr">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Ramazan AYYILDIZ">
+<meta name=description content="Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.
+Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir.">
+<meta name=keywords content="blog,developer,kişisel">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rayyildiz.com/avatars/rayyildiz.jpg">
+<meta name=twitter:title content=" COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf)">
+<meta name=twitter:description content="Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.
+Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir.">
+<meta property="og:title" content=" COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf)">
+<meta property="og:description" content="Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.
+Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rayyildiz.com/tr/posts/cots-ticari-kullanma-hazir-commercial-off-the-shelf/"><meta property="og:image" content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2010-08-03T00:00:00+00:00">
+<meta property="article:modified_time" content="2010-08-03T00:00:00+00:00"><meta property="og:site_name" content="Ramazan AYYILDIZ">
+<title>
+COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf) · Ramazan AYYILDIZ
+</title>
+<link rel=canonical href=https://rayyildiz.com/tr/posts/cots-ticari-kullanma-hazir-commercial-off-the-shelf/>
+<link rel=preload href="https://rayyildiz.com/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=https://rayyildiz.com/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css integrity="sha256-cIaG+KuBdukdRPy+SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=https://rayyildiz.com/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=https://rayyildiz.com/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://rayyildiz.com/images/apple-touch-icon.png>
+<script defer src=https://twemoji.maxcdn.com/v/13.0.2/twemoji.min.js integrity=sha384-wyB/MspSJ/r2bT2kCj44qtsYRYlpzO2oAPhRj5myrWD63dt6qWv4x8AZe7Fl3K3b crossorigin=anonymous></script>
+<meta name=generator content="Hugo 0.86.1">
+</head>
+<body class="preload-transitions colorscheme-auto" onload=twemoji.parse(document.body)>
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=https://rayyildiz.com/tr>
+Ramazan AYYILDIZ
+</a>
 <input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/posts/>Tüm Yazılar</a></li><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/series>Yazı Dizileri</a></li><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/categories/arsiv/>Arşiv</a></li><li class="navigation-item menu-separator"><span>|</span></li><li class=navigation-item><a href=https://rayyildiz.com/>English</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://rayyildiz.com/tr/posts/cots-ticari-kullanma-hazir-commercial-off-the-shelf/>COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf)</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
-<time datetime=2010-08-03T00:00:00Z>August 3, 2010</time></span>
-<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
-3 dakikalık okuma</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
-<a href=https://rayyildiz.com/tr/categories/genel/>Genel</a></div></div></header><div><p>Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.</p><p>Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir.</p><h2 id=giriş>Giriş
-<a class=heading-link href=#giri%c5%9f><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Günümüzde bir çok bilgisayar programı sistem bağımsızlığını kırmış, bağımsız bir biçimde değişik sistemler tarafından kullanılıyor hale gelmiştir. Bu tarz yazılımlar, bağımsılığını sağlayamamış programlara göre daha çok beğenilmekte ve piyasada tutulmaktadır. Bunlara örnek olarak Microsoft firması tarafından sunulan ve Eklentili Nesne modeli anlamına gelen COM ( daha sonra ismi COM+ olsu) ve CORBA teknolojisi anlatılabilir. Bu arada Sun firması tarafından piyasa sunulan ve tüketimde önemli bir yere sahip Sun Bean göz ardı edilmememlidir.</p><p>COTS son zamanlarda critik sistemlerde kullanılmaya başlandı. Hiçbir çalıştırılabilir program analiz edilemez. √áok önemli bir yerlerde kullanılacak olan bir programın analizi söz konusu olamaz. Bu tarz yerlerde kullanılacak olan programların hata kabut etmesi gibi bir durum söz konusu değildir. Bu tarz yerlerde işletim sistemleri de kritik program hükmüne geçer. Nükleer santrallerdeki bir win32 uygulaması gibi, windows 95/NT/2000/CE de kritik bir uygulama olacaktır.</p><p>Ayrıca COTS, hata ayıklama amaçlı kullanılabilir. √úretici firma tarafından COTS standartlarında hazırlanan eklentiler, test aşaması bittiği için güveilir sayılabilir. Herhangi bir programda meydana gelecek olan hatalarda öncelikle olarak COTS elementlerinin güvenilir olduğu düşünüldüğünde , yaılmış olan programlaradaki hatalara göz cevrilmelidir. COTS bu tarz yaklaşımla hata ayklamada yardım edecektir. Yoksa kapalı bir kara-kutu hükmünde olan dll dosyaları incelenmesi yapılamaz.</p><h2 id=arka-plan>ARKA PLAN
-<a class=heading-link href=#arka-plan><i class="fa fa-link" aria-hidden=true></i></a></h2><h3 id=hata-ayıklamaya-yardım-etme>Hata Ayıklamaya Yardım Etme
-<a class=heading-link href=#hata-ay%c4%b1klamaya-yard%c4%b1m-etme><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Normal bir durumda bir dll, içi görünmeyen bir kara kutudur. Peki kara-kutu, içi görünmeyen bir kutuysa bize nasıl hata ayıklamada yardım eder? Piyasaya sürülmeden önce bir COTS eklentileri, defalarca testten geçirilir. Test aşaması tamamlanan eklentiler, piyasaya sürülmek üzere hazırdır. COTS eklentileri kullanılarak hazırlanan bir programda çıkan hatadan dolayı, öncelikle sorumlu tutulması gereken kendi yazdığımız programdır. Var olabilecek hata öncelikle kendi pogram kodumuzda aranması gerekir.</p><h3 id=bağımsızlığı-destekleme>Bağımsızlığı Destekleme
-<a class=heading-link href=#ba%c4%9f%c4%b1ms%c4%b1zl%c4%b1%c4%9f%c4%b1-destekleme><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Son günlerde piyasada bir çok yazılım ortaya çıktı. Bu tarz uygulamaların sahip olduğu ve/veya istediği konfigürasyonlara sahip bir sistem bulmak zorlaşır. Unun yerine sistemler arası bağımsızlığı sağlayan programlar daha çok tercih edilmektedir. COTS eklentileri gerçekleştirmiş olduğu işlemleri yapaçağını garanti eder. Bu sayede program geliştiricileri, birtakım işlemler için işi COTS elemenltleri bırakarak standartların gelişmesini sağlarlar.</p><h3 id=kör-düğümler>Kör Düğümler
-<a class=heading-link href=#k%c3%b6r-d%c3%bc%c4%9f%c3%bcmler><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Bir sistemin entegrasyonunda bazı sorunlar çıkabilir. Sonuç itibarıyla eklentiler birer kara kutudur.</p><h2 id=cotsun-alt-siniflari>COTS&rsquo;un ALT SINIFLARI
-<a class=heading-link href=#cotsun-alt-siniflari><i class="fa fa-link" aria-hidden=true></i></a></h2><p>COTS bazı alt sınıflara ayırmak mümkündür. Herbir alt sınııfn hitap ettiği ayrı bir çözüm bulunmaktadır.</p><blockquote><p><strong>GOTS:</strong> Govermental COTS.</p><p><strong>MOTS:</strong> Modivable COTS.</p><p><strong>NDI:</strong> NonDevelopmental Item.</p><p><strong>OSS:</strong> Open Source Software.</p></blockquote><h2 id=faydalari-ve-zararlari>FAYDALARI ve ZARARLARI
-<a class=heading-link href=#faydalari-ve-zararlari><i class="fa fa-link" aria-hidden=true></i></a></h2><p>COTS getirdiği faydalar gibi sahip olduğu bir takım hatalarda da vardır.</p><h3 id=faydaları>Faydaları
-<a class=heading-link href=#faydalar%c4%b1><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Uygundur, kısa zamanda geri ödemeyi sağlar.</li><li>Pahalı üretim ve bakımı azlatır.</li><li>Fiyat/Performans oranı tahmin edilebilir.</li><li>Zengin özelliklere sahiptir.</li><li>Çabuk bir şekilde organizasyonun istekleri gerçekleştirilebilir.</li><li>Organizasyonu destekler</li><li>Yazılım donanım bağımsızlığı.</li></ul><h3 id=zararları>Zararları
-<a class=heading-link href=#zararlar%c4%b1><i class="fa fa-link" aria-hidden=true></i></a></h3><ul><li>Lisans alma süresi uzundur.</li></ul><h2 id=sonuç-olarak>SONUÇ OLARAK
-<a class=heading-link href=#sonu%c3%a7-olarak><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.</p><h2 id=referanslar>Referanslar
-<a class=heading-link href=#referanslar><i class="fa fa-link" aria-hidden=true></i></a></h2><ol><li><p>COTS Classificiton: A proposal by- Marco Torchiano ( <a href=mailto:Marco.Torchiano@idi.ntnu.no>Marco.Torchiano@idi.ntnu.no</a> ) <a href=http://www.idi.ntnu.no/~marco/>http://www.idi.ntnu.no/~marco/</a></p></li><li><p>Software- Implemented Hardware Fault Tolerance Experiments COTS in Space by P.P. Shirvani, N. Oh, E.J. McCluskey</p></li><li><p>Negotiating Requirements for COTS based- System by Carina Alves, Anthony Finkelstein(<a href=mailto:a.finkelstein@cs.ucl.ac.uk>a.finkelstein@cs.ucl.ac.uk</a>)</p></li><li><p>Correct and automatic assembly of COTS components: an architectural approach by Paola Inverardi -(<a href=mailto:inverard@univaq.it>inverard@univaq.it</a>)- and Massimo Tivoli -(<a href=mailto:tivoli@univaq.it>tivoli@univaq.it</a> )</p></li><li><p>Qualıty Assurance For Space Instruments Buılt Wıth Cots by -Peter Buch Guldager, Gsta G. Thuesen, John Leif J√∏rgensen</p></li><li><p>COTS Base System (CBS) Top-10 Lists, Lessons, Learned and Challenge by Berry Bohem at( <a href=http://www.cebase.org>http://www.cebase.org</a> )</p></li></ol></div><footer></footer></article></section></div><footer class=footer><section class=container><p><a href=https://github.com/rayyildiz/rayyildiz.com/blob/master/LICENSE>Copytight</a> © rayyildiz.com</p></section></footer></main><script src=https://rayyildiz.com/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "4a40048cb8384ec59ccaa0a0a9881476"}'></script></body></html>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=https://rayyildiz.com/tr/posts/>Tüm Yazılar</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://rayyildiz.com/tr/series>Yazı Dizileri</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://rayyildiz.com/tr/categories/arsiv/>Arşiv</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class=navigation-item>
+<a href=https://rayyildiz.com/>English</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://rayyildiz.com/tr/posts/cots-ticari-kullanma-hazir-commercial-off-the-shelf/>
+COTS (Ticari Kullanıma Hazır – Commercial Off The Shelf)
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2010-08-03T00:00:00Z>
+August 3, 2010
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+3 dakikalık okuma
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=https://rayyildiz.com/tr/categories/genel/>Genel</a></div>
+</div>
+</header>
+<div>
+<p>Abstract. Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.</p>
+<p>Ayrıca son günlerde yazılım sektörünün gelişmisindn dolayı yaılımları bağımlılığı artmıştır. Yazılımın sistemden bağımsızlığını sağlamak amacıyla ve hata ayıklama da kullanılmak için COTS diye bir mekanizma geliştirilmiştir.</p>
+<h2 id=giriş>
+Giriş
+<a class=heading-link href=#giri%c5%9f>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>Günümüzde bir çok bilgisayar programı sistem bağımsızlığını kırmış, bağımsız bir biçimde değişik sistemler tarafından kullanılıyor hale gelmiştir. Bu tarz yazılımlar, bağımsılığını sağlayamamış programlara göre daha çok beğenilmekte ve piyasada tutulmaktadır. Bunlara örnek olarak Microsoft firması tarafından sunulan ve Eklentili Nesne modeli anlamına gelen COM ( daha sonra ismi COM+ olsu) ve CORBA teknolojisi anlatılabilir. Bu arada Sun firması tarafından piyasa sunulan ve tüketimde önemli bir yere sahip Sun Bean göz ardı edilmememlidir.</p>
+<p>COTS son zamanlarda critik sistemlerde kullanılmaya başlandı. Hiçbir çalıştırılabilir program analiz edilemez. √áok önemli bir yerlerde kullanılacak olan bir programın analizi söz konusu olamaz. Bu tarz yerlerde kullanılacak olan programların hata kabut etmesi gibi bir durum söz konusu değildir. Bu tarz yerlerde işletim sistemleri de kritik program hükmüne geçer. Nükleer santrallerdeki bir win32 uygulaması gibi, windows 95/NT/2000/CE de kritik bir uygulama olacaktır.</p>
+<p>Ayrıca COTS, hata ayıklama amaçlı kullanılabilir. √úretici firma tarafından COTS standartlarında hazırlanan eklentiler, test aşaması bittiği için güveilir sayılabilir. Herhangi bir programda meydana gelecek olan hatalarda öncelikle olarak COTS elementlerinin güvenilir olduğu düşünüldüğünde , yaılmış olan programlaradaki hatalara göz cevrilmelidir. COTS bu tarz yaklaşımla hata ayklamada yardım edecektir. Yoksa kapalı bir kara-kutu hükmünde olan dll dosyaları incelenmesi yapılamaz.</p>
+<h2 id=arka-plan>
+ARKA PLAN
+<a class=heading-link href=#arka-plan>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<h3 id=hata-ayıklamaya-yardım-etme>
+Hata Ayıklamaya Yardım Etme
+<a class=heading-link href=#hata-ay%c4%b1klamaya-yard%c4%b1m-etme>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Normal bir durumda bir dll, içi görünmeyen bir kara kutudur. Peki kara-kutu, içi görünmeyen bir kutuysa bize nasıl hata ayıklamada yardım eder? Piyasaya sürülmeden önce bir COTS eklentileri, defalarca testten geçirilir. Test aşaması tamamlanan eklentiler, piyasaya sürülmek üzere hazırdır. COTS eklentileri kullanılarak hazırlanan bir programda çıkan hatadan dolayı, öncelikle sorumlu tutulması gereken kendi yazdığımız programdır. Var olabilecek hata öncelikle kendi pogram kodumuzda aranması gerekir.</p>
+<h3 id=bağımsızlığı-destekleme>
+Bağımsızlığı Destekleme
+<a class=heading-link href=#ba%c4%9f%c4%b1ms%c4%b1zl%c4%b1%c4%9f%c4%b1-destekleme>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Son günlerde piyasada bir çok yazılım ortaya çıktı. Bu tarz uygulamaların sahip olduğu ve/veya istediği konfigürasyonlara sahip bir sistem bulmak zorlaşır. Unun yerine sistemler arası bağımsızlığı sağlayan programlar daha çok tercih edilmektedir. COTS eklentileri gerçekleştirmiş olduğu işlemleri yapaçağını garanti eder. Bu sayede program geliştiricileri, birtakım işlemler için işi COTS elemenltleri bırakarak standartların gelişmesini sağlarlar.</p>
+<h3 id=kör-düğümler>
+Kör Düğümler
+<a class=heading-link href=#k%c3%b6r-d%c3%bc%c4%9f%c3%bcmler>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<p>Bir sistemin entegrasyonunda bazı sorunlar çıkabilir. Sonuç itibarıyla eklentiler birer kara kutudur.</p>
+<h2 id=cotsun-alt-siniflari>
+COTS&rsquo;un ALT SINIFLARI
+<a class=heading-link href=#cotsun-alt-siniflari>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>COTS bazı alt sınıflara ayırmak mümkündür. Herbir alt sınııfn hitap ettiği ayrı bir çözüm bulunmaktadır.</p>
+<blockquote>
+<p><strong>GOTS:</strong> Govermental COTS.</p>
+<p><strong>MOTS:</strong> Modivable COTS.</p>
+<p><strong>NDI:</strong> NonDevelopmental Item.</p>
+<p><strong>OSS:</strong> Open Source Software.</p>
+</blockquote>
+<h2 id=faydalari-ve-zararlari>
+FAYDALARI ve ZARARLARI
+<a class=heading-link href=#faydalari-ve-zararlari>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>COTS getirdiği faydalar gibi sahip olduğu bir takım hatalarda da vardır.</p>
+<h3 id=faydaları>
+Faydaları
+<a class=heading-link href=#faydalar%c4%b1>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<ul>
+<li>Uygundur, kısa zamanda geri ödemeyi sağlar.</li>
+<li>Pahalı üretim ve bakımı azlatır.</li>
+<li>Fiyat/Performans oranı tahmin edilebilir.</li>
+<li>Zengin özelliklere sahiptir.</li>
+<li>Çabuk bir şekilde organizasyonun istekleri gerçekleştirilebilir.</li>
+<li>Organizasyonu destekler</li>
+<li>Yazılım donanım bağımsızlığı.</li>
+</ul>
+<h3 id=zararları>
+Zararları
+<a class=heading-link href=#zararlar%c4%b1>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<ul>
+<li>Lisans alma süresi uzundur.</li>
+</ul>
+<h2 id=sonuç-olarak>
+SONUÇ OLARAK
+<a class=heading-link href=#sonu%c3%a7-olarak>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>Son günlerde farkına varılan ve kritik öneme sahip yazılım sorunu hata ve hata yakalamadır. Hata yakalama bir diğer adla ayrıksı durum yakalama, program çalışma esnasında ortaya çıkan yada çıkma ihitmaline karşı önceden öngörülen durumları içerir. Bu sadece programlar için değil işletim sistemleri içinde önemli bir durum olarak karşımıza çımaktadır.</p>
+<h2 id=referanslar>
+Referanslar
+<a class=heading-link href=#referanslar>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<ol>
+<li>
+<p>COTS Classificiton: A proposal by- Marco Torchiano ( <a href=mailto:Marco.Torchiano@idi.ntnu.no>Marco.Torchiano@idi.ntnu.no</a> ) <a href=http://www.idi.ntnu.no/~marco/>http://www.idi.ntnu.no/~marco/</a></p>
+</li>
+<li>
+<p>Software- Implemented Hardware Fault Tolerance Experiments COTS in Space by P.P. Shirvani, N. Oh, E.J. McCluskey</p>
+</li>
+<li>
+<p>Negotiating Requirements for COTS based- System by Carina Alves, Anthony Finkelstein(<a href=mailto:a.finkelstein@cs.ucl.ac.uk>a.finkelstein@cs.ucl.ac.uk</a>)</p>
+</li>
+<li>
+<p>Correct and automatic assembly of COTS components: an architectural approach by Paola Inverardi -(<a href=mailto:inverard@univaq.it>inverard@univaq.it</a>)- and Massimo Tivoli -(<a href=mailto:tivoli@univaq.it>tivoli@univaq.it</a> )</p>
+</li>
+<li>
+<p>Qualıty Assurance For Space Instruments Buılt Wıth Cots by -Peter Buch Guldager, Gsta G. Thuesen, John Leif J√∏rgensen</p>
+</li>
+<li>
+<p>COTS Base System (CBS) Top-10 Lists, Lessons, Learned and Challenge by Berry Bohem at( <a href=http://www.cebase.org>http://www.cebase.org</a> )</p>
+</li>
+</ol>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+<p><a href=https://github.com/rayyildiz/rayyildiz.com/blob/master/LICENSE>Copytight</a> © rayyildiz.com</p>
+</section>
+</footer>
+</main>
+<script src=https://rayyildiz.com/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script>
+<script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "4a40048cb8384ec59ccaa0a0a9881476"}'></script>
+</body>
+</html>

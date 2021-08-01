@@ -1,27 +1,133 @@
-<!doctype html><html lang=tr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="tr"><meta name=color-scheme content="light dark"><meta name=author content="Ramazan AYYILDIZ"><meta name=description content="Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
-Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır."><meta name=keywords content="blog,developer,kişisel"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta name=twitter:title content="Android Uygulamalarında Veritabanı İşlemleri"><meta name=twitter:description content="Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
-Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır."><meta property="og:title" content="Android Uygulamalarında Veritabanı İşlemleri"><meta property="og:description" content="Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
-Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır."><meta property="og:type" content="article"><meta property="og:url" content="https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/"><meta property="og:image" content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2010-06-12T00:00:00+00:00"><meta property="article:modified_time" content="2010-06-12T00:00:00+00:00"><meta property="og:site_name" content="Ramazan AYYILDIZ"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-tabli-ekranlar/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-giris/"><title>Android Uygulamalarında Veritabanı İşlemleri · Ramazan AYYILDIZ</title><link rel=canonical href=https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/><link rel=preload href="https://rayyildiz.com/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=https://rayyildiz.com/css/coder.min.34dfa7b2f5cdeb0f5302b2628f4a7a4bfe88a2431e1397ee4ec605c56ab69701.css integrity="sha256-NN+nsvXN6w9TArJij0p6S/6IokMeE5fuTsYFxWq2lwE=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://rayyildiz.com/css/coder-dark.min.d8f89ef09509afb63b9b2595ee174e53cc51ce02a6f6a2179e1621f9389e4340.css integrity="sha256-2Pie8JUJr7Y7myWV7hdOU8xRzgKm9qIXnhYh+TieQ0A=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=https://rayyildiz.com/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=https://rayyildiz.com/images/apple-touch-icon.png><script defer src=https://twemoji.maxcdn.com/v/13.0.2/twemoji.min.js integrity=sha384-wyB/MspSJ/r2bT2kCj44qtsYRYlpzO2oAPhRj5myrWD63dt6qWv4x8AZe7Fl3K3b crossorigin=anonymous></script><meta name=generator content="Hugo 0.84.3"></head><body class="preload-transitions colorscheme-auto" onload=twemoji.parse(document.body)><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://rayyildiz.com/tr>Ramazan AYYILDIZ</a>
+<!doctype html><html lang=tr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="tr">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Ramazan AYYILDIZ">
+<meta name=description content="Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
+Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır.">
+<meta name=keywords content="blog,developer,kişisel">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rayyildiz.com/avatars/rayyildiz.jpg">
+<meta name=twitter:title content="Android Uygulamalarında Veritabanı İşlemleri">
+<meta name=twitter:description content="Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
+Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır.">
+<meta property="og:title" content="Android Uygulamalarında Veritabanı İşlemleri">
+<meta property="og:description" content="Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
+Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/"><meta property="og:image" content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2010-06-12T00:00:00+00:00">
+<meta property="article:modified_time" content="2010-06-12T00:00:00+00:00"><meta property="og:site_name" content="Ramazan AYYILDIZ">
+<meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-tabli-ekranlar/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-giris/">
+<title>
+Android Uygulamalarında Veritabanı İşlemleri · Ramazan AYYILDIZ
+</title>
+<link rel=canonical href=https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/>
+<link rel=preload href="https://rayyildiz.com/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=https://rayyildiz.com/css/coder.min.708686f8ab8176e91d44fcbe488a0fe0333b94f405cf18a52383d67ba22f0ccb.css integrity="sha256-cIaG+KuBdukdRPy+SIoP4DM7lPQFzxilI4PWe6IvDMs=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=https://rayyildiz.com/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=https://rayyildiz.com/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://rayyildiz.com/images/apple-touch-icon.png>
+<script defer src=https://twemoji.maxcdn.com/v/13.0.2/twemoji.min.js integrity=sha384-wyB/MspSJ/r2bT2kCj44qtsYRYlpzO2oAPhRj5myrWD63dt6qWv4x8AZe7Fl3K3b crossorigin=anonymous></script>
+<meta name=generator content="Hugo 0.86.1">
+</head>
+<body class="preload-transitions colorscheme-auto" onload=twemoji.parse(document.body)>
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=https://rayyildiz.com/tr>
+Ramazan AYYILDIZ
+</a>
 <input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/posts/>Tüm Yazılar</a></li><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/series>Yazı Dizileri</a></li><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/categories/arsiv/>Arşiv</a></li><li class="navigation-item menu-separator"><span>|</span></li><li class=navigation-item><a href=https://rayyildiz.com/>English</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/>Android Uygulamalarında Veritabanı İşlemleri</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
-<time datetime=2010-06-12T00:00:00Z>June 12, 2010</time></span>
-<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
-5 dakikalık okuma</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=https://rayyildiz.com/tr/posts/>Tüm Yazılar</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://rayyildiz.com/tr/series>Yazı Dizileri</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://rayyildiz.com/tr/categories/arsiv/>Arşiv</a>
+</li>
+<li class="navigation-item menu-separator">
+<span>|</span>
+</li>
+<li class=navigation-item>
+<a href=https://rayyildiz.com/>English</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/>
+Android Uygulamalarında Veritabanı İşlemleri
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2010-06-12T00:00:00Z>
+June 12, 2010
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+5 dakikalık okuma
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
 <a href=https://rayyildiz.com/tr/categories/genel/>Genel</a>
 <span class=separator>•</span>
-<a href=https://rayyildiz.com/tr/categories/mobil/>Mobil</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
-<span class=tag><a href=https://rayyildiz.com/tr/tags/android/>android</a></span>
+<a href=https://rayyildiz.com/tr/categories/mobil/>Mobil</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=https://rayyildiz.com/tr/tags/android/>android</a>
+</span>
 <span class=separator>•</span>
-<span class=tag><a href=https://rayyildiz.com/tr/tags/java/>java</a></span>
+<span class=tag>
+<a href=https://rayyildiz.com/tr/tags/java/>java</a>
+</span>
 <span class=separator>•</span>
-<span class=tag><a href=https://rayyildiz.com/tr/tags/database/>database</a></span></div></div></header><div><p>Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.</p><p><img src=https://rayyildiz.com/images/sqlite1.gif#floatleft alt=Sqlite>
-<a href=http://www.sqlite.org/>Sqlite</a>, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi <a href=http://www.sqlite.org/th3.html>test edilmiş</a> bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir.</p><p>Bu giriş bilgilerinden sonra örnek bir uygulama geliştirelim. Uygulamamız, ad, soyad ve telefon numarası kayıt edeceğimiz bir “customer” tablosu olsun. Linux ‘ta sqliteman gibi bir uygulama ile veritabanınızı oluştururun. Örneğimizde kullanacağımız tablonun scripti şu şekildedir:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#ff79c6>CREATE</span> <span style=color:#ff79c6>TABLE</span> <span style=color:#f1fa8c>&#34;Customer&#34;</span> (
+<span class=tag>
+<a href=https://rayyildiz.com/tr/tags/database/>database</a>
+</span></div>
+</div>
+</header>
+<div>
+<p>Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.</p>
+<p><img src=https://rayyildiz.com/images/sqlite1.gif#floatleft alt=Sqlite>
+<a href=http://www.sqlite.org/>Sqlite</a>, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi <a href=http://www.sqlite.org/th3.html>test edilmiş</a> bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir.</p>
+<p>Bu giriş bilgilerinden sonra örnek bir uygulama geliştirelim. Uygulamamız, ad, soyad ve telefon numarası kayıt edeceğimiz bir “customer” tablosu olsun. Linux ‘ta sqliteman gibi bir uygulama ile veritabanınızı oluştururun. Örneğimizde kullanacağımız tablonun scripti şu şekildedir:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#ff79c6>CREATE</span> <span style=color:#ff79c6>TABLE</span> <span style=color:#f1fa8c>&#34;Customer&#34;</span> (
  <span style=color:#f1fa8c>&#34;Id&#34;</span> <span style=color:#8be9fd;font-style:italic>INTEGER</span> <span style=color:#ff79c6>PRIMARY</span> <span style=color:#ff79c6>KEY</span>,
  <span style=color:#f1fa8c>&#34;Firstname&#34;</span> <span style=color:#8be9fd;font-style:italic>TEXT</span>,
  <span style=color:#f1fa8c>&#34;Lastname&#34;</span> <span style=color:#8be9fd;font-style:italic>TEXT</span>,
  <span style=color:#f1fa8c>&#34;PhoneNumber&#34;</span> <span style=color:#8be9fd;font-style:italic>TEXT</span>
  );
-</code></pre></div><p>Daha sonra ise IDE nizde bir android uygulaması açınız(<a href=https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/>Android ile Uygulama Geliştirme</a> yazısından faydalanabilirsiniz). Ben daha eski telefonlarda kullanılabilmesi için 1.6 uygulması actım. Daha sonra ise droiddraw ana ekran tasarlıyoruz.</p><p>Veritabanı ilk acıldığında tablonun create edilmesi için create script i kod içine almamız gerekir. Aynı şekilde örneğimizde compiled statement kullanıyoruz. Şu anda sadece insert ve getAll metodunu implemente ettik.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>DbHelper</span> <span style=color:#ff79c6>{</span>
+</code></pre></div><p>Daha sonra ise IDE nizde bir android uygulaması açınız(<a href=https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/>Android ile Uygulama Geliştirme</a> yazısından faydalanabilirsiniz). Ben daha eski telefonlarda kullanılabilmesi için 1.6 uygulması actım. Daha sonra ise droiddraw ana ekran tasarlıyoruz.</p>
+<p>Veritabanı ilk acıldığında tablonun create edilmesi için create script i kod içine almamız gerekir. Aynı şekilde örneğimizde compiled statement kullanıyoruz. Şu anda sadece insert ve getAll metodunu implemente ettik.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>DbHelper</span> <span style=color:#ff79c6>{</span>
   <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> String DATABASE_NAME <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#34;rayyildiz_sample.db&#34;</span><span style=color:#ff79c6>;</span>
   <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> <span style=color:#8be9fd>int</span> DATABASE_VERSION <span style=color:#ff79c6>=</span> 1<span style=color:#ff79c6>;</span>
   <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> String TABLE_NAME <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#34;Customer&#34;</span><span style=color:#ff79c6>;</span>
@@ -91,7 +197,8 @@ Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone
   <span style=color:#ff79c6>}</span>
  <span style=color:#ff79c6>}</span>
 <span style=color:#ff79c6>}</span>
-</code></pre></div><p>Bu ise Customer nesnesi</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>Customer</span> <span style=color:#ff79c6>{</span>
+</code></pre></div><p>Bu ise Customer nesnesi</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>Customer</span> <span style=color:#ff79c6>{</span>
   <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd>int</span> id<span style=color:#ff79c6>;</span>
   <span style=color:#8be9fd;font-style:italic>private</span> String firstname<span style=color:#ff79c6>;</span>
   <span style=color:#8be9fd;font-style:italic>private</span> String lastname<span style=color:#ff79c6>;</span>
@@ -129,7 +236,9 @@ Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone
     <span style=color:#ff79c6>this</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>phoneNumber</span> <span style=color:#ff79c6>=</span> phoneNumber<span style=color:#ff79c6>;</span>
   <span style=color:#ff79c6>}</span>
 <span style=color:#ff79c6>}</span>
-</code></pre></div><p>İki tane Aktivity ekleyelim birisi MainActivity, diğeri ise Customer bilgilerini giriş yapabileceğimiz Activity olsun.</p><p>Bunlardan AddCustomerActivity şu şekilde:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>AddCustomerActivity</span> <span style=color:#8be9fd;font-style:italic>extends</span> Activity <span style=color:#ff79c6>{</span>
+</code></pre></div><p>İki tane Aktivity ekleyelim birisi MainActivity, diğeri ise Customer bilgilerini giriş yapabileceğimiz Activity olsun.</p>
+<p>Bunlardan AddCustomerActivity şu şekilde:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>AddCustomerActivity</span> <span style=color:#8be9fd;font-style:italic>extends</span> Activity <span style=color:#ff79c6>{</span>
   <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>final</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd>int</span> SUCCESS_RETURN_CODE <span style=color:#ff79c6>=</span> 1<span style=color:#ff79c6>;</span>
   <span style=color:#8be9fd;font-style:italic>private</span> DbHelper m_db<span style=color:#ff79c6>;</span>
 
@@ -159,7 +268,8 @@ Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone
   <span style=color:#ff79c6>});</span>
  <span style=color:#ff79c6>}</span>
 <span style=color:#ff79c6>}</span>
-</code></pre></div><p>Ve Main Activity şu şekildedir:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>MainActivity</span> <span style=color:#8be9fd;font-style:italic>extends</span> Activity <span style=color:#ff79c6>{</span>
+</code></pre></div><p>Ve Main Activity şu şekildedir:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>MainActivity</span> <span style=color:#8be9fd;font-style:italic>extends</span> Activity <span style=color:#ff79c6>{</span>
 
   <span style=color:#8be9fd;font-style:italic>private</span> ProgressDialog m_ProgressDialog <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>null</span><span style=color:#ff79c6>;</span>
   <span style=color:#8be9fd;font-style:italic>protected</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> <span style=color:#8be9fd>int</span> SUB_ACTIVITY_REQUEST_CODE <span style=color:#ff79c6>=</span> 100<span style=color:#ff79c6>;</span><span style=color:#8be9fd;font-style:italic>private</span> ArrayList m_customers <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>null</span><span style=color:#ff79c6>;</span>
@@ -277,5 +387,44 @@ Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone
     <span style=color:#ff79c6>}</span>
   <span style=color:#ff79c6>}</span>
 <span style=color:#ff79c6>}</span>
-</code></pre></div><p>Örnek uygulamamızın ekran görüntüleri</p><p><img src=https://rayyildiz.com/images/add_customer1.jpg#floatleft alt="Add Customer"></p><p><img src=https://rayyildiz.com/images/list_customers1.jpg alt="List Customers"></p><p>Uygulamanın kaynak kodunu ise <a href=https://github.com/rayyildiz/nbase>Githup</a> üzerinden indirebilirsiniz.</p></div><footer><section class=see-also><h3 id=ayrıca-bakınız-android>Ayrıca bakınız Android
-<a class=heading-link href=#ayr%c4%b1ca-bak%c4%b1n%c4%b1z-android><i class="fa fa-link" aria-hidden=true></i></a></h3><nav><ul><li><a href=https://rayyildiz.com/tr/posts/android-tabli-ekranlar/>Android Platformunda Tablı Ekranlar</a></li><li><a href=https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/>Android Uygulama Geliştirme</a></li><li><a href=https://rayyildiz.com/tr/posts/android-giris/>Android Giriş</a></li></ul></nav></section></footer></article></section></div><footer class=footer><section class=container><p><a href=https://github.com/rayyildiz/rayyildiz.com/blob/master/LICENSE>Copytight</a> © rayyildiz.com</p></section></footer></main><script src=https://rayyildiz.com/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script><script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "4a40048cb8384ec59ccaa0a0a9881476"}'></script></body></html>
+</code></pre></div><p>Örnek uygulamamızın ekran görüntüleri</p>
+<p><img src=https://rayyildiz.com/images/add_customer1.jpg#floatleft alt="Add Customer"></p>
+<p><img src=https://rayyildiz.com/images/list_customers1.jpg alt="List Customers"></p>
+<p>Uygulamanın kaynak kodunu ise <a href=https://github.com/rayyildiz/nbase>Githup</a> üzerinden indirebilirsiniz.</p>
+</div>
+<footer>
+<section class=see-also>
+<h3 id=ayrıca-bakınız-android>
+Ayrıca bakınız Android
+<a class=heading-link href=#ayr%c4%b1ca-bak%c4%b1n%c4%b1z-android>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h3>
+<nav>
+<ul>
+<li>
+<a href=https://rayyildiz.com/tr/posts/android-tabli-ekranlar/>Android Platformunda Tablı Ekranlar</a>
+</li>
+<li>
+<a href=https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/>Android Uygulama Geliştirme</a>
+</li>
+<li>
+<a href=https://rayyildiz.com/tr/posts/android-giris/>Android Giriş</a>
+</li>
+</ul>
+</nav>
+</section>
+</footer>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+<p><a href=https://github.com/rayyildiz/rayyildiz.com/blob/master/LICENSE>Copytight</a> © rayyildiz.com</p>
+</section>
+</footer>
+</main>
+<script src=https://rayyildiz.com/js/coder.min.03b17769f4f91ae35667e1f2a1ca8c16f50562576cf90ff32b3179926914daa5.js integrity="sha256-A7F3afT5GuNWZ+HyocqMFvUFYlds+Q/zKzF5kmkU2qU="></script>
+<script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "4a40048cb8384ec59ccaa0a0a9881476"}'></script>
+</body>
+</html>
