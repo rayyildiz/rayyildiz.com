@@ -30,8 +30,8 @@ git config –global user.email [eposta adresiniz]
 Projeyi Almak için
 
 ```shell
-mkdir [projenizi_adi]
-cd [projenizi_adi]
+mkdir [projenizin_adi]
+cd [projenizin_adi]
 git init
 touch README
 git add README
