@@ -26,8 +26,7 @@ Tabları host edecek olan nesnemiz ise şu şekildedir:">
 <meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-giris/">
 <title>
 Android Platformunda Tablı Ekranlar · Ramazan AYYILDIZ
-</title>
-<link rel=canonical href=https://rayyildiz.com/tr/posts/android-tabli-ekranlar/>
+</title><link rel=canonical href=https://rayyildiz.com/tr/posts/android-tabli-ekranlar/>
 <link rel=preload href="https://rayyildiz.com/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
 <link rel=stylesheet href=https://rayyildiz.com/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
 <link rel=stylesheet href=https://rayyildiz.com/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
@@ -35,15 +34,13 @@ Android Platformunda Tablı Ekranlar · Ramazan AYYILDIZ
 <link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-16x16.png sizes=16x16>
 <link rel=apple-touch-icon href=https://rayyildiz.com/images/apple-touch-icon.png>
 <link rel=apple-touch-icon sizes=180x180 href=https://rayyildiz.com/images/apple-touch-icon.png>
-<meta name=generator content="Hugo 0.92.1">
-</head>
-<body class="preload-transitions colorscheme-auto">
+<meta name=generator content="Hugo 0.93.0">
+</head><body class="preload-transitions colorscheme-auto">
 <div class=float-container>
 <a id=dark-mode-toggle class=colorscheme-toggle>
 <i class="fa fa-adjust fa-fw" aria-hidden=true></i>
 </a>
-</div>
-<main class=wrapper>
+</div><main class=wrapper>
 <nav class=navigation>
 <section class=container>
 <a class=navigation-title href=https://rayyildiz.com/tr>
@@ -56,23 +53,15 @@ Ramazan AYYILDIZ
 <ul class=navigation-list>
 <li class=navigation-item>
 <a class=navigation-link href=https://rayyildiz.com/tr/posts/>Tüm Yazılar</a>
-</li>
-<li class=navigation-item>
+</li><li class=navigation-item>
 <a class=navigation-link href=https://rayyildiz.com/tr/series>Yazı Dizileri</a>
-</li>
-<li class=navigation-item>
+</li><li class=navigation-item>
 <a class=navigation-link href=https://rayyildiz.com/tr/categories/arsiv/>Arşiv</a>
-</li>
-<li class="navigation-item menu-separator">
+</li><li class="navigation-item menu-separator">
 <span>|</span>
-</li>
-<li class=navigation-item>
+</li><li class=navigation-item>
 <a href=https://rayyildiz.com/>English</a>
-</li>
-</ul>
-</section>
-</nav>
-<div class=content>
+</li></ul></section></nav><div class=content>
 <section class="container post">
 <article>
 <header>
@@ -81,27 +70,23 @@ Ramazan AYYILDIZ
 <a class=title-link href=https://rayyildiz.com/tr/posts/android-tabli-ekranlar/>
 Android Platformunda Tablı Ekranlar
 </a>
-</h1>
-</div>
-<div class=post-meta>
+</h1></div><div class=post-meta>
 <div class=date>
 <span class=posted-on>
 <i class="fa fa-calendar" aria-hidden=true></i>
 <time datetime=2010-06-13T00:00:00Z>
-June 13, 2010
+Haziran 13, 2010
 </time>
 </span>
 <span class=reading-time>
 <i class="fa fa-clock-o" aria-hidden=true></i>
 Bir dakikalık okuma
 </span>
-</div>
-<div class=categories>
+</div><div class=categories>
 <i class="fa fa-folder" aria-hidden=true></i>
 <a href=https://rayyildiz.com/tr/categories/genel/>Genel</a>
 <span class=separator>•</span>
-<a href=https://rayyildiz.com/tr/categories/mobil/>Mobil</a></div>
-<div class=tags>
+<a href=https://rayyildiz.com/tr/categories/mobil/>Mobil</a></div><div class=tags>
 <i class="fa fa-tag" aria-hidden=true></i>
 <span class=tag>
 <a href=https://rayyildiz.com/tr/tags/android/>android</a>
@@ -109,84 +94,58 @@ Bir dakikalık okuma
 <span class=separator>•</span>
 <span class=tag>
 <a href=https://rayyildiz.com/tr/tags/java/>java</a>
-</span></div>
-</div>
-</header>
-<div>
-<p>Android ekranları tasarlarken Tab kullanmak güzel bir artı katmakta, Activity ler arasında dolaşmaktan daha avantajlı bir yapı sunmaktadır. Android de tab kullanmak için “TabActivity” yararlanacağız. Bunun için ihtiyacımız olan layout xml şu şekilde bir yapıda olmalı.</p>
-<p>Göreceğiniz gibi ana layout TabHost’dur. Gördüğünüz bir tane FrameLayout yer almaktadır. Biz code içinde Tab ları ekleyeceğimiz için layout base bir yapıdadır. Tüm Activity leri “<a href=http://developer.android.com/guide/topics/manifest/manifest-intro.html>AndroidManifest.xml</a>” içinde tanımlamalısınız.</p>
-<p>Tabları host edecek olan nesnemiz ise şu şekildedir:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>ApplicationActivity</span> <span style=color:#8be9fd;font-style:italic>extends</span> TabActivity <span style=color:#ff79c6>{</span>
-  @Override
-  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onCreate</span><span style=color:#ff79c6>(</span>Bundle icicle<span style=color:#ff79c6>)</span> <span style=color:#ff79c6>{</span>
-    <span style=color:#8be9fd;font-style:italic>super</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>onCreate</span><span style=color:#ff79c6>(</span>icicle<span style=color:#ff79c6>);</span>
-    setContentView<span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>layout</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>main</span><span style=color:#ff79c6>);</span>
-    Resources res <span style=color:#ff79c6>=</span> getResources<span style=color:#ff79c6>();</span>
-    TabHost tabHost <span style=color:#ff79c6>=</span> getTabHost<span style=color:#ff79c6>();</span>
-    TabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>TabSpec</span> spec<span style=color:#ff79c6>;</span>
-    Intent intent<span style=color:#ff79c6>;</span>
-    intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent<span style=color:#ff79c6>().</span><span style=color:#50fa7b>setClass</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>this</span><span style=color:#ff79c6>,</span> DashboardActivity<span style=color:#ff79c6>.</span><span style=color:#50fa7b>class</span><span style=color:#ff79c6>);</span>
-    spec <span style=color:#ff79c6>=</span> tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>newTabSpec</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;home&#34;</span><span style=color:#ff79c6>).</span><span style=color:#50fa7b>setIndicator</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;Home&#34;</span><span style=color:#ff79c6>,</span>
-    res<span style=color:#ff79c6>.</span><span style=color:#50fa7b>getDrawable</span> <span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>drawable</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>ic_tab_dashboard</span><span style=color:#ff79c6>)).</span><span style=color:#50fa7b>setContent</span><span style=color:#ff79c6>(</span>intent<span style=color:#ff79c6>);</span>
-    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>addTab</span><span style=color:#ff79c6>(</span>spec<span style=color:#ff79c6>);</span>
-    intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent<span style=color:#ff79c6>().</span><span style=color:#50fa7b>setClass</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>this</span><span style=color:#ff79c6>,</span> CreditCardActivity<span style=color:#ff79c6>.</span><span style=color:#50fa7b>class</span><span style=color:#ff79c6>);</span>
-    spec <span style=color:#ff79c6>=</span> tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>newTabSpec</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;sample1&#34;</span><span style=color:#ff79c6>).</span><span style=color:#50fa7b>setIndicator</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;Sample Tab&#34;</span><span style=color:#ff79c6>,</span>
-    res<span style=color:#ff79c6>.</span><span style=color:#50fa7b>getDrawable</span> <span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>drawable</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>ic_tab_sample1</span><span style=color:#ff79c6>)).</span><span style=color:#50fa7b>setContent</span><span style=color:#ff79c6>(</span>intent<span style=color:#ff79c6>);</span>
-    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>addTab</span><span style=color:#ff79c6>(</span>spec<span style=color:#ff79c6>);</span>
-    intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent<span style=color:#ff79c6>().</span><span style=color:#50fa7b>setClass</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>this</span><span style=color:#ff79c6>,</span> SettingActivity<span style=color:#ff79c6>.</span><span style=color:#50fa7b>class</span><span style=color:#ff79c6>);</span>
-    spec <span style=color:#ff79c6>=</span> tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>newTabSpec</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;sample2&#34;</span><span style=color:#ff79c6>).</span><span style=color:#50fa7b>setIndicator</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;Sample Tab 2&#34;</span><span style=color:#ff79c6>,</span>
-    res<span style=color:#ff79c6>.</span><span style=color:#50fa7b>getDrawable</span> <span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>drawable</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>ic_tab_sample2</span><span style=color:#ff79c6>)).</span><span style=color:#50fa7b>setContent</span><span style=color:#ff79c6>(</span>intent<span style=color:#ff79c6>);</span>
-    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>addTab</span><span style=color:#ff79c6>(</span>spec<span style=color:#ff79c6>);</span>
-
-    intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent<span style=color:#ff79c6>().</span><span style=color:#50fa7b>setClass</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>this</span><span style=color:#ff79c6>,</span> AboutActivity<span style=color:#ff79c6>.</span><span style=color:#50fa7b>class</span><span style=color:#ff79c6>);</span>
-    spec <span style=color:#ff79c6>=</span> tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>newTabSpec</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;about&#34;</span><span style=color:#ff79c6>).</span><span style=color:#50fa7b>setIndicator</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;Sample Tab 3&#34;</span><span style=color:#ff79c6>,</span>
-    res<span style=color:#ff79c6>.</span><span style=color:#50fa7b>getDrawable</span> <span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>drawable</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>ic_tab_about</span><span style=color:#ff79c6>)).</span><span style=color:#50fa7b>setContent</span><span style=color:#ff79c6>(</span>intent<span style=color:#ff79c6>);</span>
-    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>addTab</span><span style=color:#ff79c6>(</span>spec<span style=color:#ff79c6>);</span>
-    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>setCurrentTab</span><span style=color:#ff79c6>(</span>0<span style=color:#ff79c6>);</span>
-  <span style=color:#ff79c6>}</span>
-<span style=color:#ff79c6>}</span>
-</code></pre></div><p>Ben burada daha şık olması amacıyla Tab seçili iken farklı bir ikon görünmesi amacıyla “ic_tab_xxx” dosyalarını kullandım. Bunlar şuna benzer bir yapıdadır:</p>
-<p>Uygulamamızı çalıştırdığımızda ekran görünütüsü buna benzer olmaktadır.</p>
-<p><img src=https://rayyildiz.com/images/android_sample_tab21.jpg alt="Android Sample Tab"></p>
-<p>Daha sonra daha detaylı bilgi paylaşıyor olacağım, şimdilik hoşcakalın.</p>
-</div>
-<footer>
+</span></div></div></header><div>
+<p>Android ekranları tasarlarken Tab kullanmak güzel bir artı katmakta, Activity ler arasında dolaşmaktan daha avantajlı bir yapı sunmaktadır. Android de tab kullanmak için “TabActivity” yararlanacağız. Bunun için ihtiyacımız olan layout xml şu şekilde bir yapıda olmalı.</p><p>Göreceğiniz gibi ana layout TabHost’dur. Gördüğünüz bir tane FrameLayout yer almaktadır. Biz code içinde Tab ları ekleyeceğimiz için layout base bir yapıdadır. Tüm Activity leri “<a href=http://developer.android.com/guide/topics/manifest/manifest-intro.html>AndroidManifest.xml</a>” içinde tanımlamalısınız.</p><p>Tabları host edecek olan nesnemiz ise şu şekildedir:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>ApplicationActivity</span> <span style=color:#8be9fd;font-style:italic>extends</span> TabActivity <span style=color:#ff79c6>{</span>
+</span></span><span style=display:flex><span>  @Override
+</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onCreate</span><span style=color:#ff79c6>(</span>Bundle icicle<span style=color:#ff79c6>)</span> <span style=color:#ff79c6>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>super</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>onCreate</span><span style=color:#ff79c6>(</span>icicle<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    setContentView<span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>layout</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>main</span><span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    Resources res <span style=color:#ff79c6>=</span> getResources<span style=color:#ff79c6>();</span>
+</span></span><span style=display:flex><span>    TabHost tabHost <span style=color:#ff79c6>=</span> getTabHost<span style=color:#ff79c6>();</span>
+</span></span><span style=display:flex><span>    TabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>TabSpec</span> spec<span style=color:#ff79c6>;</span>
+</span></span><span style=display:flex><span>    Intent intent<span style=color:#ff79c6>;</span>
+</span></span><span style=display:flex><span>    intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent<span style=color:#ff79c6>().</span><span style=color:#50fa7b>setClass</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>this</span><span style=color:#ff79c6>,</span> DashboardActivity<span style=color:#ff79c6>.</span><span style=color:#50fa7b>class</span><span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    spec <span style=color:#ff79c6>=</span> tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>newTabSpec</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;home&#34;</span><span style=color:#ff79c6>).</span><span style=color:#50fa7b>setIndicator</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;Home&#34;</span><span style=color:#ff79c6>,</span>
+</span></span><span style=display:flex><span>    res<span style=color:#ff79c6>.</span><span style=color:#50fa7b>getDrawable</span> <span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>drawable</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>ic_tab_dashboard</span><span style=color:#ff79c6>)).</span><span style=color:#50fa7b>setContent</span><span style=color:#ff79c6>(</span>intent<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>addTab</span><span style=color:#ff79c6>(</span>spec<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent<span style=color:#ff79c6>().</span><span style=color:#50fa7b>setClass</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>this</span><span style=color:#ff79c6>,</span> CreditCardActivity<span style=color:#ff79c6>.</span><span style=color:#50fa7b>class</span><span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    spec <span style=color:#ff79c6>=</span> tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>newTabSpec</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;sample1&#34;</span><span style=color:#ff79c6>).</span><span style=color:#50fa7b>setIndicator</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;Sample Tab&#34;</span><span style=color:#ff79c6>,</span>
+</span></span><span style=display:flex><span>    res<span style=color:#ff79c6>.</span><span style=color:#50fa7b>getDrawable</span> <span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>drawable</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>ic_tab_sample1</span><span style=color:#ff79c6>)).</span><span style=color:#50fa7b>setContent</span><span style=color:#ff79c6>(</span>intent<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>addTab</span><span style=color:#ff79c6>(</span>spec<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent<span style=color:#ff79c6>().</span><span style=color:#50fa7b>setClass</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>this</span><span style=color:#ff79c6>,</span> SettingActivity<span style=color:#ff79c6>.</span><span style=color:#50fa7b>class</span><span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    spec <span style=color:#ff79c6>=</span> tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>newTabSpec</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;sample2&#34;</span><span style=color:#ff79c6>).</span><span style=color:#50fa7b>setIndicator</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;Sample Tab 2&#34;</span><span style=color:#ff79c6>,</span>
+</span></span><span style=display:flex><span>    res<span style=color:#ff79c6>.</span><span style=color:#50fa7b>getDrawable</span> <span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>drawable</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>ic_tab_sample2</span><span style=color:#ff79c6>)).</span><span style=color:#50fa7b>setContent</span><span style=color:#ff79c6>(</span>intent<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>addTab</span><span style=color:#ff79c6>(</span>spec<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent<span style=color:#ff79c6>().</span><span style=color:#50fa7b>setClass</span><span style=color:#ff79c6>(</span><span style=color:#ff79c6>this</span><span style=color:#ff79c6>,</span> AboutActivity<span style=color:#ff79c6>.</span><span style=color:#50fa7b>class</span><span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    spec <span style=color:#ff79c6>=</span> tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>newTabSpec</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;about&#34;</span><span style=color:#ff79c6>).</span><span style=color:#50fa7b>setIndicator</span><span style=color:#ff79c6>(</span><span style=color:#f1fa8c>&#34;Sample Tab 3&#34;</span><span style=color:#ff79c6>,</span>
+</span></span><span style=display:flex><span>    res<span style=color:#ff79c6>.</span><span style=color:#50fa7b>getDrawable</span> <span style=color:#ff79c6>(</span>R<span style=color:#ff79c6>.</span><span style=color:#50fa7b>drawable</span><span style=color:#ff79c6>.</span><span style=color:#50fa7b>ic_tab_about</span><span style=color:#ff79c6>)).</span><span style=color:#50fa7b>setContent</span><span style=color:#ff79c6>(</span>intent<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>addTab</span><span style=color:#ff79c6>(</span>spec<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>    tabHost<span style=color:#ff79c6>.</span><span style=color:#50fa7b>setCurrentTab</span><span style=color:#ff79c6>(</span>0<span style=color:#ff79c6>);</span>
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>}</span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>}</span>
+</span></span></code></pre></div><p>Ben burada daha şık olması amacıyla Tab seçili iken farklı bir ikon görünmesi amacıyla “ic_tab_xxx” dosyalarını kullandım. Bunlar şuna benzer bir yapıdadır:</p><p>Uygulamamızı çalıştırdığımızda ekran görünütüsü buna benzer olmaktadır.</p><p><img src=https://rayyildiz.com/images/android_sample_tab21.jpg alt="Android Sample Tab"></p><p>Daha sonra daha detaylı bilgi paylaşıyor olacağım, şimdilik hoşcakalın.</p></div><footer>
 <section class=see-also>
 <h3 id=ayrıca-bakınız-android>
 Ayrıca bakınız Android
 <a class=heading-link href=#ayr%c4%b1ca-bak%c4%b1n%c4%b1z-android>
 <i class="fa fa-link" aria-hidden=true></i>
 </a>
-</h3>
-<nav>
+</h3><nav>
 <ul>
 <li>
 <a href=https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/>Android Uygulamalarında Veritabanı İşlemleri</a>
-</li>
-<li>
+</li><li>
 <a href=https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/>Android Uygulama Geliştirme</a>
-</li>
-<li>
+</li><li>
 <a href=https://rayyildiz.com/tr/posts/android-giris/>Android Giriş</a>
-</li>
-</ul>
-</nav>
-</section>
-</footer>
-</article>
-</section>
-</div>
-<footer class=footer>
+</li></ul></nav></section></footer></article></section></div><footer class=footer>
 <section class=container>
 ©
 2022
 Ramazan AYYILDIZ
 ·
 Site program altyapısı <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
-</section>
-</footer>
-</main>
-<script src=https://rayyildiz.com/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
+</section></footer></main><script src=https://rayyildiz.com/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js integrity="sha256-j7hjdqFuaEr0cqMprvUC2+vPq2XOJk6XUNFEkSlHxgI="></script>
 <script defer src=https://static.cloudflareinsights.com/beacon.min.js data-cf-beacon='{"token": "4a40048cb8384ec59ccaa0a0a9881476"}'></script>
-</body>
-</html>
+</body></html>
