@@ -55,7 +55,7 @@ enableRobotsTXT = true
     custom_css = ["custom.css"]
     
 [params.cloudflare]
-    token = "4a40048cb8384ec59ccaa0a0a9881476"
+    token = "012efc48b40e46dab7acdc375ba96820"
 
 [[params.social]]
     name = "Github"
