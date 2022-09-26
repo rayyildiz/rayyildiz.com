@@ -3,7 +3,7 @@ date= "2011-10-27"
 title= "SpringOne 2GX – KeyNote"
 slug="springone-2gx-keynote"
 tags= ["java","groovy","spring framework"]
-categories= ["Genel","Yazilim gelistirme"]
+categories= ["Arsiv","Genel","Yazilim gelistirme"]
 +++
 
 

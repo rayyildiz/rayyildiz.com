@@ -1,5 +1,5 @@
 +++
-date= "2019-07-10"
+date= "2015-05-10"
 title= "Impereative Programlama"
 slug="reactive-programlama-1"
 tags= ["java","Software Development"]
