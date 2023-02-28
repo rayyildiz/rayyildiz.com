@@ -1,7 +1,7 @@
 name: hugo generator
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -22,12 +22,3 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          cname: rayyildiz.com
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./public
