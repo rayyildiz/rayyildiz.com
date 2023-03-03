@@ -26,7 +26,7 @@ Go ayrıca, karmaşıklığı azaltmaya yardımcı olan ve dili daha yönetilebi
 
 Birkaç özelliğini vurgulamak gerekirse:
 
-- Unicode desteği ile gelir, yani [Türkçe fonksiyon/değişken adı](ağaçSayısıKaçtır) kullanabilirsiniz.
+- Unicode desteği ile gelir, yani [Türkçe fonksiyon/değişken adı](https://go.dev/play/p/u-eTjrRXcVC) kullanabilirsiniz.
 - [Exception](https://www.w3schools.com/java/java_try_catch.asp) yoktur, hatalar için bir value olan [error](https://go.dev/ref/spec#Errors) kullanılır. 
 - `do-while`,`while-do` yoktur, sadece oldukça yetenekli olan [for](https://go.dev/ref/spec#For_statements) vardır.
 - OOP dillerinde olduğu gibi [inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)), [overloading](https://en.wikipedia.org/wiki/Function_overloading), [overriding](https://en.wikipedia.org/wiki/Method_overriding) yoktur.
