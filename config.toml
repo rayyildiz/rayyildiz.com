@@ -101,11 +101,11 @@ enableRobotsTXT = true
             description = "Ramazan AYYILDIZ's personal website"
             keywords = "blog,developer,personal"
 
-        [languages.en.menu]
+         [languages.en.menu]
             #[[languages.en.menu.main]]
             #name = "Blog"
             #weight = 1
-            #url = "/en/posts/"
+            #url = "/posts/"
 
             #[[languages.en.menu.main]]
             #name = "About"
