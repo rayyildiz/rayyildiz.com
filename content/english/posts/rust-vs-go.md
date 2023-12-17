@@ -13,6 +13,8 @@ slug= "rust-vs-go"
 
 In the vast landscape of programming languages, [Rust](https://www.rust-lang.org/) and [Go](https://go.dev/) stand out as two compelling choices for developers seeking modern solutions to their software development needs. Both languages have gained significant traction and popularity in recent years, each with its unique set of features, strengths, and use cases. In this post, we'll delve into the differences between [Rust](https://www.rust-lang.org/) and [Go](https://go.dev/), highlighting their key characteristics, use cases, and trade-offs, helping developers make informed decisions when choosing the right language for their projects.
 
+![rust-vs-go](/images/rust-go-1.jpg#floatleft)
+
 
 ### Background and Goals
 
@@ -20,9 +22,14 @@ In the vast landscape of programming languages, [Rust](https://www.rust-lang.org
 
 Developed by Mozilla, Rust is designed with a strong emphasis on **memory safety**, **performance**, and **system-level programming**. It aims to eliminate common programming errors like null pointer dereferences and buffer overflows by enforcing strict compile-time checks through its [ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html), [borrowing](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html), and [lifetime](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html) systems.
 
+![rust memory safety](/images/rust-go-2.jpg#floatleft)
+
+
 #### Go (aka Golang)
 
 Created by Google, Go focuses on **simplicity**, **efficiency**, and **concurrency**. It was built to address challenges in scalable software development, particularly in the context of *distributed systems* and *networked applications*. Go's design philosophy emphasizes ease of use and fast compilation.
+
+![go concurrency](/images/rust-go-3.jpg#floatleft)
 
 
 ### Syntax and Learning Curve
