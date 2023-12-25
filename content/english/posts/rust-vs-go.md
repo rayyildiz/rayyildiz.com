@@ -4,6 +4,7 @@ title= "Rust vs. Go: Exploring the Differences"
 tags= ["rust", "go"]
 categories= ["Programming"]
 slug= "rust-vs-go"
+series = ["Rust Programming Language"]
 +++
 
 

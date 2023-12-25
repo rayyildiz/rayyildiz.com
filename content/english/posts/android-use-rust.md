@@ -4,7 +4,7 @@ title= "How Android Uses Rust for Enhanced Memory Safety"
 tags= ["rust"]
 categories= ["Programming"]
 slug= "android-uses-rust-for-memory-safety"
-series = ["Rust Language"]
+series = ["Rust Programming Language"]
 +++
 
 [Android](https://developer.android.com), the widely used mobile operating system developed by Google,

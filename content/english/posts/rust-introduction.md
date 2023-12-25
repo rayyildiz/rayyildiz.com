@@ -4,7 +4,7 @@ title= "Introduction to Rust Language"
 tags= ["rust"]
 categories= ["Programming"]
 slug= "introduction-to-rust-language"
-series = ["Rust Language"]
+series = ["Rust Programming Language"]
 +++
 
 ## What is Rust?
