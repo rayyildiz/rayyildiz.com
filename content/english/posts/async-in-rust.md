@@ -29,8 +29,6 @@ async fn fetch_data(url: &str) -> Result<String, &'static str> {
     
     // business logic
     
-    // In a real application, you would make an actual network request here
-    // For the sake of this example, we'll just return a fixed response
     Ok(String::from(r#"{"name":"rayyildiz","bio":"just for fun"}"#))
 }
 
