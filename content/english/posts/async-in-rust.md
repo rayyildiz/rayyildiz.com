@@ -22,8 +22,6 @@ Rust's standard library provides the foundational traits and types for async pro
 
 
 ```rust
-use tokio::time::{sleep, Duration};
-
 async fn fetch_data(url: &str) -> Result<String, &'static str> {
     println!("Fetching data from: {}", url);
     
