@@ -17,7 +17,7 @@ Asynchronous programming allows a program to initiate a potentially long-running
 
 ### Example
 
-Rust's standard library provides the foundational traits and types for async programming but does not include a runtime to execute Futures. To run async code, you indeed need to use an external crate that provides an async runtime, such as [tokio](https://tokio.rs), [async-std](https://async.rs), or [smol](https://github.com/smol-rs/smol).
+Rust's standard library provides the foundational traits and types for async programming but does not include a runtime to execute `Futures`. To run async code, you indeed need to use an external crate that provides an async runtime, such as [tokio](https://tokio.rs), [async-std](https://async.rs), or [smol](https://github.com/smol-rs/smol).
 
 
 
@@ -49,19 +49,20 @@ tokio = { version = "1.0", features = ["full"] }
 ```
 
 ### Pros of Async in Rust:
-Non-blocking I/O: Async allows for non-blocking I/O operations, enabling the handling of thousands of connections simultaneously without the overhead of threads.
 
-Improved Performance: By avoiding unnecessary waits, async can significantly improve the performance of I/O-bound applications.
+**Non-blocking I/O:** Async allows for non-blocking I/O operations, enabling the handling of thousands of connections simultaneously without the overhead of threads.
 
-Resource Efficiency: Async reduces the need for threads, which are more expensive in terms of system resources.
+**Improved Performance:** By avoiding unnecessary waits, async can significantly improve the performance of I/O-bound applications.
+
+**Resource Efficiency:** Async reduces the need for threads, which are more expensive in terms of system resources.
 
 ### Cons of Async in Rust:
 
-Learning Curve: The async/await syntax and the concept of futures can be challenging for newcomers.
+**Learning Curve:** The async/await syntax and the concept of futures can be challenging for newcomers.
 
-Complexity: Error handling, lifetime management, and task coordination can introduce complexity, making code harder to understand and maintain.
+**Complexity:** Error handling, lifetime management, and task coordination can introduce complexity, making code harder to understand and maintain.
 
-Compatibility Issues: Not all libraries are async-aware, potentially leading to blocking calls that can negate the benefits of async programming.
+**Compatibility:** Not all libraries are async-aware, potentially leading to blocking calls that can negate the benefits of async programming.
 
 ## Channels in Rust
 
@@ -95,24 +96,24 @@ fn main() {
 
 ### Pros of CSP in Rust:
 
-Simplicity: CSP can be easier to reason about, as each process has its own state and communicates through well-defined channels.
+**Simplicity:** CSP can be easier to reason about, as each process has its own state and communicates through well-defined channels.
 
-Safety: Rust's type system and ownership model ensure safe concurrent access to resources without data races.
+**Safety:** Rust's type system and ownership model ensure safe concurrent access to resources without data races.
 
-Flexibility: Channels can be used in both synchronous and asynchronous contexts, making them versatile for different concurrency models.
+**Flexibility:** Channels can be used in both synchronous and asynchronous contexts, making them versatile for different concurrency models.
 
 
 ### Cons of CSP in Rust:
 
-Overhead: The creation and management of channels and messages can introduce overhead, especially if not used judiciously.
+**Overhead:** The creation and management of channels and messages can introduce overhead, especially if not used judiciously.
 
-Limited Scalability: For some highly concurrent applications, the overhead of message passing can become a bottleneck compared to non-blocking async operations.
+**Limited Scalability:** For some highly concurrent applications, the overhead of message passing can become a bottleneck compared to non-blocking async operations.
 
 ## Conclustion
 
 Ultimately, both async and CSP have their place in Rust's concurrency model. The "good or bad" debate around async in Rust isn't about dismissing one approach in favor of the other; it's about understanding the trade-offs and making informed decisions based on your application's needs. By leveraging Rust's powerful type system and concurrency features, developers can build efficient, safe, and scalable applications, whether they choose async, CSP, or a combination of both.
 
 
-Use **async** for high-concurrency, I/O-bound applications where non-blocking I/O and resource efficiency are critical.
+* Use **async** for high-concurrency, I/O-bound applications where non-blocking I/O and resource efficiency are critical.
 
-Consider **CSP** for applications where the logic naturally fits into distinct processes communicating through channels, and where the overhead of channels is justified by the benefits of easier reasoning and code safety.
+* Consider **CSP** for applications where the logic naturally fits into distinct processes communicating through channels, and where the overhead of channels is justified by the benefits of easier reasoning and code safety.
