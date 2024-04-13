@@ -17,7 +17,7 @@ slug= "cc2p"
 
 Provide instructions on how to build the project, for example, installing the Rust compiler and necessary crates.
 
-Here is how to install the `cc2p` directly from the Git repository:
+Here is how to install the `cc2p` directly from [crates.io](https://crates.io/crates/cc2p)
 
 ```shell
 cargo install cc2p
