@@ -36,7 +36,7 @@ Options:
 
 - **delimiter**: delimiter char used in CSV files (default: `,`)
 - **no-header**: whether to include the header in the CSV search column (default: `false`)
-- **worker**: Number of worker threads to use for performing the task (default: `4`)
+- **worker**: Number of worker threads to use for performing the task (default: `1`)
 
 ```shell
 > cc2p --help
