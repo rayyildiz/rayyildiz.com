@@ -107,7 +107,7 @@ fn main() {
 
 **Limited Scalability:** For some highly concurrent applications, the overhead of message passing can become a bottleneck compared to non-blocking async operations.
 
-## Conclustion
+## Conclusion
 
 Ultimately, both async and CSP have their place in Rust's concurrency model. The "good or bad" debate around async in Rust isn't about dismissing one approach in favor of the other; it's about understanding the trade-offs and making informed decisions based on your application's needs. By leveraging Rust's powerful type system and concurrency features, developers can build efficient, safe, and scalable applications, whether they choose async, CSP, or a combination of both.
 

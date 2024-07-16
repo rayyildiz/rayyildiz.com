@@ -28,7 +28,7 @@ particularly around memory management.
 developers to write safe concurrent code.
 
 **Zero-Cost Abstractions:** The language is designed to provide abstractions without overhead. This means you can write
-high-level abstractions, but the compiler will optimize it to be as fast as hand-written lower-level code.
+high-level abstractions, but the compiler will optimize it to be as fast as handwritten lower-level code.
 
 **Tooling:** Rust comes with Cargo, a command-line tool that helps manage projects. Cargo handles building code,
 downloading
@@ -60,7 +60,7 @@ cargo run
 Rust has excellent documentation,
 including ["The Rust Programming Language"](https://www.amazon.com/Rust-Programming-Language-Steve-Klabnik/dp/1593278284)
 book, which is available online for free. Additionally, there are
-numerous [tutorials](https://doc.rust-lang.org/book/), [videos](https://www.youtube.com/@RustVideos), and community
+many [tutorials](https://doc.rust-lang.org/book/), [videos](https://www.youtube.com/@RustVideos), and community
 forums where new [Rustaceans](https://rust-for-rustaceans.com) can seek help.
 
 ## Conclusion

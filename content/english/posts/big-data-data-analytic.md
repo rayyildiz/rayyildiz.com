@@ -47,7 +47,7 @@ as data mining, predictive analytics, and machine learning.
 
 ## Tools for Data Analytics
 
-The explosion of data has given rise to numerous tools and technologies designed to handle, process, and analyze Big
+The explosion of data has given rise to many tools and technologies designed to handle, process, and analyze Big
 Data. Here's a look at some of the most popular ones:
 
 ![tools](/images/big-data-analytic-3.jpg#floatleft)

@@ -50,7 +50,7 @@ Bu katmanda çok önemli birkaç yapı bulunmaktadır. Bu yapıları incelemeye 
 
 * Notification Manager: Bu özellik sayesinde çalışır durumdaki uygulamalar ( servis olarak yada arka planda çalışan uygulamalar) durum çubuğunda mesaj gönderme yapabilirler. Bu sayede kullanıcı bilgilendirme yapılmaya olanak sunulmuş olur.
 
-* Resource Management: Performasn acısından grafiklerin, yazıların yönetimini yapan yapıdır.
+* Resource Management: Performans acısından grafiklerin, yazıların yönetimini yapan yapıdır.
 
 * XMPP Service: Bazı uygulamaların arkaplanda çalışması istenebilir. Bu durumda bu yapıdan yaralanılır.
 
