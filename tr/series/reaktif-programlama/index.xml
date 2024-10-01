@@ -1,5 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reaktif Programlama on Ramazan AYYILDIZ</title><link>https://rayyildiz.com/tr/series/reaktif-programlama/</link><description>Recent content in Reaktif Programlama on Ramazan AYYILDIZ</description><generator>Hugo</generator><language>tr</language><lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://rayyildiz.com/tr/series/reaktif-programlama/index.xml" rel="self" type="application/rss+xml"/><item><title>Reactive Programlama</title><link>https://rayyildiz.com/tr/posts/reactive-programlama-2/</link><pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/tr/posts/reactive-programlama-2/</guid><description>Reaktif programlamaya açıklamaya calışacağım bu yazı dizisinde ile ilgili diğer yazılar:
-Impereative Programming Reactive Programming Functional Programming Butun terimlerin Turkçe&amp;rsquo;sini çevirmek biraz zor olduğu ve internette arastırma yaptığınızda orijinal tabirleri bulacağınız için, bu yazı dizisinde terimlerin orijinallerini kullanmaya çalısacağım.
-Giris Başlık Linki Imperative programlamanın tam tersi ise declerative programlamadır. Burada asıl husus olay ustune kuruludur. Burada bilgisayara satır satır ne yapacağını vermek yerine, bir olay olduğunda uygulamanın nasıl davranması gerektiğini soylersiniz.</description></item><item><title>Impereative Programlama</title><link>https://rayyildiz.com/tr/posts/reactive-programlama-1/</link><pubDate>Sun, 10 May 2015 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/tr/posts/reactive-programlama-1/</guid><description>Reaktif programlamaya acıklamaya calışacağım bu yazı dizisinde ile ilgili diğer yazılar:
-Impereative Programming Reactive Programming Functional Programming Bütün terimlerin Türkçe&amp;rsquo;sini çevirmek biraz zor olduğu ve internette araştırma yaptığınızda orijinal tabirleri bulacağınız için, bu yazi dizisinde terimlerin orijinallerini kullanmaya calısacağım.
-Giriş Başlık Linki Üniversitede bilgisayar bilimleri veya programala iceren benzer bölümlerden mezun olan birçok kişi muhtemelen Oject Oriented Programming biliyordur. Ben de diğer birçok kişi gibi programlaya Pascal ile başladım. Daha sonra ise C,C++, ve Java şeklinde bir öğrenme süreci gördüm.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reaktif Programlama on Ramazan AYYILDIZ</title><link>https://rayyildiz.com/tr/series/reaktif-programlama/</link><description>Recent content in Reaktif Programlama on Ramazan AYYILDIZ</description><generator>Hugo</generator><language>tr</language><lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://rayyildiz.com/tr/series/reaktif-programlama/index.xml" rel="self" type="application/rss+xml"/><item><title>Reactive Programlama</title><link>https://rayyildiz.com/tr/posts/reactive-programlama-2/</link><pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/tr/posts/reactive-programlama-2/</guid><description>&lt;p>Reaktif programlamaya açıklamaya calışacağım bu yazı dizisinde ile ilgili diğer yazılar:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://rayyildiz.com/tr/posts/reactive-programlama-1" >Impereative Programming&lt;/a>&lt;/li>
+&lt;li>Reactive Programming&lt;/li>
+&lt;li>&lt;a href="#soon" >Functional Programming&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Butun terimlerin Turkçe&amp;rsquo;sini çevirmek biraz zor olduğu ve internette arastırma yaptığınızda orijinal tabirleri bulacağınız için, bu yazı dizisinde terimlerin orijinallerini kullanmaya çalısacağım.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="giris">
+ Giris
+ &lt;a class="heading-link" href="#giris">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Başlık Linki">&lt;/i>
+ &lt;span class="sr-only">Başlık Linki&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Imperative programlamanın tam tersi ise declerative programlamadır. Burada asıl husus olay ustune kuruludur. Burada bilgisayara satır satır ne yapacağını vermek yerine, bir olay olduğunda uygulamanın nasıl davranması gerektiğini soylersiniz. Bu konu baya genis bir konu olduğu için sadece bir bolumune odaklanacağız: reactive programlama.&lt;/p></description></item><item><title>Impereative Programlama</title><link>https://rayyildiz.com/tr/posts/reactive-programlama-1/</link><pubDate>Sun, 10 May 2015 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/tr/posts/reactive-programlama-1/</guid><description>&lt;p>Reaktif programlamaya acıklamaya calışacağım bu yazı dizisinde ile ilgili diğer yazılar:&lt;/p>
+&lt;ul>
+&lt;li>Impereative Programming&lt;/li>
+&lt;li>&lt;a href="https://rayyildiz.com/tr/posts/reactive-programlama-2" >Reactive Programming&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#soon" >Functional Programming&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Bütün terimlerin Türkçe&amp;rsquo;sini çevirmek biraz zor olduğu ve internette araştırma yaptığınızda orijinal tabirleri bulacağınız için, bu yazi dizisinde terimlerin orijinallerini kullanmaya calısacağım.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="giriş">
+ Giriş
+ &lt;a class="heading-link" href="#giri%c5%9f">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Başlık Linki">&lt;/i>
+ &lt;span class="sr-only">Başlık Linki&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Üniversitede bilgisayar bilimleri veya programala iceren benzer bölümlerden mezun olan birçok kişi muhtemelen &lt;a href="https://en.wikipedia.org/wiki/Object-oriented_programming" class="external-link" target="_blank" rel="noopener">Oject Oriented Programming&lt;/a> biliyordur. Ben de diğer birçok kişi gibi programlaya &lt;a href="https://www.freepascal.org/" class="external-link" target="_blank" rel="noopener">Pascal&lt;/a> ile başladım. Daha sonra ise &lt;a href="https://gcc.gnu.org/" class="external-link" target="_blank" rel="noopener">C&lt;/a>,&lt;a href="http://www.cplusplus.com/" class="external-link" target="_blank" rel="noopener">C++&lt;/a>, ve &lt;a href="https://openjdk.java.net/" class="external-link" target="_blank" rel="noopener">Java&lt;/a> şeklinde bir öğrenme süreci gördüm.&lt;/p></description></item></channel></rss>
