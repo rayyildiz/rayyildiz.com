@@ -12,7 +12,7 @@ slug= "cc2p"
 
 ### Prerequisites
 
-- Rust 1.74
+- Rust 1.75
 
 ### Building
 
