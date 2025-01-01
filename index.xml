@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ramazan AYYILDIZ</title><link>https://rayyildiz.com/</link><description>Recent content on Ramazan AYYILDIZ</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rayyildiz.com/index.xml" rel="self" type="application/rss+xml"/><item><title>CC2P - Convert CSV to Parquet Files</title><link>https://rayyildiz.com/projects/cc2p/</link><pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/projects/cc2p/</guid><description>&lt;p>&lt;strong>(CC2P)&lt;/strong> is a Rust-based project that converts CSV files in a selected folder into parquet format. This tool provides a simple and efficient way of handling and converting your CSV data files.&lt;/p>
-&lt;p>&lt;img src="https://rayyildiz.com/gif/cc2p.gif">&lt;/p>
+&lt;p>&lt;img src="https://rayyildiz.com/gif/cc2p.gif" alt="">&lt;/p>
 &lt;h2 id="installation--usage">
  Installation &amp;amp; Usage
  &lt;a class="heading-link" href="#installation--usage">
@@ -62,7 +62,7 @@ ownership with a set of rules that the compiler checks at compile time. This sys
 thread safety.&lt;/p></description></item><item><title>Unveiling the Power of Big Data and Data Analytics</title><link>https://rayyildiz.com/posts/big-data-data-analytic/</link><pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/big-data-data-analytic/</guid><description>&lt;p>In today&amp;rsquo;s data-driven world, the terms &amp;lsquo;Big Data&amp;rsquo; and &amp;lsquo;Data Analytics&amp;rsquo; are more than just buzzwords; they represent a
 fundamental shift in how we process information and make decisions. This blog post delves into the essence of Big Data
 and Data Analytics and introduces some of the most effective tools that are revolutionizing these fields.&lt;/p>
-&lt;p>&lt;img alt="Intro" src="https://rayyildiz.com/images/big-data-analytic-1.jpg#floatleft">&lt;/p>
+&lt;p>&lt;img src="https://rayyildiz.com/images/big-data-analytic-1.jpg#floatleft" alt="Intro">&lt;/p>
 &lt;h2 id="understanding-big-data">
  Understanding Big Data
  &lt;a class="heading-link" href="#understanding-big-data">

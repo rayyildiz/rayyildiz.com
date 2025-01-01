@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on Ramazan AYYILDIZ</title><link>https://rayyildiz.com/projects/</link><description>Recent content in Projects on Ramazan AYYILDIZ</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rayyildiz.com/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>CC2P - Convert CSV to Parquet Files</title><link>https://rayyildiz.com/projects/cc2p/</link><pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/projects/cc2p/</guid><description>&lt;p>&lt;strong>(CC2P)&lt;/strong> is a Rust-based project that converts CSV files in a selected folder into parquet format. This tool provides a simple and efficient way of handling and converting your CSV data files.&lt;/p>
-&lt;p>&lt;img src="https://rayyildiz.com/gif/cc2p.gif">&lt;/p>
+&lt;p>&lt;img src="https://rayyildiz.com/gif/cc2p.gif" alt="">&lt;/p>
 &lt;h2 id="installation--usage">
  Installation &amp;amp; Usage
  &lt;a class="heading-link" href="#installation--usage">
