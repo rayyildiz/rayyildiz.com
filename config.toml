@@ -6,7 +6,8 @@ theme = "coder"
 # googleAnalytics ="UA-765318-11"
 languagecode = "en"
 
-paginate = 25
+# paginate = 25
+pagination.pagerSize = 25
 canonifyurls = true
 
 #  dracula, vim
