@@ -1,43 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Ramazan AYYILDIZ</title><link>https://rayyildiz.com/categories/programming/</link><description>Recent content in Programming on Ramazan AYYILDIZ</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rayyildiz.com/categories/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Async pattern in Rust and CSP</title><link>https://rayyildiz.com/posts/async-in-rust-vs-csp/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/async-in-rust-vs-csp/</guid><description>&lt;p>Asynchronous programming in Rust has sparked considerable debate within the programming community. On one side, advocates argue that async enhances performance and scalability, especially in I/O-bound and high-concurrency applications. On the other side, critics point to its complexity and potential for complicating the codebase. To fully understand this debate, it&amp;rsquo;s crucial to examine the differences between asynchronous programming and the &lt;a href="https://en.wikipedia.org/wiki/Communicating_sequential_processes" class="external-link" target="_blank" rel="noopener">Communicating Sequential Processes&lt;/a> (CSP) model, particularly as implemented through channels in Rust.&lt;/p></description></item><item><title>How Android Uses Rust for Enhanced Memory Safety</title><link>https://rayyildiz.com/posts/android-uses-rust-for-memory-safety/</link><pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/android-uses-rust-for-memory-safety/</guid><description>&lt;p>&lt;a href="https://developer.android.com" class="external-link" target="_blank" rel="noopener">Android&lt;/a>, the widely used mobile operating system developed by Google,
-has &lt;a href="https://security.googleblog.com/2021/04/rust-in-android-platform.html" class="external-link" target="_blank" rel="noopener">recently&lt;/a> started incorporating the Rust
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Ramazan AYYILDIZ</title><link>https://rayyildiz.com/categories/programming/</link><description>Recent content in Programming on Ramazan AYYILDIZ</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rayyildiz.com/categories/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Async pattern in Rust and CSP</title><link>https://rayyildiz.com/posts/async-in-rust-vs-csp/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/async-in-rust-vs-csp/</guid><description>&lt;p&gt;Asynchronous programming in Rust has sparked considerable debate within the programming community. On one side, advocates argue that async enhances performance and scalability, especially in I/O-bound and high-concurrency applications. On the other side, critics point to its complexity and potential for complicating the codebase. To fully understand this debate, it&amp;rsquo;s crucial to examine the differences between asynchronous programming and the &lt;a href="https://en.wikipedia.org/wiki/Communicating_sequential_processes" class="external-link" target="_blank" rel="noopener"&gt;Communicating Sequential Processes&lt;/a&gt; (CSP) model, particularly as implemented through channels in Rust.&lt;/p&gt;</description></item><item><title>How Android Uses Rust for Enhanced Memory Safety</title><link>https://rayyildiz.com/posts/android-uses-rust-for-memory-safety/</link><pubDate>Sat, 23 Dec 2023 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/android-uses-rust-for-memory-safety/</guid><description>&lt;p&gt;&lt;a href="https://developer.android.com" class="external-link" target="_blank" rel="noopener"&gt;Android&lt;/a&gt;, the widely used mobile operating system developed by Google,
+has &lt;a href="https://security.googleblog.com/2021/04/rust-in-android-platform.html" class="external-link" target="_blank" rel="noopener"&gt;recently&lt;/a&gt; started incorporating the Rust
 programming language to enhance its memory safety. This move signifies a major shift in Android&amp;rsquo;s approach to
-system-level programming, primarily dominated by C and C++.&lt;/p>
-&lt;h2 id="the-challenge-with-c-and-c">
+system-level programming, primarily dominated by C and C++.&lt;/p&gt;
+&lt;h2 id="the-challenge-with-c-and-c"&gt;
  The Challenge with C and C++
- &lt;a class="heading-link" href="#the-challenge-with-c-and-c">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;p>Traditionally, Android&amp;rsquo;s core system components have been written in C/C++, known for their performance and control
-over system resources. However, these languages come with significant &lt;a href="https://security.googleblog.com/2021/04/rust-in-android-platform.html" class="external-link" target="_blank" rel="noopener">challenges&lt;/a>, particularly in memory safety. They
+ &lt;a class="heading-link" href="#the-challenge-with-c-and-c"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Traditionally, Android&amp;rsquo;s core system components have been written in C/C++, known for their performance and control
+over system resources. However, these languages come with significant &lt;a href="https://security.googleblog.com/2021/04/rust-in-android-platform.html" class="external-link" target="_blank" rel="noopener"&gt;challenges&lt;/a&gt;, particularly in memory safety. They
 lack modern safety features, leading to vulnerabilities like buffer overflows and null pointer dereferences. Such issues
-have been the root cause of many security vulnerabilities in Android.&lt;/p></description></item><item><title>Introduction to Rust Programming Language</title><link>https://rayyildiz.com/posts/introduction-to-rust-language/</link><pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/introduction-to-rust-language/</guid><description>&lt;h2 id="what-is-rust">
+have been the root cause of many security vulnerabilities in Android.&lt;/p&gt;</description></item><item><title>Introduction to Rust Programming Language</title><link>https://rayyildiz.com/posts/introduction-to-rust-language/</link><pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/introduction-to-rust-language/</guid><description>&lt;h2 id="what-is-rust"&gt;
  What is Rust?
- &lt;a class="heading-link" href="#what-is-rust">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;p>&lt;a href="https://www.rust-lang.org/" class="external-link" target="_blank" rel="noopener">Rust&lt;/a> is an open-source systems programming language known for its focus on safety and
-performance. Developed by &lt;a href="https://github.com/graydon" class="external-link" target="_blank" rel="noopener">Graydon Hoare&lt;/a> at Mozilla Research, it was first released
-in &lt;a href="https://blog.rust-lang.org/2015/05/15/Rust-1.0.html" class="external-link" target="_blank" rel="noopener">2015&lt;/a>.
+ &lt;a class="heading-link" href="#what-is-rust"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.rust-lang.org/" class="external-link" target="_blank" rel="noopener"&gt;Rust&lt;/a&gt; is an open-source systems programming language known for its focus on safety and
+performance. Developed by &lt;a href="https://github.com/graydon" class="external-link" target="_blank" rel="noopener"&gt;Graydon Hoare&lt;/a&gt; at Mozilla Research, it was first released
+in &lt;a href="https://blog.rust-lang.org/2015/05/15/Rust-1.0.html" class="external-link" target="_blank" rel="noopener"&gt;2015&lt;/a&gt;.
 Rust offers memory safety without using a garbage collector, making it a valuable tool in system-level development where
-efficiency is critical.&lt;/p>
-&lt;h2 id="key-features-of-rust">
+efficiency is critical.&lt;/p&gt;
+&lt;h2 id="key-features-of-rust"&gt;
  Key Features of Rust
- &lt;a class="heading-link" href="#key-features-of-rust">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;p>&lt;strong>Safety:&lt;/strong> Rust&amp;rsquo;s biggest selling point is its emphasis on memory safety. It achieves this through a system of
+ &lt;a class="heading-link" href="#key-features-of-rust"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Safety:&lt;/strong&gt; Rust&amp;rsquo;s biggest selling point is its emphasis on memory safety. It achieves this through a system of
 ownership with a set of rules that the compiler checks at compile time. This system prevents common bugs and ensures
-thread safety.&lt;/p></description></item><item><title>Rust vs. Go: Exploring the Differences</title><link>https://rayyildiz.com/posts/rust-vs-go/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/rust-vs-go/</guid><description>&lt;h2 id="introduction">
+thread safety.&lt;/p&gt;</description></item><item><title>Rust vs. Go: Exploring the Differences</title><link>https://rayyildiz.com/posts/rust-vs-go/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/posts/rust-vs-go/</guid><description>&lt;h2 id="introduction"&gt;
  Introduction
- &lt;a class="heading-link" href="#introduction">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;p>In the vast landscape of programming languages, &lt;a href="https://www.rust-lang.org/" class="external-link" target="_blank" rel="noopener">Rust&lt;/a> and &lt;a href="https://go.dev/" class="external-link" target="_blank" rel="noopener">Go&lt;/a> stand out as two compelling choices for developers seeking modern solutions to their software development needs. Both languages have gained significant traction and popularity in recent years, each with its unique set of features, strengths, and use cases. In this post, we&amp;rsquo;ll delve into the differences between &lt;a href="https://www.rust-lang.org/" class="external-link" target="_blank" rel="noopener">Rust&lt;/a> and &lt;a href="https://go.dev/" class="external-link" target="_blank" rel="noopener">Go&lt;/a>, highlighting their key characteristics, use cases, and trade-offs, helping developers make informed decisions when choosing the right language for their projects.&lt;/p></description></item></channel></rss>
+ &lt;a class="heading-link" href="#introduction"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In the vast landscape of programming languages, &lt;a href="https://www.rust-lang.org/" class="external-link" target="_blank" rel="noopener"&gt;Rust&lt;/a&gt; and &lt;a href="https://go.dev/" class="external-link" target="_blank" rel="noopener"&gt;Go&lt;/a&gt; stand out as two compelling choices for developers seeking modern solutions to their software development needs. Both languages have gained significant traction and popularity in recent years, each with its unique set of features, strengths, and use cases. In this post, we&amp;rsquo;ll delve into the differences between &lt;a href="https://www.rust-lang.org/" class="external-link" target="_blank" rel="noopener"&gt;Rust&lt;/a&gt; and &lt;a href="https://go.dev/" class="external-link" target="_blank" rel="noopener"&gt;Go&lt;/a&gt;, highlighting their key characteristics, use cases, and trade-offs, helping developers make informed decisions when choosing the right language for their projects.&lt;/p&gt;</description></item></channel></rss>

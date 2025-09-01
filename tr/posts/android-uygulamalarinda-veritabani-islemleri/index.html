@@ -2,7 +2,7 @@
 
 Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir."><meta name=keywords content="blog,developer,kişisel"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta name=twitter:title content="Android Uygulamalarında Veritabanı İşlemleri"><meta name=twitter:description content="Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
 Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir."><meta property="og:url" content="https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/"><meta property="og:site_name" content="Ramazan AYYILDIZ"><meta property="og:title" content="Android Uygulamalarında Veritabanı İşlemleri"><meta property="og:description" content="Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.
-Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir."><meta property="og:locale" content="tr"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2010-06-12T00:00:00+00:00"><meta property="article:modified_time" content="2010-06-12T00:00:00+00:00"><meta property="article:tag" content="Android"><meta property="article:tag" content="Java"><meta property="article:tag" content="Database"><meta property="og:image" content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-tabli-ekranlar/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-giris/"><link rel=canonical href=https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/><link rel=preload href=https://rayyildiz.com/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=https://rayyildiz.com/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=https://rayyildiz.com/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=https://rayyildiz.com/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://rayyildiz.com/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=https://rayyildiz.com/images/favicon.svg sizes=any><link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=https://rayyildiz.com/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=https://rayyildiz.com/images/apple-touch-icon.png><link rel=manifest href=https://rayyildiz.com/site.webmanifest><link rel=mask-icon href=https://rayyildiz.com/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://rayyildiz.com/tr/>Ramazan AYYILDIZ
+Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi test edilmiş bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir."><meta property="og:locale" content="tr"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2010-06-12T00:00:00+00:00"><meta property="article:modified_time" content="2010-06-12T00:00:00+00:00"><meta property="article:tag" content="Android"><meta property="article:tag" content="Java"><meta property="article:tag" content="Database"><meta property="og:image" content="https://rayyildiz.com/avatars/rayyildiz.jpg"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-tabli-ekranlar/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/"><meta property="og:see_also" content="https://rayyildiz.com/tr/posts/android-giris/"><link rel=canonical href=https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/><link rel=preload href=https://rayyildiz.com/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=https://rayyildiz.com/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=https://rayyildiz.com/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=https://rayyildiz.com/css/coder.min.ebdf1a5dca6a69142e979b32668c69f2a95448b145a168104c5808b14d2b75b0.css integrity="sha256-698aXcpqaRQul5syZoxp8qlUSLFFoWgQTFgIsU0rdbA=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://rayyildiz.com/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=https://rayyildiz.com/images/favicon.svg sizes=any><link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://rayyildiz.com/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=https://rayyildiz.com/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=https://rayyildiz.com/images/apple-touch-icon.png><link rel=manifest href=https://rayyildiz.com/site.webmanifest><link rel=mask-icon href=https://rayyildiz.com/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://rayyildiz.com/tr/>Ramazan AYYILDIZ
 </a><input type=checkbox id=menu-toggle>
 <label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/posts/>Tüm Yazılar</a></li><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/series>Yazı Dizileri</a></li><li class=navigation-item><a class=navigation-link href=https://rayyildiz.com/tr/categories/arsiv/>Arşiv</a></li><li class="navigation-item menu-separator"><span>|</span></li><li class=navigation-item><a href=https://rayyildiz.com/>English</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://rayyildiz.com/tr/posts/android-uygulamalarinda-veritabani-islemleri/>Android Uygulamalarında Veritabanı İşlemleri</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
 <time datetime=2010-06-12T00:00:00Z>Haziran 12, 2010
@@ -16,265 +16,265 @@ Sqlite, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone
 <span class=tag><a href=https://rayyildiz.com/tr/tags/java/>Java</a>
 </span><span class=separator>•</span>
 <span class=tag><a href=https://rayyildiz.com/tr/tags/database/>Database</a></span></div></div></header><div class=post-content><p>Bir uygulama geliştirirken verilerin saklanması ihtiyacı doğmakta ve verilerin uygulamadan ayrı bir yapı olarak durması maksadıyla veritabını kullanılmaktadır. Android bir uygulama geliştirirken, aynı nedenden dolayı verilerin saklanması ihtiyacınız olacaktır. Micro device için uygulama geliştirmek, desktop bir bilgisayar için uygulama geliştirmekten daha zordur. Memory ve harddisk’inizin kısıtlı olması, işlemcinin gücü, multitask uygulama geliştirme sıkıntısı başlıcalarındandır. Android de ise yerleşik sqlite veritabanının yer alması ise Android’e önemli bir artı sunmaktadır.</p><p><img src=https://rayyildiz.com/images/sqlite1.gif#floatleft alt=Sqlite>
-<a href=http://www.sqlite.org/ class=external-link target=_blank rel=noopener>Sqlite</a>, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi <a href=http://www.sqlite.org/th3.html class=external-link target=_blank rel=noopener>test edilmiş</a> bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir.</p><p>Bu giriş bilgilerinden sonra örnek bir uygulama geliştirelim. Uygulamamız, ad, soyad ve telefon numarası kayıt edeceğimiz bir “customer” tablosu olsun. Linux ‘ta sqliteman gibi bir uygulama ile veritabanınızı oluştururun. Örneğimizde kullanacağımız tablonun scripti şu şekildedir:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=display:flex><span><span style=color:#ff79c6>CREATE</span> <span style=color:#ff79c6>TABLE</span> <span style=color:#f1fa8c>&#34;Customer&#34;</span> (
-</span></span><span style=display:flex><span> <span style=color:#f1fa8c>&#34;Id&#34;</span> <span style=color:#8be9fd;font-style:italic>INTEGER</span> <span style=color:#ff79c6>PRIMARY</span> <span style=color:#ff79c6>KEY</span>,
-</span></span><span style=display:flex><span> <span style=color:#f1fa8c>&#34;Firstname&#34;</span> <span style=color:#8be9fd;font-style:italic>TEXT</span>,
-</span></span><span style=display:flex><span> <span style=color:#f1fa8c>&#34;Lastname&#34;</span> <span style=color:#8be9fd;font-style:italic>TEXT</span>,
-</span></span><span style=display:flex><span> <span style=color:#f1fa8c>&#34;PhoneNumber&#34;</span> <span style=color:#8be9fd;font-style:italic>TEXT</span>
+<a href=http://www.sqlite.org/ class=external-link target=_blank rel=noopener>Sqlite</a>, oldukça önemli projelerde kullanılmış (Firefox,Skype, Mcfee, iPhone,…) ve de oldukçe iyi <a href=http://www.sqlite.org/th3.html class=external-link target=_blank rel=noopener>test edilmiş</a> bir veritabanıdır. 4K stack ve 100K ise heap için yeterlidir. Android içinde ise gelen sqlite, bir android uygulamasının ihtiyac duyduğu veritabanı işlemlerini karşılayacak düzeydedir.</p><p>Bu giriş bilgilerinden sonra örnek bir uygulama geliştirelim. Uygulamamız, ad, soyad ve telefon numarası kayıt edeceğimiz bir “customer” tablosu olsun. Linux ‘ta sqliteman gibi bir uygulama ile veritabanınızı oluştururun. Örneğimizde kullanacağımız tablonun scripti şu şekildedir:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=display:flex><span><span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#e6db74>&#34;Customer&#34;</span> (
+</span></span><span style=display:flex><span> <span style=color:#e6db74>&#34;Id&#34;</span> INTEGER <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span>,
+</span></span><span style=display:flex><span> <span style=color:#e6db74>&#34;Firstname&#34;</span> TEXT,
+</span></span><span style=display:flex><span> <span style=color:#e6db74>&#34;Lastname&#34;</span> TEXT,
+</span></span><span style=display:flex><span> <span style=color:#e6db74>&#34;PhoneNumber&#34;</span> TEXT
 </span></span><span style=display:flex><span> );
-</span></span></code></pre></div><p>Daha sonra ise IDE nizde bir android uygulaması açınız(<a href=https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/>Android ile Uygulama Geliştirme</a> yazısından faydalanabilirsiniz). Ben daha eski telefonlarda kullanılabilmesi için 1.6 uygulması actım. Daha sonra ise droiddraw ana ekran tasarlıyoruz.</p><p>Veritabanı ilk acıldığında tablonun create edilmesi için create script i kod içine almamız gerekir. Aynı şekilde örneğimizde compiled statement kullanıyoruz. Şu anda sadece insert ve getAll metodunu implemente ettik.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>DbHelper</span> {
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> String DATABASE_NAME <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#34;rayyildiz_sample.db&#34;</span>;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> <span style=color:#8be9fd>int</span> DATABASE_VERSION <span style=color:#ff79c6>=</span> 1;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> String TABLE_NAME <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#34;Customer&#34;</span>;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> String TABLE_CREATE <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#34;CREATE TABLE &#34;</span> <span style=color:#ff79c6>+</span> TABLE_NAME <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34; ( &#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;  \&#34;Id\&#34; INTEGER PRIMARY KEY,&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;  \&#34;Firstname\&#34; TEXT,&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;  \&#34;Lastname\&#34; TEXT,&#34;</span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;  \&#34;PhoneNumber\&#34; TEXT&#34;</span> <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;)&#34;</span>;
+</span></span></code></pre></div><p>Daha sonra ise IDE nizde bir android uygulaması açınız(<a href=https://rayyildiz.com/tr/posts/android-uygulama-gelistirme/>Android ile Uygulama Geliştirme</a> yazısından faydalanabilirsiniz). Ben daha eski telefonlarda kullanılabilmesi için 1.6 uygulması actım. Daha sonra ise droiddraw ana ekran tasarlıyoruz.</p><p>Veritabanı ilk acıldığında tablonun create edilmesi için create script i kod içine almamız gerekir. Aynı şekilde örneğimizde compiled statement kullanıyoruz. Şu anda sadece insert ve getAll metodunu implemente ettik.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DbHelper</span> {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> String DATABASE_NAME <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;rayyildiz_sample.db&#34;</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> DATABASE_VERSION <span style=color:#f92672>=</span> 1;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> String TABLE_NAME <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Customer&#34;</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> String TABLE_CREATE <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;CREATE TABLE &#34;</span> <span style=color:#f92672>+</span> TABLE_NAME <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; ( &#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;  \&#34;Id\&#34; INTEGER PRIMARY KEY,&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;  \&#34;Firstname\&#34; TEXT,&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;  \&#34;Lastname\&#34; TEXT,&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;  \&#34;PhoneNumber\&#34; TEXT&#34;</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;)&#34;</span>;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> String TABLE_INSERT <span style=color:#ff79c6>=</span> <span style=color:#f1fa8c>&#34;INSERT INTO &#34;</span> <span style=color:#ff79c6>+</span> TABLE_NAME <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;(Firstname,Lastname,PhoneNumber) VALUES (?,?,?)&#34;</span>;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> Context context;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> SQLiteDatabase database;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> SQLiteStatement insertSQLiteStatement;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> String TABLE_INSERT <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;INSERT INTO &#34;</span> <span style=color:#f92672>+</span> TABLE_NAME <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;(Firstname,Lastname,PhoneNumber) VALUES (?,?,?)&#34;</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> Context context;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> SQLiteDatabase database;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> SQLiteStatement insertSQLiteStatement;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#50fa7b>DbHelper</span>(Context context) {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>this</span>.<span style=color:#50fa7b>context</span> <span style=color:#ff79c6>=</span> context;
-</span></span><span style=display:flex><span>    DbOpenHelper dbOpenHelper <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> DbOpenHelper(context);
-</span></span><span style=display:flex><span>    database <span style=color:#ff79c6>=</span> dbOpenHelper.<span style=color:#50fa7b>getWritableDatabase</span>();
-</span></span><span style=display:flex><span>    insertSQLiteStatement <span style=color:#ff79c6>=</span> database.<span style=color:#50fa7b>compileStatement</span>(TABLE_INSERT);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>DbHelper</span>(Context context) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>context</span> <span style=color:#f92672>=</span> context;
+</span></span><span style=display:flex><span>    DbOpenHelper dbOpenHelper <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> DbOpenHelper(context);
+</span></span><span style=display:flex><span>    database <span style=color:#f92672>=</span> dbOpenHelper.<span style=color:#a6e22e>getWritableDatabase</span>();
+</span></span><span style=display:flex><span>    insertSQLiteStatement <span style=color:#f92672>=</span> database.<span style=color:#a6e22e>compileStatement</span>(TABLE_INSERT);
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>long</span> <span style=color:#50fa7b>insertCustomer</span>(Customer customer) {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (customer <span style=color:#ff79c6>==</span> <span style=color:#ff79c6>null</span>) {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>return</span> <span style=color:#ff79c6>-</span>1;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>long</span> <span style=color:#a6e22e>insertCustomer</span>(Customer customer) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (customer <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> <span style=color:#f92672>-</span>1;
 </span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>    insertSQLiteStatement.<span style=color:#50fa7b>bindString</span>(1, customer.<span style=color:#50fa7b>getFirstname</span>());
-</span></span><span style=display:flex><span>    insertSQLiteStatement.<span style=color:#50fa7b>bindString</span>(2, customer.<span style=color:#50fa7b>getLastname</span>());
-</span></span><span style=display:flex><span>    insertSQLiteStatement.<span style=color:#50fa7b>bindString</span>(3, customer.<span style=color:#50fa7b>getPhoneNumber</span>());
+</span></span><span style=display:flex><span>    insertSQLiteStatement.<span style=color:#a6e22e>bindString</span>(1, customer.<span style=color:#a6e22e>getFirstname</span>());
+</span></span><span style=display:flex><span>    insertSQLiteStatement.<span style=color:#a6e22e>bindString</span>(2, customer.<span style=color:#a6e22e>getLastname</span>());
+</span></span><span style=display:flex><span>    insertSQLiteStatement.<span style=color:#a6e22e>bindString</span>(3, customer.<span style=color:#a6e22e>getPhoneNumber</span>());
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> insertSQLiteStatement.<span style=color:#50fa7b>executeInsert</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> insertSQLiteStatement.<span style=color:#a6e22e>executeInsert</span>();
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> List <span style=color:#50fa7b>getAllCustomer</span>() {
-</span></span><span style=display:flex><span>    List customers <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> ArrayList();
-</span></span><span style=display:flex><span>    Cursor cursor <span style=color:#ff79c6>=</span> database.<span style=color:#50fa7b>query</span>(TABLE_NAME, <span style=color:#ff79c6>new</span> String<span style=color:#ff79c6>[]</span>{<span style=color:#f1fa8c>&#34;id,Firstname,Lastname,PhoneNumber&#34;</span>}, <span style=color:#ff79c6>null</span>, <span style=color:#ff79c6>null</span>, <span style=color:#ff79c6>null</span>, <span style=color:#ff79c6>null</span>, <span style=color:#f1fa8c>&#34;id desc&#34;</span>);
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (cursor.<span style=color:#50fa7b>moveToFirst</span>()) {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>do</span> {
-</span></span><span style=display:flex><span>        Customer c <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Customer();
-</span></span><span style=display:flex><span>        c.<span style=color:#50fa7b>setId</span>(cursor.<span style=color:#50fa7b>getInt</span>(0));
-</span></span><span style=display:flex><span>        c.<span style=color:#50fa7b>setFirstname</span>(cursor.<span style=color:#50fa7b>getString</span>(1));
-</span></span><span style=display:flex><span>        c.<span style=color:#50fa7b>setLastname</span>(cursor.<span style=color:#50fa7b>getString</span>(2));
-</span></span><span style=display:flex><span>        c.<span style=color:#50fa7b>setPhoneNumber</span>(cursor.<span style=color:#50fa7b>getString</span>(3));
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> List <span style=color:#a6e22e>getAllCustomer</span>() {
+</span></span><span style=display:flex><span>    List customers <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList();
+</span></span><span style=display:flex><span>    Cursor cursor <span style=color:#f92672>=</span> database.<span style=color:#a6e22e>query</span>(TABLE_NAME, <span style=color:#66d9ef>new</span> String<span style=color:#f92672>[]</span>{<span style=color:#e6db74>&#34;id,Firstname,Lastname,PhoneNumber&#34;</span>}, <span style=color:#66d9ef>null</span>, <span style=color:#66d9ef>null</span>, <span style=color:#66d9ef>null</span>, <span style=color:#66d9ef>null</span>, <span style=color:#e6db74>&#34;id desc&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (cursor.<span style=color:#a6e22e>moveToFirst</span>()) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>do</span> {
+</span></span><span style=display:flex><span>        Customer c <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Customer();
+</span></span><span style=display:flex><span>        c.<span style=color:#a6e22e>setId</span>(cursor.<span style=color:#a6e22e>getInt</span>(0));
+</span></span><span style=display:flex><span>        c.<span style=color:#a6e22e>setFirstname</span>(cursor.<span style=color:#a6e22e>getString</span>(1));
+</span></span><span style=display:flex><span>        c.<span style=color:#a6e22e>setLastname</span>(cursor.<span style=color:#a6e22e>getString</span>(2));
+</span></span><span style=display:flex><span>        c.<span style=color:#a6e22e>setPhoneNumber</span>(cursor.<span style=color:#a6e22e>getString</span>(3));
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        customers.<span style=color:#50fa7b>add</span>(c);
-</span></span><span style=display:flex><span>      } <span style=color:#ff79c6>while</span> (cursor.<span style=color:#50fa7b>moveToNext</span>());
+</span></span><span style=display:flex><span>        customers.<span style=color:#a6e22e>add</span>(c);
+</span></span><span style=display:flex><span>      } <span style=color:#66d9ef>while</span> (cursor.<span style=color:#a6e22e>moveToNext</span>());
 </span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (cursor <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>null</span> <span style=color:#ff79c6>&amp;</span>amp;<span style=color:#ff79c6>&amp;</span>amp; <span style=color:#ff79c6>!</span>cursor.<span style=color:#50fa7b>isClosed</span>()) {
-</span></span><span style=display:flex><span>      cursor.<span style=color:#50fa7b>close</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (cursor <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span> <span style=color:#f92672>&amp;</span>amp;<span style=color:#f92672>&amp;</span>amp; <span style=color:#f92672>!</span>cursor.<span style=color:#a6e22e>isClosed</span>()) {
+</span></span><span style=display:flex><span>      cursor.<span style=color:#a6e22e>close</span>();
 </span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> customers;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> customers;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span> <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>DbOpenHelper</span> <span style=color:#8be9fd;font-style:italic>extends</span> SQLiteOpenHelper {
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#50fa7b>DbOpenHelper</span>(Context context) {
-</span></span><span style=display:flex><span>   <span style=color:#8be9fd;font-style:italic>super</span>(context, DATABASE_NAME, <span style=color:#ff79c6>null</span>, DATABASE_VERSION);
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DbOpenHelper</span> <span style=color:#66d9ef>extends</span> SQLiteOpenHelper {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>DbOpenHelper</span>(Context context) {
+</span></span><span style=display:flex><span>   <span style=color:#66d9ef>super</span>(context, DATABASE_NAME, <span style=color:#66d9ef>null</span>, DATABASE_VERSION);
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  @Override
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onCreate</span>(SQLiteDatabase db) {
-</span></span><span style=display:flex><span>   db.<span style=color:#50fa7b>execSQL</span>(TABLE_CREATE);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onCreate</span>(SQLiteDatabase db) {
+</span></span><span style=display:flex><span>   db.<span style=color:#a6e22e>execSQL</span>(TABLE_CREATE);
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  @Override
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onUpgrade</span>(SQLiteDatabase db, <span style=color:#8be9fd>int</span> oldVersion, <span style=color:#8be9fd>int</span> newVersion) {
-</span></span><span style=display:flex><span>   db.<span style=color:#50fa7b>execSQL</span>(<span style=color:#f1fa8c>&#34;DROP TABLE IF EXISTS &#34;</span> <span style=color:#ff79c6>+</span> TABLE_NAME);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onUpgrade</span>(SQLiteDatabase db, <span style=color:#66d9ef>int</span> oldVersion, <span style=color:#66d9ef>int</span> newVersion) {
+</span></span><span style=display:flex><span>   db.<span style=color:#a6e22e>execSQL</span>(<span style=color:#e6db74>&#34;DROP TABLE IF EXISTS &#34;</span> <span style=color:#f92672>+</span> TABLE_NAME);
 </span></span><span style=display:flex><span>   onCreate(db);
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span> }
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>Bu ise Customer nesnesi</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>Customer</span> {
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd>int</span> id;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> String firstname;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> String lastname;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> String phoneNumber;
+</span></span></code></pre></div><p>Bu ise Customer nesnesi</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Customer</span> {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>int</span> id;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> String firstname;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> String lastname;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> String phoneNumber;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> String <span style=color:#50fa7b>getFirstname</span>() {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> firstname;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getFirstname</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> firstname;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>setFirstname</span>(String firstname) {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>this</span>.<span style=color:#50fa7b>firstname</span> <span style=color:#ff79c6>=</span> firstname;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setFirstname</span>(String firstname) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>firstname</span> <span style=color:#f92672>=</span> firstname;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>int</span> <span style=color:#50fa7b>getId</span>() {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> id;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> <span style=color:#a6e22e>getId</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> id;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>setId</span>(<span style=color:#8be9fd>int</span> id) {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>this</span>.<span style=color:#50fa7b>id</span> <span style=color:#ff79c6>=</span> id;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setId</span>(<span style=color:#66d9ef>int</span> id) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>id</span> <span style=color:#f92672>=</span> id;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> String <span style=color:#50fa7b>getLastname</span>() {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> lastname;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getLastname</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> lastname;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>setLastname</span>(String lastname) {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>this</span>.<span style=color:#50fa7b>lastname</span> <span style=color:#ff79c6>=</span> lastname;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setLastname</span>(String lastname) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>lastname</span> <span style=color:#f92672>=</span> lastname;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> String <span style=color:#50fa7b>getPhoneNumber</span>() {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span> phoneNumber;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> String <span style=color:#a6e22e>getPhoneNumber</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> phoneNumber;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>setPhoneNumber</span>(String phoneNumber) {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>this</span>.<span style=color:#50fa7b>phoneNumber</span> <span style=color:#ff79c6>=</span> phoneNumber;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setPhoneNumber</span>(String phoneNumber) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>phoneNumber</span> <span style=color:#f92672>=</span> phoneNumber;
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>İki tane Aktivity ekleyelim birisi MainActivity, diğeri ise Customer bilgilerini giriş yapabileceğimiz Activity olsun.</p><p>Bunlardan AddCustomerActivity şu şekilde:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>AddCustomerActivity</span> <span style=color:#8be9fd;font-style:italic>extends</span> Activity {
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>final</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd>int</span> SUCCESS_RETURN_CODE <span style=color:#ff79c6>=</span> 1;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> DbHelper m_db;
+</span></span></code></pre></div><p>İki tane Aktivity ekleyelim birisi MainActivity, diğeri ise Customer bilgilerini giriş yapabileceğimiz Activity olsun.</p><p>Bunlardan AddCustomerActivity şu şekilde:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AddCustomerActivity</span> <span style=color:#66d9ef>extends</span> Activity {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>int</span> SUCCESS_RETURN_CODE <span style=color:#f92672>=</span> 1;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> DbHelper m_db;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  @Override
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>protected</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onCreate</span>(Bundle savedInstanceState) {
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>super</span>.<span style=color:#50fa7b>onCreate</span>(savedInstanceState);
-</span></span><span style=display:flex><span>    setContentView(R.<span style=color:#50fa7b>layout</span>.<span style=color:#50fa7b>insert</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onCreate</span>(Bundle savedInstanceState) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>super</span>.<span style=color:#a6e22e>onCreate</span>(savedInstanceState);
+</span></span><span style=display:flex><span>    setContentView(R.<span style=color:#a6e22e>layout</span>.<span style=color:#a6e22e>insert</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    m_db <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> DbHelper(<span style=color:#ff79c6>this</span>);
-</span></span><span style=display:flex><span>    Button saveButton <span style=color:#ff79c6>=</span> (Button) findViewById(R.<span style=color:#50fa7b>id</span>.<span style=color:#50fa7b>btnSave</span>);
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>final</span>  EditText textFirstname <span style=color:#ff79c6>=</span> (EditText) findViewById(R.<span style=color:#50fa7b>id</span>.<span style=color:#50fa7b>textFirstname</span>);
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>final</span> EditText textLastname <span style=color:#ff79c6>=</span> (EditText) findViewById(R.<span style=color:#50fa7b>id</span>.<span style=color:#50fa7b>textLastname</span>);
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>final</span> EditText textPhoneNumber <span style=color:#ff79c6>=</span> (EditText) findViewById(R.<span style=color:#50fa7b>id</span>.<span style=color:#50fa7b>textPhoneNumber</span>);
+</span></span><span style=display:flex><span>    m_db <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> DbHelper(<span style=color:#66d9ef>this</span>);
+</span></span><span style=display:flex><span>    Button saveButton <span style=color:#f92672>=</span> (Button) findViewById(R.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>btnSave</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>final</span>  EditText textFirstname <span style=color:#f92672>=</span> (EditText) findViewById(R.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>textFirstname</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>final</span> EditText textLastname <span style=color:#f92672>=</span> (EditText) findViewById(R.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>textLastname</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>final</span> EditText textPhoneNumber <span style=color:#f92672>=</span> (EditText) findViewById(R.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>textPhoneNumber</span>);
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    saveButton.<span style=color:#50fa7b>setOnClickListener</span>(<span style=color:#ff79c6>new</span> View.<span style=color:#50fa7b>OnClickListener</span>() {
-</span></span><span style=display:flex><span>      @Override
-</span></span><span style=display:flex><span>      <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onClick</span>(View v) {
-</span></span><span style=display:flex><span>      Intent intent <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent();
-</span></span><span style=display:flex><span>      Customer c <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Customer();
-</span></span><span style=display:flex><span>      c.<span style=color:#50fa7b>setFirstname</span>(textFirstname.<span style=color:#50fa7b>getText</span>().<span style=color:#50fa7b>toString</span>());
-</span></span><span style=display:flex><span>      c.<span style=color:#50fa7b>setLastname</span>(textLastname.<span style=color:#50fa7b>getText</span>().<span style=color:#50fa7b>toString</span>());
-</span></span><span style=display:flex><span>      c.<span style=color:#50fa7b>setPhoneNumber</span>(textPhoneNumber.<span style=color:#50fa7b>getText</span>().<span style=color:#50fa7b>toString</span>());
-</span></span><span style=display:flex><span>      m_db.<span style=color:#50fa7b>insertCustomer</span>(c);
+</span></span><span style=display:flex><span>    saveButton.<span style=color:#a6e22e>setOnClickListener</span>(<span style=color:#66d9ef>new</span> View.<span style=color:#a6e22e>OnClickListener</span>() {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onClick</span>(View v) {
+</span></span><span style=display:flex><span>      Intent intent <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Intent();
+</span></span><span style=display:flex><span>      Customer c <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Customer();
+</span></span><span style=display:flex><span>      c.<span style=color:#a6e22e>setFirstname</span>(textFirstname.<span style=color:#a6e22e>getText</span>().<span style=color:#a6e22e>toString</span>());
+</span></span><span style=display:flex><span>      c.<span style=color:#a6e22e>setLastname</span>(textLastname.<span style=color:#a6e22e>getText</span>().<span style=color:#a6e22e>toString</span>());
+</span></span><span style=display:flex><span>      c.<span style=color:#a6e22e>setPhoneNumber</span>(textPhoneNumber.<span style=color:#a6e22e>getText</span>().<span style=color:#a6e22e>toString</span>());
+</span></span><span style=display:flex><span>      m_db.<span style=color:#a6e22e>insertCustomer</span>(c);
 </span></span><span style=display:flex><span>      setResult(SUCCESS_RETURN_CODE, intent);
 </span></span><span style=display:flex><span>      finish();
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  });
 </span></span><span style=display:flex><span> }
 </span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>Ve Main Activity şu şekildedir:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>MainActivity</span> <span style=color:#8be9fd;font-style:italic>extends</span> Activity {
+</span></span></code></pre></div><p>Ve Main Activity şu şekildedir:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MainActivity</span> <span style=color:#66d9ef>extends</span> Activity {
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> ProgressDialog m_ProgressDialog <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>null</span>;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>protected</span> <span style=color:#8be9fd;font-style:italic>static</span> <span style=color:#8be9fd;font-style:italic>final</span> <span style=color:#8be9fd>int</span> SUB_ACTIVITY_REQUEST_CODE <span style=color:#ff79c6>=</span> 100;<span style=color:#8be9fd;font-style:italic>private</span> ArrayList m_customers <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>null</span>;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> DataAdapter m_adapter;
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> Runnable viewData;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> ProgressDialog m_ProgressDialog <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> <span style=color:#66d9ef>int</span> SUB_ACTIVITY_REQUEST_CODE <span style=color:#f92672>=</span> 100;<span style=color:#66d9ef>private</span> ArrayList m_customers <span style=color:#f92672>=</span> <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> DataAdapter m_adapter;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> Runnable viewData;
 </span></span><span style=display:flex><span>  DbHelper m_db;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  @Override
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onCreate</span>(Bundle icicle) {
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>super</span>.<span style=color:#50fa7b>onCreate</span>(icicle);
-</span></span><span style=display:flex><span>    setContentView(R.<span style=color:#50fa7b>layout</span>.<span style=color:#50fa7b>main</span>);
-</span></span><span style=display:flex><span>    m_db <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> DbHelper(<span style=color:#ff79c6>this</span>);
-</span></span><span style=display:flex><span>    m_customers <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> ArrayList();
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>this</span>.<span style=color:#50fa7b>m_adapter</span> <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> DataAdapter(<span style=color:#ff79c6>this</span>, R.<span style=color:#50fa7b>layout</span>.<span style=color:#50fa7b>row</span>, m_customers);
-</span></span><span style=display:flex><span>    setListAdapter(<span style=color:#ff79c6>this</span>.<span style=color:#50fa7b>m_adapter</span>);
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onCreate</span>(Bundle icicle) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>super</span>.<span style=color:#a6e22e>onCreate</span>(icicle);
+</span></span><span style=display:flex><span>    setContentView(R.<span style=color:#a6e22e>layout</span>.<span style=color:#a6e22e>main</span>);
+</span></span><span style=display:flex><span>    m_db <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> DbHelper(<span style=color:#66d9ef>this</span>);
+</span></span><span style=display:flex><span>    m_customers <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>m_adapter</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> DataAdapter(<span style=color:#66d9ef>this</span>, R.<span style=color:#a6e22e>layout</span>.<span style=color:#a6e22e>row</span>, m_customers);
+</span></span><span style=display:flex><span>    setListAdapter(<span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>m_adapter</span>);
 </span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>    Button refreshButton <span style=color:#ff79c6>=</span> (Button)findViewById(R.<span style=color:#50fa7b>id</span>.<span style=color:#50fa7b>btnRefresh</span>);
-</span></span><span style=display:flex><span>    refreshButton.<span style=color:#50fa7b>setOnClickListener</span>(<span style=color:#ff79c6>new</span> View.<span style=color:#50fa7b>OnClickListener</span>() {
-</span></span><span style=display:flex><span>      <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onClick</span>(View arg0) {
+</span></span><span style=display:flex><span>    Button refreshButton <span style=color:#f92672>=</span> (Button)findViewById(R.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>btnRefresh</span>);
+</span></span><span style=display:flex><span>    refreshButton.<span style=color:#a6e22e>setOnClickListener</span>(<span style=color:#66d9ef>new</span> View.<span style=color:#a6e22e>OnClickListener</span>() {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onClick</span>(View arg0) {
 </span></span><span style=display:flex><span>        refresh();
 </span></span><span style=display:flex><span>      }
 </span></span><span style=display:flex><span>    });
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    Button addButton <span style=color:#ff79c6>=</span> (Button) findViewById(R.<span style=color:#50fa7b>id</span>.<span style=color:#50fa7b>btnAdd</span>);
-</span></span><span style=display:flex><span>    addButton.<span style=color:#50fa7b>setOnClickListener</span>(<span style=color:#ff79c6>new</span> View.<span style=color:#50fa7b>OnClickListener</span>() {
+</span></span><span style=display:flex><span>    Button addButton <span style=color:#f92672>=</span> (Button) findViewById(R.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>btnAdd</span>);
+</span></span><span style=display:flex><span>    addButton.<span style=color:#a6e22e>setOnClickListener</span>(<span style=color:#66d9ef>new</span> View.<span style=color:#a6e22e>OnClickListener</span>() {
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>      <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onClick</span>(View v) {
-</span></span><span style=display:flex><span>        Intent i <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Intent(MainActivity.<span style=color:#50fa7b>this</span>,AddCustomerActivity.<span style=color:#50fa7b>class</span>);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onClick</span>(View v) {
+</span></span><span style=display:flex><span>        Intent i <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Intent(MainActivity.<span style=color:#a6e22e>this</span>,AddCustomerActivity.<span style=color:#a6e22e>class</span>);
 </span></span><span style=display:flex><span>        startActivityForResult(i, SUB_ACTIVITY_REQUEST_CODE);
 </span></span><span style=display:flex><span>      }
 </span></span><span style=display:flex><span>    });
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  @Override
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>protected</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>onActivityResult</span>(<span style=color:#8be9fd>int</span> requestCode, <span style=color:#8be9fd>int</span> resultCode, Intent data) {
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>super</span>.<span style=color:#50fa7b>onActivityResult</span>(requestCode, resultCode, data);
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (requestCode <span style=color:#ff79c6>==</span> SUB_ACTIVITY_REQUEST_CODE) {
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>onActivityResult</span>(<span style=color:#66d9ef>int</span> requestCode, <span style=color:#66d9ef>int</span> resultCode, Intent data) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>super</span>.<span style=color:#a6e22e>onActivityResult</span>(requestCode, resultCode, data);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (requestCode <span style=color:#f92672>==</span> SUB_ACTIVITY_REQUEST_CODE) {
 </span></span><span style=display:flex><span>      refresh();
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>setListAdapter</span>(DataAdapter m_adapter) {
-</span></span><span style=display:flex><span>    ListView lw <span style=color:#ff79c6>=</span> (ListView) findViewById(R.<span style=color:#50fa7b>id</span>.<span style=color:#50fa7b>listCustomer</span>);
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>if</span> (lw <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>null</span>) {
-</span></span><span style=display:flex><span>      lw.<span style=color:#50fa7b>setAdapter</span>(m_adapter);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setListAdapter</span>(DataAdapter m_adapter) {
+</span></span><span style=display:flex><span>    ListView lw <span style=color:#f92672>=</span> (ListView) findViewById(R.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>listCustomer</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (lw <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>      lw.<span style=color:#a6e22e>setAdapter</span>(m_adapter);
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>insert</span>(Customer c){
-</span></span><span style=display:flex><span>    m_db.<span style=color:#50fa7b>insertCustomer</span>(c);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>insert</span>(Customer c){
+</span></span><span style=display:flex><span>    m_db.<span style=color:#a6e22e>insertCustomer</span>(c);
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>refresh</span>(){
-</span></span><span style=display:flex><span>    WorkerThread thread <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> WorkerThread();
-</span></span><span style=display:flex><span>    thread.<span style=color:#50fa7b>start</span>();
-</span></span><span style=display:flex><span>    m_ProgressDialog <span style=color:#ff79c6>=</span> ProgressDialog.<span style=color:#50fa7b>show</span>(MainActivity.<span style=color:#50fa7b>this</span>, <span style=color:#f1fa8c>&#34;Please wait...&#34;</span>, <span style=color:#f1fa8c>&#34;Resfreshing data ...&#34;</span>, <span style=color:#ff79c6>true</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>refresh</span>(){
+</span></span><span style=display:flex><span>    WorkerThread thread <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> WorkerThread();
+</span></span><span style=display:flex><span>    thread.<span style=color:#a6e22e>start</span>();
+</span></span><span style=display:flex><span>    m_ProgressDialog <span style=color:#f92672>=</span> ProgressDialog.<span style=color:#a6e22e>show</span>(MainActivity.<span style=color:#a6e22e>this</span>, <span style=color:#e6db74>&#34;Please wait...&#34;</span>, <span style=color:#e6db74>&#34;Resfreshing data ...&#34;</span>, <span style=color:#66d9ef>true</span>);
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>WorkerThread</span> <span style=color:#8be9fd;font-style:italic>extends</span> Thread {
-</span></span><span style=display:flex><span>    @Override
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>run</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>WorkerThread</span> <span style=color:#66d9ef>extends</span> Thread {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>run</span>() {
 </span></span><span style=display:flex><span>      getCustomers();
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> Runnable returnRes <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> Runnable() {
-</span></span><span style=display:flex><span>    @Override
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>run</span>() {
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>if</span> (m_customers <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>null</span> <span style=color:#ff79c6>&amp;</span>amp;<span style=color:#ff79c6>&amp;</span>amp; m_customers.<span style=color:#50fa7b>size</span>() <span style=color:#ff79c6>&amp;</span>gt; 0) {
-</span></span><span style=display:flex><span>        m_adapter.<span style=color:#50fa7b>clear</span>();
-</span></span><span style=display:flex><span>        m_adapter.<span style=color:#50fa7b>notifyDataSetChanged</span>();
-</span></span><span style=display:flex><span>        <span style=color:#ff79c6>for</span> (<span style=color:#8be9fd>int</span> i <span style=color:#ff79c6>=</span> 0; i <span style=color:#ff79c6>&amp;</span>lt; m_customers.<span style=color:#50fa7b>size</span>(); i<span style=color:#ff79c6>++</span>) {
-</span></span><span style=display:flex><span>          m_adapter.<span style=color:#50fa7b>add</span>(m_customers.<span style=color:#50fa7b>get</span>(i));
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> Runnable returnRes <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Runnable() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>run</span>() {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span> (m_customers <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span> <span style=color:#f92672>&amp;</span>amp;<span style=color:#f92672>&amp;</span>amp; m_customers.<span style=color:#a6e22e>size</span>() <span style=color:#f92672>&amp;</span>gt; 0) {
+</span></span><span style=display:flex><span>        m_adapter.<span style=color:#a6e22e>clear</span>();
+</span></span><span style=display:flex><span>        m_adapter.<span style=color:#a6e22e>notifyDataSetChanged</span>();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0; i <span style=color:#f92672>&amp;</span>lt; m_customers.<span style=color:#a6e22e>size</span>(); i<span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>          m_adapter.<span style=color:#a6e22e>add</span>(m_customers.<span style=color:#a6e22e>get</span>(i));
 </span></span><span style=display:flex><span>        }
 </span></span><span style=display:flex><span>      }
-</span></span><span style=display:flex><span>      m_ProgressDialog.<span style=color:#50fa7b>dismiss</span>();
-</span></span><span style=display:flex><span>      m_adapter.<span style=color:#50fa7b>notifyDataSetChanged</span>();
+</span></span><span style=display:flex><span>      m_ProgressDialog.<span style=color:#a6e22e>dismiss</span>();
+</span></span><span style=display:flex><span>      m_adapter.<span style=color:#a6e22e>notifyDataSetChanged</span>();
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  };
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>private</span> <span style=color:#8be9fd>void</span> <span style=color:#50fa7b>getCustomers</span>() {
-</span></span><span style=display:flex><span>    <span style=color:#ff79c6>try</span> {
-</span></span><span style=display:flex><span>      m_customers <span style=color:#ff79c6>=</span> <span style=color:#ff79c6>new</span> ArrayList();
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>getCustomers</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>      m_customers <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ArrayList();
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>      m_customers <span style=color:#ff79c6>=</span> (ArrayList) m_db.<span style=color:#50fa7b>getAllCustomer</span>();  
-</span></span><span style=display:flex><span>    } <span style=color:#ff79c6>catch</span> (Exception e) {
-</span></span><span style=display:flex><span>      Log.<span style=color:#50fa7b>e</span>(<span style=color:#f1fa8c>&#34;BACKGROUND_PROC&#34;</span>, e.<span style=color:#50fa7b>getMessage</span>());
+</span></span><span style=display:flex><span>      m_customers <span style=color:#f92672>=</span> (ArrayList) m_db.<span style=color:#a6e22e>getAllCustomer</span>();  
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (Exception e) {
+</span></span><span style=display:flex><span>      Log.<span style=color:#a6e22e>e</span>(<span style=color:#e6db74>&#34;BACKGROUND_PROC&#34;</span>, e.<span style=color:#a6e22e>getMessage</span>());
 </span></span><span style=display:flex><span>    } 
 </span></span><span style=display:flex><span>    runOnUiThread(returnRes);
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>  <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#8be9fd;font-style:italic>class</span> <span style=color:#50fa7b>DataAdapter</span> <span style=color:#8be9fd;font-style:italic>extends</span> ArrayAdapter{
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>private</span> ArrayList items;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DataAdapter</span> <span style=color:#66d9ef>extends</span> ArrayAdapter{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> ArrayList items;
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>public</span> <span style=color:#50fa7b>DataAdapter</span>(Context context, <span style=color:#8be9fd>int</span> textViewResourceId, ArrayList items) {
-</span></span><span style=display:flex><span>      <span style=color:#8be9fd;font-style:italic>super</span>(context, textViewResourceId, items);
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>this</span>.<span style=color:#50fa7b>items</span> <span style=color:#ff79c6>=</span> items;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>DataAdapter</span>(Context context, <span style=color:#66d9ef>int</span> textViewResourceId, ArrayList items) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>super</span>(context, textViewResourceId, items);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>items</span> <span style=color:#f92672>=</span> items;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    @Override
-</span></span><span style=display:flex><span>    <span style=color:#8be9fd;font-style:italic>public</span> View <span style=color:#50fa7b>getView</span>(<span style=color:#8be9fd>int</span> position, View convertView, ViewGroup parent) {
-</span></span><span style=display:flex><span>      View v <span style=color:#ff79c6>=</span> convertView;
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>if</span> (v <span style=color:#ff79c6>==</span> <span style=color:#ff79c6>null</span>) {
-</span></span><span style=display:flex><span>        LayoutInflater vi <span style=color:#ff79c6>=</span> (LayoutInflater) getSystemService(Context.<span style=color:#50fa7b>LAYOUT_INFLATER_SERVICE</span>);
-</span></span><span style=display:flex><span>        v <span style=color:#ff79c6>=</span> vi.<span style=color:#50fa7b>inflate</span>(R.<span style=color:#50fa7b>layout</span>.<span style=color:#50fa7b>row</span>, <span style=color:#ff79c6>null</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> View <span style=color:#a6e22e>getView</span>(<span style=color:#66d9ef>int</span> position, View convertView, ViewGroup parent) {
+</span></span><span style=display:flex><span>      View v <span style=color:#f92672>=</span> convertView;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span> (v <span style=color:#f92672>==</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        LayoutInflater vi <span style=color:#f92672>=</span> (LayoutInflater) getSystemService(Context.<span style=color:#a6e22e>LAYOUT_INFLATER_SERVICE</span>);
+</span></span><span style=display:flex><span>        v <span style=color:#f92672>=</span> vi.<span style=color:#a6e22e>inflate</span>(R.<span style=color:#a6e22e>layout</span>.<span style=color:#a6e22e>row</span>, <span style=color:#66d9ef>null</span>);
 </span></span><span style=display:flex><span>      }
-</span></span><span style=display:flex><span>      Customer o <span style=color:#ff79c6>=</span> items.<span style=color:#50fa7b>get</span>(position);
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>if</span> (o <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>null</span>) {
-</span></span><span style=display:flex><span>        TextView tt <span style=color:#ff79c6>=</span> (TextView) v.<span style=color:#50fa7b>findViewById</span>(R.<span style=color:#50fa7b>id</span>.<span style=color:#50fa7b>listLabeltext</span>);
-</span></span><span style=display:flex><span>        <span style=color:#ff79c6>if</span> (tt <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>null</span>) {
-</span></span><span style=display:flex><span>          tt.<span style=color:#50fa7b>setText</span>(o.<span style=color:#50fa7b>getId</span>() <span style=color:#ff79c6>+</span><span style=color:#f1fa8c>&#34; : &#34;</span> <span style=color:#ff79c6>+</span> o.<span style=color:#50fa7b>getFirstname</span>() <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34; &#34;</span> <span style=color:#ff79c6>+</span> o.<span style=color:#50fa7b>getLastname</span>() <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;(&#34;</span><span style=color:#ff79c6>+</span> o.<span style=color:#50fa7b>getPhoneNumber</span>() <span style=color:#ff79c6>+</span> <span style=color:#f1fa8c>&#34;)&#34;</span>);
+</span></span><span style=display:flex><span>      Customer o <span style=color:#f92672>=</span> items.<span style=color:#a6e22e>get</span>(position);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span> (o <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>        TextView tt <span style=color:#f92672>=</span> (TextView) v.<span style=color:#a6e22e>findViewById</span>(R.<span style=color:#a6e22e>id</span>.<span style=color:#a6e22e>listLabeltext</span>);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (tt <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span>) {
+</span></span><span style=display:flex><span>          tt.<span style=color:#a6e22e>setText</span>(o.<span style=color:#a6e22e>getId</span>() <span style=color:#f92672>+</span><span style=color:#e6db74>&#34; : &#34;</span> <span style=color:#f92672>+</span> o.<span style=color:#a6e22e>getFirstname</span>() <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; &#34;</span> <span style=color:#f92672>+</span> o.<span style=color:#a6e22e>getLastname</span>() <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;(&#34;</span><span style=color:#f92672>+</span> o.<span style=color:#a6e22e>getPhoneNumber</span>() <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;)&#34;</span>);
 </span></span><span style=display:flex><span>        }
 </span></span><span style=display:flex><span>      }
-</span></span><span style=display:flex><span>      <span style=color:#ff79c6>return</span> v;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span> v;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>  }
 </span></span><span style=display:flex><span>}

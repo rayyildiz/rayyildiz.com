@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Netbeans on Ramazan AYYILDIZ</title><link>https://rayyildiz.com/tr/tags/netbeans/</link><description>Recent content in Netbeans on Ramazan AYYILDIZ</description><generator>Hugo</generator><language>tr</language><lastBuildDate>Mon, 09 Mar 2009 00:00:00 +0000</lastBuildDate><atom:link href="https://rayyildiz.com/tr/tags/netbeans/index.xml" rel="self" type="application/rss+xml"/><item><title>Netbeans 6.9</title><link>https://rayyildiz.com/tr/posts/netbeans-6-9-ozellikleri/</link><pubDate>Mon, 09 Mar 2009 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/tr/posts/netbeans-6-9-ozellikleri/</guid><description>&lt;p>Netbeans 6.9 beta sürümü yayınlandı. Netbeans 6.9 adresinden detaylarına bakabilir ve indirebilirsiniz.
-&lt;img src="https://rayyildiz.com/images/enterprise-cdi1.jpg" alt="Enterprise Cdi1">&lt;/p>
-&lt;p>Netbeans 6.9 da benim uzun süredir beklediğim Spring 3.0 desteği en sonunda gelmiş oldu. Daha önceki sürümlerinde netbeans Spring 2.5 desteği sunuyordu. Özellikle spring 3.0 ile gelen özellikleri kullanabileceğiz. Netbeans 6.9, 9 haziranda release olacak.&lt;/p>
-&lt;p>Google App Engine için geliştirilmiş plugin de mevcuttur.&lt;/p>
-&lt;h2 id="javafx">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Netbeans on Ramazan AYYILDIZ</title><link>https://rayyildiz.com/tr/tags/netbeans/</link><description>Recent content in Netbeans on Ramazan AYYILDIZ</description><generator>Hugo</generator><language>tr</language><lastBuildDate>Mon, 09 Mar 2009 00:00:00 +0000</lastBuildDate><atom:link href="https://rayyildiz.com/tr/tags/netbeans/index.xml" rel="self" type="application/rss+xml"/><item><title>Netbeans 6.9</title><link>https://rayyildiz.com/tr/posts/netbeans-6-9-ozellikleri/</link><pubDate>Mon, 09 Mar 2009 00:00:00 +0000</pubDate><guid>https://rayyildiz.com/tr/posts/netbeans-6-9-ozellikleri/</guid><description>&lt;p&gt;Netbeans 6.9 beta sürümü yayınlandı. Netbeans 6.9 adresinden detaylarına bakabilir ve indirebilirsiniz.
+&lt;img src="https://rayyildiz.com/images/enterprise-cdi1.jpg" alt="Enterprise Cdi1"&gt;&lt;/p&gt;
+&lt;p&gt;Netbeans 6.9 da benim uzun süredir beklediğim Spring 3.0 desteği en sonunda gelmiş oldu. Daha önceki sürümlerinde netbeans Spring 2.5 desteği sunuyordu. Özellikle spring 3.0 ile gelen özellikleri kullanabileceğiz. Netbeans 6.9, 9 haziranda release olacak.&lt;/p&gt;
+&lt;p&gt;Google App Engine için geliştirilmiş plugin de mevcuttur.&lt;/p&gt;
+&lt;h2 id="javafx"&gt;
  JavaFX
- &lt;a class="heading-link" href="#javafx">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Başlık Linki">&lt;/i>
- &lt;span class="sr-only">Başlık Linki&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;p>Bildiğiniz gibi Sun &amp;amp; Oracle , linux platformunda javafx desteğini sunmuşlardı. Netbeans ise javafx geliştirmek için en uygun ücretsiz IDE olarak yoluna devam ediyor.&lt;/p></description></item></channel></rss>
+ &lt;a class="heading-link" href="#javafx"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Başlık Linki"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Başlık Linki&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Bildiğiniz gibi Sun &amp;amp; Oracle , linux platformunda javafx desteğini sunmuşlardı. Netbeans ise javafx geliştirmek için en uygun ücretsiz IDE olarak yoluna devam ediyor.&lt;/p&gt;</description></item></channel></rss>
