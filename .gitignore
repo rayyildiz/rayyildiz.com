@@ -10,3 +10,7 @@ gh-pages.pub
 .hugo_build.lock
 .vscode/
 .DS_Store
+
+# Added by cargo
+
+/target
