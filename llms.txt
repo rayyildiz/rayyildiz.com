@@ -1,0 +1,74 @@
+llms: 1.0
+site: https://rayyildiz.com
+author: Ramazan AYYILDIZ
+
+[EN]
+Description/Purpose:
+- Personal website and blog by Ramazan AYYILDIZ.
+- Shares practical notes, articles, and project write-ups on software development and related topics.
+
+Main Topics:
+- Software engineering and programming
+- Web development and backend services
+- Go (Golang) and general developer tooling
+- Open source, personal projects, and technical notes
+
+Content Types:
+- Blog posts (articles, tutorials, notes)
+- Project pages and write-ups
+- Series (multi-part posts)
+- About and other informational pages
+
+Site Structure and Sections:
+- Bilingual site with language-specific sections at /en (English) and /tr (Turkish)
+- Posts organized by tags, categories, and series
+- Key sections include: /posts, /projects, and about pages
+
+Language and Translation:
+- Bilingual: English and Turkish
+- Primary language: Turkish; English versions are provided when available
+- Not all content is translated one-to-one; some posts are language-specific
+- Where applicable, cross-links are provided between language versions
+
+Target Audience:
+- Software developers, engineers, and technologists
+- Learners interested in practical programming and real-world project insights
+
+Update Pattern:
+- Updated periodically as new posts or projects are published; no fixed schedule
+
+
+[TR]
+Açıklama/Amaç:
+- Ramazan AYYILDIZ’ın kişisel web sitesi ve blogu.
+- Yazılım geliştirme ve ilgili konularda pratik notlar, yazılar ve proje paylaşımları içerir.
+
+Ana Konular:
+- Yazılım mühendisliği ve programlama
+- Web geliştirme ve arka uç servisler
+- Go (Golang) ve genel geliştirici araçları
+- Açık kaynak, kişisel projeler ve teknik notlar
+
+İçerik Türleri:
+- Blog yazıları (makaleler, rehberler, notlar)
+- Proje sayfaları ve anlatımları
+- Seriler (çok bölümlü yazılar)
+- Hakkında ve diğer bilgilendirme sayfaları
+
+Site Yapısı ve Bölümler:
+- İki dilli site: /en (İngilizce) ve /tr (Türkçe) dil bölümleri
+- Yazılar etiketler, kategoriler ve seriler ile organize edilir
+- Temel bölümler: /posts, /projects ve hakkında sayfaları
+
+Dil ve Çeviri:
+- İki dilli: Türkçe ve İngilizce
+- Birincil dil: Türkçe; mevcut olduğunda İngilizce sürümler sağlanır
+- Tüm içerik birebir çevrilmeyebilir; bazı yazılar dile özeldir
+- Uygun olduğunda diller arası bağlantılar verilir
+
+Hedef Kitle:
+- Yazılım geliştiriciler, mühendisler ve teknoloji meraklıları
+- Uygulamalı programlama ve gerçek projelerden öğrenmeye ilgi duyanlar
+
+Güncelleme Sıklığı:
+- Yeni yazılar veya projeler yayımlandıkça periyodik olarak güncellenir; sabit bir takvim yoktur
