@@ -1,0 +1,198 @@
+---
+title: "CC2P - Convert CSV to Parquet Files"
+slug: "cc2p"
+description: "A Rust-based project that converts CSV files into parquet format"
+---
+
+**CC2P** (Convert CSV To Parquet) is a high-performance command-line tool written in Rust that efficiently converts CSV files to the Apache Parquet format. Parquet is a columnar storage file format that offers efficient data compression and encoding schemes, making it ideal for big data processing.
+
+## Why Use CC2P?
+
+- **Performance**: Leverages Rust's speed and multi-threading for fast conversions
+- **Memory Efficiency**: Processes files with minimal memory footprint
+- **Flexibility**: Supports various CSV formats with different delimiters and header options
+- **Schema Inference**: Automatically detects column types from your data
+- **Batch Processing**: Convert multiple CSV files in a single command
+- **Interactive Mode**: Browse and selectively export columns using the TUI
+
+![](/gif/cc2p.gif)
+
+
+## Installation
+
+### From Cargo (Recommended)
+
+If you have Rust installed, you can install CC2P directly from crates.io:
+
+```shell
+cargo install cc2p
+```
+
+### From GitHub Releases
+
+You can download pre-built binaries from the [GitHub Releases page](https://github.com/rayyildiz/cc2p/releases).
+
+### From Source
+
+To build from source:
+
+```shell
+# Clone the repository
+git clone https://github.com/rayyildiz/cc2p.git
+cd cc2p
+
+# Build in release mode
+cargo build --release
+
+# The binary will be in target/release/cc2p
+```
+
+## Usage
+
+Basic usage:
+
+```shell
+cc2p [OPTIONS] [PATH]
+```
+
+Where `PATH` is the path to a CSV file or a glob pattern (default: `*.csv`).
+
+### Examples
+
+Convert a single CSV file:
+```shell
+cc2p data.csv
+```
+
+Convert all CSV files in the current directory:
+```shell
+cc2p
+```
+
+Convert CSV files with semicolon delimiter:
+```shell
+cc2p --delimiter ";" *.csv
+```
+
+Convert CSV files without headers:
+```shell
+cc2p --no-header data_files/*.csv
+```
+
+Use 4 worker threads for faster processing:
+```shell
+cc2p --worker 4 large_data.csv
+```
+
+### Options
+
+- **-d, --delimiter** : Delimiter character used in CSV files (default: `,`)
+- **-n, --no-header**: Whether to include the header in the CSV search column (default: `false`)
+- **-w, --worker**: Number of worker threads to use for performing the task (default: `1`)
+- **-s, --sampling**: Number of rows to sample for inferring the schema (default: `2048`)
+- **-i, --interactive**: Show an interactive UI to browse files and select columns (default: `false`)
+
+```shell
+$ cc2p --help
+
+Convert a CSV to parquet file format
+
+Usage: cc2p [OPTIONS] [PATH]
+
+Arguments:
+  [PATH]  Represents the folder path for CSV search. [default: *.csv]
+
+Options:
+  -d, --delimiter <DELIMITER>  Represents the delimiter used in CSV files. [default: ,]
+  -n, --no-header              Indicates whether to include the header in the CSV search column.
+  -w, --worker <WORKER>        Number of worker threads to use for performing the task. [default: 1]
+  -s, --sampling <SAMPLING>    Number of rows to sample for inferring the schema. [default: 2048]
+  -i, --interactive            Show an interactive UI.
+  -h, --help                   Print help
+  -V, --version                Print version
+```
+
+## Features
+
+### Technical Features
+
+- **Columnar Storage**: Parquet's columnar format provides better compression and faster query performance compared to row-based formats like CSV
+- **Efficient Compression**: Uses Snappy compression for a good balance between compression ratio and speed
+- **Schema Handling**: Automatically infers data types and handles duplicate column names
+- **Parallel Processing**: Multi-threaded conversion using [Tokio](https://tokio.rs/) runtime
+- **Progress Tracking**: Real-time progress indication with [indicatif](https://docs.rs/indicatif) progress bars
+- **Interactive TUI**: Browse files, inspect schemas, and select columns for export using a terminal-based UI
+- **Error Handling**: Robust error handling with detailed error messages
+
+### Performance Benefits
+
+- **Reduced Storage**: Parquet files are typically much smaller than equivalent CSV files
+- **Faster Analytics**: A columnar format allows for more efficient querying in data analysis tools
+- **Schema Enforcement**: Parquet maintains schema information, unlike CSV which is schema-less
+- **Selective Column Reading**: Analytics tools can read only the columns they need, improving performance
+
+## Interactive Mode
+
+CC2P includes an interactive Terminal User Interface (TUI) that allows you to browse CSV files in your directory, view their inferred schemas, and selectively export specific columns.
+
+To start the interactive mode:
+```shell
+cc2p -i
+```
+
+### Controls
+
+| Key | Action |
+| --- | --- |
+| `↑`/`↓` | Navigate through files or columns |
+| `Tab` | Switch between File List and Column List panels |
+| `Space` | Select/Unselect the highlighted column |
+| `Enter` | Export the selected columns of the current file to Parquet |
+| `Q` | Quit the application |
+
+## Platform-Specific Notes
+
+### macOS Users
+
+**NOTE for macOS Users:** Our Apple signing/notarization is not entirely done yet,
+thus you have to run the following command once to run the application. [Download the app](https://github.com/rayyildiz/cc2p/releases) and run this command:
+
+```shell
+xattr -c cc2p
+```
+
+### Linux Users
+
+On Linux, you can also install CC2P via Snap:
+
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/cc2p)
+
+```shell
+sudo snap install cc2p
+```
+
+## Technical Requirements
+
+- **Rust Version**: 1.88.0 or later
+- **Rust Edition**: 2024
+- **Minimum Memory**: Depends on the size of CSV files being processed
+
+## Contributing
+
+If you wish to contribute, please feel free to fork the repository, make your changes, and submit a pull request. All contributions are welcome!
+
+### Development Setup
+
+1. Clone the repository
+2. Install Rust (1.88.0 or later)
+3. Run `cargo build` to build the project
+4. Run `cargo test` to run the tests
+
+## License
+
+This project is licensed under MIT, see the [LICENSE](https://github.com/rayyildiz/cc2p/blob/main/LICENSE) file for details.
+
+## Contact
+
+- Project Link: https://github.com/rayyildiz/cc2p
+- Report Issues: https://github.com/rayyildiz/cc2p/issues

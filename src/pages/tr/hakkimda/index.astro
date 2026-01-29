@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AboutContent, { frontmatter } from '../../../content/pages/tr/hakkimda.md';
+---
+
+<BaseLayout lang="tr" title={frontmatter.title} description={frontmatter.description}>
+  <article class="prose prose-slate max-w-none prose-headings:text-[var(--color-text)] prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline">
+    <h1 class="gradient-text !bg-clip-text">{frontmatter.title}</h1>
+    <AboutContent />
+  </article>
+</BaseLayout>

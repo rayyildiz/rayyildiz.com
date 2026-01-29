@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { isLangPost, isNotDraft } from '../../../lib/content';
+import { slugifyTerm } from '../../../lib/slug';
+
+const posts = (await getCollection('posts')).filter((p) => isLangPost('tr', p) && isNotDraft(p));
+
+const counts = new Map<string, { label: string; count: number }>();
+for (const p of posts) {
+  for (const s of p.data.series ?? []) {
+    const key = slugifyTerm(s);
+    if (!key) continue;
+    const prev = counts.get(key);
+    counts.set(key, { label: s, count: (prev?.count ?? 0) + 1 });
+  }
+}
+
+const series = Array.from(counts.entries())
+  .map(([slug, v]) => ({ slug, ...v }))
+  .sort((a, b) => a.slug.localeCompare(b.slug));
+---
+
+<BaseLayout lang="tr" title="Seriler">
+  <h1 class="text-2xl font-semibold">Seriler</h1>
+  <ul class="mt-6 grid gap-2 sm:grid-cols-2">
+    {series.map((s) => (
+      <li>
+        <a class="hover:underline" href={`/tr/series/${s.slug}/`}>{s.label}</a>
+        <span class="text-sm text-slate-500"> ({s.count})</span>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

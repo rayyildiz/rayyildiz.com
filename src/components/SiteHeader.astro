@@ -1,0 +1,29 @@
+---
+const { lang } = Astro.props as { lang: 'en' | 'tr' };
+const isTr = lang === 'tr';
+const t = {
+  home: isTr ? 'Anasayfa' : 'Home',
+  posts: isTr ? 'Yazılar' : 'Posts',
+  about: isTr ? 'Hakkımda' : 'About'
+};
+
+const href = {
+  home: isTr ? '/tr/' : '/',
+  posts: isTr ? '/tr/posts/' : '/posts/',
+  about: isTr ? '/tr/hakkimda/' : '/about/'
+};
+
+const switchTo = isTr ? '/' : '/tr/';
+const switchLabel = isTr ? 'EN' : 'TR';
+---
+
+<header class="border-b border-[var(--color-border)] bg-[var(--color-bg-secondary)]/80 backdrop-blur-sm sticky top-0 z-50">
+  <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
+    <a class="font-bold tracking-tight text-lg gradient-text hover:opacity-80 transition-opacity" href={href.home}>rayyildiz.com</a>
+    <nav class="flex items-center gap-4 text-sm">
+      <a class="text-[var(--color-text-secondary)] hover:text-primary-600 transition-colors font-medium" href={href.posts}>{t.posts}</a>
+      <a class="text-[var(--color-text-secondary)] hover:text-primary-600 transition-colors font-medium" href={href.about}>{t.about}</a>
+      <a class="rounded-lg bg-primary-600 hover:bg-primary-700 px-3 py-1.5 text-xs font-medium text-white transition-colors" href={switchTo}>{switchLabel}</a>
+    </nav>
+  </div>
+</header>

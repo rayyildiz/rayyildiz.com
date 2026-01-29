@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-bg: #fafafa;
+  --color-bg-secondary: #ffffff;
+  --color-text: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-border: #e2e8f0;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-accent: #9333ea;
+  --color-accent-hover: #7e22ce;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom link styling */
+a:not([class]) {
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+a:not([class]):hover {
+  color: var(--color-primary-hover);
+}
+
+/* Selection styling */
+::selection {
+  background-color: #bfdbfe;
+  color: #172554;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getPostSlug, isLangPost, isNotDraft } from '../../../lib/content';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('posts')).filter((p) => isLangPost('en', p) && isNotDraft(p));
+  return posts.map((post) => ({
+    params: { slug: getPostSlug(post) },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props as { post: CollectionEntry<'posts'> };
+const { Content } = await post.render();
+---
+
+<BaseLayout lang="en" title={post.data.title} description={post.data.description}>
+  <article class="prose prose-slate max-w-none prose-headings:text-[var(--color-text)] prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-code:text-accent-700">
+    <h1 class="gradient-text !bg-clip-text">{post.data.title}</h1>
+    {post.data.date ? <p class="text-sm text-[var(--color-text-secondary)] flex items-center gap-2 not-prose"><span class="text-accent-500">📅</span> {post.data.date.toISOString().slice(0, 10)}</p> : null}
+    <Content />
+  </article>
+</BaseLayout>
