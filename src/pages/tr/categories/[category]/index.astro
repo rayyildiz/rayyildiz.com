@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { getPostSlug, isLangPost, postDateValue } from '../../../../lib/content';
+import { getPostSlug, isLangPost, isNotDraft, postDateValue } from '../../../../lib/content';
 import { slugifyTerm } from '../../../../lib/slug';
 
 export async function getStaticPaths() {
-  const posts = (await getCollection('posts')).filter((p) => isLangPost('tr', p));
+  const posts = (await getCollection('posts')).filter((p) => isLangPost('tr', p) && isNotDraft(p));
   const set = new Set<string>();
 
   for (const p of posts) {
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 
 const categorySlug = Astro.params.category;
 const posts = (await getCollection('posts'))
-  .filter((p) => isLangPost('tr', p))
+  .filter((p) => isLangPost('tr', p) && isNotDraft(p))
   .filter((p) => (p.data.categories ?? []).some((c) => slugifyTerm(c) === categorySlug));
 
 posts.sort((a, b) => postDateValue(b) - postDateValue(a));

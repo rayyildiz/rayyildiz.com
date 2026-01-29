@@ -23,3 +23,7 @@ export function getPostSlug(post: CollectionEntry<'posts'>): string {
 export function postDateValue(post: CollectionEntry<'posts'>): number {
   return post.data.date ? post.data.date.getTime() : 0;
 }
+
+export function isNotDraft(post: CollectionEntry<'posts'>): boolean {
+  return post.data.draft !== true;
+}

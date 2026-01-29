@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { getPostSlug, isLangPost, postDateValue } from '../../lib/content';
+import { getPostSlug, isLangPost, isNotDraft, postDateValue } from '../../lib/content';
 
-const posts = (await getCollection('posts')).filter((p) => isLangPost('tr', p));
+const posts = (await getCollection('posts')).filter((p) => isLangPost('tr', p) && isNotDraft(p));
 posts.sort((a, b) => postDateValue(b) - postDateValue(a));
 const latest = posts.slice(0, 8);
 ---
