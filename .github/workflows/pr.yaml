@@ -16,3 +16,5 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Install, build, and upload your site
+        uses: withastro/action@v5
