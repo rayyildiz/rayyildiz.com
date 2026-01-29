@@ -1,11 +1,11 @@
-+++
-date= "2023-12-22"
-title= "Introduction to Rust Programming Language"
-tags= ["rust"]
-categories= ["Programming"]
-slug= "introduction-to-rust-language"
-series = ["Rust Programming Language"]
-+++
+---
+title: "Introduction to Rust Programming Language"
+date: 2023-12-22
+tags: ["rust"]
+categories: ["Programming"]
+series: ["Rust Programming Language"]
+slug: "introduction-to-rust-language"
+---
 
 ## What is Rust?
 

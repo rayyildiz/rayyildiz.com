@@ -16,3 +16,6 @@ LICENSE
 themes/
 resources/
 .idea
+public/
+node_modules/
+dist

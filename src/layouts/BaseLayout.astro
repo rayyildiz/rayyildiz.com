@@ -1,0 +1,50 @@
+---
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import '../styles/global.css';
+
+const { title, description, lang } = Astro.props as {
+  title: string;
+  description?: string;
+  lang: 'en' | 'tr';
+};
+
+const pageTitle = title ? `${title} · rayyildiz.com` : 'rayyildiz.com';
+
+const site = Astro.site ?? new URL('https://rayyildiz.com');
+const canonicalUrl = new URL(Astro.url.pathname, site).toString();
+---
+
+<!doctype html>
+<html lang={lang} class="bg-[var(--color-bg)] text-[var(--color-text)]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{pageTitle}</title>
+    {description ? <meta name="description" content={description} /> : null}
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="color-scheme" content="light" />
+
+    <meta property="og:title" content={pageTitle} />
+    {description ? <meta property="og:description" content={description} /> : null}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" href="/custom.css" />
+  </head>
+  <body class="min-h-screen">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded focus:bg-slate-900 focus:px-3 focus:py-2 focus:text-white"
+    >
+      Skip to content
+    </a>
+    <SiteHeader lang={lang} />
+    <main id="main-content" class="mx-auto max-w-5xl px-4 py-10">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

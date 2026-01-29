@@ -1,11 +1,11 @@
-+++
-date= "2023-12-23"
-title= "How Android Uses Rust for Enhanced Memory Safety"
-tags= ["rust"]
-categories= ["Programming"]
-slug= "android-uses-rust-for-memory-safety"
-series = ["Rust Programming Language"]
-+++
+---
+title: "How Android Uses Rust for Enhanced Memory Safety"
+date: 2023-12-23
+tags: ["rust"]
+categories: ["Programming"]
+series: ["Rust Programming Language"]
+slug: "android-uses-rust-for-memory-safety"
+---
 
 [Android](https://developer.android.com), the widely used mobile operating system developed by Google,
 has [recently](https://security.googleblog.com/2021/04/rust-in-android-platform.html) started incorporating the Rust

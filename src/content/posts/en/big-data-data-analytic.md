@@ -1,11 +1,11 @@
-+++
-date= "2023-12-16"
-title= "Unveiling the Power of Big Data and Data Analytics"
-tags= ["hadoop","spark","sql","nosql","python"]
-categories= ["Big Data"]
-slug= "big-data-data-analytic"
-series = ["Big Data"]
-+++
+---
+title: "Unveiling the Power of Big Data and Data Analytics"
+date: 2023-12-16
+tags: ["hadoop", "spark", "sql", "nosql", "python"]
+categories: ["Big Data"]
+series: ["Big Data"]
+slug: "big-data-data-analytic"
+---
 
 In today's data-driven world, the terms 'Big Data' and 'Data Analytics' are more than just buzzwords; they represent a
 fundamental shift in how we process information and make decisions. This blog post delves into the essence of Big Data

@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { isLangPost } from '../../lib/content';
+import { slugifyTerm } from '../../lib/slug';
+
+const posts = (await getCollection('posts')).filter((p) => isLangPost('en', p));
+
+const counts = new Map<string, { label: string; count: number }>();
+for (const p of posts) {
+  for (const cat of p.data.categories ?? []) {
+    const key = slugifyTerm(cat);
+    if (!key) continue;
+    const prev = counts.get(key);
+    counts.set(key, { label: cat, count: (prev?.count ?? 0) + 1 });
+  }
+}
+
+const categories = Array.from(counts.entries())
+  .map(([slug, v]) => ({ slug, ...v }))
+  .sort((a, b) => a.slug.localeCompare(b.slug));
+---
+
+<BaseLayout lang="en" title="Categories">
+  <h1 class="text-3xl font-bold gradient-text">Categories</h1>
+  <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+    {categories.map((c) => (
+      <li class="group">
+        <a class="flex items-center justify-between p-3 rounded-lg border border-[var(--color-border)] hover:border-primary-300 hover:bg-primary-50 transition-all" href={`/categories/${c.slug}/`}>
+          <span class="font-medium text-[var(--color-text)] group-hover:text-primary-600 transition-colors">{c.label}</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-accent-100 text-accent-700">{c.count}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

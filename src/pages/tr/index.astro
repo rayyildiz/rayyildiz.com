@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getPostSlug, isLangPost, postDateValue } from '../../lib/content';
+
+const posts = (await getCollection('posts')).filter((p) => isLangPost('tr', p));
+posts.sort((a, b) => postDateValue(b) - postDateValue(a));
+const latest = posts.slice(0, 8);
+---
+
+<BaseLayout lang="tr" title="Anasayfa" description="rayyildiz blog ve notları">
+  <section class="prose prose-slate max-w-none">
+    <h1 class="gradient-text !bg-clip-text">rayyildiz</h1>
+    <p class="text-lg text-[var(--color-text-secondary)]">Programlama ve mühendislik üzerine yazılar.</p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold text-[var(--color-text)] flex items-center gap-2">
+      <span class="text-accent-500">📝</span> Son yazılar
+    </h2>
+    <ul class="mt-6 space-y-3">
+      {latest.map((p) => (
+        <li class="group">
+          <a 
+            class="flex items-center gap-2 py-2 px-3 -mx-3 rounded-lg hover:bg-primary-50 transition-colors text-[var(--color-text)] hover:text-primary-600" 
+            href={`/tr/posts/${getPostSlug(p)}/`}
+          >
+            <span class="text-accent-500 group-hover:text-primary-500 transition-colors">→</span>
+            {p.data.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>

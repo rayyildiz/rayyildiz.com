@@ -1,11 +1,11 @@
-+++
-date= "2024-01-15"
-title= "Async pattern in Rust and CSP"
-tags= ["rust"]
-categories= ["Programming"]
-slug= "async-in-rust-vs-csp"
-series = ["Rust Programming Language"]
-+++
+---
+title: "Async pattern in Rust and CSP"
+date: 2024-01-15
+tags: ["rust"]
+categories: ["Programming"]
+series: ["Rust Programming Language"]
+slug: "async-in-rust-vs-csp"
+---
 
 Asynchronous programming in Rust has sparked considerable debate within the programming community. On one side, advocates argue that async enhances performance and scalability, especially in I/O-bound and high-concurrency applications. On the other side, critics point to its complexity and potential for complicating the codebase. To fully understand this debate, it's crucial to examine the differences between asynchronous programming and the [Communicating Sequential Processes](https://en.wikipedia.org/wiki/Communicating_sequential_processes) (CSP) model, particularly as implemented through channels in Rust.
 

@@ -1,4 +1,3 @@
-public/
 resources/_gen
 .vs
 .idea/
@@ -11,6 +10,12 @@ gh-pages.pub
 .vscode/
 .DS_Store
 
+# Node / Astro
+node_modules/
+dist/
+.astro/
+
 # Added by cargo
 
 /target
+node_modules
