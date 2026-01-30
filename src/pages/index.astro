@@ -7,22 +7,25 @@ import '../styles/global.css';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>rayyildiz · Software Engineer | Data & Architecture</title>
-    <meta name="description" content="Personal blog and portfolio of rayyildiz - Software Engineer specializing in Data Engineering and Software Architecture" />
+    <title>Ramazan AYYILDIZ · Software Engineer</title>
+    <meta name="description" content="Personal blog and portfolio of Ramazan AYYILDIZ - Software Engineer specializing in Big Data, Cloud Native, AI and Distributed Computing" />
     <link rel="canonical" href="https://rayyildiz.com" />
     <meta name="color-scheme" content="light" />
-    <meta property="og:title" content="rayyildiz · Software Engineer" />
-    <meta property="og:description" content="Personal blog and portfolio - Data Engineering & Software Architecture" />
+    <meta property="og:title" content="Ramazan AYYILDIZ · Software Engineer" />
+    <meta property="og:description" content="Personal blog and portfolio - Big Data, Cloud Native, AI & Distributed Computing" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rayyildiz.com" />
-    <meta name="twitter:card" content="summary" />
   </head>
-  <body class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-primary-50 overflow-hidden">
+  <body class="min-h-screen bg-gradient-to-br from-slate-50 via-white to-primary-50 overflow-x-hidden flex flex-col">
     <!-- Animated background elements -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
       <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-primary-400/20 to-accent-400/20 rounded-full blur-3xl animate-pulse"></div>
       <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-accent-400/20 to-primary-400/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary-200/10 via-accent-200/10 to-primary-200/10 rounded-full blur-3xl"></div>
+      
+      <!-- Reddish glow elements -->
+      <div class="absolute top-1/4 -left-20 w-72 h-72 bg-gradient-to-br from-rose-400/15 to-red-500/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 0.5s;"></div>
+      <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-gradient-to-tl from-red-400/15 to-rose-500/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1.5s;"></div>
       
       <!-- Floating shapes -->
       <div class="absolute top-20 left-[15%] w-4 h-4 bg-primary-400/40 rounded-full animate-float"></div>
@@ -30,12 +33,17 @@ import '../styles/global.css';
       <div class="absolute bottom-32 left-[25%] w-5 h-5 bg-primary-300/40 rounded-full animate-float" style="animation-delay: 1s;"></div>
       <div class="absolute bottom-20 right-[30%] w-3 h-3 bg-accent-300/40 rounded-full animate-float" style="animation-delay: 1.5s;"></div>
       
+      <!-- Reddish floating shapes -->
+      <div class="absolute top-32 right-[10%] w-4 h-4 bg-rose-400/35 rounded-full animate-float" style="animation-delay: 0.8s;"></div>
+      <div class="absolute bottom-40 left-[10%] w-3 h-3 bg-red-400/35 rounded-full animate-float" style="animation-delay: 1.2s;"></div>
+      <div class="absolute top-1/2 right-[5%] w-5 h-5 bg-rose-300/30 rounded-full animate-float" style="animation-delay: 2s;"></div>
+      
       <!-- Grid pattern -->
       <div class="absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
     </div>
 
     <!-- Main content -->
-    <main class="relative min-h-screen flex flex-col items-center justify-center px-6 py-12">
+    <main class="relative flex-1 flex flex-col items-center justify-center px-6 py-12">
       <!-- Avatar with glow effect -->
       <div class="relative mb-8 group">
         <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500 scale-110"></div>
@@ -55,7 +63,7 @@ import '../styles/global.css';
       <div class="text-center mb-8">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">
           <span class="bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 bg-clip-text text-transparent">
-            rayyildiz
+            Ramazan AYYILDIZ
           </span>
         </h1>
         <div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-6">
@@ -69,20 +77,26 @@ import '../styles/global.css';
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
             </svg>
-            Data Engineering
+            Big Data
           </span>
           <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-700 rounded-full text-sm font-medium">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
             </svg>
-            Architecture
+            Cloud Native
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            GenAI
           </span>
         </div>
         <p class="text-slate-600 text-lg md:text-xl max-w-lg mx-auto leading-relaxed">
-          Building scalable systems & sharing knowledge about 
-          <span class="text-primary-600 font-medium">data pipelines</span>, 
-          <span class="text-accent-600 font-medium">distributed systems</span>, and 
-          <span class="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent font-medium">software architecture</span>.
+          Just for fun — exploring 
+          <span class="text-primary-600 font-medium">distributed computing</span>, 
+          <span class="text-accent-600 font-medium">artificial intelligence</span>, and 
+          <span class="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent font-medium">cloud native technologies</span>.
         </p>
       </div>
 
@@ -109,14 +123,14 @@ import '../styles/global.css';
           
           <a 
             href="/tr/posts/" 
-            class="group relative px-8 py-4 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-accent-300 overflow-hidden"
+            class="group relative px-8 py-4 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-red-300 overflow-hidden"
           >
-            <div class="absolute inset-0 bg-gradient-to-r from-accent-500 to-accent-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             <div class="relative flex items-center gap-4">
               <span class="text-3xl">🇹🇷</span>
               <div>
                 <span class="block text-lg font-bold text-slate-800 group-hover:text-white transition-colors">Türkçe</span>
-                <span class="block text-sm text-slate-500 group-hover:text-accent-100 transition-colors">Blogu Türkçe oku</span>
+                <span class="block text-sm text-slate-500 group-hover:text-red-100 transition-colors">Blogu Türkçe oku</span>
               </div>
               <svg class="w-5 h-5 text-slate-400 group-hover:text-white transition-colors ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
@@ -128,7 +142,7 @@ import '../styles/global.css';
 
       <!-- Tech stack pills -->
       <div class="flex flex-wrap justify-center gap-2 max-w-xl mb-10">
-        {['Apache Spark', 'Kafka', 'Kubernetes', 'Go', 'Python', 'GCP', 'PostgreSQL', 'Redis'].map((tech) => (
+        {['Rust', 'Go', 'Python', 'Kafka', 'Kubernetes', 'Spark', 'PostgreSQL', 'Redis', 'AWS', 'Docker', 'LLM', 'RAG'].map((tech) => (
           <span class="px-3 py-1 bg-white/80 backdrop-blur-sm text-slate-600 rounded-full text-xs font-medium border border-slate-200 hover:border-primary-300 hover:text-primary-600 transition-colors cursor-default">
             {tech}
           </span>
@@ -149,34 +163,45 @@ import '../styles/global.css';
           </svg>
         </a>
         <a 
-          href="https://linkedin.com/in/rayyildiz" 
+          href="https://bsky.app/profile/rayyildiz.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-slate-600 hover:text-[#0077b5] hover:scale-110"
-          aria-label="LinkedIn"
+          class="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-slate-600 hover:text-[#0085ff] hover:scale-110"
+          aria-label="Bluesky"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
           </svg>
         </a>
         <a 
-          href="https://twitter.com/nickmetal" 
+          href="https://stackshare.io/rayyildiz/stack" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-slate-600 hover:text-[#1da1f2] hover:scale-110"
-          aria-label="Twitter"
+          class="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-slate-600 hover:text-[#0690fa] hover:scale-110"
+          aria-label="StackShare"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            <path d="M2.59 9.89a1.41 1.41 0 0 1 0-2l4.24-4.24a1.41 1.41 0 0 1 2 0l4.24 4.24a1.41 1.41 0 0 1 0 2L8.83 14.13a1.41 1.41 0 0 1-2 0zm8.34 4.24a1.41 1.41 0 0 1 0-2l4.24-4.24a1.41 1.41 0 0 1 2 0l4.24 4.24a1.41 1.41 0 0 1 0 2l-4.24 4.24a1.41 1.41 0 0 1-2 0z"/>
+          </svg>
+        </a>
+        <a 
+          href="https://crates.io/users/rayyildiz" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-slate-600 hover:text-[#e6822d] hover:scale-110"
+          aria-label="Crates.io"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M23.502 8.042l-.005-.027a.669.669 0 00-.023-.08l-.005-.015a.61.61 0 00-.087-.15l-.007-.009a.606.606 0 00-.118-.104l-.016-.01a.595.595 0 00-.078-.046l-.018-.008a.64.64 0 00-.074-.03l-.038-.011-5.69-1.5L12.64.295a.6.6 0 00-.64 0L7.3 2.052l-5.69 1.5-.038.012a.62.62 0 00-.073.029l-.02.009a.597.597 0 00-.076.045l-.017.011a.608.608 0 00-.117.103l-.008.01a.61.61 0 00-.087.15l-.005.014a.66.66 0 00-.023.08l-.005.028a.64.64 0 00-.01.08v.004l-.005 7.62v.003c0 .024.002.05.005.073l.002.016c.004.027.01.053.018.079l.006.02a.6.6 0 00.037.082l.008.015c.015.026.032.05.05.074l.012.016a.596.596 0 00.075.073l.007.006.016.013 4.71 3.533v4.242l.001.004a.603.603 0 00.597.597h.003l7.639-.004h.004a.603.603 0 00.596-.597V16.12l4.71-3.532.016-.014.007-.006a.599.599 0 00.075-.073l.012-.015c.019-.023.036-.048.05-.075l.008-.015a.598.598 0 00.037-.082l.006-.02a.606.606 0 00.018-.078l.002-.017a.6.6 0 00.005-.072v-.004l-.005-7.62v-.003a.622.622 0 00-.01-.081zm-6.697 7.4l-4.166 3.125V14.42l4.166-2.604v3.625zm-5.369 3.126l-4.166-3.126v-3.625l4.166 2.604v4.147zm.602-5.304L7.958 10.71V7.23L12.038 9.7v3.564zm4.08-3.564l4.08-2.47v3.48l-4.08 2.554V9.7zm-.52-3.888L12 8.628 8.402 5.812 12 3.437l3.598 2.375z"/>
           </svg>
         </a>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class="absolute bottom-0 left-0 right-0 py-4 text-center">
+    <footer class="relative py-6 text-center mt-auto">
       <p class="text-slate-400 text-sm">
-        © 2025 rayyildiz · Built with <span class="text-accent-500">♥</span> and <span class="text-primary-500 font-medium">Astro</span>
+        © 2026 Ramazan AYYILDIZ · Built with <span class="text-accent-500">♥</span> and <span class="text-primary-500 font-medium">Astro</span>
       </p>
     </footer>
 
