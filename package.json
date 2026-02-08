@@ -20,6 +20,8 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.23",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "node-addon-api": "^8.5.0",
+    "node-gyp": "^12.2.0"
   }
 }
